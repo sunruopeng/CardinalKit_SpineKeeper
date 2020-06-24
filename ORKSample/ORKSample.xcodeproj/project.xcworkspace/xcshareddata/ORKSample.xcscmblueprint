@@ -1,0 +1,44 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B716CBFC5F2A252BA004E187ED8D309678E60B69",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9CF6181E3789E3853840089C16D4B9FDDB9B31E2" : 9223372036854775807,
+    "6BBB14D18404D37303A51A25CEF2D4EDDAFF0564" : 9223372036854775807,
+    "091ACA35269B19B46287003BF57E117227C61697" : 9223372036854775807,
+    "B716CBFC5F2A252BA004E187ED8D309678E60B69" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "42C8053D-CC6C-4090-8D51-C943CF55C020",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9CF6181E3789E3853840089C16D4B9FDDB9B31E2" : "apple\/researchkit\/",
+    "6BBB14D18404D37303A51A25CEF2D4EDDAFF0564" : "apple\/carekit\/",
+    "091ACA35269B19B46287003BF57E117227C61697" : "",
+    "B716CBFC5F2A252BA004E187ED8D309678E60B69" : "stanfordback\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ORKSample",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "aman\/ORKSample\/ORKSample.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/gastabteam\/myproj.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "091ACA35269B19B46287003BF57E117227C61697"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/carekit-apple\/CareKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6BBB14D18404D37303A51A25CEF2D4EDDAFF0564"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ResearchKit\/ResearchKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9CF6181E3789E3853840089C16D4B9FDDB9B31E2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/amans\/stanfordback.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B716CBFC5F2A252BA004E187ED8D309678E60B69"
+    }
+  ]
+}

@@ -1,0 +1,1586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		042E2BFF1E9F46B100961299 /* backbook.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 042E2BFE1E9F46B000961299 /* backbook.pdf */; };
+		042E2C031E9F489700961299 /* meditate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 042E2C011E9F489700961299 /* meditate.jpg */; };
+		042E2C0D1EA0867800961299 /* SixMinuteWalk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042E2C0C1EA0867800961299 /* SixMinuteWalk.swift */; };
+		04FC643F1EA29A2F007DC617 /* Sleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC643E1EA29A2F007DC617 /* Sleep.swift */; };
+		04FC64431EA2C0A0007DC617 /* VoiceAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC64421EA2C0A0007DC617 /* VoiceAnalysis.swift */; };
+		04FC64701EA2C777007DC617 /* BackRangeOfMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC646F1EA2C777007DC617 /* BackRangeOfMotion.swift */; };
+		04FC64721EA2CA89007DC617 /* Journaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC64711EA2CA89007DC617 /* Journaling.swift */; };
+		04FC64741EA321BC007DC617 /* StartBackSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC64731EA321BC007DC617 /* StartBackSurvey.swift */; };
+		070BA5CA1FCF734800B38879 /* innerthighstretch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5A31FCF734800B38879 /* innerthighstretch.jpg */; };
+		070BA5CB1FCF734800B38879 /* hamstringstretch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5A41FCF734800B38879 /* hamstringstretch.jpg */; };
+		070BA5CC1FCF734800B38879 /* pressup.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5A51FCF734800B38879 /* pressup.jpg */; };
+		070BA5CD1FCF734800B38879 /* sidebridge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5A61FCF734800B38879 /* sidebridge.jpg */; };
+		070BA5D21FCF734800B38879 /* frontalcorestretch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5AB1FCF734800B38879 /* frontalcorestretch.jpg */; };
+		070BA5D31FCF734800B38879 /* abdominalcrunch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5AC1FCF734800B38879 /* abdominalcrunch.jpg */; };
+		070BA5D51FCF734800B38879 /* sagittalcore2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5AE1FCF734800B38879 /* sagittalcore2.jpg */; };
+		070BA5D61FCF734800B38879 /* abdominalexercise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5AF1FCF734800B38879 /* abdominalexercise.jpg */; };
+		070BA5D91FCF734800B38879 /* sagittalcore1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5B21FCF734800B38879 /* sagittalcore1.jpg */; };
+		070BA5DB1FCF734800B38879 /* transversecore2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5B41FCF734800B38879 /* transversecore2.jpg */; };
+		070BA5DE1FCF734800B38879 /* doorwaycheststretch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5B71FCF734800B38879 /* doorwaycheststretch.jpg */; };
+		070BA5DF1FCF734800B38879 /* transversecore1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5B81FCF734800B38879 /* transversecore1.jpg */; };
+		070BA5E01FCF734800B38879 /* neckpress2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5B91FCF734800B38879 /* neckpress2.jpg */; };
+		070BA5E11FCF734800B38879 /* wallwash1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5BA1FCF734800B38879 /* wallwash1.jpg */; };
+		070BA5E21FCF734800B38879 /* neckpress3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5BB1FCF734800B38879 /* neckpress3.jpg */; };
+		070BA5E41FCF734800B38879 /* brace.png in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5BD1FCF734800B38879 /* brace.png */; };
+		070BA5E51FCF734800B38879 /* neckpress1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5BE1FCF734800B38879 /* neckpress1.jpg */; };
+		070BA5E61FCF734800B38879 /* wallwash2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5BF1FCF734800B38879 /* wallwash2.jpg */; };
+		070BA5E71FCF734800B38879 /* plank.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5C01FCF734800B38879 /* plank.jpg */; };
+		070BA5E81FCF734800B38879 /* standingthreadtheneedle1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5C11FCF734800B38879 /* standingthreadtheneedle1.jpg */; };
+		070BA5E91FCF734800B38879 /* standingthreadtheneedle2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5C21FCF734800B38879 /* standingthreadtheneedle2.jpg */; };
+		070BA5EA1FCF734800B38879 /* backbend.png in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5C31FCF734800B38879 /* backbend.png */; };
+		070BA5EF1FCF7C4000B38879 /* wallwash_combined.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5EB1FCF7C3D00B38879 /* wallwash_combined.jpg */; };
+		070BA5F01FCF7C4000B38879 /* sagittalcore_combined.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5EC1FCF7C3E00B38879 /* sagittalcore_combined.jpg */; };
+		070BA5F11FCF7C4000B38879 /* transversecore_combined.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5ED1FCF7C3F00B38879 /* transversecore_combined.jpg */; };
+		070BA5F21FCF7C4000B38879 /* standingthreadtheneedle_combined.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5EE1FCF7C4000B38879 /* standingthreadtheneedle_combined.jpg */; };
+		070BA5F41FD153CD00B38879 /* NassVideo1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070BA5F31FD153CD00B38879 /* NassVideo1.swift */; };
+		070BA6001FD154CF00B38879 /* nass9.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5F71FD154C900B38879 /* nass9.mp4 */; };
+		070BA6011FD154CF00B38879 /* nass3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5F81FD154C900B38879 /* nass3.mp4 */; };
+		070BA6021FD154CF00B38879 /* nass2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5F91FD154CA00B38879 /* nass2.mp4 */; };
+		070BA6031FD154CF00B38879 /* nass4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5FA1FD154CA00B38879 /* nass4.mp4 */; };
+		070BA6041FD154CF00B38879 /* nass5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5FB1FD154CB00B38879 /* nass5.mp4 */; };
+		070BA6051FD154CF00B38879 /* nass6.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5FC1FD154CB00B38879 /* nass6.mp4 */; };
+		070BA6061FD154CF00B38879 /* nass1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5FD1FD154CC00B38879 /* nass1.mp4 */; };
+		070BA6071FD154CF00B38879 /* nass8.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5FE1FD154CC00B38879 /* nass8.mp4 */; };
+		070BA6081FD154CF00B38879 /* nass7.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 070BA5FF1FD154CF00B38879 /* nass7.mp4 */; };
+		070BA6111FD2102A00B38879 /* NassVideo7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070BA6091FD2102800B38879 /* NassVideo7.swift */; };
+		070BA6121FD2102A00B38879 /* NassVideo3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070BA60A1FD2102800B38879 /* NassVideo3.swift */; };
+		070BA6131FD2102A00B38879 /* NassVideo4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070BA60B1FD2102900B38879 /* NassVideo4.swift */; };
+		070BA6141FD2102A00B38879 /* NassVideo5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070BA60C1FD2102900B38879 /* NassVideo5.swift */; };
+		070BA6151FD2102A00B38879 /* NassVideo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070BA60D1FD2102900B38879 /* NassVideo2.swift */; };
+		070BA6161FD2102A00B38879 /* NassVideo8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070BA60E1FD2102A00B38879 /* NassVideo8.swift */; };
+		070BA6171FD2102A00B38879 /* NassVideo9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070BA60F1FD2102A00B38879 /* NassVideo9.swift */; };
+		070BA6181FD2102A00B38879 /* NassVideo6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070BA6101FD2102A00B38879 /* NassVideo6.swift */; };
+		070BA61A1FD2140000B38879 /* LearnVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070BA6191FD2140000B38879 /* LearnVideoViewController.swift */; };
+		070E22531EA40DAC0087759C /* CKLineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070E22521EA40DAC0087759C /* CKLineGraph.swift */; };
+		070F16FB1FE2678F00C9A09B /* BackFacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070F16FA1FE2678F00C9A09B /* BackFacts.swift */; };
+		070F17011FE276F400C9A09B /* CausesOfBackPain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070F17001FE276F400C9A09B /* CausesOfBackPain.swift */; };
+		071F10501FBCFFC700EFFA89 /* PressUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071F104F1FBCFFC700EFFA89 /* PressUp.swift */; };
+		0725EACE21E57FFE00861C3B /* Legal.html in Resources */ = {isa = PBXBuildFile; fileRef = 0725EAC921E57FFD00861C3B /* Legal.html */; };
+		0733F1882348058600209212 /* RNCryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0733F1872348058600209212 /* RNCryptor.swift */; };
+		07466C051FE1B75000CB9871 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07466C041FE1B75000CB9871 /* ImageScrollView.swift */; };
+		07466C0B1FE1B9E800CB9871 /* iceheat.png in Resources */ = {isa = PBXBuildFile; fileRef = 07466C0A1FE1B9E700CB9871 /* iceheat.png */; };
+		07466C0D1FE1D37300CB9871 /* IceHeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07466C0C1FE1D37300CB9871 /* IceHeat.swift */; };
+		07466C101FE1DE3100CB9871 /* exercisetype.png in Resources */ = {isa = PBXBuildFile; fileRef = 07466C0E1FE1DE3000CB9871 /* exercisetype.png */; };
+		07466C111FE1DE3100CB9871 /* layflat.png in Resources */ = {isa = PBXBuildFile; fileRef = 07466C0F1FE1DE3000CB9871 /* layflat.png */; };
+		07466C131FE1DF0A00CB9871 /* LayFlat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07466C121FE1DF0A00CB9871 /* LayFlat.swift */; };
+		07466C151FE1DFCF00CB9871 /* ExerciseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07466C141FE1DFCF00CB9871 /* ExerciseType.swift */; };
+		074DF898208557F600A4C959 /* CustomIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074DF897208557F600A4C959 /* CustomIntroViewController.swift */; };
+		0755B4B01FD511430078A8F7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0755B4AF1FD511430078A8F7 /* AudioToolbox.framework */; };
+		07709A49209502AC0018FCCF /* ODISurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07709A44209502AB0018FCCF /* ODISurvey.swift */; };
+		07709A4B20950C4B0018FCCF /* consent.html in Resources */ = {isa = PBXBuildFile; fileRef = 07709A4A20950C4A0018FCCF /* consent.html */; };
+		079234E7205F488D00E54509 /* guidelines.html in Resources */ = {isa = PBXBuildFile; fileRef = 079234E1205F488C00E54509 /* guidelines.html */; };
+		079234E8205F488D00E54509 /* physicalactivity.html in Resources */ = {isa = PBXBuildFile; fileRef = 079234E6205F488C00E54509 /* physicalactivity.html */; };
+		079498E11E81024100071726 /* ASVerificationStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079498E01E81024100071726 /* ASVerificationStepViewController.swift */; };
+		07951D4B1E9AC9D5005CE00E /* 00_Blank_to_Activities@2x.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 07951D3B1E9AC9D5005CE00E /* 00_Blank_to_Activities@2x.m4v */; };
+		07951D4C1E9AC9D5005CE00E /* 01_Activities_to_SensorData@2x.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 07951D3C1E9AC9D5005CE00E /* 01_Activities_to_SensorData@2x.m4v */; };
+		07951D4D1E9AC9D5005CE00E /* 02_SensorData_to_DataGathering@2x.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 07951D3D1E9AC9D5005CE00E /* 02_SensorData_to_DataGathering@2x.m4v */; };
+		07951D4E1E9AC9D5005CE00E /* 10_PotentialBenifits@2x.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 07951D3E1E9AC9D5005CE00E /* 10_PotentialBenifits@2x.m4v */; };
+		07951D4F1E9AC9D5005CE00E /* 11_IssuesToConsider1@2x.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 07951D3F1E9AC9D5005CE00E /* 11_IssuesToConsider1@2x.m4v */; };
+		07951D501E9AC9D5005CE00E /* 12_IssuesToConside2@2x.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 07951D401E9AC9D5005CE00E /* 12_IssuesToConside2@2x.m4v */; };
+		07951D511E9AC9D5005CE00E /* 13_RiskToPrivacy@2x.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 07951D411E9AC9D5005CE00E /* 13_RiskToPrivacy@2x.m4v */; };
+		07951D521E9AC9D5005CE00E /* 00_Blank_to_Activities@3x.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 07951D431E9AC9D5005CE00E /* 00_Blank_to_Activities@3x.m4v */; };
+		07951D531E9AC9D5005CE00E /* 01_Activities_to_SensorData@3x.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 07951D441E9AC9D5005CE00E /* 01_Activities_to_SensorData@3x.m4v */; };
+		07951D541E9AC9D5005CE00E /* 02_SensorData_to_DataGathering@3x.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 07951D451E9AC9D5005CE00E /* 02_SensorData_to_DataGathering@3x.m4v */; };
+		07951D551E9AC9D5005CE00E /* 10_PotentialBenifits@3x.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 07951D461E9AC9D5005CE00E /* 10_PotentialBenifits@3x.m4v */; };
+		07951D561E9AC9D5005CE00E /* 11_IssuesToConsider1@3x.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 07951D471E9AC9D5005CE00E /* 11_IssuesToConsider1@3x.m4v */; };
+		07951D571E9AC9D5005CE00E /* 12_IssuesToConside2@3x.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 07951D481E9AC9D5005CE00E /* 12_IssuesToConside2@3x.m4v */; };
+		07951D581E9AC9D5005CE00E /* 13_RiskToPrivacy@3x.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 07951D491E9AC9D5005CE00E /* 13_RiskToPrivacy@3x.m4v */; };
+		07951D591E9AC9D5005CE00E /* Intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 07951D4A1E9AC9D5005CE00E /* Intro.mp4 */; };
+		07951D801E9ACA37005CE00E /* 10study_task.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D5B1E9ACA37005CE00E /* 10study_task.html */; };
+		07951D811E9ACA37005CE00E /* 11withdrawing.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D5C1E9ACA37005CE00E /* 11withdrawing.html */; };
+		07951D821E9ACA37005CE00E /* 12potentialbenefits1.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D5D1E9ACA37005CE00E /* 12potentialbenefits1.html */; };
+		07951D831E9ACA37005CE00E /* 13issues_survey.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D5E1E9ACA37005CE00E /* 13issues_survey.html */; };
+		07951D841E9ACA37005CE00E /* 14issues_mood.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D5F1E9ACA37005CE00E /* 14issues_mood.html */; };
+		07951D851E9ACA37005CE00E /* 15privacy_risk.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D601E9ACA37005CE00E /* 15privacy_risk.html */; };
+		07951D861E9ACA37005CE00E /* 15sharing_rsch.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D611E9ACA37005CE00E /* 15sharing_rsch.html */; };
+		07951D871E9ACA37005CE00E /* 1welcome.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D621E9ACA37005CE00E /* 1welcome.html */; };
+		07951D881E9ACA37005CE00E /* 23andme.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D631E9ACA37005CE00E /* 23andme.html */; };
+		07951D891E9ACA37005CE00E /* 2quiz_headsup.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D641E9ACA37005CE00E /* 2quiz_headsup.html */; };
+		07951D8A1E9ACA37005CE00E /* 3activities.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D651E9ACA37005CE00E /* 3activities.html */; };
+		07951D8B1E9ACA37005CE00E /* 4sensordata.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D661E9ACA37005CE00E /* 4sensordata.html */; };
+		07951D8C1E9ACA37005CE00E /* 5dataprocessing.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D671E9ACA37005CE00E /* 5dataprocessing.html */; };
+		07951D8D1E9ACA37005CE00E /* 6protectingdata.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D681E9ACA37005CE00E /* 6protectingdata.html */; };
+		07951D8E1E9ACA37005CE00E /* 7datause.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D691E9ACA37005CE00E /* 7datause.html */; };
+		07951D8F1E9ACA37005CE00E /* 8time.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D6A1E9ACA37005CE00E /* 8time.html */; };
+		07951D901E9ACA37005CE00E /* 9study_survey.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D6B1E9ACA37005CE00E /* 9study_survey.html */; };
+		07951D911E9ACA37005CE00E /* AboutStudy.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D6C1E9ACA37005CE00E /* AboutStudy.html */; };
+		07951D921E9ACA37005CE00E /* AboutStudy_intro.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D6D1E9ACA37005CE00E /* AboutStudy_intro.html */; };
+		07951D931E9ACA37005CE00E /* asthma_overview.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D6E1E9ACA37005CE00E /* asthma_overview.html */; };
+		07951D941E9ACA37005CE00E /* cardio_fullconsent.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D6F1E9ACA37005CE00E /* cardio_fullconsent.html */; };
+		07951D951E9ACA37005CE00E /* coaching.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D701E9ACA37005CE00E /* coaching.html */; };
+		07951D961E9ACA37005CE00E /* disease_information.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D711E9ACA37005CE00E /* disease_information.html */; };
+		07951D971E9ACA37005CE00E /* disease_information_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 07951D721E9ACA37005CE00E /* disease_information_top.png */; };
+		07951D981E9ACA37005CE00E /* EligibleToParticipate.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D731E9ACA37005CE00E /* EligibleToParticipate.html */; };
+		07951D991E9ACA37005CE00E /* EligibleToParticipate_intro.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D741E9ACA37005CE00E /* EligibleToParticipate_intro.html */; };
+		07951D9A1E9ACA37005CE00E /* howstudyworks.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D751E9ACA37005CE00E /* howstudyworks.html */; };
+		07951D9B1E9ACA37005CE00E /* howstudyworks_intro.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D761E9ACA37005CE00E /* howstudyworks_intro.html */; };
+		07951D9C1E9ACA37005CE00E /* institution.png in Resources */ = {isa = PBXBuildFile; fileRef = 07951D771E9ACA37005CE00E /* institution.png */; };
+		07951D9D1E9ACA37005CE00E /* Intro_section_cardio.css in Resources */ = {isa = PBXBuildFile; fileRef = 07951D781E9ACA37005CE00E /* Intro_section_cardio.css */; };
+		07951D9E1E9ACA37005CE00E /* Learn_section_cardio.css in Resources */ = {isa = PBXBuildFile; fileRef = 07951D791E9ACA37005CE00E /* Learn_section_cardio.css */; };
+		07951D9F1E9ACA37005CE00E /* online_resources.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D7A1E9ACA37005CE00E /* online_resources.html */; };
+		07951DA01E9ACA37005CE00E /* online_resources_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 07951D7B1E9ACA37005CE00E /* online_resources_top.png */; };
+		07951DA11E9ACA37005CE00E /* PrivacyPolicy.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D7C1E9ACA37005CE00E /* PrivacyPolicy.html */; };
+		07951DA21E9ACA37005CE00E /* symptoms.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D7D1E9ACA37005CE00E /* symptoms.html */; };
+		07951DA31E9ACA37005CE00E /* treatment.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D7E1E9ACA37005CE00E /* treatment.html */; };
+		07951DA41E9ACA37005CE00E /* whoisrunning.html in Resources */ = {isa = PBXBuildFile; fileRef = 07951D7F1E9ACA37005CE00E /* whoisrunning.html */; };
+		07A3B51C22B97ABE00AD872B /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A3B51B22B97ABE00AD872B /* HealthKit.framework */; };
+		07CE9F1D1E7F23B10070659E /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CE9F1C1E7F23B10070659E /* LearnViewController.swift */; };
+		07CE9F1F1E7F24D40070659E /* LearnStaticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CE9F1E1E7F24D40070659E /* LearnStaticTableViewCell.swift */; };
+		07DBAA921E9CA49F00FC3F36 /* BuildInsightsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBAA8C1E9CA49F00FC3F36 /* BuildInsightsOperation.swift */; };
+		07DBAA931E9CA49F00FC3F36 /* CarePlanStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBAA8D1E9CA49F00FC3F36 /* CarePlanStoreManager.swift */; };
+		07DBAA941E9CA49F00FC3F36 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBAA8E1E9CA49F00FC3F36 /* Colors.swift */; };
+		07DBAA951E9CA49F00FC3F36 /* NSCalendar+Dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBAA8F1E9CA49F00FC3F36 /* NSCalendar+Dates.swift */; };
+		07DBAA961E9CA49F00FC3F36 /* OCKInsightItem+EmptyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBAA901E9CA49F00FC3F36 /* OCKInsightItem+EmptyMessage.swift */; };
+		07DBAA971E9CA49F00FC3F36 /* QueryActivityEventsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBAA911E9CA49F00FC3F36 /* QueryActivityEventsOperation.swift */; };
+		07DBAA9B1E9CA51300FC3F36 /* InsightsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBAA9A1E9CA51300FC3F36 /* InsightsBuilder.swift */; };
+		07DBAA9E1E9CA57600FC3F36 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBAA9C1E9CA57600FC3F36 /* Activity.swift */; };
+		07DBAA9F1E9CA57600FC3F36 /* BackPain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBAA9D1E9CA57600FC3F36 /* BackPain.swift */; };
+		07DBAAAB1E9CA88200FC3F36 /* ExcerciseMinutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBAAA71E9CA88200FC3F36 /* ExcerciseMinutes.swift */; };
+		07DBAAAC1E9CA88200FC3F36 /* HealthSampleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBAAA81E9CA88200FC3F36 /* HealthSampleBuilder.swift */; };
+		07DBAAAD1E9CA88200FC3F36 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBAAA91E9CA88200FC3F36 /* Mood.swift */; };
+		07DBAAAE1E9CA88200FC3F36 /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBAAAA1E9CA88200FC3F36 /* Weight.swift */; };
+		07DBAAB01E9CA89700FC3F36 /* Assessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBAAAF1E9CA89700FC3F36 /* Assessment.swift */; };
+		07DBAAB41E9CCE9400FC3F36 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBAAB31E9CCE9400FC3F36 /* SampleData.swift */; };
+		07DC54D32094FFF1002B1219 /* StanfordSpineKeeperIntro.mov in Resources */ = {isa = PBXBuildFile; fileRef = 07DC54D22094FFEE002B1219 /* StanfordSpineKeeperIntro.mov */; };
+		07E05A5F1FBD2C16002A54C3 /* Breathe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E05A5E1FBD2C16002A54C3 /* Breathe.swift */; };
+		07E05A671FCDE8D5002A54C3 /* Brace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E05A661FCDE8D5002A54C3 /* Brace.swift */; };
+		07E05A691FCDEB2E002A54C3 /* WallWash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E05A681FCDEB2E002A54C3 /* WallWash.swift */; };
+		07E05A6B1FCDEDDA002A54C3 /* DoorwayChestStretch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E05A6A1FCDEDDA002A54C3 /* DoorwayChestStretch.swift */; };
+		07E05A6D1FCF5BF6002A54C3 /* BackwardBending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E05A6C1FCF5BF5002A54C3 /* BackwardBending.swift */; };
+		07E05A721FCF5C63002A54C3 /* StandingThreadTheNeedle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E05A6E1FCF5C62002A54C3 /* StandingThreadTheNeedle.swift */; };
+		07E05A731FCF5C63002A54C3 /* FrontalCoreStretch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E05A6F1FCF5C62002A54C3 /* FrontalCoreStretch.swift */; };
+		07E05A741FCF5C63002A54C3 /* InnerThighStretch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E05A701FCF5C62002A54C3 /* InnerThighStretch.swift */; };
+		07E05A751FCF5C63002A54C3 /* HamstringStretch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E05A711FCF5C62002A54C3 /* HamstringStretch.swift */; };
+		07E7733F20589A9B00C5D237 /* Dealing1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E7733E20589A9B00C5D237 /* Dealing1.swift */; };
+		07E7734520589B9E00C5D237 /* dealing2.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E7734020589B9D00C5D237 /* dealing2.html */; };
+		07E7734620589B9E00C5D237 /* dealing3.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E7734120589B9D00C5D237 /* dealing3.html */; };
+		07E7734720589B9E00C5D237 /* dealing1.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E7734220589B9E00C5D237 /* dealing1.html */; };
+		07E7734820589B9E00C5D237 /* backfacts.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E7734320589B9E00C5D237 /* backfacts.html */; };
+		07E7734920589B9E00C5D237 /* causesofbackpain.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E7734420589B9E00C5D237 /* causesofbackpain.html */; };
+		07E7734B20589BE600C5D237 /* Dealing2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E7734A20589BE600C5D237 /* Dealing2.swift */; };
+		07E7734D20589C3200C5D237 /* Dealing3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E7734C20589C3200C5D237 /* Dealing3.swift */; };
+		07E7734F20589D7F00C5D237 /* ChronicPain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E7734E20589D7F00C5D237 /* ChronicPain.swift */; };
+		07E7735120589F1B00C5D237 /* StayingActive1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E7735020589F1B00C5D237 /* StayingActive1.swift */; };
+		07E7735320589F8E00C5D237 /* StayingActive2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E7735220589F8E00C5D237 /* StayingActive2.swift */; };
+		07E773552058A78E00C5D237 /* Sleep1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E773542058A78E00C5D237 /* Sleep1.swift */; };
+		07E773572058A80600C5D237 /* Sleep2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E773562058A80600C5D237 /* Sleep2.swift */; };
+		07E773622058DA1900C5D237 /* Myth6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E773582058DA1300C5D237 /* Myth6.swift */; };
+		07E773632058DA1900C5D237 /* Myth4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E773592058DA1400C5D237 /* Myth4.swift */; };
+		07E773642058DA1900C5D237 /* Myth7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E7735A2058DA1400C5D237 /* Myth7.swift */; };
+		07E773652058DA1900C5D237 /* Myth8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E7735B2058DA1500C5D237 /* Myth8.swift */; };
+		07E773662058DA1900C5D237 /* Myth1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E7735C2058DA1600C5D237 /* Myth1.swift */; };
+		07E773672058DA1A00C5D237 /* Myth9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E7735D2058DA1600C5D237 /* Myth9.swift */; };
+		07E773682058DA1A00C5D237 /* Myth3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E7735E2058DA1700C5D237 /* Myth3.swift */; };
+		07E773692058DA1A00C5D237 /* Myth2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E7735F2058DA1800C5D237 /* Myth2.swift */; };
+		07E7736A2058DA1A00C5D237 /* Myth10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E773602058DA1800C5D237 /* Myth10.swift */; };
+		07E7736B2058DA1A00C5D237 /* Myth5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E773612058DA1900C5D237 /* Myth5.swift */; };
+		07E7736D2058DD1900C5D237 /* Coping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E7736C2058DD1900C5D237 /* Coping.swift */; };
+		07E7736F2058DFA900C5D237 /* CopingRefresher1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E7736E2058DFA900C5D237 /* CopingRefresher1.swift */; };
+		07E773712058E00A00C5D237 /* CopingRefresher2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E773702058E00A00C5D237 /* CopingRefresher2.swift */; };
+		07E773732058E05B00C5D237 /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E773722058E05B00C5D237 /* Diary.swift */; };
+		07E773752058E30500C5D237 /* SummaryFacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E773742058E30500C5D237 /* SummaryFacts.swift */; };
+		07E773892058E93100C5D237 /* sleep2.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E773762058E92D00C5D237 /* sleep2.html */; };
+		07E7738A2058E93100C5D237 /* myth2.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E773772058E92D00C5D237 /* myth2.html */; };
+		07E7738B2058E93100C5D237 /* myth9.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E773782058E92D00C5D237 /* myth9.html */; };
+		07E7738C2058E93100C5D237 /* coping.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E773792058E92D00C5D237 /* coping.html */; };
+		07E7738D2058E93100C5D237 /* copingrefresher1.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E7737A2058E92E00C5D237 /* copingrefresher1.html */; };
+		07E7738E2058E93100C5D237 /* myth6.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E7737B2058E92E00C5D237 /* myth6.html */; };
+		07E7738F2058E93100C5D237 /* myth8.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E7737C2058E92E00C5D237 /* myth8.html */; };
+		07E773902058E93100C5D237 /* myth7.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E7737D2058E92E00C5D237 /* myth7.html */; };
+		07E773912058E93100C5D237 /* myth10.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E7737E2058E92F00C5D237 /* myth10.html */; };
+		07E773922058E93100C5D237 /* copingrefresher2.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E7737F2058E92F00C5D237 /* copingrefresher2.html */; };
+		07E773932058E93100C5D237 /* myth3.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E773802058E92F00C5D237 /* myth3.html */; };
+		07E773942058E93100C5D237 /* sleep1.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E773812058E92F00C5D237 /* sleep1.html */; };
+		07E773952058E93100C5D237 /* stayingactive1.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E773822058E93000C5D237 /* stayingactive1.html */; };
+		07E773962058E93100C5D237 /* stayingactive2.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E773832058E93000C5D237 /* stayingactive2.html */; };
+		07E773972058E93100C5D237 /* myth4.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E773842058E93000C5D237 /* myth4.html */; };
+		07E773982058E93100C5D237 /* summaryfacts.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E773852058E93000C5D237 /* summaryfacts.html */; };
+		07E773992058E93100C5D237 /* myth5.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E773862058E93000C5D237 /* myth5.html */; };
+		07E7739A2058E93100C5D237 /* myth1.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E773872058E93100C5D237 /* myth1.html */; };
+		07E7739B2058E93100C5D237 /* chronicpain.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E773882058E93100C5D237 /* chronicpain.html */; };
+		07E7739D2058EAEF00C5D237 /* TransverseCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E7739C2058EAEF00C5D237 /* TransverseCore.swift */; };
+		07E7739F2058F07200C5D237 /* SagittalCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E7739E2058F07200C5D237 /* SagittalCore.swift */; };
+		07E773A12058F15D00C5D237 /* AbdominalCrunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E773A02058F15D00C5D237 /* AbdominalCrunch.swift */; };
+		07E773A32058F25800C5D237 /* AbdominalExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E773A22058F25800C5D237 /* AbdominalExercise.swift */; };
+		07E773A5205909EB00C5D237 /* NeckPress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E773A4205909EB00C5D237 /* NeckPress.swift */; };
+		07E773A720590DB400C5D237 /* neck_combined.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07E773A620590DB300C5D237 /* neck_combined.jpg */; };
+		07E773A920590E7B00C5D237 /* SideBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E773A820590E7B00C5D237 /* SideBridge.swift */; };
+		07E773AB20590F1F00C5D237 /* Plank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E773AA20590F1F00C5D237 /* Plank.swift */; };
+		07E773AD2059126C00C5D237 /* PhysicalActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E773AC2059126C00C5D237 /* PhysicalActivity.swift */; };
+		07E773AF2059130100C5D237 /* Guidelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E773AE2059130100C5D237 /* Guidelines.swift */; };
+		161479C41BD6CE8F0099A068 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161479C31BD6CE8F0099A068 /* AppDelegate.swift */; };
+		161479C91BD6CE8F0099A068 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 161479C71BD6CE8F0099A068 /* Main.storyboard */; };
+		161479CB1BD6CE8F0099A068 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 161479CA1BD6CE8F0099A068 /* Assets.xcassets */; };
+		161479CE1BD6CE8F0099A068 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 161479CC1BD6CE8F0099A068 /* LaunchScreen.storyboard */; };
+		16147A0F1BD83F700099A068 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16147A0E1BD83F700099A068 /* ActivityViewController.swift */; };
+		165A7E661BD99DBA00B6D223 /* StudyTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165A7E651BD99DBA00B6D223 /* StudyTasks.swift */; };
+		165A7E6E1BD9AEF800B6D223 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165A7E6D1BD9AEF800B6D223 /* IntroductionViewController.swift */; };
+		16BF5B691BE2974A007C79C6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF5B681BE2974A007C79C6 /* ProfileViewController.swift */; };
+		16BF5B6F1BE2BE77007C79C6 /* HealthClientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF5B6E1BE2BE77007C79C6 /* HealthClientType.swift */; };
+		16BF5B711BE2C989007C79C6 /* ProfileStaticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF5B701BE2C989007C79C6 /* ProfileStaticTableViewCell.swift */; };
+		86CCDFF61C1B50970042AA39 /* ResearchContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CCDFF51C1B50970042AA39 /* ResearchContainerViewController.swift */; };
+		B5BC85FA1BF1405900B0CFA5 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161479C51BD6CE8F0099A068 /* OnboardingViewController.swift */; };
+		B5BC85FD1BF1408500B0CFA5 /* HealthDataStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168F25711BE052AD001D2D65 /* HealthDataStepViewController.swift */; };
+		B5C2073F1BEC16F00051D9D8 /* ResearchContainerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C2073E1BEC16F00051D9D8 /* ResearchContainerSegue.swift */; };
+		B5C207421BECBA8B0051D9D8 /* WithdrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C207411BECBA8B0051D9D8 /* WithdrawViewController.swift */; };
+		B5C207501BECCB1A0051D9D8 /* AnimatableChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C2074F1BECCB1A0051D9D8 /* AnimatableChart.swift */; };
+		B5C207561BECED750051D9D8 /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C207551BECED750051D9D8 /* ConsentDocument.swift */; };
+		B5C366B41BE7ADBA0036112D /* DashboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C366B31BE7ADBA0036112D /* DashboardTableViewController.swift */; };
+		B5D117581BE8D12000D7F153 /* PieChartDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D117571BE8D12000D7F153 /* PieChartDataSource.swift */; };
+		B5D1175C1BE8D15400D7F153 /* DiscreteGraphDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1175B1BE8D15400D7F153 /* DiscreteGraphDataSource.swift */; };
+		B5D1175E1BE8D17E00D7F153 /* LineGraphDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1175D1BE8D17E00D7F153 /* LineGraphDataSource.swift */; };
+		B5D35FC71BEA363F004CBB06 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D35FC61BEA363F004CBB06 /* ProfileHeaderView.swift */; };
+		B5D35FC91BEA48D3004CBB06 /* HKHealthStore+Queries.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D35FC81BEA48D3004CBB06 /* HKHealthStore+Queries.swift */; };
+		B5FA92E91BF13D98001E46C0 /* HealthDataStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA92E81BF13D98001E46C0 /* HealthDataStep.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EAA72C1E24A3DF8600D345B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA72C1824A3DF8500D345B5 /* CareKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8605A5BA1C4F04EC00DD65FF;
+			remoteInfo = CareKit;
+		};
+		EAA72C2024A3DF8600D345B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA72C1824A3DF8500D345B5 /* CareKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8605A5C41C4F04EC00DD65FF;
+			remoteInfo = CareKitTests;
+		};
+		EAA72C2824A3DF9F00D345B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA72C2224A3DF9E00D345B5 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B183A5951A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		EAA72C2A24A3DF9F00D345B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA72C2224A3DF9E00D345B5 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
+			remoteInfo = ResearchKitTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BC2A3CDF1C58F1DB00DA64B7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		042E2BFE1E9F46B000961299 /* backbook.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = backbook.pdf; path = Pictures/backbook.pdf; sourceTree = "<group>"; };
+		042E2C011E9F489700961299 /* meditate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = meditate.jpg; path = Pictures/meditate.jpg; sourceTree = "<group>"; };
+		042E2C0C1EA0867800961299 /* SixMinuteWalk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SixMinuteWalk.swift; path = OCKSample/SixMinuteWalk.swift; sourceTree = "<group>"; };
+		04FC643E1EA29A2F007DC617 /* Sleep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sleep.swift; path = OCKSample/Sleep.swift; sourceTree = "<group>"; };
+		04FC64421EA2C0A0007DC617 /* VoiceAnalysis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VoiceAnalysis.swift; path = OCKSample/VoiceAnalysis.swift; sourceTree = "<group>"; };
+		04FC646F1EA2C777007DC617 /* BackRangeOfMotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackRangeOfMotion.swift; path = OCKSample/BackRangeOfMotion.swift; sourceTree = "<group>"; };
+		04FC64711EA2CA89007DC617 /* Journaling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Journaling.swift; sourceTree = "<group>"; };
+		04FC64731EA321BC007DC617 /* StartBackSurvey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartBackSurvey.swift; sourceTree = "<group>"; };
+		070BA5A31FCF734800B38879 /* innerthighstretch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = innerthighstretch.jpg; sourceTree = "<group>"; };
+		070BA5A41FCF734800B38879 /* hamstringstretch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hamstringstretch.jpg; sourceTree = "<group>"; };
+		070BA5A51FCF734800B38879 /* pressup.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pressup.jpg; sourceTree = "<group>"; };
+		070BA5A61FCF734800B38879 /* sidebridge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sidebridge.jpg; sourceTree = "<group>"; };
+		070BA5AB1FCF734800B38879 /* frontalcorestretch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = frontalcorestretch.jpg; sourceTree = "<group>"; };
+		070BA5AC1FCF734800B38879 /* abdominalcrunch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = abdominalcrunch.jpg; sourceTree = "<group>"; };
+		070BA5AE1FCF734800B38879 /* sagittalcore2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sagittalcore2.jpg; sourceTree = "<group>"; };
+		070BA5AF1FCF734800B38879 /* abdominalexercise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = abdominalexercise.jpg; sourceTree = "<group>"; };
+		070BA5B21FCF734800B38879 /* sagittalcore1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sagittalcore1.jpg; sourceTree = "<group>"; };
+		070BA5B41FCF734800B38879 /* transversecore2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = transversecore2.jpg; sourceTree = "<group>"; };
+		070BA5B71FCF734800B38879 /* doorwaycheststretch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = doorwaycheststretch.jpg; sourceTree = "<group>"; };
+		070BA5B81FCF734800B38879 /* transversecore1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = transversecore1.jpg; sourceTree = "<group>"; };
+		070BA5B91FCF734800B38879 /* neckpress2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = neckpress2.jpg; sourceTree = "<group>"; };
+		070BA5BA1FCF734800B38879 /* wallwash1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wallwash1.jpg; sourceTree = "<group>"; };
+		070BA5BB1FCF734800B38879 /* neckpress3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = neckpress3.jpg; sourceTree = "<group>"; };
+		070BA5BD1FCF734800B38879 /* brace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brace.png; sourceTree = "<group>"; };
+		070BA5BE1FCF734800B38879 /* neckpress1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = neckpress1.jpg; sourceTree = "<group>"; };
+		070BA5BF1FCF734800B38879 /* wallwash2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wallwash2.jpg; sourceTree = "<group>"; };
+		070BA5C01FCF734800B38879 /* plank.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = plank.jpg; sourceTree = "<group>"; };
+		070BA5C11FCF734800B38879 /* standingthreadtheneedle1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = standingthreadtheneedle1.jpg; sourceTree = "<group>"; };
+		070BA5C21FCF734800B38879 /* standingthreadtheneedle2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = standingthreadtheneedle2.jpg; sourceTree = "<group>"; };
+		070BA5C31FCF734800B38879 /* backbend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backbend.png; sourceTree = "<group>"; };
+		070BA5EB1FCF7C3D00B38879 /* wallwash_combined.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wallwash_combined.jpg; sourceTree = "<group>"; };
+		070BA5EC1FCF7C3E00B38879 /* sagittalcore_combined.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sagittalcore_combined.jpg; sourceTree = "<group>"; };
+		070BA5ED1FCF7C3F00B38879 /* transversecore_combined.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = transversecore_combined.jpg; sourceTree = "<group>"; };
+		070BA5EE1FCF7C4000B38879 /* standingthreadtheneedle_combined.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = standingthreadtheneedle_combined.jpg; sourceTree = "<group>"; };
+		070BA5F31FD153CD00B38879 /* NassVideo1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NassVideo1.swift; path = OCKSample/NassVideo1.swift; sourceTree = "<group>"; };
+		070BA5F71FD154C900B38879 /* nass9.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = nass9.mp4; sourceTree = "<group>"; };
+		070BA5F81FD154C900B38879 /* nass3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = nass3.mp4; sourceTree = "<group>"; };
+		070BA5F91FD154CA00B38879 /* nass2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = nass2.mp4; sourceTree = "<group>"; };
+		070BA5FA1FD154CA00B38879 /* nass4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = nass4.mp4; sourceTree = "<group>"; };
+		070BA5FB1FD154CB00B38879 /* nass5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = nass5.mp4; sourceTree = "<group>"; };
+		070BA5FC1FD154CB00B38879 /* nass6.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = nass6.mp4; sourceTree = "<group>"; };
+		070BA5FD1FD154CC00B38879 /* nass1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = nass1.mp4; sourceTree = "<group>"; };
+		070BA5FE1FD154CC00B38879 /* nass8.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = nass8.mp4; sourceTree = "<group>"; };
+		070BA5FF1FD154CF00B38879 /* nass7.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = nass7.mp4; sourceTree = "<group>"; };
+		070BA6091FD2102800B38879 /* NassVideo7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NassVideo7.swift; path = OCKSample/NassVideo7.swift; sourceTree = "<group>"; };
+		070BA60A1FD2102800B38879 /* NassVideo3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NassVideo3.swift; path = OCKSample/NassVideo3.swift; sourceTree = "<group>"; };
+		070BA60B1FD2102900B38879 /* NassVideo4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NassVideo4.swift; path = OCKSample/NassVideo4.swift; sourceTree = "<group>"; };
+		070BA60C1FD2102900B38879 /* NassVideo5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NassVideo5.swift; path = OCKSample/NassVideo5.swift; sourceTree = "<group>"; };
+		070BA60D1FD2102900B38879 /* NassVideo2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NassVideo2.swift; path = OCKSample/NassVideo2.swift; sourceTree = "<group>"; };
+		070BA60E1FD2102A00B38879 /* NassVideo8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NassVideo8.swift; path = OCKSample/NassVideo8.swift; sourceTree = "<group>"; };
+		070BA60F1FD2102A00B38879 /* NassVideo9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NassVideo9.swift; path = OCKSample/NassVideo9.swift; sourceTree = "<group>"; };
+		070BA6101FD2102A00B38879 /* NassVideo6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NassVideo6.swift; path = OCKSample/NassVideo6.swift; sourceTree = "<group>"; };
+		070BA6191FD2140000B38879 /* LearnVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LearnVideoViewController.swift; path = ORKSample/LearnVideoViewController.swift; sourceTree = "<group>"; };
+		070E22521EA40DAC0087759C /* CKLineGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CKLineGraph.swift; path = ORKSample/CKLineGraph.swift; sourceTree = "<group>"; };
+		070F16FA1FE2678F00C9A09B /* BackFacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BackFacts.swift; path = OCKSample/BackFacts.swift; sourceTree = "<group>"; };
+		070F17001FE276F400C9A09B /* CausesOfBackPain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CausesOfBackPain.swift; path = OCKSample/CausesOfBackPain.swift; sourceTree = "<group>"; };
+		071F104F1FBCFFC700EFFA89 /* PressUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PressUp.swift; path = OCKSample/PressUp.swift; sourceTree = "<group>"; };
+		0725EAC921E57FFD00861C3B /* Legal.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Legal.html; sourceTree = "<group>"; };
+		0733F1872348058600209212 /* RNCryptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNCryptor.swift; sourceTree = "<group>"; };
+		07466C041FE1B75000CB9871 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageScrollView.swift; path = ORKSample/ImageScrollView.swift; sourceTree = "<group>"; };
+		07466C0A1FE1B9E700CB9871 /* iceheat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iceheat.png; sourceTree = "<group>"; };
+		07466C0C1FE1D37300CB9871 /* IceHeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IceHeat.swift; path = OCKSample/IceHeat.swift; sourceTree = "<group>"; };
+		07466C0E1FE1DE3000CB9871 /* exercisetype.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exercisetype.png; sourceTree = "<group>"; };
+		07466C0F1FE1DE3000CB9871 /* layflat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = layflat.png; sourceTree = "<group>"; };
+		07466C121FE1DF0A00CB9871 /* LayFlat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LayFlat.swift; path = OCKSample/LayFlat.swift; sourceTree = "<group>"; };
+		07466C141FE1DFCF00CB9871 /* ExerciseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExerciseType.swift; path = ORKSample/ExerciseType.swift; sourceTree = "<group>"; };
+		074DF897208557F600A4C959 /* CustomIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomIntroViewController.swift; path = ORKSample/CustomIntroViewController.swift; sourceTree = "<group>"; };
+		0755B4AF1FD511430078A8F7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		07709A44209502AB0018FCCF /* ODISurvey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ODISurvey.swift; path = OCKSample/ODISurvey.swift; sourceTree = "<group>"; };
+		07709A4A20950C4A0018FCCF /* consent.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = consent.html; sourceTree = "<group>"; };
+		079234E1205F488C00E54509 /* guidelines.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guidelines.html; sourceTree = "<group>"; };
+		079234E6205F488C00E54509 /* physicalactivity.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = physicalactivity.html; sourceTree = "<group>"; };
+		079498E01E81024100071726 /* ASVerificationStepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ASVerificationStepViewController.swift; path = ORKSample/ASVerificationStepViewController.swift; sourceTree = "<group>"; };
+		07951D3B1E9AC9D5005CE00E /* 00_Blank_to_Activities@2x.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "00_Blank_to_Activities@2x.m4v"; sourceTree = "<group>"; };
+		07951D3C1E9AC9D5005CE00E /* 01_Activities_to_SensorData@2x.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "01_Activities_to_SensorData@2x.m4v"; sourceTree = "<group>"; };
+		07951D3D1E9AC9D5005CE00E /* 02_SensorData_to_DataGathering@2x.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "02_SensorData_to_DataGathering@2x.m4v"; sourceTree = "<group>"; };
+		07951D3E1E9AC9D5005CE00E /* 10_PotentialBenifits@2x.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "10_PotentialBenifits@2x.m4v"; sourceTree = "<group>"; };
+		07951D3F1E9AC9D5005CE00E /* 11_IssuesToConsider1@2x.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "11_IssuesToConsider1@2x.m4v"; sourceTree = "<group>"; };
+		07951D401E9AC9D5005CE00E /* 12_IssuesToConside2@2x.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "12_IssuesToConside2@2x.m4v"; sourceTree = "<group>"; };
+		07951D411E9AC9D5005CE00E /* 13_RiskToPrivacy@2x.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "13_RiskToPrivacy@2x.m4v"; sourceTree = "<group>"; };
+		07951D431E9AC9D5005CE00E /* 00_Blank_to_Activities@3x.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "00_Blank_to_Activities@3x.m4v"; sourceTree = "<group>"; };
+		07951D441E9AC9D5005CE00E /* 01_Activities_to_SensorData@3x.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "01_Activities_to_SensorData@3x.m4v"; sourceTree = "<group>"; };
+		07951D451E9AC9D5005CE00E /* 02_SensorData_to_DataGathering@3x.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "02_SensorData_to_DataGathering@3x.m4v"; sourceTree = "<group>"; };
+		07951D461E9AC9D5005CE00E /* 10_PotentialBenifits@3x.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "10_PotentialBenifits@3x.m4v"; sourceTree = "<group>"; };
+		07951D471E9AC9D5005CE00E /* 11_IssuesToConsider1@3x.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "11_IssuesToConsider1@3x.m4v"; sourceTree = "<group>"; };
+		07951D481E9AC9D5005CE00E /* 12_IssuesToConside2@3x.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "12_IssuesToConside2@3x.m4v"; sourceTree = "<group>"; };
+		07951D491E9AC9D5005CE00E /* 13_RiskToPrivacy@3x.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "13_RiskToPrivacy@3x.m4v"; sourceTree = "<group>"; };
+		07951D4A1E9AC9D5005CE00E /* Intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Intro.mp4; sourceTree = "<group>"; };
+		07951D5B1E9ACA37005CE00E /* 10study_task.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = 10study_task.html; sourceTree = "<group>"; };
+		07951D5C1E9ACA37005CE00E /* 11withdrawing.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = 11withdrawing.html; sourceTree = "<group>"; };
+		07951D5D1E9ACA37005CE00E /* 12potentialbenefits1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = 12potentialbenefits1.html; sourceTree = "<group>"; };
+		07951D5E1E9ACA37005CE00E /* 13issues_survey.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = 13issues_survey.html; sourceTree = "<group>"; };
+		07951D5F1E9ACA37005CE00E /* 14issues_mood.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = 14issues_mood.html; sourceTree = "<group>"; };
+		07951D601E9ACA37005CE00E /* 15privacy_risk.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = 15privacy_risk.html; sourceTree = "<group>"; };
+		07951D611E9ACA37005CE00E /* 15sharing_rsch.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = 15sharing_rsch.html; sourceTree = "<group>"; };
+		07951D621E9ACA37005CE00E /* 1welcome.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = 1welcome.html; sourceTree = "<group>"; };
+		07951D631E9ACA37005CE00E /* 23andme.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = 23andme.html; sourceTree = "<group>"; };
+		07951D641E9ACA37005CE00E /* 2quiz_headsup.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = 2quiz_headsup.html; sourceTree = "<group>"; };
+		07951D651E9ACA37005CE00E /* 3activities.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = 3activities.html; sourceTree = "<group>"; };
+		07951D661E9ACA37005CE00E /* 4sensordata.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = 4sensordata.html; sourceTree = "<group>"; };
+		07951D671E9ACA37005CE00E /* 5dataprocessing.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = 5dataprocessing.html; sourceTree = "<group>"; };
+		07951D681E9ACA37005CE00E /* 6protectingdata.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = 6protectingdata.html; sourceTree = "<group>"; };
+		07951D691E9ACA37005CE00E /* 7datause.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = 7datause.html; sourceTree = "<group>"; };
+		07951D6A1E9ACA37005CE00E /* 8time.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = 8time.html; sourceTree = "<group>"; };
+		07951D6B1E9ACA37005CE00E /* 9study_survey.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = 9study_survey.html; sourceTree = "<group>"; };
+		07951D6C1E9ACA37005CE00E /* AboutStudy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = AboutStudy.html; sourceTree = "<group>"; };
+		07951D6D1E9ACA37005CE00E /* AboutStudy_intro.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = AboutStudy_intro.html; sourceTree = "<group>"; };
+		07951D6E1E9ACA37005CE00E /* asthma_overview.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = asthma_overview.html; sourceTree = "<group>"; };
+		07951D6F1E9ACA37005CE00E /* cardio_fullconsent.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cardio_fullconsent.html; sourceTree = "<group>"; };
+		07951D701E9ACA37005CE00E /* coaching.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = coaching.html; sourceTree = "<group>"; };
+		07951D711E9ACA37005CE00E /* disease_information.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = disease_information.html; sourceTree = "<group>"; };
+		07951D721E9ACA37005CE00E /* disease_information_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disease_information_top.png; sourceTree = "<group>"; };
+		07951D731E9ACA37005CE00E /* EligibleToParticipate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = EligibleToParticipate.html; sourceTree = "<group>"; };
+		07951D741E9ACA37005CE00E /* EligibleToParticipate_intro.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = EligibleToParticipate_intro.html; sourceTree = "<group>"; };
+		07951D751E9ACA37005CE00E /* howstudyworks.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = howstudyworks.html; sourceTree = "<group>"; };
+		07951D761E9ACA37005CE00E /* howstudyworks_intro.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = howstudyworks_intro.html; sourceTree = "<group>"; };
+		07951D771E9ACA37005CE00E /* institution.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = institution.png; sourceTree = "<group>"; };
+		07951D781E9ACA37005CE00E /* Intro_section_cardio.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = Intro_section_cardio.css; sourceTree = "<group>"; };
+		07951D791E9ACA37005CE00E /* Learn_section_cardio.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = Learn_section_cardio.css; sourceTree = "<group>"; };
+		07951D7A1E9ACA37005CE00E /* online_resources.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = online_resources.html; sourceTree = "<group>"; };
+		07951D7B1E9ACA37005CE00E /* online_resources_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = online_resources_top.png; sourceTree = "<group>"; };
+		07951D7C1E9ACA37005CE00E /* PrivacyPolicy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = PrivacyPolicy.html; sourceTree = "<group>"; };
+		07951D7D1E9ACA37005CE00E /* symptoms.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = symptoms.html; sourceTree = "<group>"; };
+		07951D7E1E9ACA37005CE00E /* treatment.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = treatment.html; sourceTree = "<group>"; };
+		07951D7F1E9ACA37005CE00E /* whoisrunning.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = whoisrunning.html; sourceTree = "<group>"; };
+		07A3B51B22B97ABE00AD872B /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		07CE9F1C1E7F23B10070659E /* LearnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LearnViewController.swift; path = ORKSample/LearnViewController.swift; sourceTree = "<group>"; };
+		07CE9F1E1E7F24D40070659E /* LearnStaticTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LearnStaticTableViewCell.swift; path = ORKSample/LearnStaticTableViewCell.swift; sourceTree = "<group>"; };
+		07DBAA8C1E9CA49F00FC3F36 /* BuildInsightsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuildInsightsOperation.swift; path = OCKSample/BuildInsightsOperation.swift; sourceTree = "<group>"; };
+		07DBAA8D1E9CA49F00FC3F36 /* CarePlanStoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarePlanStoreManager.swift; path = OCKSample/CarePlanStoreManager.swift; sourceTree = "<group>"; };
+		07DBAA8E1E9CA49F00FC3F36 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = OCKSample/Colors.swift; sourceTree = "<group>"; };
+		07DBAA8F1E9CA49F00FC3F36 /* NSCalendar+Dates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSCalendar+Dates.swift"; path = "OCKSample/NSCalendar+Dates.swift"; sourceTree = "<group>"; };
+		07DBAA901E9CA49F00FC3F36 /* OCKInsightItem+EmptyMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "OCKInsightItem+EmptyMessage.swift"; path = "OCKSample/OCKInsightItem+EmptyMessage.swift"; sourceTree = "<group>"; };
+		07DBAA911E9CA49F00FC3F36 /* QueryActivityEventsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QueryActivityEventsOperation.swift; path = OCKSample/QueryActivityEventsOperation.swift; sourceTree = "<group>"; };
+		07DBAA9A1E9CA51300FC3F36 /* InsightsBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InsightsBuilder.swift; path = OCKSample/InsightsBuilder.swift; sourceTree = "<group>"; };
+		07DBAA9C1E9CA57600FC3F36 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Activity.swift; path = OCKSample/Activity.swift; sourceTree = "<group>"; };
+		07DBAA9D1E9CA57600FC3F36 /* BackPain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackPain.swift; path = OCKSample/BackPain.swift; sourceTree = "<group>"; };
+		07DBAAA71E9CA88200FC3F36 /* ExcerciseMinutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExcerciseMinutes.swift; path = OCKSample/ExcerciseMinutes.swift; sourceTree = "<group>"; };
+		07DBAAA81E9CA88200FC3F36 /* HealthSampleBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthSampleBuilder.swift; path = OCKSample/HealthSampleBuilder.swift; sourceTree = "<group>"; };
+		07DBAAA91E9CA88200FC3F36 /* Mood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mood.swift; path = OCKSample/Mood.swift; sourceTree = "<group>"; };
+		07DBAAAA1E9CA88200FC3F36 /* Weight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Weight.swift; path = OCKSample/Weight.swift; sourceTree = "<group>"; };
+		07DBAAAF1E9CA89700FC3F36 /* Assessment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Assessment.swift; path = OCKSample/Assessment.swift; sourceTree = "<group>"; };
+		07DBAAB31E9CCE9400FC3F36 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SampleData.swift; path = OCKSample/SampleData.swift; sourceTree = "<group>"; };
+		07DC54D22094FFEE002B1219 /* StanfordSpineKeeperIntro.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = StanfordSpineKeeperIntro.mov; sourceTree = "<group>"; };
+		07E05A5E1FBD2C16002A54C3 /* Breathe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Breathe.swift; path = OCKSample/Breathe.swift; sourceTree = "<group>"; };
+		07E05A661FCDE8D5002A54C3 /* Brace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Brace.swift; path = OCKSample/Brace.swift; sourceTree = "<group>"; };
+		07E05A681FCDEB2E002A54C3 /* WallWash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WallWash.swift; path = OCKSample/WallWash.swift; sourceTree = "<group>"; };
+		07E05A6A1FCDEDDA002A54C3 /* DoorwayChestStretch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DoorwayChestStretch.swift; path = OCKSample/DoorwayChestStretch.swift; sourceTree = "<group>"; };
+		07E05A6C1FCF5BF5002A54C3 /* BackwardBending.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackwardBending.swift; path = OCKSample/BackwardBending.swift; sourceTree = "<group>"; };
+		07E05A6E1FCF5C62002A54C3 /* StandingThreadTheNeedle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StandingThreadTheNeedle.swift; path = OCKSample/StandingThreadTheNeedle.swift; sourceTree = "<group>"; };
+		07E05A6F1FCF5C62002A54C3 /* FrontalCoreStretch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FrontalCoreStretch.swift; path = OCKSample/FrontalCoreStretch.swift; sourceTree = "<group>"; };
+		07E05A701FCF5C62002A54C3 /* InnerThighStretch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InnerThighStretch.swift; path = OCKSample/InnerThighStretch.swift; sourceTree = "<group>"; };
+		07E05A711FCF5C62002A54C3 /* HamstringStretch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HamstringStretch.swift; path = OCKSample/HamstringStretch.swift; sourceTree = "<group>"; };
+		07E4224D2096F2EA00D444D7 /* temp.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = temp.gpx; path = ../../../../../../Downloads/temp.gpx; sourceTree = "<group>"; };
+		07E7733E20589A9B00C5D237 /* Dealing1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Dealing1.swift; path = OCKSample/Dealing1.swift; sourceTree = "<group>"; };
+		07E7734020589B9D00C5D237 /* dealing2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = dealing2.html; sourceTree = "<group>"; };
+		07E7734120589B9D00C5D237 /* dealing3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = dealing3.html; sourceTree = "<group>"; };
+		07E7734220589B9E00C5D237 /* dealing1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = dealing1.html; sourceTree = "<group>"; };
+		07E7734320589B9E00C5D237 /* backfacts.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = backfacts.html; sourceTree = "<group>"; };
+		07E7734420589B9E00C5D237 /* causesofbackpain.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = causesofbackpain.html; sourceTree = "<group>"; };
+		07E7734A20589BE600C5D237 /* Dealing2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Dealing2.swift; path = OCKSample/Dealing2.swift; sourceTree = "<group>"; };
+		07E7734C20589C3200C5D237 /* Dealing3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Dealing3.swift; path = OCKSample/Dealing3.swift; sourceTree = "<group>"; };
+		07E7734E20589D7F00C5D237 /* ChronicPain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChronicPain.swift; path = OCKSample/ChronicPain.swift; sourceTree = "<group>"; };
+		07E7735020589F1B00C5D237 /* StayingActive1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StayingActive1.swift; path = OCKSample/StayingActive1.swift; sourceTree = "<group>"; };
+		07E7735220589F8E00C5D237 /* StayingActive2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StayingActive2.swift; path = OCKSample/StayingActive2.swift; sourceTree = "<group>"; };
+		07E773542058A78E00C5D237 /* Sleep1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Sleep1.swift; path = OCKSample/Sleep1.swift; sourceTree = "<group>"; };
+		07E773562058A80600C5D237 /* Sleep2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Sleep2.swift; path = OCKSample/Sleep2.swift; sourceTree = "<group>"; };
+		07E773582058DA1300C5D237 /* Myth6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Myth6.swift; path = OCKSample/Myth6.swift; sourceTree = "<group>"; };
+		07E773592058DA1400C5D237 /* Myth4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Myth4.swift; path = OCKSample/Myth4.swift; sourceTree = "<group>"; };
+		07E7735A2058DA1400C5D237 /* Myth7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Myth7.swift; path = OCKSample/Myth7.swift; sourceTree = "<group>"; };
+		07E7735B2058DA1500C5D237 /* Myth8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Myth8.swift; path = OCKSample/Myth8.swift; sourceTree = "<group>"; };
+		07E7735C2058DA1600C5D237 /* Myth1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Myth1.swift; path = OCKSample/Myth1.swift; sourceTree = "<group>"; };
+		07E7735D2058DA1600C5D237 /* Myth9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Myth9.swift; path = OCKSample/Myth9.swift; sourceTree = "<group>"; };
+		07E7735E2058DA1700C5D237 /* Myth3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Myth3.swift; path = OCKSample/Myth3.swift; sourceTree = "<group>"; };
+		07E7735F2058DA1800C5D237 /* Myth2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Myth2.swift; path = OCKSample/Myth2.swift; sourceTree = "<group>"; };
+		07E773602058DA1800C5D237 /* Myth10.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Myth10.swift; path = OCKSample/Myth10.swift; sourceTree = "<group>"; };
+		07E773612058DA1900C5D237 /* Myth5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Myth5.swift; path = OCKSample/Myth5.swift; sourceTree = "<group>"; };
+		07E7736C2058DD1900C5D237 /* Coping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Coping.swift; path = OCKSample/Coping.swift; sourceTree = "<group>"; };
+		07E7736E2058DFA900C5D237 /* CopingRefresher1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CopingRefresher1.swift; path = OCKSample/CopingRefresher1.swift; sourceTree = "<group>"; };
+		07E773702058E00A00C5D237 /* CopingRefresher2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CopingRefresher2.swift; path = OCKSample/CopingRefresher2.swift; sourceTree = "<group>"; };
+		07E773722058E05B00C5D237 /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Diary.swift; path = OCKSample/Diary.swift; sourceTree = "<group>"; };
+		07E773742058E30500C5D237 /* SummaryFacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SummaryFacts.swift; path = OCKSample/SummaryFacts.swift; sourceTree = "<group>"; };
+		07E773762058E92D00C5D237 /* sleep2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sleep2.html; sourceTree = "<group>"; };
+		07E773772058E92D00C5D237 /* myth2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = myth2.html; sourceTree = "<group>"; };
+		07E773782058E92D00C5D237 /* myth9.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = myth9.html; sourceTree = "<group>"; };
+		07E773792058E92D00C5D237 /* coping.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = coping.html; sourceTree = "<group>"; };
+		07E7737A2058E92E00C5D237 /* copingrefresher1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = copingrefresher1.html; sourceTree = "<group>"; };
+		07E7737B2058E92E00C5D237 /* myth6.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = myth6.html; sourceTree = "<group>"; };
+		07E7737C2058E92E00C5D237 /* myth8.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = myth8.html; sourceTree = "<group>"; };
+		07E7737D2058E92E00C5D237 /* myth7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = myth7.html; sourceTree = "<group>"; };
+		07E7737E2058E92F00C5D237 /* myth10.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = myth10.html; sourceTree = "<group>"; };
+		07E7737F2058E92F00C5D237 /* copingrefresher2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = copingrefresher2.html; sourceTree = "<group>"; };
+		07E773802058E92F00C5D237 /* myth3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = myth3.html; sourceTree = "<group>"; };
+		07E773812058E92F00C5D237 /* sleep1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sleep1.html; sourceTree = "<group>"; };
+		07E773822058E93000C5D237 /* stayingactive1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = stayingactive1.html; sourceTree = "<group>"; };
+		07E773832058E93000C5D237 /* stayingactive2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = stayingactive2.html; sourceTree = "<group>"; };
+		07E773842058E93000C5D237 /* myth4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = myth4.html; sourceTree = "<group>"; };
+		07E773852058E93000C5D237 /* summaryfacts.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = summaryfacts.html; sourceTree = "<group>"; };
+		07E773862058E93000C5D237 /* myth5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = myth5.html; sourceTree = "<group>"; };
+		07E773872058E93100C5D237 /* myth1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = myth1.html; sourceTree = "<group>"; };
+		07E773882058E93100C5D237 /* chronicpain.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = chronicpain.html; sourceTree = "<group>"; };
+		07E7739C2058EAEF00C5D237 /* TransverseCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TransverseCore.swift; path = OCKSample/TransverseCore.swift; sourceTree = "<group>"; };
+		07E7739E2058F07200C5D237 /* SagittalCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SagittalCore.swift; path = OCKSample/SagittalCore.swift; sourceTree = "<group>"; };
+		07E773A02058F15D00C5D237 /* AbdominalCrunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AbdominalCrunch.swift; path = OCKSample/AbdominalCrunch.swift; sourceTree = "<group>"; };
+		07E773A22058F25800C5D237 /* AbdominalExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AbdominalExercise.swift; path = OCKSample/AbdominalExercise.swift; sourceTree = "<group>"; };
+		07E773A4205909EB00C5D237 /* NeckPress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NeckPress.swift; path = OCKSample/NeckPress.swift; sourceTree = "<group>"; };
+		07E773A620590DB300C5D237 /* neck_combined.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = neck_combined.jpg; sourceTree = "<group>"; };
+		07E773A820590E7B00C5D237 /* SideBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SideBridge.swift; path = OCKSample/SideBridge.swift; sourceTree = "<group>"; };
+		07E773AA20590F1F00C5D237 /* Plank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Plank.swift; path = OCKSample/Plank.swift; sourceTree = "<group>"; };
+		07E773AC2059126C00C5D237 /* PhysicalActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhysicalActivity.swift; path = OCKSample/PhysicalActivity.swift; sourceTree = "<group>"; };
+		07E773AE2059130100C5D237 /* Guidelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Guidelines.swift; path = OCKSample/Guidelines.swift; sourceTree = "<group>"; };
+		07E9EA821E76966F0030F5E5 /* ORKSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ORKSample-Bridging-Header.h"; sourceTree = "<group>"; };
+		161479C01BD6CE8F0099A068 /* ORKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ORKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		161479C31BD6CE8F0099A068 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ORKSample/AppDelegate.swift; sourceTree = "<group>"; };
+		161479C51BD6CE8F0099A068 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingViewController.swift; path = ORKSample/OnboardingViewController.swift; sourceTree = "<group>"; };
+		161479C81BD6CE8F0099A068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		161479CA1BD6CE8F0099A068 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ORKSample/Assets.xcassets; sourceTree = "<group>"; };
+		161479CD1BD6CE8F0099A068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		161479CF1BD6CE8F0099A068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = ORKSample/Info.plist; sourceTree = "<group>"; };
+		16147A0E1BD83F700099A068 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityViewController.swift; path = ORKSample/ActivityViewController.swift; sourceTree = "<group>"; };
+		165A7E651BD99DBA00B6D223 /* StudyTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StudyTasks.swift; path = ORKSample/StudyTasks.swift; sourceTree = "<group>"; };
+		165A7E6D1BD9AEF800B6D223 /* IntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroductionViewController.swift; path = ORKSample/IntroductionViewController.swift; sourceTree = "<group>"; };
+		168F256F1BE03541001D2D65 /* ORKSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = ORKSample.entitlements; path = ORKSample/ORKSample.entitlements; sourceTree = "<group>"; };
+		168F25711BE052AD001D2D65 /* HealthDataStepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthDataStepViewController.swift; path = ORKSample/HealthDataStepViewController.swift; sourceTree = "<group>"; };
+		16BF5B681BE2974A007C79C6 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ORKSample/ProfileViewController.swift; sourceTree = "<group>"; };
+		16BF5B6E1BE2BE77007C79C6 /* HealthClientType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthClientType.swift; path = ORKSample/HealthClientType.swift; sourceTree = "<group>"; };
+		16BF5B701BE2C989007C79C6 /* ProfileStaticTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileStaticTableViewCell.swift; path = ORKSample/ProfileStaticTableViewCell.swift; sourceTree = "<group>"; };
+		86CCDFF51C1B50970042AA39 /* ResearchContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResearchContainerViewController.swift; path = ORKSample/ResearchContainerViewController.swift; sourceTree = SOURCE_ROOT; };
+		B5C2073E1BEC16F00051D9D8 /* ResearchContainerSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResearchContainerSegue.swift; path = ORKSample/ResearchContainerSegue.swift; sourceTree = "<group>"; };
+		B5C207411BECBA8B0051D9D8 /* WithdrawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WithdrawViewController.swift; path = ORKSample/WithdrawViewController.swift; sourceTree = "<group>"; };
+		B5C2074F1BECCB1A0051D9D8 /* AnimatableChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimatableChart.swift; path = ORKSample/AnimatableChart.swift; sourceTree = "<group>"; };
+		B5C207551BECED750051D9D8 /* ConsentDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConsentDocument.swift; path = ORKSample/ConsentDocument.swift; sourceTree = "<group>"; };
+		B5C366B31BE7ADBA0036112D /* DashboardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardTableViewController.swift; path = ORKSample/DashboardTableViewController.swift; sourceTree = "<group>"; };
+		B5D117571BE8D12000D7F153 /* PieChartDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PieChartDataSource.swift; path = ORKSample/PieChartDataSource.swift; sourceTree = "<group>"; };
+		B5D1175B1BE8D15400D7F153 /* DiscreteGraphDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiscreteGraphDataSource.swift; path = ORKSample/DiscreteGraphDataSource.swift; sourceTree = "<group>"; };
+		B5D1175D1BE8D17E00D7F153 /* LineGraphDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LineGraphDataSource.swift; path = ORKSample/LineGraphDataSource.swift; sourceTree = "<group>"; };
+		B5D35FC61BEA363F004CBB06 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileHeaderView.swift; path = ORKSample/ProfileHeaderView.swift; sourceTree = "<group>"; };
+		B5D35FC81BEA48D3004CBB06 /* HKHealthStore+Queries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "HKHealthStore+Queries.swift"; path = "ORKSample/HKHealthStore+Queries.swift"; sourceTree = "<group>"; };
+		B5FA92E81BF13D98001E46C0 /* HealthDataStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthDataStep.swift; path = ORKSample/HealthDataStep.swift; sourceTree = "<group>"; };
+		EAA72C1824A3DF8500D345B5 /* CareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKit.xcodeproj; path = ../../spinekeeper/apple/carekit/CareKit.xcodeproj; sourceTree = "<group>"; };
+		EAA72C2224A3DF9E00D345B5 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ../../spinekeeper/apple/researchkit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		161479BD1BD6CE8F0099A068 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A3B51C22B97ABE00AD872B /* HealthKit.framework in Frameworks */,
+				0755B4B01FD511430078A8F7 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		042E2BF31E9F2F8300961299 /* Pictures */ = {
+			isa = PBXGroup;
+			children = (
+				070BA5A21FCF734800B38879 /* activities */,
+				042E2C011E9F489700961299 /* meditate.jpg */,
+				042E2BFE1E9F46B000961299 /* backbook.pdf */,
+			);
+			name = Pictures;
+			sourceTree = "<group>";
+		};
+		070BA5A21FCF734800B38879 /* activities */ = {
+			isa = PBXGroup;
+			children = (
+				07466C0A1FE1B9E700CB9871 /* iceheat.png */,
+				07466C0E1FE1DE3000CB9871 /* exercisetype.png */,
+				07466C0F1FE1DE3000CB9871 /* layflat.png */,
+				070BA5A31FCF734800B38879 /* innerthighstretch.jpg */,
+				070BA5A41FCF734800B38879 /* hamstringstretch.jpg */,
+				070BA5A51FCF734800B38879 /* pressup.jpg */,
+				070BA5A61FCF734800B38879 /* sidebridge.jpg */,
+				070BA5AB1FCF734800B38879 /* frontalcorestretch.jpg */,
+				070BA5AC1FCF734800B38879 /* abdominalcrunch.jpg */,
+				070BA5EC1FCF7C3E00B38879 /* sagittalcore_combined.jpg */,
+				070BA5EE1FCF7C4000B38879 /* standingthreadtheneedle_combined.jpg */,
+				070BA5ED1FCF7C3F00B38879 /* transversecore_combined.jpg */,
+				070BA5EB1FCF7C3D00B38879 /* wallwash_combined.jpg */,
+				070BA5AE1FCF734800B38879 /* sagittalcore2.jpg */,
+				070BA5AF1FCF734800B38879 /* abdominalexercise.jpg */,
+				070BA5B21FCF734800B38879 /* sagittalcore1.jpg */,
+				070BA5B41FCF734800B38879 /* transversecore2.jpg */,
+				070BA5B71FCF734800B38879 /* doorwaycheststretch.jpg */,
+				070BA5B81FCF734800B38879 /* transversecore1.jpg */,
+				070BA5B91FCF734800B38879 /* neckpress2.jpg */,
+				07E773A620590DB300C5D237 /* neck_combined.jpg */,
+				070BA5BA1FCF734800B38879 /* wallwash1.jpg */,
+				070BA5BB1FCF734800B38879 /* neckpress3.jpg */,
+				070BA5BD1FCF734800B38879 /* brace.png */,
+				070BA5BE1FCF734800B38879 /* neckpress1.jpg */,
+				070BA5BF1FCF734800B38879 /* wallwash2.jpg */,
+				070BA5C01FCF734800B38879 /* plank.jpg */,
+				070BA5C11FCF734800B38879 /* standingthreadtheneedle1.jpg */,
+				070BA5C21FCF734800B38879 /* standingthreadtheneedle2.jpg */,
+				070BA5C31FCF734800B38879 /* backbend.png */,
+			);
+			path = activities;
+			sourceTree = "<group>";
+		};
+		070BA5F61FD1549C00B38879 /* NassVideos */ = {
+			isa = PBXGroup;
+			children = (
+				070BA5FD1FD154CC00B38879 /* nass1.mp4 */,
+				070BA5F91FD154CA00B38879 /* nass2.mp4 */,
+				070BA5F81FD154C900B38879 /* nass3.mp4 */,
+				070BA5FA1FD154CA00B38879 /* nass4.mp4 */,
+				070BA5FB1FD154CB00B38879 /* nass5.mp4 */,
+				070BA5FC1FD154CB00B38879 /* nass6.mp4 */,
+				070BA5FF1FD154CF00B38879 /* nass7.mp4 */,
+				070BA5FE1FD154CC00B38879 /* nass8.mp4 */,
+				070BA5F71FD154C900B38879 /* nass9.mp4 */,
+			);
+			path = NassVideos;
+			sourceTree = "<group>";
+		};
+		0733F1822348056000209212 /* RNCryptor */ = {
+			isa = PBXGroup;
+			children = (
+				0733F1872348058600209212 /* RNCryptor.swift */,
+			);
+			name = RNCryptor;
+			sourceTree = "<group>";
+		};
+		07951D381E9AC9D5005CE00E /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				07951D391E9AC9D5005CE00E /* Consent */,
+				07951D4A1E9AC9D5005CE00E /* Intro.mp4 */,
+				07DC54D22094FFEE002B1219 /* StanfordSpineKeeperIntro.mov */,
+				070BA5F61FD1549C00B38879 /* NassVideos */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		07951D391E9AC9D5005CE00E /* Consent */ = {
+			isa = PBXGroup;
+			children = (
+				07951D3A1E9AC9D5005CE00E /* 2x */,
+				07951D421E9AC9D5005CE00E /* 3x */,
+			);
+			path = Consent;
+			sourceTree = "<group>";
+		};
+		07951D3A1E9AC9D5005CE00E /* 2x */ = {
+			isa = PBXGroup;
+			children = (
+				07951D3B1E9AC9D5005CE00E /* 00_Blank_to_Activities@2x.m4v */,
+				07951D3C1E9AC9D5005CE00E /* 01_Activities_to_SensorData@2x.m4v */,
+				07951D3D1E9AC9D5005CE00E /* 02_SensorData_to_DataGathering@2x.m4v */,
+				07951D3E1E9AC9D5005CE00E /* 10_PotentialBenifits@2x.m4v */,
+				07951D3F1E9AC9D5005CE00E /* 11_IssuesToConsider1@2x.m4v */,
+				07951D401E9AC9D5005CE00E /* 12_IssuesToConside2@2x.m4v */,
+				07951D411E9AC9D5005CE00E /* 13_RiskToPrivacy@2x.m4v */,
+			);
+			path = 2x;
+			sourceTree = "<group>";
+		};
+		07951D421E9AC9D5005CE00E /* 3x */ = {
+			isa = PBXGroup;
+			children = (
+				07951D431E9AC9D5005CE00E /* 00_Blank_to_Activities@3x.m4v */,
+				07951D441E9AC9D5005CE00E /* 01_Activities_to_SensorData@3x.m4v */,
+				07951D451E9AC9D5005CE00E /* 02_SensorData_to_DataGathering@3x.m4v */,
+				07951D461E9AC9D5005CE00E /* 10_PotentialBenifits@3x.m4v */,
+				07951D471E9AC9D5005CE00E /* 11_IssuesToConsider1@3x.m4v */,
+				07951D481E9AC9D5005CE00E /* 12_IssuesToConside2@3x.m4v */,
+				07951D491E9AC9D5005CE00E /* 13_RiskToPrivacy@3x.m4v */,
+			);
+			path = 3x;
+			sourceTree = "<group>";
+		};
+		07951D5A1E9ACA37005CE00E /* HTMLContent */ = {
+			isa = PBXGroup;
+			children = (
+				07951D5B1E9ACA37005CE00E /* 10study_task.html */,
+				0725EAC921E57FFD00861C3B /* Legal.html */,
+				07709A4A20950C4A0018FCCF /* consent.html */,
+				07E773882058E93100C5D237 /* chronicpain.html */,
+				079234E1205F488C00E54509 /* guidelines.html */,
+				079234E6205F488C00E54509 /* physicalactivity.html */,
+				07E773792058E92D00C5D237 /* coping.html */,
+				07E7737A2058E92E00C5D237 /* copingrefresher1.html */,
+				07E7737F2058E92F00C5D237 /* copingrefresher2.html */,
+				07E773872058E93100C5D237 /* myth1.html */,
+				07E773772058E92D00C5D237 /* myth2.html */,
+				07E773802058E92F00C5D237 /* myth3.html */,
+				07E773842058E93000C5D237 /* myth4.html */,
+				07E773862058E93000C5D237 /* myth5.html */,
+				07E7737B2058E92E00C5D237 /* myth6.html */,
+				07E7737D2058E92E00C5D237 /* myth7.html */,
+				07E7737C2058E92E00C5D237 /* myth8.html */,
+				07E773782058E92D00C5D237 /* myth9.html */,
+				07E7737E2058E92F00C5D237 /* myth10.html */,
+				07E773812058E92F00C5D237 /* sleep1.html */,
+				07E773762058E92D00C5D237 /* sleep2.html */,
+				07E773822058E93000C5D237 /* stayingactive1.html */,
+				07E773832058E93000C5D237 /* stayingactive2.html */,
+				07E773852058E93000C5D237 /* summaryfacts.html */,
+				07951D5C1E9ACA37005CE00E /* 11withdrawing.html */,
+				07E7734320589B9E00C5D237 /* backfacts.html */,
+				07E7734420589B9E00C5D237 /* causesofbackpain.html */,
+				07E7734220589B9E00C5D237 /* dealing1.html */,
+				07E7734020589B9D00C5D237 /* dealing2.html */,
+				07E7734120589B9D00C5D237 /* dealing3.html */,
+				07951D5D1E9ACA37005CE00E /* 12potentialbenefits1.html */,
+				07951D5E1E9ACA37005CE00E /* 13issues_survey.html */,
+				07951D5F1E9ACA37005CE00E /* 14issues_mood.html */,
+				07951D601E9ACA37005CE00E /* 15privacy_risk.html */,
+				07951D611E9ACA37005CE00E /* 15sharing_rsch.html */,
+				07951D621E9ACA37005CE00E /* 1welcome.html */,
+				07951D631E9ACA37005CE00E /* 23andme.html */,
+				07951D641E9ACA37005CE00E /* 2quiz_headsup.html */,
+				07951D651E9ACA37005CE00E /* 3activities.html */,
+				07951D661E9ACA37005CE00E /* 4sensordata.html */,
+				07951D671E9ACA37005CE00E /* 5dataprocessing.html */,
+				07951D681E9ACA37005CE00E /* 6protectingdata.html */,
+				07951D691E9ACA37005CE00E /* 7datause.html */,
+				07951D6A1E9ACA37005CE00E /* 8time.html */,
+				07951D6B1E9ACA37005CE00E /* 9study_survey.html */,
+				07951D6C1E9ACA37005CE00E /* AboutStudy.html */,
+				07951D6D1E9ACA37005CE00E /* AboutStudy_intro.html */,
+				07951D6E1E9ACA37005CE00E /* asthma_overview.html */,
+				07951D6F1E9ACA37005CE00E /* cardio_fullconsent.html */,
+				07951D701E9ACA37005CE00E /* coaching.html */,
+				07951D711E9ACA37005CE00E /* disease_information.html */,
+				07951D721E9ACA37005CE00E /* disease_information_top.png */,
+				07951D731E9ACA37005CE00E /* EligibleToParticipate.html */,
+				07951D741E9ACA37005CE00E /* EligibleToParticipate_intro.html */,
+				07951D751E9ACA37005CE00E /* howstudyworks.html */,
+				07951D761E9ACA37005CE00E /* howstudyworks_intro.html */,
+				07951D771E9ACA37005CE00E /* institution.png */,
+				07951D781E9ACA37005CE00E /* Intro_section_cardio.css */,
+				07951D791E9ACA37005CE00E /* Learn_section_cardio.css */,
+				07951D7A1E9ACA37005CE00E /* online_resources.html */,
+				07951D7B1E9ACA37005CE00E /* online_resources_top.png */,
+				07951D7C1E9ACA37005CE00E /* PrivacyPolicy.html */,
+				07951D7D1E9ACA37005CE00E /* symptoms.html */,
+				07951D7E1E9ACA37005CE00E /* treatment.html */,
+				07951D7F1E9ACA37005CE00E /* whoisrunning.html */,
+			);
+			path = HTMLContent;
+			sourceTree = "<group>";
+		};
+		07CE9F1B1E7F21E50070659E /* Learn */ = {
+			isa = PBXGroup;
+			children = (
+				07CE9F1C1E7F23B10070659E /* LearnViewController.swift */,
+				070BA6191FD2140000B38879 /* LearnVideoViewController.swift */,
+				07CE9F1E1E7F24D40070659E /* LearnStaticTableViewCell.swift */,
+			);
+			name = Learn;
+			sourceTree = "<group>";
+		};
+		07DBAA981E9CA4B200FC3F36 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				07DBAA8F1E9CA49F00FC3F36 /* NSCalendar+Dates.swift */,
+				07DBAA901E9CA49F00FC3F36 /* OCKInsightItem+EmptyMessage.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		07DBAA991E9CA50500FC3F36 /* Insights */ = {
+			isa = PBXGroup;
+			children = (
+				07DBAA9A1E9CA51300FC3F36 /* InsightsBuilder.swift */,
+				07DBAA8C1E9CA49F00FC3F36 /* BuildInsightsOperation.swift */,
+				07DBAA911E9CA49F00FC3F36 /* QueryActivityEventsOperation.swift */,
+				070E22521EA40DAC0087759C /* CKLineGraph.swift */,
+			);
+			name = Insights;
+			sourceTree = "<group>";
+		};
+		07DBAAA01E9CA82700FC3F36 /* Assessments */ = {
+			isa = PBXGroup;
+			children = (
+				07DBAAAF1E9CA89700FC3F36 /* Assessment.swift */,
+				04FC64731EA321BC007DC617 /* StartBackSurvey.swift */,
+				07DBAA9D1E9CA57600FC3F36 /* BackPain.swift */,
+				07DBAAAA1E9CA88200FC3F36 /* Weight.swift */,
+				042E2C0C1EA0867800961299 /* SixMinuteWalk.swift */,
+				07709A44209502AB0018FCCF /* ODISurvey.swift */,
+				07DBAAA71E9CA88200FC3F36 /* ExcerciseMinutes.swift */,
+				04FC64421EA2C0A0007DC617 /* VoiceAnalysis.swift */,
+				04FC646F1EA2C777007DC617 /* BackRangeOfMotion.swift */,
+				04FC64711EA2CA89007DC617 /* Journaling.swift */,
+				07DBAAA91E9CA88200FC3F36 /* Mood.swift */,
+				04FC643E1EA29A2F007DC617 /* Sleep.swift */,
+				07DBAAA81E9CA88200FC3F36 /* HealthSampleBuilder.swift */,
+			);
+			name = Assessments;
+			sourceTree = "<group>";
+		};
+		161479B71BD6CE8F0099A068 = {
+			isa = PBXGroup;
+			children = (
+				07E4224D2096F2EA00D444D7 /* temp.gpx */,
+				BC2A3CA81C58E92600DA64B7 /* Frameworks */,
+				0733F1822348056000209212 /* RNCryptor */,
+				161479C21BD6CE8F0099A068 /* ORKSample */,
+				161479C11BD6CE8F0099A068 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		161479C11BD6CE8F0099A068 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				161479C01BD6CE8F0099A068 /* ORKSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		161479C21BD6CE8F0099A068 /* ORKSample */ = {
+			isa = PBXGroup;
+			children = (
+				07E9EA821E76966F0030F5E5 /* ORKSample-Bridging-Header.h */,
+				161479C31BD6CE8F0099A068 /* AppDelegate.swift */,
+				86CCDFF51C1B50970042AA39 /* ResearchContainerViewController.swift */,
+				B5C2073E1BEC16F00051D9D8 /* ResearchContainerSegue.swift */,
+				07DBAA8D1E9CA49F00FC3F36 /* CarePlanStoreManager.swift */,
+				07466C041FE1B75000CB9871 /* ImageScrollView.swift */,
+				07DBAAB31E9CCE9400FC3F36 /* SampleData.swift */,
+				07DBAA8E1E9CA49F00FC3F36 /* Colors.swift */,
+				16BF5B611BE29643007C79C6 /* Onboarding */,
+				16BF5B651BE29658007C79C6 /* Dashboard */,
+				16BF5B671BE29676007C79C6 /* Activities */,
+				07DBAAA01E9CA82700FC3F36 /* Assessments */,
+				07CE9F1B1E7F21E50070659E /* Learn */,
+				16BF5B641BE2964F007C79C6 /* Profile */,
+				B5C207401BECBA710051D9D8 /* Withdrawal */,
+				07DBAA981E9CA4B200FC3F36 /* Extensions */,
+				168F25701BE05281001D2D65 /* Steps */,
+				16BF5B6B1BE2BD1C007C79C6 /* Protocols */,
+				B5D35FC81BEA48D3004CBB06 /* HKHealthStore+Queries.swift */,
+				161479C71BD6CE8F0099A068 /* Main.storyboard */,
+				161479CC1BD6CE8F0099A068 /* LaunchScreen.storyboard */,
+				161479D51BD6CFB00099A068 /* Supporting Files */,
+			);
+			name = ORKSample;
+			sourceTree = "<group>";
+		};
+		161479D51BD6CFB00099A068 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				042E2BF31E9F2F8300961299 /* Pictures */,
+				07951D381E9AC9D5005CE00E /* Video */,
+				07951D5A1E9ACA37005CE00E /* HTMLContent */,
+				161479CA1BD6CE8F0099A068 /* Assets.xcassets */,
+				161479CF1BD6CE8F0099A068 /* Info.plist */,
+				168F256F1BE03541001D2D65 /* ORKSample.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		168F25701BE05281001D2D65 /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+				B5FA92E81BF13D98001E46C0 /* HealthDataStep.swift */,
+				168F25711BE052AD001D2D65 /* HealthDataStepViewController.swift */,
+			);
+			name = Steps;
+			sourceTree = "<group>";
+		};
+		16BF5B611BE29643007C79C6 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				161479C51BD6CE8F0099A068 /* OnboardingViewController.swift */,
+				074DF897208557F600A4C959 /* CustomIntroViewController.swift */,
+				165A7E6D1BD9AEF800B6D223 /* IntroductionViewController.swift */,
+				B5C207551BECED750051D9D8 /* ConsentDocument.swift */,
+				079498E01E81024100071726 /* ASVerificationStepViewController.swift */,
+			);
+			name = Onboarding;
+			sourceTree = "<group>";
+		};
+		16BF5B641BE2964F007C79C6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				16BF5B681BE2974A007C79C6 /* ProfileViewController.swift */,
+				16BF5B701BE2C989007C79C6 /* ProfileStaticTableViewCell.swift */,
+				B5D35FC61BEA363F004CBB06 /* ProfileHeaderView.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		16BF5B651BE29658007C79C6 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				07DBAA991E9CA50500FC3F36 /* Insights */,
+				B5C366B31BE7ADBA0036112D /* DashboardTableViewController.swift */,
+				B5D117571BE8D12000D7F153 /* PieChartDataSource.swift */,
+				B5D1175B1BE8D15400D7F153 /* DiscreteGraphDataSource.swift */,
+				B5D1175D1BE8D17E00D7F153 /* LineGraphDataSource.swift */,
+			);
+			name = Dashboard;
+			sourceTree = "<group>";
+		};
+		16BF5B671BE29676007C79C6 /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+				16147A0E1BD83F700099A068 /* ActivityViewController.swift */,
+				165A7E651BD99DBA00B6D223 /* StudyTasks.swift */,
+				071F104F1FBCFFC700EFFA89 /* PressUp.swift */,
+				07E05A5E1FBD2C16002A54C3 /* Breathe.swift */,
+				07E05A6C1FCF5BF5002A54C3 /* BackwardBending.swift */,
+				07E05A6F1FCF5C62002A54C3 /* FrontalCoreStretch.swift */,
+				07E05A701FCF5C62002A54C3 /* InnerThighStretch.swift */,
+				07E7739C2058EAEF00C5D237 /* TransverseCore.swift */,
+				07E7739E2058F07200C5D237 /* SagittalCore.swift */,
+				07E773A02058F15D00C5D237 /* AbdominalCrunch.swift */,
+				07E773A22058F25800C5D237 /* AbdominalExercise.swift */,
+				07E773A4205909EB00C5D237 /* NeckPress.swift */,
+				07E773A820590E7B00C5D237 /* SideBridge.swift */,
+				07E773AA20590F1F00C5D237 /* Plank.swift */,
+				07E05A6E1FCF5C62002A54C3 /* StandingThreadTheNeedle.swift */,
+				07E05A711FCF5C62002A54C3 /* HamstringStretch.swift */,
+				07E05A681FCDEB2E002A54C3 /* WallWash.swift */,
+				07E05A6A1FCDEDDA002A54C3 /* DoorwayChestStretch.swift */,
+				07E05A661FCDE8D5002A54C3 /* Brace.swift */,
+				07E773722058E05B00C5D237 /* Diary.swift */,
+				070BA5F31FD153CD00B38879 /* NassVideo1.swift */,
+				070BA60D1FD2102900B38879 /* NassVideo2.swift */,
+				070BA60A1FD2102800B38879 /* NassVideo3.swift */,
+				070BA60B1FD2102900B38879 /* NassVideo4.swift */,
+				070BA60C1FD2102900B38879 /* NassVideo5.swift */,
+				070BA6101FD2102A00B38879 /* NassVideo6.swift */,
+				070BA6091FD2102800B38879 /* NassVideo7.swift */,
+				070BA60E1FD2102A00B38879 /* NassVideo8.swift */,
+				070BA60F1FD2102A00B38879 /* NassVideo9.swift */,
+				07466C0C1FE1D37300CB9871 /* IceHeat.swift */,
+				07466C121FE1DF0A00CB9871 /* LayFlat.swift */,
+				07466C141FE1DFCF00CB9871 /* ExerciseType.swift */,
+				070F16FA1FE2678F00C9A09B /* BackFacts.swift */,
+				07E7733E20589A9B00C5D237 /* Dealing1.swift */,
+				07E7734A20589BE600C5D237 /* Dealing2.swift */,
+				07E7734C20589C3200C5D237 /* Dealing3.swift */,
+				07E7734E20589D7F00C5D237 /* ChronicPain.swift */,
+				07E7735020589F1B00C5D237 /* StayingActive1.swift */,
+				07E7735220589F8E00C5D237 /* StayingActive2.swift */,
+				07E773542058A78E00C5D237 /* Sleep1.swift */,
+				07E773562058A80600C5D237 /* Sleep2.swift */,
+				07E7735C2058DA1600C5D237 /* Myth1.swift */,
+				07E7735F2058DA1800C5D237 /* Myth2.swift */,
+				07E7735E2058DA1700C5D237 /* Myth3.swift */,
+				07E773592058DA1400C5D237 /* Myth4.swift */,
+				07E773612058DA1900C5D237 /* Myth5.swift */,
+				07E773582058DA1300C5D237 /* Myth6.swift */,
+				07E7735A2058DA1400C5D237 /* Myth7.swift */,
+				07E7735B2058DA1500C5D237 /* Myth8.swift */,
+				07E7735D2058DA1600C5D237 /* Myth9.swift */,
+				07E773602058DA1800C5D237 /* Myth10.swift */,
+				070F17001FE276F400C9A09B /* CausesOfBackPain.swift */,
+				07E7736C2058DD1900C5D237 /* Coping.swift */,
+				07E7736E2058DFA900C5D237 /* CopingRefresher1.swift */,
+				07E773702058E00A00C5D237 /* CopingRefresher2.swift */,
+				07E773742058E30500C5D237 /* SummaryFacts.swift */,
+				07E773AC2059126C00C5D237 /* PhysicalActivity.swift */,
+				07E773AE2059130100C5D237 /* Guidelines.swift */,
+				07DBAA9C1E9CA57600FC3F36 /* Activity.swift */,
+			);
+			name = Activities;
+			sourceTree = "<group>";
+		};
+		16BF5B6B1BE2BD1C007C79C6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				16BF5B6E1BE2BE77007C79C6 /* HealthClientType.swift */,
+				B5C2074F1BECCB1A0051D9D8 /* AnimatableChart.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		B5C207401BECBA710051D9D8 /* Withdrawal */ = {
+			isa = PBXGroup;
+			children = (
+				B5C207411BECBA8B0051D9D8 /* WithdrawViewController.swift */,
+			);
+			name = Withdrawal;
+			sourceTree = "<group>";
+		};
+		BC2A3CA81C58E92600DA64B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EAA72C2224A3DF9E00D345B5 /* ResearchKit.xcodeproj */,
+				EAA72C1824A3DF8500D345B5 /* CareKit.xcodeproj */,
+				07A3B51B22B97ABE00AD872B /* HealthKit.framework */,
+				0755B4AF1FD511430078A8F7 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EAA72C1924A3DF8500D345B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EAA72C1F24A3DF8600D345B5 /* CareKit.framework */,
+				EAA72C2124A3DF8600D345B5 /* CareKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EAA72C2324A3DF9E00D345B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EAA72C2924A3DF9F00D345B5 /* ResearchKit.framework */,
+				EAA72C2B24A3DF9F00D345B5 /* ResearchKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		161479BF1BD6CE8F0099A068 /* ORKSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 161479D21BD6CE8F0099A068 /* Build configuration list for PBXNativeTarget "ORKSample" */;
+			buildPhases = (
+				161479BC1BD6CE8F0099A068 /* Sources */,
+				161479BD1BD6CE8F0099A068 /* Frameworks */,
+				161479BE1BD6CE8F0099A068 /* Resources */,
+				BC2A3CDF1C58F1DB00DA64B7 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ORKSample;
+			productName = ResearchHealth;
+			productReference = 161479C01BD6CE8F0099A068 /* ORKSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		161479B81BD6CE8F0099A068 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Apple, Inc.";
+				TargetAttributes = {
+					161479BF1BD6CE8F0099A068 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = M24M42Z23H;
+						LastSwiftMigration = 1010;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.DataProtection = {
+								enabled = 1;
+							};
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 161479BB1BD6CE8F0099A068 /* Build configuration list for PBXProject "ORKSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 161479B71BD6CE8F0099A068;
+			productRefGroup = 161479C11BD6CE8F0099A068 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EAA72C1924A3DF8500D345B5 /* Products */;
+					ProjectRef = EAA72C1824A3DF8500D345B5 /* CareKit.xcodeproj */;
+				},
+				{
+					ProductGroup = EAA72C2324A3DF9E00D345B5 /* Products */;
+					ProjectRef = EAA72C2224A3DF9E00D345B5 /* ResearchKit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				161479BF1BD6CE8F0099A068 /* ORKSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		EAA72C1F24A3DF8600D345B5 /* CareKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CareKit.framework;
+			remoteRef = EAA72C1E24A3DF8600D345B5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EAA72C2124A3DF8600D345B5 /* CareKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CareKitTests.xctest;
+			remoteRef = EAA72C2024A3DF8600D345B5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EAA72C2924A3DF9F00D345B5 /* ResearchKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ResearchKit.framework;
+			remoteRef = EAA72C2824A3DF9F00D345B5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EAA72C2B24A3DF9F00D345B5 /* ResearchKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ResearchKitTests.xctest;
+			remoteRef = EAA72C2A24A3DF9F00D345B5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		161479BE1BD6CE8F0099A068 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07951D831E9ACA37005CE00E /* 13issues_survey.html in Resources */,
+				07951D871E9ACA37005CE00E /* 1welcome.html in Resources */,
+				07951D8A1E9ACA37005CE00E /* 3activities.html in Resources */,
+				070BA6031FD154CF00B38879 /* nass4.mp4 in Resources */,
+				07E773992058E93100C5D237 /* myth5.html in Resources */,
+				07709A4B20950C4B0018FCCF /* consent.html in Resources */,
+				07951D841E9ACA37005CE00E /* 14issues_mood.html in Resources */,
+				042E2C031E9F489700961299 /* meditate.jpg in Resources */,
+				161479CE1BD6CE8F0099A068 /* LaunchScreen.storyboard in Resources */,
+				07E773912058E93100C5D237 /* myth10.html in Resources */,
+				0725EACE21E57FFE00861C3B /* Legal.html in Resources */,
+				07951D511E9AC9D5005CE00E /* 13_RiskToPrivacy@2x.m4v in Resources */,
+				070BA5CD1FCF734800B38879 /* sidebridge.jpg in Resources */,
+				07951DA21E9ACA37005CE00E /* symptoms.html in Resources */,
+				07466C111FE1DE3100CB9871 /* layflat.png in Resources */,
+				07951D8D1E9ACA37005CE00E /* 6protectingdata.html in Resources */,
+				07E7734820589B9E00C5D237 /* backfacts.html in Resources */,
+				07E773922058E93100C5D237 /* copingrefresher2.html in Resources */,
+				070BA6041FD154CF00B38879 /* nass5.mp4 in Resources */,
+				07951D861E9ACA37005CE00E /* 15sharing_rsch.html in Resources */,
+				070BA5CA1FCF734800B38879 /* innerthighstretch.jpg in Resources */,
+				07951D591E9AC9D5005CE00E /* Intro.mp4 in Resources */,
+				07951DA01E9ACA37005CE00E /* online_resources_top.png in Resources */,
+				070BA5E61FCF734800B38879 /* wallwash2.jpg in Resources */,
+				070BA5E21FCF734800B38879 /* neckpress3.jpg in Resources */,
+				070BA5CB1FCF734800B38879 /* hamstringstretch.jpg in Resources */,
+				07951D4C1E9AC9D5005CE00E /* 01_Activities_to_SensorData@2x.m4v in Resources */,
+				07E773942058E93100C5D237 /* sleep1.html in Resources */,
+				07E7738C2058E93100C5D237 /* coping.html in Resources */,
+				07951D921E9ACA37005CE00E /* AboutStudy_intro.html in Resources */,
+				07E7734520589B9E00C5D237 /* dealing2.html in Resources */,
+				07951D4D1E9AC9D5005CE00E /* 02_SensorData_to_DataGathering@2x.m4v in Resources */,
+				070BA5E01FCF734800B38879 /* neckpress2.jpg in Resources */,
+				070BA6001FD154CF00B38879 /* nass9.mp4 in Resources */,
+				07951D9A1E9ACA37005CE00E /* howstudyworks.html in Resources */,
+				07951D951E9ACA37005CE00E /* coaching.html in Resources */,
+				070BA5CC1FCF734800B38879 /* pressup.jpg in Resources */,
+				07951D901E9ACA37005CE00E /* 9study_survey.html in Resources */,
+				07E7738A2058E93100C5D237 /* myth2.html in Resources */,
+				070BA5F01FCF7C4000B38879 /* sagittalcore_combined.jpg in Resources */,
+				070BA5D91FCF734800B38879 /* sagittalcore1.jpg in Resources */,
+				070BA5E51FCF734800B38879 /* neckpress1.jpg in Resources */,
+				07951D541E9AC9D5005CE00E /* 02_SensorData_to_DataGathering@3x.m4v in Resources */,
+				07951D9D1E9ACA37005CE00E /* Intro_section_cardio.css in Resources */,
+				07951D521E9AC9D5005CE00E /* 00_Blank_to_Activities@3x.m4v in Resources */,
+				07951D991E9ACA37005CE00E /* EligibleToParticipate_intro.html in Resources */,
+				07951D9F1E9ACA37005CE00E /* online_resources.html in Resources */,
+				07951D501E9AC9D5005CE00E /* 12_IssuesToConside2@2x.m4v in Resources */,
+				07E7738F2058E93100C5D237 /* myth8.html in Resources */,
+				07951D981E9ACA37005CE00E /* EligibleToParticipate.html in Resources */,
+				07951D4E1E9AC9D5005CE00E /* 10_PotentialBenifits@2x.m4v in Resources */,
+				07951D821E9ACA37005CE00E /* 12potentialbenefits1.html in Resources */,
+				070BA6071FD154CF00B38879 /* nass8.mp4 in Resources */,
+				070BA6051FD154CF00B38879 /* nass6.mp4 in Resources */,
+				079234E7205F488D00E54509 /* guidelines.html in Resources */,
+				070BA5EF1FCF7C4000B38879 /* wallwash_combined.jpg in Resources */,
+				070BA5E81FCF734800B38879 /* standingthreadtheneedle1.jpg in Resources */,
+				07E773972058E93100C5D237 /* myth4.html in Resources */,
+				070BA5F21FCF7C4000B38879 /* standingthreadtheneedle_combined.jpg in Resources */,
+				070BA5D31FCF734800B38879 /* abdominalcrunch.jpg in Resources */,
+				07E773A720590DB400C5D237 /* neck_combined.jpg in Resources */,
+				07951DA41E9ACA37005CE00E /* whoisrunning.html in Resources */,
+				07466C0B1FE1B9E800CB9871 /* iceheat.png in Resources */,
+				070BA5D61FCF734800B38879 /* abdominalexercise.jpg in Resources */,
+				079234E8205F488D00E54509 /* physicalactivity.html in Resources */,
+				07E7739A2058E93100C5D237 /* myth1.html in Resources */,
+				07951D581E9AC9D5005CE00E /* 13_RiskToPrivacy@3x.m4v in Resources */,
+				070BA5E91FCF734800B38879 /* standingthreadtheneedle2.jpg in Resources */,
+				07951D531E9AC9D5005CE00E /* 01_Activities_to_SensorData@3x.m4v in Resources */,
+				070BA5D51FCF734800B38879 /* sagittalcore2.jpg in Resources */,
+				07E773982058E93100C5D237 /* summaryfacts.html in Resources */,
+				07951D971E9ACA37005CE00E /* disease_information_top.png in Resources */,
+				07E7734620589B9E00C5D237 /* dealing3.html in Resources */,
+				07951D4F1E9AC9D5005CE00E /* 11_IssuesToConsider1@2x.m4v in Resources */,
+				161479CB1BD6CE8F0099A068 /* Assets.xcassets in Resources */,
+				07951DA31E9ACA37005CE00E /* treatment.html in Resources */,
+				161479C91BD6CE8F0099A068 /* Main.storyboard in Resources */,
+				070BA5E41FCF734800B38879 /* brace.png in Resources */,
+				070BA5EA1FCF734800B38879 /* backbend.png in Resources */,
+				07951D961E9ACA37005CE00E /* disease_information.html in Resources */,
+				070BA6021FD154CF00B38879 /* nass2.mp4 in Resources */,
+				07951D571E9AC9D5005CE00E /* 12_IssuesToConside2@3x.m4v in Resources */,
+				07E7738E2058E93100C5D237 /* myth6.html in Resources */,
+				07951D9C1E9ACA37005CE00E /* institution.png in Resources */,
+				07951D851E9ACA37005CE00E /* 15privacy_risk.html in Resources */,
+				07951D891E9ACA37005CE00E /* 2quiz_headsup.html in Resources */,
+				07E7734720589B9E00C5D237 /* dealing1.html in Resources */,
+				070BA5F11FCF7C4000B38879 /* transversecore_combined.jpg in Resources */,
+				07951D561E9AC9D5005CE00E /* 11_IssuesToConsider1@3x.m4v in Resources */,
+				07951D941E9ACA37005CE00E /* cardio_fullconsent.html in Resources */,
+				070BA6061FD154CF00B38879 /* nass1.mp4 in Resources */,
+				07951D911E9ACA37005CE00E /* AboutStudy.html in Resources */,
+				07E773952058E93100C5D237 /* stayingactive1.html in Resources */,
+				07951DA11E9ACA37005CE00E /* PrivacyPolicy.html in Resources */,
+				07E773962058E93100C5D237 /* stayingactive2.html in Resources */,
+				070BA5E71FCF734800B38879 /* plank.jpg in Resources */,
+				07466C101FE1DE3100CB9871 /* exercisetype.png in Resources */,
+				07951D8E1E9ACA37005CE00E /* 7datause.html in Resources */,
+				07951D801E9ACA37005CE00E /* 10study_task.html in Resources */,
+				07951D8C1E9ACA37005CE00E /* 5dataprocessing.html in Resources */,
+				07E7738D2058E93100C5D237 /* copingrefresher1.html in Resources */,
+				070BA6011FD154CF00B38879 /* nass3.mp4 in Resources */,
+				070BA5E11FCF734800B38879 /* wallwash1.jpg in Resources */,
+				07951D8B1E9ACA37005CE00E /* 4sensordata.html in Resources */,
+				07E773932058E93100C5D237 /* myth3.html in Resources */,
+				07E773902058E93100C5D237 /* myth7.html in Resources */,
+				07E7738B2058E93100C5D237 /* myth9.html in Resources */,
+				07951D551E9AC9D5005CE00E /* 10_PotentialBenifits@3x.m4v in Resources */,
+				07E773892058E93100C5D237 /* sleep2.html in Resources */,
+				070BA5DF1FCF734800B38879 /* transversecore1.jpg in Resources */,
+				070BA5D21FCF734800B38879 /* frontalcorestretch.jpg in Resources */,
+				042E2BFF1E9F46B100961299 /* backbook.pdf in Resources */,
+				07951D881E9ACA37005CE00E /* 23andme.html in Resources */,
+				07951D9B1E9ACA37005CE00E /* howstudyworks_intro.html in Resources */,
+				07951D9E1E9ACA37005CE00E /* Learn_section_cardio.css in Resources */,
+				070BA6081FD154CF00B38879 /* nass7.mp4 in Resources */,
+				07951D4B1E9AC9D5005CE00E /* 00_Blank_to_Activities@2x.m4v in Resources */,
+				070BA5DB1FCF734800B38879 /* transversecore2.jpg in Resources */,
+				07951D931E9ACA37005CE00E /* asthma_overview.html in Resources */,
+				07E7739B2058E93100C5D237 /* chronicpain.html in Resources */,
+				07DC54D32094FFF1002B1219 /* StanfordSpineKeeperIntro.mov in Resources */,
+				070BA5DE1FCF734800B38879 /* doorwaycheststretch.jpg in Resources */,
+				07951D8F1E9ACA37005CE00E /* 8time.html in Resources */,
+				07E7734920589B9E00C5D237 /* causesofbackpain.html in Resources */,
+				07951D811E9ACA37005CE00E /* 11withdrawing.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		161479BC1BD6CE8F0099A068 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07709A49209502AC0018FCCF /* ODISurvey.swift in Sources */,
+				07DBAAB41E9CCE9400FC3F36 /* SampleData.swift in Sources */,
+				070BA6121FD2102A00B38879 /* NassVideo3.swift in Sources */,
+				070F16FB1FE2678F00C9A09B /* BackFacts.swift in Sources */,
+				B5D35FC91BEA48D3004CBB06 /* HKHealthStore+Queries.swift in Sources */,
+				07E05A691FCDEB2E002A54C3 /* WallWash.swift in Sources */,
+				07E7739D2058EAEF00C5D237 /* TransverseCore.swift in Sources */,
+				07E05A721FCF5C63002A54C3 /* StandingThreadTheNeedle.swift in Sources */,
+				B5BC85FD1BF1408500B0CFA5 /* HealthDataStepViewController.swift in Sources */,
+				074DF898208557F600A4C959 /* CustomIntroViewController.swift in Sources */,
+				07E773AD2059126C00C5D237 /* PhysicalActivity.swift in Sources */,
+				070BA6181FD2102A00B38879 /* NassVideo6.swift in Sources */,
+				07E773652058DA1900C5D237 /* Myth8.swift in Sources */,
+				B5C366B41BE7ADBA0036112D /* DashboardTableViewController.swift in Sources */,
+				07E773662058DA1900C5D237 /* Myth1.swift in Sources */,
+				07DBAAAB1E9CA88200FC3F36 /* ExcerciseMinutes.swift in Sources */,
+				079498E11E81024100071726 /* ASVerificationStepViewController.swift in Sources */,
+				07E05A671FCDE8D5002A54C3 /* Brace.swift in Sources */,
+				07466C0D1FE1D37300CB9871 /* IceHeat.swift in Sources */,
+				07E7734B20589BE600C5D237 /* Dealing2.swift in Sources */,
+				070BA6161FD2102A00B38879 /* NassVideo8.swift in Sources */,
+				07E773712058E00A00C5D237 /* CopingRefresher2.swift in Sources */,
+				07E7735120589F1B00C5D237 /* StayingActive1.swift in Sources */,
+				07DBAA971E9CA49F00FC3F36 /* QueryActivityEventsOperation.swift in Sources */,
+				04FC64721EA2CA89007DC617 /* Journaling.swift in Sources */,
+				07E773642058DA1900C5D237 /* Myth7.swift in Sources */,
+				070BA6141FD2102A00B38879 /* NassVideo5.swift in Sources */,
+				07E773A32058F25800C5D237 /* AbdominalExercise.swift in Sources */,
+				165A7E661BD99DBA00B6D223 /* StudyTasks.swift in Sources */,
+				07DBAA931E9CA49F00FC3F36 /* CarePlanStoreManager.swift in Sources */,
+				B5FA92E91BF13D98001E46C0 /* HealthDataStep.swift in Sources */,
+				B5D1175E1BE8D17E00D7F153 /* LineGraphDataSource.swift in Sources */,
+				07E7734F20589D7F00C5D237 /* ChronicPain.swift in Sources */,
+				07E773672058DA1A00C5D237 /* Myth9.swift in Sources */,
+				07E773732058E05B00C5D237 /* Diary.swift in Sources */,
+				07E773A5205909EB00C5D237 /* NeckPress.swift in Sources */,
+				07DBAAB01E9CA89700FC3F36 /* Assessment.swift in Sources */,
+				07E7736B2058DA1A00C5D237 /* Myth5.swift in Sources */,
+				07DBAA961E9CA49F00FC3F36 /* OCKInsightItem+EmptyMessage.swift in Sources */,
+				16BF5B691BE2974A007C79C6 /* ProfileViewController.swift in Sources */,
+				071F10501FBCFFC700EFFA89 /* PressUp.swift in Sources */,
+				070BA5F41FD153CD00B38879 /* NassVideo1.swift in Sources */,
+				07E05A751FCF5C63002A54C3 /* HamstringStretch.swift in Sources */,
+				07E773692058DA1A00C5D237 /* Myth2.swift in Sources */,
+				07DBAAAE1E9CA88200FC3F36 /* Weight.swift in Sources */,
+				B5C207421BECBA8B0051D9D8 /* WithdrawViewController.swift in Sources */,
+				07E773AF2059130100C5D237 /* Guidelines.swift in Sources */,
+				04FC64701EA2C777007DC617 /* BackRangeOfMotion.swift in Sources */,
+				07E05A5F1FBD2C16002A54C3 /* Breathe.swift in Sources */,
+				07DBAA941E9CA49F00FC3F36 /* Colors.swift in Sources */,
+				07CE9F1F1E7F24D40070659E /* LearnStaticTableViewCell.swift in Sources */,
+				04FC643F1EA29A2F007DC617 /* Sleep.swift in Sources */,
+				07E7736D2058DD1900C5D237 /* Coping.swift in Sources */,
+				07E773A920590E7B00C5D237 /* SideBridge.swift in Sources */,
+				04FC64431EA2C0A0007DC617 /* VoiceAnalysis.swift in Sources */,
+				04FC64741EA321BC007DC617 /* StartBackSurvey.swift in Sources */,
+				070BA6131FD2102A00B38879 /* NassVideo4.swift in Sources */,
+				07466C131FE1DF0A00CB9871 /* LayFlat.swift in Sources */,
+				07DBAA951E9CA49F00FC3F36 /* NSCalendar+Dates.swift in Sources */,
+				B5C2073F1BEC16F00051D9D8 /* ResearchContainerSegue.swift in Sources */,
+				0733F1882348058600209212 /* RNCryptor.swift in Sources */,
+				B5BC85FA1BF1405900B0CFA5 /* OnboardingViewController.swift in Sources */,
+				07E773622058DA1900C5D237 /* Myth6.swift in Sources */,
+				07E05A6D1FCF5BF6002A54C3 /* BackwardBending.swift in Sources */,
+				070BA6111FD2102A00B38879 /* NassVideo7.swift in Sources */,
+				070F17011FE276F400C9A09B /* CausesOfBackPain.swift in Sources */,
+				07E773632058DA1900C5D237 /* Myth4.swift in Sources */,
+				B5C207561BECED750051D9D8 /* ConsentDocument.swift in Sources */,
+				16BF5B711BE2C989007C79C6 /* ProfileStaticTableViewCell.swift in Sources */,
+				07DBAA9B1E9CA51300FC3F36 /* InsightsBuilder.swift in Sources */,
+				07DBAA921E9CA49F00FC3F36 /* BuildInsightsOperation.swift in Sources */,
+				B5D1175C1BE8D15400D7F153 /* DiscreteGraphDataSource.swift in Sources */,
+				07DBAA9E1E9CA57600FC3F36 /* Activity.swift in Sources */,
+				86CCDFF61C1B50970042AA39 /* ResearchContainerViewController.swift in Sources */,
+				07E7735320589F8E00C5D237 /* StayingActive2.swift in Sources */,
+				07E7736F2058DFA900C5D237 /* CopingRefresher1.swift in Sources */,
+				B5C207501BECCB1A0051D9D8 /* AnimatableChart.swift in Sources */,
+				16147A0F1BD83F700099A068 /* ActivityViewController.swift in Sources */,
+				070BA6171FD2102A00B38879 /* NassVideo9.swift in Sources */,
+				07DBAA9F1E9CA57600FC3F36 /* BackPain.swift in Sources */,
+				07DBAAAD1E9CA88200FC3F36 /* Mood.swift in Sources */,
+				042E2C0D1EA0867800961299 /* SixMinuteWalk.swift in Sources */,
+				16BF5B6F1BE2BE77007C79C6 /* HealthClientType.swift in Sources */,
+				07E773752058E30500C5D237 /* SummaryFacts.swift in Sources */,
+				07E773A12058F15D00C5D237 /* AbdominalCrunch.swift in Sources */,
+				070E22531EA40DAC0087759C /* CKLineGraph.swift in Sources */,
+				07466C151FE1DFCF00CB9871 /* ExerciseType.swift in Sources */,
+				07E7734D20589C3200C5D237 /* Dealing3.swift in Sources */,
+				07CE9F1D1E7F23B10070659E /* LearnViewController.swift in Sources */,
+				07E773572058A80600C5D237 /* Sleep2.swift in Sources */,
+				07E05A741FCF5C63002A54C3 /* InnerThighStretch.swift in Sources */,
+				07E05A6B1FCDEDDA002A54C3 /* DoorwayChestStretch.swift in Sources */,
+				07E7733F20589A9B00C5D237 /* Dealing1.swift in Sources */,
+				07E7739F2058F07200C5D237 /* SagittalCore.swift in Sources */,
+				B5D35FC71BEA363F004CBB06 /* ProfileHeaderView.swift in Sources */,
+				07E7736A2058DA1A00C5D237 /* Myth10.swift in Sources */,
+				161479C41BD6CE8F0099A068 /* AppDelegate.swift in Sources */,
+				070BA6151FD2102A00B38879 /* NassVideo2.swift in Sources */,
+				070BA61A1FD2140000B38879 /* LearnVideoViewController.swift in Sources */,
+				07E773AB20590F1F00C5D237 /* Plank.swift in Sources */,
+				07DBAAAC1E9CA88200FC3F36 /* HealthSampleBuilder.swift in Sources */,
+				165A7E6E1BD9AEF800B6D223 /* IntroductionViewController.swift in Sources */,
+				B5D117581BE8D12000D7F153 /* PieChartDataSource.swift in Sources */,
+				07E773682058DA1A00C5D237 /* Myth3.swift in Sources */,
+				07466C051FE1B75000CB9871 /* ImageScrollView.swift in Sources */,
+				07E773552058A78E00C5D237 /* Sleep1.swift in Sources */,
+				07E05A731FCF5C63002A54C3 /* FrontalCoreStretch.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		161479C71BD6CE8F0099A068 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				161479C81BD6CE8F0099A068 /* Base */,
+			);
+			name = Main.storyboard;
+			path = ORKSample;
+			sourceTree = "<group>";
+		};
+		161479CC1BD6CE8F0099A068 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				161479CD1BD6CE8F0099A068 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = ORKSample;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		161479D01BD6CE8F0099A068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		161479D11BD6CE8F0099A068 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		161479D31BD6CE8F0099A068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ORKSample/ORKSample.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M24M42Z23H;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
+				"HEADER_SEARCH_PATHS[arch=*]" = "";
+				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "$(SRCROOT)";
+				INFOPLIST_FILE = "$(SRCROOT)/ORKSample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stanfordBack.Test2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ORKSample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s arm";
+			};
+			name = Debug;
+		};
+		161479D41BD6CE8F0099A068 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ORKSample/ORKSample.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M24M42Z23H;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
+				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "$(SRCROOT)";
+				INFOPLIST_FILE = "$(SRCROOT)/ORKSample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stanfordBack.Test2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ORKSample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s arm";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		161479BB1BD6CE8F0099A068 /* Build configuration list for PBXProject "ORKSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				161479D01BD6CE8F0099A068 /* Debug */,
+				161479D11BD6CE8F0099A068 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		161479D21BD6CE8F0099A068 /* Build configuration list for PBXNativeTarget "ORKSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				161479D31BD6CE8F0099A068 /* Debug */,
+				161479D41BD6CE8F0099A068 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 161479B81BD6CE8F0099A068 /* Project object */;
+}
