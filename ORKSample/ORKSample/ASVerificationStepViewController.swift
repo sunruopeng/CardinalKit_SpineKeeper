@@ -65,21 +65,21 @@ class ASVerificationStepViewController : ORKVerificationStepViewController {
             print(responseJSON ?? ["hi":"yo"])
             let status = (response as! HTTPURLResponse).statusCode
             if status == 200 {
-                UserDefaults.standard.set(responseJSON!!["sessionToken"], forKey: "sessionToken")
-                UserDefaults.standard.set(responseJSON!!["dataSharing"], forKey: "dataSharing")
+                UserDefaults.standard.set(responseJSON!["sessionToken"], forKey: "sessionToken")
+                UserDefaults.standard.set(responseJSON!["dataSharing"], forKey: "dataSharing")
                 DispatchQueue.main.async {
                     self.goForward()
                 }
                 return
             }
             if status == 412 {
-                UserDefaults.standard.set(responseJSON!!["sessionToken"], forKey: "sessionToken")
-                UserDefaults.standard.set(responseJSON!!["dataSharing"], forKey: "dataSharing")
+                UserDefaults.standard.set(responseJSON!["sessionToken"], forKey: "sessionToken")
+                UserDefaults.standard.set(responseJSON!["dataSharing"], forKey: "dataSharing")
                 self.doConsent()
                 return
             }
             // 400 or 403
-            self.errorHelper(title: "Oops!", message: responseJSON!!["message"] as? String ?? "Something went wrong.")
+            self.errorHelper(title: "Oops!", message: responseJSON!["message"] as? String ?? "Something went wrong.")
         }
         task.resume()
     }
@@ -115,7 +115,7 @@ class ASVerificationStepViewController : ORKVerificationStepViewController {
                 self.continueTapped()
                 return
             }
-            self.errorHelper(title: "Oops!", message: responseJSON!!["message"] as? String ?? "Something went wrong.")
+            self.errorHelper(title: "Oops!", message: responseJSON!["message"] as? String ?? "Something went wrong.")
         }
         task.resume()
     }

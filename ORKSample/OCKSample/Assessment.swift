@@ -168,7 +168,7 @@ extension Assessment {
         else if let numericResult = stepResult as? ORKNumericQuestionResult, let answer = numericResult.numericAnswer {
             return OCKCarePlanEventResult(valueString: answer.stringValue, unitString: numericResult.unit, userInfo: nil)
         }
-        else if let textResult = stepResult as? ORKTextQuestionResult, let answer = textResult.textAnswer {
+        else if let textResult = stepResult as? ORKTextQuestionResult, let _ = textResult.textAnswer {
            // let answer = textResult.textAnswer
             return OCKCarePlanEventResult(valueString: "Completed", unitString: nil, userInfo: nil)
         }

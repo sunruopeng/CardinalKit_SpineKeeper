@@ -344,7 +344,7 @@ class BuildInsightsOperation: Operation {
             //let score2 = Int(scores?[1] ?? "0")
             if score2 > 0.001 {
                 medicationValues.append(Int(score2))
-                medicationLabels.append(String(Int(score2)) ?? NSLocalizedString("N/A", comment: ""))
+                medicationLabels.append(String(Int(score2)))
             }
             else {
                 medicationValues.append(0)
@@ -397,13 +397,16 @@ class BuildInsightsOperation: Operation {
                                 maximumScaleRangeValue: 10)
         
         //let chart2 = CKLineGraph.init(withDataSource: LineGraphDataSource(), tintColor: Colors.blue.color, referenceLineColor: Colors.green.color)
-        let yo = UIApplication.shared.delegate as! AppDelegate
-        let yo2 = yo.containerViewController?.dashboardVC
-        yo2?.lineGraphDataSource.plotPoints = [medicationValues.map{val in ORKValueRange(value: Double(val))},
-                                               //painValues.map{val in ORKValueRange(value: Double(val))},
-                                              ]
-        yo2?.lineGraphDataSource.maxVal = 10.0
-        yo2?.lineGraphDataSource.minVal = 0.0
+        
+        DispatchQueue.main.async {
+            let yo = UIApplication.shared.delegate as! AppDelegate
+            let yo2 = yo.containerViewController?.dashboardVC
+            yo2?.lineGraphDataSource.plotPoints = [medicationValues.map{val in ORKValueRange(value: Double(val))},
+                                                   //painValues.map{val in ORKValueRange(value: Double(val))},
+                                                  ]
+            yo2?.lineGraphDataSource.maxVal = 10.0
+            yo2?.lineGraphDataSource.minVal = 0.0
+        }
         
         // so this is just a dummy to make insightsviewcontroller do what i want with the dashboardVC line graph
         return CKLineGraph(withTitle: "Activity Routine Trends")

@@ -267,6 +267,9 @@ extension ORKConsentSectionType: CustomStringConvertible {
                 
             case .onlyInDocument:
                 return "OnlyInDocument"
+            
+            @unknown default:
+                return "default"
         }
     }
 }

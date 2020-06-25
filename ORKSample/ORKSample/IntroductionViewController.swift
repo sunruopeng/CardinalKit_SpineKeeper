@@ -58,7 +58,7 @@ class IntroductionViewController: UIPageViewController, UIPageViewControllerData
     // MARK: UIPageViewControllerDataSource
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        let index = pageViewControllers.index(of: viewController)!
+        let index = pageViewControllers.firstIndex(of: viewController)!
         
         if index - 1 >= 0 {
             return pageViewControllers[index - 1]
@@ -68,7 +68,7 @@ class IntroductionViewController: UIPageViewController, UIPageViewControllerData
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        let index = pageViewControllers.index(of: viewController)!
+        let index = pageViewControllers.firstIndex(of: viewController)!
         
         if index + 1 < pageViewControllers.count {
             return pageViewControllers[index + 1]

@@ -329,7 +329,7 @@ extension OnboardingViewController : ORKTaskViewControllerDelegate {
                 if let result = taskViewController.result.stepResult(forStepIdentifier: "ScheduleQuestionStep"),
                 let results = result.results,
                 let choiceResult = results.first as? ORKChoiceQuestionResult,
-                    let choice = choiceResult.choiceAnswers?.first as! Int! {
+                    let choice = choiceResult.choiceAnswers?.first as! Int? {
                     var temp = choice
                     if choice == 2 { temp = Int(arc4random_uniform(UInt32(2))) }
                     if temp == 0 { UserDefaults.standard.set(temp, forKey: "activityScheduleIndex") }
@@ -399,6 +399,8 @@ extension OnboardingViewController : ORKTaskViewControllerDelegate {
             
             case .discarded, .failed, .saved:
                 dismiss(animated: true, completion: nil)
+        @unknown default:
+            print("Default Case")
         }
     }
     
