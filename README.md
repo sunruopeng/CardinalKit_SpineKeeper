@@ -10,6 +10,17 @@ the current code can run on Xcode 10.2.1.
 Junaid's Work
 =============
 
+June 26, 2020
+----------------
+* Creates private fork of ResearchKit
+* Creates private fork of CareKit
+* Syncs custom code changes of ResearchKit into the latest code of ResearchKit
+* Upgrades the current codebase (SpineKeeper) with latest version of ResearchKit 2.1
+* Fixes deprecated methods with new implementations
+* Fixes warnings in the codebase
+* Upgrades the project file to support the latest version of ResearchKit
+* Fixes spelling mistake
+
 June 25, 2020
 ----------------
 * Clone all three repositories
