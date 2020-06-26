@@ -71,8 +71,10 @@ struct ODISurvey: Assessment {
             ORKTextChoice(text: "The pain is the worst imaginable at the moment.", value: 5 as NSCoding & NSCopying & NSObjectProtocol)
         ]
         var questAnswerFormat: ORKTextChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: textChoices)
-        var questQuestionStep = ORKQuestionStep(identifier: "ODITextChoiceQuestionStep", title: questQuestionStepTitle, answer: questAnswerFormat)
-        
+        var questQuestionStep = ORKQuestionStep(identifier: "ODITextChoiceQuestionStep",
+                                                title: questQuestionStepTitle,
+                                                question: nil,
+                                                answer: questAnswerFormat)
         steps += [questQuestionStep]
         
         // Quest question using text choice
@@ -86,8 +88,10 @@ struct ODISurvey: Assessment {
             ORKTextChoice(text: "I do not get dressed, wash with difficulty and stay in bed.", value: 5 as NSCoding & NSCopying & NSObjectProtocol)
         ]
         questAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: textChoices)
-        questQuestionStep = ORKQuestionStep(identifier: "ODITextChoiceQuestionStep1", title: questQuestionStepTitle, answer: questAnswerFormat)
-        
+        questQuestionStep = ORKQuestionStep(identifier: "ODITextChoiceQuestionStep1",
+                                            title: questQuestionStepTitle,
+                                            question: nil,
+                                            answer: questAnswerFormat)
         steps += [questQuestionStep]
 
         // Quest question using text choice
@@ -101,8 +105,10 @@ struct ODISurvey: Assessment {
             ORKTextChoice(text: "I cannot lift or carry anything at all.", value: 5 as NSCoding & NSCopying & NSObjectProtocol)
         ]
         questAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: textChoices)
-        questQuestionStep = ORKQuestionStep(identifier: "ODITextChoiceQuestionStep2", title: questQuestionStepTitle, answer: questAnswerFormat)
-        
+        questQuestionStep = ORKQuestionStep(identifier: "ODITextChoiceQuestionStep2",
+                                            title: questQuestionStepTitle,
+                                            question: nil,
+                                            answer: questAnswerFormat)
         steps += [questQuestionStep]
         
         // Quest question using text choice
@@ -116,8 +122,10 @@ struct ODISurvey: Assessment {
             ORKTextChoice(text: "I am in bed most of the time and have to crawl to the toilet.", value: 5 as NSCoding & NSCopying & NSObjectProtocol)
         ]
         questAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: textChoices)
-        questQuestionStep = ORKQuestionStep(identifier: "ODITextChoiceQuestionStep3", title: questQuestionStepTitle, answer: questAnswerFormat)
-        
+        questQuestionStep = ORKQuestionStep(identifier: "ODITextChoiceQuestionStep3",
+                                            title: questQuestionStepTitle,
+                                            question: nil,
+                                            answer: questAnswerFormat)
         steps += [questQuestionStep]
         
         // Quest question using text choice
@@ -131,8 +139,10 @@ struct ODISurvey: Assessment {
             ORKTextChoice(text: "Pain prevents me from sitting at all.", value: 5 as NSCoding & NSCopying & NSObjectProtocol)
         ]
         questAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: textChoices)
-        questQuestionStep = ORKQuestionStep(identifier: "ODITextChoiceQuestionStep10", title: questQuestionStepTitle, answer: questAnswerFormat)
-        
+        questQuestionStep = ORKQuestionStep(identifier: "ODITextChoiceQuestionStep10",
+                                            title: questQuestionStepTitle,
+                                            question: nil,
+                                            answer: questAnswerFormat)
         steps += [questQuestionStep]
 
         
@@ -147,8 +157,10 @@ struct ODISurvey: Assessment {
             ORKTextChoice(text: "Pain prevents me from standing at all.", value: 5 as NSCoding & NSCopying & NSObjectProtocol)
         ]
         questAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: textChoices)
-        questQuestionStep = ORKQuestionStep(identifier: "ODITextChoiceQuestionStep4", title: questQuestionStepTitle, answer: questAnswerFormat)
-        
+        questQuestionStep = ORKQuestionStep(identifier: "ODITextChoiceQuestionStep4",
+                                            title: questQuestionStepTitle,
+                                            question: nil,
+                                            answer: questAnswerFormat)
         steps += [questQuestionStep]
         
         
@@ -163,8 +175,10 @@ struct ODISurvey: Assessment {
             ORKTextChoice(text: "Pain prevents me from sleeping at all.", value: 5 as NSCoding & NSCopying & NSObjectProtocol)
         ]
         questAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: textChoices)
-        questQuestionStep = ORKQuestionStep(identifier: "ODITextChoiceQuestionStep5", title: questQuestionStepTitle, answer: questAnswerFormat)
-        
+        questQuestionStep = ORKQuestionStep(identifier: "ODITextChoiceQuestionStep5",
+                                            title: questQuestionStepTitle,
+                                            question: nil,
+                                            answer: questAnswerFormat)
         steps += [questQuestionStep]
         
         
@@ -179,8 +193,10 @@ struct ODISurvey: Assessment {
             ORKTextChoice(text: "I have no social life because of pain.", value: 5 as NSCoding & NSCopying & NSObjectProtocol)
         ]
         questAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: textChoices)
-        questQuestionStep = ORKQuestionStep(identifier: "ODITextChoiceQuestionStep6", title: questQuestionStepTitle, answer: questAnswerFormat)
-        
+        questQuestionStep = ORKQuestionStep(identifier: "ODITextChoiceQuestionStep6",
+                                            title: questQuestionStepTitle,
+                                            question: nil,
+                                            answer: questAnswerFormat)
         steps += [questQuestionStep]
         
         
@@ -195,8 +211,10 @@ struct ODISurvey: Assessment {
             ORKTextChoice(text: "Pain prevents me from travelling except to recieve treatment.", value: 5 as NSCoding & NSCopying & NSObjectProtocol)
         ]
         questAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: textChoices)
-        questQuestionStep = ORKQuestionStep(identifier: "ODITextChoiceQuestionStep11", title: questQuestionStepTitle, answer: questAnswerFormat)
-        
+        questQuestionStep = ORKQuestionStep(identifier: "ODITextChoiceQuestionStep11",
+                                            title: questQuestionStepTitle,
+                                            question: nil,
+                                            answer: questAnswerFormat)
         steps += [questQuestionStep]
         
         

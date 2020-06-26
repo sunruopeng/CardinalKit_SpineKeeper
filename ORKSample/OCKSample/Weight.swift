@@ -89,7 +89,10 @@ struct Weight: Assessment, HealthSampleBuilder {
         
         // Create a question.
         let title = NSLocalizedString("Input your weight", comment: "")
-        let questionStep = ORKQuestionStep(identifier: activityType.rawValue, title: title, answer: answerFormat)
+        let questionStep = ORKQuestionStep(identifier: activityType.rawValue,
+                                           title: title,
+                                           question: nil,
+                                           answer: answerFormat)
         questionStep.isOptional = false
         
         // Create an ordered task with a single question.

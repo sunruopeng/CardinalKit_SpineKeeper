@@ -129,7 +129,10 @@ class OnboardingViewController: UIViewController {
             ORKTextChoice(text: "Choose for me", value: 2 as NSCoding & NSCopying & NSObjectProtocol)
         ]
         let answerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: textChoices)
-        let step = ORKQuestionStep(identifier: "ScheduleQuestionStep", title: "Activity Schedule", answer: answerFormat)
+        let step = ORKQuestionStep(identifier: "ScheduleQuestionStep",
+                                   title: "Activity Schedule",
+                                   question: nil,
+                                   answer: answerFormat)
         step.text = ques
         step.isOptional = false
         return step
@@ -195,13 +198,21 @@ class OnboardingViewController: UIViewController {
 
         // Create a question.
         let title0 = NSLocalizedString("Input your weight", comment: "")
-        let questionStep0 = ORKQuestionStep(identifier: "weightStep", title: title0, answer: ORKWeightAnswerFormat.init(measurementSystem: ORKMeasurementSystem.local))
+        let answerFormat = ORKWeightAnswerFormat.init(measurementSystem: ORKMeasurementSystem.local)
+        let questionStep0 = ORKQuestionStep(identifier: "weightStep",
+                                            title: title0,
+                                            question: nil,
+                                            answer: answerFormat)
         questionStep0.isOptional = true
         steps += [questionStep0]
         
         // Create a question.
         let title = NSLocalizedString("Input your height", comment: "")
-        let questionStep = ORKQuestionStep(identifier: "heightStep", title: title, answer: ORKHeightAnswerFormat(measurementSystem: ORKMeasurementSystem.local))
+        let answerFormat1 = ORKHeightAnswerFormat(measurementSystem: ORKMeasurementSystem.local)
+        let questionStep = ORKQuestionStep(identifier: "heightStep",
+                                           title: title,
+                                           question: nil,
+                                           answer: answerFormat1)
         questionStep.isOptional = true
         steps += [questionStep]
         
@@ -211,13 +222,16 @@ class OnboardingViewController: UIViewController {
     }
     
     func makeEligibilityStep() -> ORKNavigablePageStep {
-        let eligQues = "Please verify the following:\n\n\u{2022} you are at least 18 years old\n\n\u{2022} you reside in the US \n\n\u{2022} you can read and understand English in order to provide informed consent and follow this app's instructions"
+        let eligQues = "Please verify the following:\n\n\u{2022} You are at least 18 years old\n\n\u{2022} You reside in the US \n\n\u{2022} You can read and understand English in order to provide informed consent and follow this app's instructions"
         let eligTextChoices = [
             ORKTextChoice(text: "Yes, these are ALL true", value: 0 as NSCoding & NSCopying & NSObjectProtocol),
             ORKTextChoice(text: "No", value: 1 as NSCoding & NSCopying & NSObjectProtocol)
         ]
         let eligAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: eligTextChoices)
-        let eligStep = ORKQuestionStep(identifier: "EligibilityQuestionStep", title: "Eligiblity", answer: eligAnswerFormat)
+        let eligStep = ORKQuestionStep(identifier: "EligibilityQuestionStep",
+                                       title: "Eligiblity",
+                                       question: nil,
+                                       answer: eligAnswerFormat)
         eligStep.text = eligQues
         eligStep.isOptional = false
         
@@ -227,14 +241,17 @@ class OnboardingViewController: UIViewController {
         eligFailureStep.text = "You aren't eligible for this study."
         //eligFailureStep.image = UIImage.init(named: "13_RiskToPrivacy")
         
-        let eligQues2 = "Please verify the following:\n\n\u{2022} you DO NOT have any serious chronic medical issues that may limit your ability to participate in physical therapy and home exercise or make participation in physical therapy and home exercise medically inadvisable. This includes cancer, severe arthritis, neuropathy or other neuromuscular disease, angina, cardiovascular disease, pulmonary disease, stroke or other neurological disorder, or peripheral vascular disease\n\n\u{2022} you ARE NOT pregnant, incarcerated, or decisionally impaired"
+        let eligQues2 = "Please verify the following:\n\n\u{2022} You DO NOT have any serious chronic medical issues that may limit your ability to participate in physical therapy and home exercise or make participation in physical therapy and home exercise medically inadvisable. This includes cancer, severe arthritis, neuropathy or other neuromuscular disease, angina, cardiovascular disease, pulmonary disease, stroke or other neurological disorder, or peripheral vascular disease\n\n\u{2022} You ARE NOT pregnant, incarcerated, or decisionally impaired"
         
         let eligTextChoices2 = [
             ORKTextChoice(text: "Yes, these are ALL true", value: 0 as NSCoding & NSCopying & NSObjectProtocol),
             ORKTextChoice(text: "No", value: 1 as NSCoding & NSCopying & NSObjectProtocol)
         ]
         let eligAnswerFormat2 = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: eligTextChoices2)
-        let eligStep2 = ORKQuestionStep(identifier: "EligibilityQuestionStep2", title: "Eligiblity", answer: eligAnswerFormat2)
+        let eligStep2 = ORKQuestionStep(identifier: "EligibilityQuestionStep2",
+                                        title: "Eligiblity",
+                                        question: nil,
+                                        answer: eligAnswerFormat2)
         eligStep2.text = eligQues2
         eligStep2.isOptional = false
         

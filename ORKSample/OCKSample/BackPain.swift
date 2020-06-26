@@ -88,13 +88,19 @@ struct BackPain: Assessment {
             minimumValueDescription: minimumValueDescription
         )
         
-        let questionStep = ORKQuestionStep(identifier: "backPainStep1", title: question, answer: answerFormat)
+        let questionStep = ORKQuestionStep(identifier: "backPainStep1",
+                                           title: question,
+                                           question: nil,
+                                           answer: answerFormat)
         questionStep.isOptional = false
         steps += [questionStep]
         
         // Get the localized strings to use for the task.
         let question2 = NSLocalizedString("What was your maximum pain in the last 24 hours?", comment: "")
-        let questionStep2 = ORKQuestionStep(identifier: "backPainStep2", title: question2, answer: answerFormat)
+        let questionStep2 = ORKQuestionStep(identifier: "backPainStep2",
+                                            title: question2,
+                                            question: nil,
+                                            answer: answerFormat)
         questionStep2.isOptional = false
         
         steps += [questionStep2]

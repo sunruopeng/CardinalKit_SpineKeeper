@@ -90,50 +90,66 @@ struct StartBackSurvey: Assessment {
         
         // Boolean question
         let booleanQuestionStepTitle = "My back pain has spread down my leg(s) at some time in the last 2 weeks?"
-        let booleanQuestionStep = ORKQuestionStep(identifier: "BooleanQuestionStep", title: booleanQuestionStepTitle, answer: ORKBooleanAnswerFormat())
-        
+        let booleanQuestionStep = ORKQuestionStep(identifier: "BooleanQuestionStep",
+                                                  title: booleanQuestionStepTitle,
+                                                  question: nil,
+                                                  answer: ORKBooleanAnswerFormat())
         steps += [booleanQuestionStep]
         
         // Boolean question
         let booleanQuestionStepTitle1 = "I have had pain in the shoulder or neck at some time in the last 2 weeks?"
-        let booleanQuestionStep1 = ORKQuestionStep(identifier: "BooleanQuestionStep1", title: booleanQuestionStepTitle1, answer: ORKBooleanAnswerFormat())
-        
+        let booleanQuestionStep1 = ORKQuestionStep(identifier: "BooleanQuestionStep1",
+                                                   title: booleanQuestionStepTitle1,
+                                                   question: nil,
+                                                   answer: ORKBooleanAnswerFormat())
         steps += [booleanQuestionStep1]
         
         // Boolean question
         let booleanQuestionStepTitle2 = "I have only walked short distances because of my back pain?"
-        let booleanQuestionStep2 = ORKQuestionStep(identifier: "BooleanQuestionStep2", title: booleanQuestionStepTitle2, answer: ORKBooleanAnswerFormat())
-        
+        let booleanQuestionStep2 = ORKQuestionStep(identifier: "BooleanQuestionStep2",
+                                                   title: booleanQuestionStepTitle2,
+                                                   question: nil,
+                                                   answer: ORKBooleanAnswerFormat())
         steps += [booleanQuestionStep2]
         
         // Boolean question
         let booleanQuestionStepTitle3 = "In the last 2 weeks, I have dressed more slowly than usual because of back pain?"
-        let booleanQuestionStep3 = ORKQuestionStep(identifier: "BooleanQuestionStep3", title: booleanQuestionStepTitle3, answer: ORKBooleanAnswerFormat())
-        
+        let booleanQuestionStep3 = ORKQuestionStep(identifier: "BooleanQuestionStep3",
+                                                   title: booleanQuestionStepTitle3,
+                                                   question: nil,
+                                                   answer: ORKBooleanAnswerFormat())
         steps += [booleanQuestionStep3]
         
         // Boolean question
         let booleanQuestionStepTitle4 = "It’s not really safe for a person with a condition like mine to be physically active?"
-        let booleanQuestionStep4 = ORKQuestionStep(identifier: "BooleanQuestionStep4", title: booleanQuestionStepTitle4, answer: ORKBooleanAnswerFormat())
-        
+        let booleanQuestionStep4 = ORKQuestionStep(identifier: "BooleanQuestionStep4",
+                                                   title: booleanQuestionStepTitle4,
+                                                   question: nil,
+                                                   answer: ORKBooleanAnswerFormat())
         steps += [booleanQuestionStep4]
         
         // Boolean question
         let booleanQuestionStepTitle5 = "Worrying thoughts have been going through my mind a lot of the time?"
-        let booleanQuestionStep5 = ORKQuestionStep(identifier: "BooleanQuestionStep5", title: booleanQuestionStepTitle5, answer: ORKBooleanAnswerFormat())
-        
+        let booleanQuestionStep5 = ORKQuestionStep(identifier: "BooleanQuestionStep5",
+                                                   title: booleanQuestionStepTitle5,
+                                                   question: nil,
+                                                   answer: ORKBooleanAnswerFormat())
         steps += [booleanQuestionStep5]
         
         // Boolean question
         let booleanQuestionStepTitle6 = "I feel that my back pain is terrible and it’s never going to get any better?"
-        let booleanQuestionStep6 = ORKQuestionStep(identifier: "BooleanQuestionStep6", title: booleanQuestionStepTitle6, answer: ORKBooleanAnswerFormat())
-        
+        let booleanQuestionStep6 = ORKQuestionStep(identifier: "BooleanQuestionStep6",
+                                                   title: booleanQuestionStepTitle6,
+                                                   question: nil,
+                                                   answer: ORKBooleanAnswerFormat())
         steps += [booleanQuestionStep6]
         
         // Boolean question
         let booleanQuestionStepTitle7 = "In general I have not enjoyed all the things I used to enjoy?"
-        let booleanQuestionStep7 = ORKQuestionStep(identifier: "BooleanQuestionStep7", title: booleanQuestionStepTitle7, answer: ORKBooleanAnswerFormat())
-        
+        let booleanQuestionStep7 = ORKQuestionStep(identifier: "BooleanQuestionStep7",
+                                                   title: booleanQuestionStepTitle7,
+                                                   question: nil,
+                                                   answer: ORKBooleanAnswerFormat())
         steps += [booleanQuestionStep7]
         
         
@@ -147,8 +163,10 @@ struct StartBackSurvey: Assessment {
             ORKTextChoice(text: "Extremely", value: 4 as NSCoding & NSCopying & NSObjectProtocol)
         ]
         let questAnswerFormat: ORKTextChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: textChoices)
-        let questQuestionStep = ORKQuestionStep(identifier: "TextChoiceQuestionStep", title: questQuestionStepTitle, answer: questAnswerFormat)
-        
+        let questQuestionStep = ORKQuestionStep(identifier: "TextChoiceQuestionStep",
+                                                title: questQuestionStepTitle,
+                                                question: nil,
+                                                answer: questAnswerFormat)
         steps += [questQuestionStep]
         
         /*

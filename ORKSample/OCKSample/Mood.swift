@@ -82,7 +82,10 @@ struct Mood: Assessment {
             minimumValueDescription: minimumValueDescription
         )
         
-        let questionStep = ORKQuestionStep(identifier: activityType.rawValue, title: question, answer: answerFormat)
+        let questionStep = ORKQuestionStep(identifier: activityType.rawValue,
+                                           title: question,
+                                           question: nil,
+                                           answer: answerFormat)
         questionStep.isOptional = false
         
         // Create an ordered task with a single question.

@@ -74,8 +74,10 @@ struct Journaling: Assessment {
         // Create a question and answer format.
         let answerFormat = ORKTextAnswerFormat(maximumLength: 1000)
         
-        
-        let journalStep = ORKQuestionStep(identifier: activityType.rawValue, title: question, answer: answerFormat)
+        let journalStep = ORKQuestionStep(identifier: activityType.rawValue,
+                                          title: question,
+                                          question: nil,
+                                          answer: answerFormat)
         journalStep.isOptional = false
         journalStep.text = "Did any notable events occur that might relate to your back pain?"
         

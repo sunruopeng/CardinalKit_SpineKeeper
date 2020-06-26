@@ -73,7 +73,10 @@ struct ExcerciseMinutes: Assessment {
             let unit = HKUnit.minute()
             let answerFormat = ORKHealthKitQuantityTypeAnswerFormat(quantityType: quantityType, unit: unit, style: .integer)
             let title = NSLocalizedString("Input the number of minutes of excercise you performed today", comment: "")
-            let questionStep = ORKQuestionStep(identifier: activityType.rawValue, title: title, answer: answerFormat)
+            let questionStep = ORKQuestionStep(identifier: activityType.rawValue,
+                                               title: title,
+                                               question: nil,
+                                               answer: answerFormat)
             questionStep.isOptional = false
 
             // Create an ordered task with a single question.
@@ -82,7 +85,10 @@ struct ExcerciseMinutes: Assessment {
         } else {
             let answerFormat = ORKNumericAnswerFormat(style: ORKNumericAnswerStyle.integer, unit: "min")
             let title = NSLocalizedString("Input the number of minutes of excercise you performed today", comment: "")
-            let questionStep = ORKQuestionStep(identifier: activityType.rawValue, title: title, answer: answerFormat)
+            let questionStep = ORKQuestionStep(identifier: activityType.rawValue,
+                                               title: title,
+                                               question: nil,
+                                               answer: answerFormat)
             questionStep.isOptional = false
             
             // Create an ordered task with a single question.

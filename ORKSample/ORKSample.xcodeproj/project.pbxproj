@@ -241,13 +241,27 @@
 		B5D35FC71BEA363F004CBB06 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D35FC61BEA363F004CBB06 /* ProfileHeaderView.swift */; };
 		B5D35FC91BEA48D3004CBB06 /* HKHealthStore+Queries.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D35FC81BEA48D3004CBB06 /* HKHealthStore+Queries.swift */; };
 		B5FA92E91BF13D98001E46C0 /* HealthDataStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA92E81BF13D98001E46C0 /* HealthDataStep.swift */; };
-		FAB5682424A46C740065BB45 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB5682124A46B080065BB45 /* ResearchKit.framework */; };
-		FAB5682524A46C740065BB45 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAB5682124A46B080065BB45 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FA7C5EE524A625DE00C6C976 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7C5EE224A625D600C6C976 /* ResearchKit.framework */; };
+		FA7C5EE624A625DE00C6C976 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA7C5EE224A625D600C6C976 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FAB5682824A46C740065BB45 /* CareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB5681724A46AF90065BB45 /* CareKit.framework */; };
 		FAB5682924A46C740065BB45 /* CareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAB5681724A46AF90065BB45 /* CareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FA7C5EE124A625D600C6C976 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA7C5EDB24A625D500C6C976 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B183A5951A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		FA7C5EE324A625D600C6C976 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA7C5EDB24A625D500C6C976 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
+			remoteInfo = ResearchKitTests;
+		};
 		FAB5681624A46AF90065BB45 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FAB5681024A46AF80065BB45 /* CareKit.xcodeproj */;
@@ -261,27 +275,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 8605A5C41C4F04EC00DD65FF;
 			remoteInfo = CareKitTests;
-		};
-		FAB5682024A46B080065BB45 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FAB5681A24A46B080065BB45 /* ResearchKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B183A5951A8535D100C76870;
-			remoteInfo = ResearchKit;
-		};
-		FAB5682224A46B080065BB45 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FAB5681A24A46B080065BB45 /* ResearchKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
-			remoteInfo = ResearchKitTests;
-		};
-		FAB5682624A46C740065BB45 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FAB5681A24A46B080065BB45 /* ResearchKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = B183A4731A8535D100C76870;
-			remoteInfo = ResearchKit;
 		};
 		FAB5682A24A46C740065BB45 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -299,8 +292,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				FA7C5EE624A625DE00C6C976 /* ResearchKit.framework in Embed Frameworks */,
 				FAB5682924A46C740065BB45 /* CareKit.framework in Embed Frameworks */,
-				FAB5682524A46C740065BB45 /* ResearchKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -547,8 +540,8 @@
 		B5D35FC61BEA363F004CBB06 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileHeaderView.swift; path = ORKSample/ProfileHeaderView.swift; sourceTree = "<group>"; };
 		B5D35FC81BEA48D3004CBB06 /* HKHealthStore+Queries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "HKHealthStore+Queries.swift"; path = "ORKSample/HKHealthStore+Queries.swift"; sourceTree = "<group>"; };
 		B5FA92E81BF13D98001E46C0 /* HealthDataStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthDataStep.swift; path = ORKSample/HealthDataStep.swift; sourceTree = "<group>"; };
+		FA7C5EDB24A625D500C6C976 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../../apple-repos/ResearchKit/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
 		FAB5681024A46AF80065BB45 /* CareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKit.xcodeproj; path = ../../CareKit/CareKit.xcodeproj; sourceTree = "<group>"; };
-		FAB5681A24A46B080065BB45 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ../../ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -558,8 +551,8 @@
 			files = (
 				FAB5682824A46C740065BB45 /* CareKit.framework in Frameworks */,
 				07A3B51C22B97ABE00AD872B /* HealthKit.framework in Frameworks */,
+				FA7C5EE524A625DE00C6C976 /* ResearchKit.framework in Frameworks */,
 				0755B4B01FD511430078A8F7 /* AudioToolbox.framework in Frameworks */,
-				FAB5682424A46C740065BB45 /* ResearchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -997,7 +990,7 @@
 		BC2A3CA81C58E92600DA64B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FAB5681A24A46B080065BB45 /* ResearchKit.xcodeproj */,
+				FA7C5EDB24A625D500C6C976 /* ResearchKit.xcodeproj */,
 				FAB5681024A46AF80065BB45 /* CareKit.xcodeproj */,
 				07A3B51B22B97ABE00AD872B /* HealthKit.framework */,
 				0755B4AF1FD511430078A8F7 /* AudioToolbox.framework */,
@@ -1005,20 +998,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FA7C5EDC24A625D500C6C976 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA7C5EE224A625D600C6C976 /* ResearchKit.framework */,
+				FA7C5EE424A625D600C6C976 /* ResearchKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		FAB5681124A46AF80065BB45 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				FAB5681724A46AF90065BB45 /* CareKit.framework */,
 				FAB5681924A46AF90065BB45 /* CareKitTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		FAB5681B24A46B080065BB45 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FAB5682124A46B080065BB45 /* ResearchKit.framework */,
-				FAB5682324A46B080065BB45 /* ResearchKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1038,7 +1031,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				FAB5682724A46C740065BB45 /* PBXTargetDependency */,
 				FAB5682B24A46C740065BB45 /* PBXTargetDependency */,
 			);
 			name = ORKSample;
@@ -1095,8 +1087,8 @@
 					ProjectRef = FAB5681024A46AF80065BB45 /* CareKit.xcodeproj */;
 				},
 				{
-					ProductGroup = FAB5681B24A46B080065BB45 /* Products */;
-					ProjectRef = FAB5681A24A46B080065BB45 /* ResearchKit.xcodeproj */;
+					ProductGroup = FA7C5EDC24A625D500C6C976 /* Products */;
+					ProjectRef = FA7C5EDB24A625D500C6C976 /* ResearchKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1107,6 +1099,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		FA7C5EE224A625D600C6C976 /* ResearchKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ResearchKit.framework;
+			remoteRef = FA7C5EE124A625D600C6C976 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FA7C5EE424A625D600C6C976 /* ResearchKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ResearchKitTests.xctest;
+			remoteRef = FA7C5EE324A625D600C6C976 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		FAB5681724A46AF90065BB45 /* CareKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -1119,20 +1125,6 @@
 			fileType = wrapper.cfbundle;
 			path = CareKitTests.xctest;
 			remoteRef = FAB5681824A46AF90065BB45 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FAB5682124A46B080065BB45 /* ResearchKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ResearchKit.framework;
-			remoteRef = FAB5682024A46B080065BB45 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FAB5682324A46B080065BB45 /* ResearchKitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ResearchKitTests.xctest;
-			remoteRef = FAB5682224A46B080065BB45 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1390,11 +1382,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FAB5682724A46C740065BB45 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ResearchKit;
-			targetProxy = FAB5682624A46C740065BB45 /* PBXContainerItemProxy */;
-		};
 		FAB5682B24A46C740065BB45 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CareKit;
@@ -1555,7 +1542,7 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "";
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "$(SRCROOT)";
 				INFOPLIST_FILE = ORKSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stanfordBack.Test2;
@@ -1591,7 +1578,7 @@
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "$(SRCROOT)";
 				INFOPLIST_FILE = ORKSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stanfordBack.Test2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
