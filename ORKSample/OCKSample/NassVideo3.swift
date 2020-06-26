@@ -49,7 +49,7 @@ struct NassVideo3: Activity {
         // Get the localized strings to use for the activity.
         let title = NSLocalizedString("Maintaining a Healthy Weight", comment: "")
         let summary = NSLocalizedString("Watch video", comment: "")
-        let instructions = "\u{2022} Take a slow breath in through your nose, breathing into your lower belly (for about 4 seconds).\n\n\u{2022} Hold for 1 to 2 seconds.\n\n\u{2022}Exhale slowly through your moth (for about 4 seconds).\n\n\u{2022} Wait a few seconds before taking another breath."
+        let instructions = "\u{2022} Take a slow breath in through your nose, breathing into your lower belly (for about 4 seconds).\n\n\u{2022} Hold for 1 to 2 seconds.\n\n\u{2022} Exhale slowly through your mouth (for about 4 seconds).\n\n\u{2022} Wait a few seconds before taking another breath."
         
         // Create the intervention activity.
         let activity = OCKCarePlanActivity.intervention(
