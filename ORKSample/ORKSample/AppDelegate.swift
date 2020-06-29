@@ -229,7 +229,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         let passcodeViewController = ORKPasscodeViewController.passcodeAuthenticationViewController(withText: "Please enter your passcode.", delegate: self)
         passcodeViewController.modalPresentationStyle = .fullScreen
-        containerViewController?.present(passcodeViewController, animated: false, completion: nil)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.containerViewController?.present(passcodeViewController, animated: false, completion: nil)
+        }
     }
 }
 
