@@ -220,6 +220,7 @@ class ProfileViewController: UITableViewController, HealthClientType, MFMailComp
             let passcodeVC = ORKPasscodeViewController.passcodeEditingViewController(withText: "",
                                                                                      delegate: self,
                                                                                      passcodeType: ORKPasscodeType.type4Digit)
+            passcodeVC.modalPresentationStyle = .fullScreen
             self.present(passcodeVC, animated: true, completion: nil)
         }
         
@@ -242,7 +243,7 @@ class ProfileViewController: UITableViewController, HealthClientType, MFMailComp
             let ciphertext = cipherdata.base64EncodedString()
             //print(ciphertext)
             composeVC.setMessageBody(ciphertext, isHTML: false)
-            
+            composeVC.modalPresentationStyle = .fullScreen
             // Present the view controller modally.
             self.present(composeVC, animated: true, completion: nil)
         }
@@ -251,6 +252,7 @@ class ProfileViewController: UITableViewController, HealthClientType, MFMailComp
             let orderedTask = ORKOrderedTask(identifier: "TutorialTask", steps: makeTutorialSteps())
             let taskViewController = ORKTaskViewController(task: orderedTask, taskRun: nil)
             taskViewController.delegate = self
+            taskViewController.modalPresentationStyle = .fullScreen
             present(taskViewController, animated: true, completion: nil)
         }
         if indexPath.section == 2 && indexPath.row == 1 {

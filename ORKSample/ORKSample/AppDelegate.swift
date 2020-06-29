@@ -82,9 +82,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
         print("didFinishLaunchingWithOptions")
         
-        //Junaid: make view controllers full-screen for iOS 13
-        UIViewController.swizzlePresent()
-        
         lockApp()
         return true
     }
@@ -231,6 +228,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             && UserDefaults.standard.object(forKey: "startDate") != nil else { return }
         window?.makeKeyAndVisible()
         let passcodeViewController = ORKPasscodeViewController.passcodeAuthenticationViewController(withText: "Please enter your passcode.", delegate: self)
+        passcodeViewController.modalPresentationStyle = .fullScreen
         containerViewController?.present(passcodeViewController, animated: false, completion: nil)
     }
 }
@@ -242,40 +240,5 @@ extension AppDelegate: ORKPasscodeDelegate {
         syncDataWithServer()
     }
     func passcodeViewControllerDidFailAuthentication(_ viewController: UIViewController) {
-    }
-}
-
-extension UIViewController {
-    static func swizzlePresent() {
-        let orginalSelector = #selector(present(_: animated: completion:))
-        let swizzledSelector = #selector(swizzledPresent)
-
-        let orginalMethod = class_getInstanceMethod(self, orginalSelector)
-        let swizzledMethod = class_getInstanceMethod(self, swizzledSelector)
-        
-        let didAddMethod = class_addMethod(self,
-                                           orginalSelector,
-                                           method_getImplementation(swizzledMethod!),
-                                           method_getTypeEncoding(swizzledMethod!))
-        
-        if didAddMethod {
-            class_replaceMethod(self, swizzledSelector,
-                                method_getImplementation(orginalMethod!),
-                                method_getTypeEncoding(orginalMethod!))
-        } else {
-            method_exchangeImplementations(orginalMethod!, swizzledMethod!)
-        }
-    }
-    
-    @objc
-    private func swizzledPresent(_ viewControllerToPresent: UIViewController, animated flag: Bool,
-                                 completion: (() -> Void)? = nil) {
-        if #available(iOS 13.0, *) {
-            if viewControllerToPresent.modalPresentationStyle == .pageSheet
-                || viewControllerToPresent.modalPresentationStyle == .automatic {
-                viewControllerToPresent.modalPresentationStyle = .fullScreen
-            }
-        }
-        swizzledPresent(viewControllerToPresent, animated: flag, completion: completion)
     }
 }

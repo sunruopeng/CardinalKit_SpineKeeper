@@ -117,7 +117,7 @@ class OnboardingViewController: UIViewController {
         let orderedTask = ORKOrderedTask(identifier: "Join", steps: steps)
         let taskViewController = ORKTaskViewController(task: orderedTask, taskRun: nil)
         taskViewController.delegate = self
-        
+        taskViewController.modalPresentationStyle = .fullScreen
         present(taskViewController, animated: true, completion: nil)
     }
     

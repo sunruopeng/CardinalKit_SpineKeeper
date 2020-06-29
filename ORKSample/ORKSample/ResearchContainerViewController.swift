@@ -193,6 +193,7 @@ class ResearchContainerViewController: UIViewController, HealthClientType, MFMai
     
     @objc func showPasscode() {
         let passcodeVC = ORKPasscodeViewController.passcodeAuthenticationViewController(withText: "", delegate: self)
+        passcodeVC.modalPresentationStyle = .fullScreen
         present(passcodeVC, animated: true, completion: nil)
     }
     
@@ -208,6 +209,7 @@ class ResearchContainerViewController: UIViewController, HealthClientType, MFMai
         if UserDefaults.standard.integer(forKey: "withdrawn") == 0 {
             let viewController = WithdrawViewController()
             viewController.delegate = self
+            viewController.modalPresentationStyle = .fullScreen
             present(viewController, animated: true, completion: nil)
         }
         
@@ -482,6 +484,7 @@ extension ResearchContainerViewController: OCKSymptomTrackerViewControllerDelega
         let taskViewController = ORKTaskViewController(task: sampleAssessment.task(), taskRun: nil)
         taskViewController.delegate = self
         taskViewController.outputDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        taskViewController.modalPresentationStyle = .fullScreen
         present(taskViewController, animated: true, completion: nil)
     }
 }

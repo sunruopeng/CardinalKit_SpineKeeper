@@ -142,6 +142,7 @@ class ActivityViewController: UITableViewController {
         }
 
         taskViewController.delegate = self
+        taskViewController.modalPresentationStyle = .fullScreen
         navigationController?.present(taskViewController, animated: true, completion: nil)
     }
 }
