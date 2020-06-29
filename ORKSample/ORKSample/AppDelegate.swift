@@ -235,10 +235,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate: ORKPasscodeDelegate {
     func passcodeViewControllerDidFinish(withSuccess viewController: UIViewController) {
-        containerViewController?.contentHidden = false
         viewController.dismiss(animated: true, completion: nil)
+        containerViewController?.contentHidden = false
+        containerViewController?.toStudy()
         syncDataWithServer()
     }
+    
     func passcodeViewControllerDidFailAuthentication(_ viewController: UIViewController) {
+        
     }
 }

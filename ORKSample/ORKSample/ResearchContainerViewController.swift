@@ -91,10 +91,10 @@ class ResearchContainerViewController: UIViewController, HealthClientType, MFMai
         
         // this line along with setting the global tint in main.storyboard makes the colors consistent everywhere
         //UIView.appearance(whenContainedInInstancesOf: [UIViewController.self]).tintColor = window?.rootViewController?.view.tintColor
-        UIView.appearance().tintColor = self.view.tintColor
+//        UIView.appearance().tintColor = self.view.tintColor
         //ORKPasscodeViewController.removePasscodeFromKeychain() // for debugging and to reset the account
         if ORKPasscodeViewController.isPasscodeStoredInKeychain() && UserDefaults.standard.object(forKey: "startDate") != nil {
-            perform(#selector(ResearchContainerViewController.showPasscode), with: nil, afterDelay: 0.0)
+//            perform(#selector(ResearchContainerViewController.showPasscode), with: nil, afterDelay: 1.0)
         }
         else {
             if ORKPasscodeViewController.isPasscodeStoredInKeychain() {
@@ -194,7 +194,7 @@ class ResearchContainerViewController: UIViewController, HealthClientType, MFMai
     @objc func showPasscode() {
         let passcodeVC = ORKPasscodeViewController.passcodeAuthenticationViewController(withText: "", delegate: self)
         passcodeVC.modalPresentationStyle = .fullScreen
-        present(passcodeVC, animated: true, completion: nil)
+        present(passcodeVC, animated: false, completion: nil)
     }
     
     func toOnboarding() {
