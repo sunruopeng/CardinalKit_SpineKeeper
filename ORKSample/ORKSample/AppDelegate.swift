@@ -63,7 +63,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return window?.rootViewController as? ResearchContainerViewController
     }
     
-    private func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
+    func application(_ application: UIApplication,
+                     willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let standardDefaults = UserDefaults.standard
         if standardDefaults.object(forKey: "ORKSampleFirstRun") == nil {
             ORKPasscodeViewController.removePasscodeFromKeychain()
@@ -79,9 +80,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    private func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
-        print("didFinishLaunchingWithOptions")
-        
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         lockApp()
         return true
     }
