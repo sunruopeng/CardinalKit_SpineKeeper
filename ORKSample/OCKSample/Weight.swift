@@ -91,7 +91,7 @@ struct Weight: Assessment, HealthSampleBuilder {
         let title = NSLocalizedString("Input your weight", comment: "")
         let questionStep = ORKQuestionStep(identifier: activityType.rawValue,
                                            title: title,
-                                           question: nil,
+                                           question: title,
                                            answer: answerFormat)
         questionStep.isOptional = false
         

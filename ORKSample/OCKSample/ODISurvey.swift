@@ -73,8 +73,9 @@ struct ODISurvey: Assessment {
         var questAnswerFormat: ORKTextChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: textChoices)
         var questQuestionStep = ORKQuestionStep(identifier: "ODITextChoiceQuestionStep",
                                                 title: questQuestionStepTitle,
-                                                question: nil,
+                                                question: questQuestionStepTitle,
                                                 answer: questAnswerFormat)
+        questQuestionStep.text = questQuestionStepTitle
         steps += [questQuestionStep]
         
         // Quest question using text choice
@@ -90,8 +91,9 @@ struct ODISurvey: Assessment {
         questAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: textChoices)
         questQuestionStep = ORKQuestionStep(identifier: "ODITextChoiceQuestionStep1",
                                             title: questQuestionStepTitle,
-                                            question: nil,
+                                            question: questQuestionStepTitle,
                                             answer: questAnswerFormat)
+        questQuestionStep.text = questQuestionStepTitle
         steps += [questQuestionStep]
 
         // Quest question using text choice
@@ -107,8 +109,9 @@ struct ODISurvey: Assessment {
         questAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: textChoices)
         questQuestionStep = ORKQuestionStep(identifier: "ODITextChoiceQuestionStep2",
                                             title: questQuestionStepTitle,
-                                            question: nil,
+                                            question: questQuestionStepTitle,
                                             answer: questAnswerFormat)
+        questQuestionStep.text = questQuestionStepTitle
         steps += [questQuestionStep]
         
         // Quest question using text choice
@@ -124,8 +127,9 @@ struct ODISurvey: Assessment {
         questAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: textChoices)
         questQuestionStep = ORKQuestionStep(identifier: "ODITextChoiceQuestionStep3",
                                             title: questQuestionStepTitle,
-                                            question: nil,
+                                            question: questQuestionStepTitle,
                                             answer: questAnswerFormat)
+        questQuestionStep.text = questQuestionStepTitle
         steps += [questQuestionStep]
         
         // Quest question using text choice
@@ -141,8 +145,9 @@ struct ODISurvey: Assessment {
         questAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: textChoices)
         questQuestionStep = ORKQuestionStep(identifier: "ODITextChoiceQuestionStep10",
                                             title: questQuestionStepTitle,
-                                            question: nil,
+                                            question: questQuestionStepTitle,
                                             answer: questAnswerFormat)
+        questQuestionStep.text = questQuestionStepTitle
         steps += [questQuestionStep]
 
         
@@ -159,8 +164,9 @@ struct ODISurvey: Assessment {
         questAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: textChoices)
         questQuestionStep = ORKQuestionStep(identifier: "ODITextChoiceQuestionStep4",
                                             title: questQuestionStepTitle,
-                                            question: nil,
+                                            question: questQuestionStepTitle,
                                             answer: questAnswerFormat)
+        questQuestionStep.text = questQuestionStepTitle
         steps += [questQuestionStep]
         
         
@@ -177,8 +183,9 @@ struct ODISurvey: Assessment {
         questAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: textChoices)
         questQuestionStep = ORKQuestionStep(identifier: "ODITextChoiceQuestionStep5",
                                             title: questQuestionStepTitle,
-                                            question: nil,
+                                            question: questQuestionStepTitle,
                                             answer: questAnswerFormat)
+        questQuestionStep.text = questQuestionStepTitle
         steps += [questQuestionStep]
         
         
@@ -195,8 +202,9 @@ struct ODISurvey: Assessment {
         questAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: textChoices)
         questQuestionStep = ORKQuestionStep(identifier: "ODITextChoiceQuestionStep6",
                                             title: questQuestionStepTitle,
-                                            question: nil,
+                                            question: questQuestionStepTitle,
                                             answer: questAnswerFormat)
+        questQuestionStep.text = questQuestionStepTitle
         steps += [questQuestionStep]
         
         
@@ -213,8 +221,9 @@ struct ODISurvey: Assessment {
         questAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: textChoices)
         questQuestionStep = ORKQuestionStep(identifier: "ODITextChoiceQuestionStep11",
                                             title: questQuestionStepTitle,
-                                            question: nil,
+                                            question: questQuestionStepTitle,
                                             answer: questAnswerFormat)
+        questQuestionStep.text = questQuestionStepTitle
         steps += [questQuestionStep]
         
         

@@ -81,7 +81,7 @@ struct Sleep: Assessment {
         
         let questionStep = ORKQuestionStep(identifier: activityType.rawValue,
                                            title: question,
-                                           question: nil,
+                                           question: question,
                                            answer: answerFormat)
         questionStep.isOptional = false
         

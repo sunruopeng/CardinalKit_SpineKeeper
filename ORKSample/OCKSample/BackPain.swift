@@ -90,7 +90,7 @@ struct BackPain: Assessment {
         
         let questionStep = ORKQuestionStep(identifier: "backPainStep1",
                                            title: question,
-                                           question: nil,
+                                           question: question,
                                            answer: answerFormat)
         questionStep.isOptional = false
         steps += [questionStep]
@@ -99,7 +99,7 @@ struct BackPain: Assessment {
         let question2 = NSLocalizedString("What was your maximum pain in the last 24 hours?", comment: "")
         let questionStep2 = ORKQuestionStep(identifier: "backPainStep2",
                                             title: question2,
-                                            question: nil,
+                                            question: question2,
                                             answer: answerFormat)
         questionStep2.isOptional = false
         

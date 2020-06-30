@@ -75,7 +75,7 @@ struct ExcerciseMinutes: Assessment {
             let title = NSLocalizedString("Input the number of minutes of excercise you performed today", comment: "")
             let questionStep = ORKQuestionStep(identifier: activityType.rawValue,
                                                title: title,
-                                               question: nil,
+                                               question: title,
                                                answer: answerFormat)
             questionStep.isOptional = false
 
@@ -87,7 +87,7 @@ struct ExcerciseMinutes: Assessment {
             let title = NSLocalizedString("Input the number of minutes of excercise you performed today", comment: "")
             let questionStep = ORKQuestionStep(identifier: activityType.rawValue,
                                                title: title,
-                                               question: nil,
+                                               question: title,
                                                answer: answerFormat)
             questionStep.isOptional = false
             

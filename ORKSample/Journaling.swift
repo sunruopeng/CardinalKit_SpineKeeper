@@ -76,7 +76,7 @@ struct Journaling: Assessment {
         
         let journalStep = ORKQuestionStep(identifier: activityType.rawValue,
                                           title: question,
-                                          question: nil,
+                                          question: question,
                                           answer: answerFormat)
         journalStep.isOptional = false
         journalStep.text = "Did any notable events occur that might relate to your back pain?"

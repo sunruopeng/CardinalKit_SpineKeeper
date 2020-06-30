@@ -51,6 +51,7 @@ class OnboardingViewController: UIViewController {
         let reviewConsentStep = ORKConsentReviewStep(identifier: "ConsentReviewStep",
                                                      signature: signature,
                                                      in: consentDocument)
+        reviewConsentStep.title = "Consent"
         reviewConsentStep.text = "Review the consent form."
         reviewConsentStep.reasonForConsent = "Consent to join the Stanford SpineKeeper Study."
         
@@ -154,6 +155,7 @@ class OnboardingViewController: UIViewController {
         
         let completionTask = ORKNavigableOrderedTask(identifier: "tutorialTask", steps: [tempStep, tempStep2])
         let completeStep = ORKNavigablePageStep(identifier: "TutorialStep", pageTask: completionTask)
+        completeStep.title = "All Set!"
         return completeStep
     }
     
@@ -164,6 +166,7 @@ class OnboardingViewController: UIViewController {
         
         let backPainTask = ORKNavigableOrderedTask(identifier: "keeleTask", steps: steps)
         let backPainStep = ORKNavigablePageStep(identifier: "keeleStep", pageTask: backPainTask)
+        backPainStep.title = "The Keele Start Back Screening Tool"
         return backPainStep
     }
     
@@ -173,6 +176,7 @@ class OnboardingViewController: UIViewController {
         
         let backPainTask = ORKNavigableOrderedTask(identifier: "ODITask", steps: steps)
         let backPainStep = ORKNavigablePageStep(identifier: "ODIStep", pageTask: backPainTask)
+        backPainStep.title = "Oswestry Disability Index"
         return backPainStep
     }
     
@@ -201,8 +205,9 @@ class OnboardingViewController: UIViewController {
         let answerFormat = ORKWeightAnswerFormat.init(measurementSystem: ORKMeasurementSystem.local)
         let questionStep0 = ORKQuestionStep(identifier: "weightStep",
                                             title: title0,
-                                            question: nil,
+                                            question: title0,
                                             answer: answerFormat)
+        questionStep0.text = title0
         questionStep0.isOptional = true
         steps += [questionStep0]
         
@@ -211,13 +216,15 @@ class OnboardingViewController: UIViewController {
         let answerFormat1 = ORKHeightAnswerFormat(measurementSystem: ORKMeasurementSystem.local)
         let questionStep = ORKQuestionStep(identifier: "heightStep",
                                            title: title,
-                                           question: nil,
+                                           question: title,
                                            answer: answerFormat1)
+        questionStep.text = title
         questionStep.isOptional = true
         steps += [questionStep]
         
         let demoTask = ORKNavigableOrderedTask(identifier: "demoTask", steps: steps)
         let demoStep = ORKNavigablePageStep(identifier: "demoStep", pageTask: demoTask)
+        demoStep.title = "Demographics"
         return demoStep
     }
     
@@ -230,7 +237,7 @@ class OnboardingViewController: UIViewController {
         let eligAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: eligTextChoices)
         let eligStep = ORKQuestionStep(identifier: "EligibilityQuestionStep",
                                        title: "Eligiblity",
-                                       question: nil,
+                                       question: "Eligiblity",
                                        answer: eligAnswerFormat)
         eligStep.text = eligQues
         eligStep.isOptional = false
@@ -250,14 +257,14 @@ class OnboardingViewController: UIViewController {
         let eligAnswerFormat2 = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: eligTextChoices2)
         let eligStep2 = ORKQuestionStep(identifier: "EligibilityQuestionStep2",
                                         title: "Eligiblity",
-                                        question: nil,
+                                        question: "Eligiblity",
                                         answer: eligAnswerFormat2)
         eligStep2.text = eligQues2
         eligStep2.isOptional = false
         
         let eligSuccessStep = ORKInstructionStep(identifier:"EligibilitySuccessStep")
-        eligSuccessStep.title = "Great, you're eligible for the study!"
-        eligSuccessStep.text = "Let's continue."
+        eligSuccessStep.text = "Great, you're eligible for the study!"
+        eligSuccessStep.detailText = "Let's continue."
         
         let resultSelector = ORKResultSelector(stepIdentifier: "EligibilityQuestionStep", resultIdentifier: "EligibilityQuestionStep")
         let predicate = ORKResultPredicate.predicateForChoiceQuestionResult(with: resultSelector, expectedAnswerValue: 0 as NSCoding & NSCopying & NSObjectProtocol)
@@ -273,6 +280,7 @@ class OnboardingViewController: UIViewController {
         eligProcessTask.setNavigationRule(ORKDirectStepNavigationRule(destinationStepIdentifier: "EligibilityQuestionStep"),
                                           forTriggerStepIdentifier: "EligibilityFailureStep")
         let eligProcessStep = ORKNavigablePageStep(identifier: "eligProcessStep", pageTask: eligProcessTask)
+        eligProcessStep.title = "Eligiblity"
         return eligProcessStep
     }
 }

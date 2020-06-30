@@ -82,6 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        UIView.appearance().tintColor = Colors.cardinalRed.color
         lockApp()
         return true
     }
