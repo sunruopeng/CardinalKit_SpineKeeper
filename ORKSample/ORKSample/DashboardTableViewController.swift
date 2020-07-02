@@ -65,7 +65,8 @@ class DashboardTableViewController: UITableViewController {
         tableView.rowHeight = UITableView.automaticDimension
         
         let yo = UIApplication.shared.delegate as! AppDelegate
-        yo.containerViewController?.careStoreManager.updateInsights()
+        //  Junaid Commnented
+       // yo.containerViewController?.careStoreManager.updateInsights()
         
     }
 

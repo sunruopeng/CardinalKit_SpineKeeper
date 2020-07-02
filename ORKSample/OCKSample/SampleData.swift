@@ -51,7 +51,7 @@ class SampleData: NSObject {
         TransverseCore(),
         SagittalCore(),
         AbdominalCrunch(),
-        NeckPress(),
+        //NeckPress(), Junaid Commnented
         SideBridge(),
         Plank(),
         PhysicalActivity(),
@@ -113,6 +113,8 @@ class SampleData: NSObject {
     /**
         An array of `OCKContact`s to display on the Connect view.
     */
+    /* Junaid Commnented
+    
     let contacts: [OCKContact] = [
         OCKContact(contactType: .careTeam,
             name: "Dr. Maria Ruiz",
@@ -138,10 +140,12 @@ class SampleData: NSObject {
             monogram: nil,
             image: nil)
     ]
+ 
+ */
     
     // MARK: Initialization
 
-    
+    /* Junaid Commnented
     required init(carePlanStore: OCKCarePlanStore) {
         super.init()
         
@@ -157,7 +161,10 @@ class SampleData: NSObject {
             }
         }
     }
-    
+ 
+ */
+ 
+    /* Junaid Commnented
     func resetStore(store: OCKCarePlanStore) {
         self._clearStore(store: store)
     }
@@ -195,7 +202,7 @@ class SampleData: NSObject {
         DispatchGroup().wait(timeout: DispatchTime.distantFuture)
     }
     
-    
+    */
     
     // MARK: Convenience
     
@@ -208,6 +215,8 @@ class SampleData: NSObject {
         return nil
     }
     
+    /* Junaid Commnented
+    
     func generateSampleDocument() -> OCKDocument {
         let subtitle = OCKDocumentElementSubtitle(subtitle: "First subtitle")
         
@@ -218,4 +227,6 @@ class SampleData: NSObject {
         
         return document
     }
+    
+    */
 }

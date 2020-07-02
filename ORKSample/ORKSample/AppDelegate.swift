@@ -143,6 +143,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         //}
+        
+        /*   Junaid Commnented
         let yo = containerViewController?.careStoreManager.store
         yo?.activities{ (success, activities, errorOrNil) in
                 guard success else {
@@ -196,6 +198,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.containerViewController?.present(composeVC, animated: true, completion: nil)
             */
         }
+        
+        */
         
 //        //print("hello")
 //        var i = 0

@@ -40,6 +40,7 @@ struct VoiceAnalysis: Assessment {
     
     let activityType: ActivityType = .voiceAnalysis
     
+    /* Junaid Commnented
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
         let startDate = DateComponents(year: 2016, month: 01, day: 01)
@@ -62,6 +63,8 @@ struct VoiceAnalysis: Assessment {
         )
         return activity
     }
+ 
+ */
     // MARK: Assessment
     func task() -> ORKTask {
         let intendedUseDescription = "Everyone's voice has unique characteristics."

@@ -16,7 +16,7 @@ struct Coping: Activity {
     // MARK: Activity
     
     let activityType: ActivityType = .coping
-    
+    /* Junaid Commnented
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
         let calendar = Calendar.autoupdatingCurrent
@@ -65,6 +65,8 @@ struct Coping: Activity {
         )
         return activity
     }
+ 
+ */
 }
 
 

@@ -47,6 +47,8 @@ struct Weight: Assessment, HealthSampleBuilder {
     
     // MARK: Activity
     
+    
+    /* Junaid Commnented
     func carePlanActivity() -> OCKCarePlanActivity {
         let calendar = Calendar.autoupdatingCurrent
         let startDate = (UserDefaults.standard.object(forKey: "startDate") as! Date)
@@ -80,6 +82,8 @@ struct Weight: Assessment, HealthSampleBuilder {
         
         return activity
     }
+    
+    */
     
     // MARK: Assessment
     

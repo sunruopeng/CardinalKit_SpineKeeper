@@ -17,6 +17,8 @@ struct WallWash: Activity {
     
     let activityType: ActivityType = .wallWash
     
+    /* Junaid Commnented
+    
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
         let calendar = Calendar.autoupdatingCurrent
@@ -67,5 +69,7 @@ struct WallWash: Activity {
         
         return activity
     }
+ 
+ */
 }
 

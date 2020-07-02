@@ -17,6 +17,7 @@ struct DoorwayChestStretch: Activity {
     
     let activityType: ActivityType = .doorwayChestStretch
     
+    /* Junaid Commnented
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
         let calendar = Calendar.autoupdatingCurrent
@@ -67,6 +68,8 @@ struct DoorwayChestStretch: Activity {
         
         return activity
     }
+ 
+ */
 }
 
 

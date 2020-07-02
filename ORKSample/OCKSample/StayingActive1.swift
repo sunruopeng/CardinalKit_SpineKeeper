@@ -17,6 +17,8 @@ struct StayingActive1: Activity {
     
     let activityType: ActivityType = .stayingActive1
     
+    /*
+    
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
         let calendar = Calendar.autoupdatingCurrent
@@ -67,6 +69,8 @@ struct StayingActive1: Activity {
         
         return activity
     }
+    
+    */
 }
 
 

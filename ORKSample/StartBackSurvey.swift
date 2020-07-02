@@ -40,6 +40,7 @@ struct StartBackSurvey: Assessment {
     
     let activityType: ActivityType = .startBackSurvey
     
+    /* Junaid Commnented
     func carePlanActivity() -> OCKCarePlanActivity {
         let calendar = Calendar.autoupdatingCurrent
         let startDate = (UserDefaults.standard.object(forKey: "startDate") as! Date)
@@ -74,6 +75,8 @@ struct StartBackSurvey: Assessment {
         
         return activity
     }
+ 
+ */
     
     // MARK: Assessment
     

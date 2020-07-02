@@ -17,6 +17,7 @@ struct Brace: Activity {
     
     let activityType: ActivityType = .brace
     
+    /* Junaid Commnented
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
         let calendar = Calendar.autoupdatingCurrent
@@ -68,5 +69,7 @@ struct Brace: Activity {
         
         return activity
     }
+ 
+ */
 }
 

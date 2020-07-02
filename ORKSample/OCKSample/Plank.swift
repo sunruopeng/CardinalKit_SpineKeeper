@@ -18,6 +18,8 @@ struct Plank: Activity {
     
     let activityType: ActivityType = .plank //Change this
     
+    /* Junaid Commnented
+    
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
         let calendar = Calendar.autoupdatingCurrent
@@ -69,6 +71,8 @@ struct Plank: Activity {
         
         return activity
     }
+ 
+ */
 }
 
 

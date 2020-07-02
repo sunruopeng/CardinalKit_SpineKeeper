@@ -35,7 +35,8 @@ import CareKit
  */
 protocol Activity {
     var activityType: ActivityType { get }
-    func carePlanActivity() -> OCKCarePlanActivity
+    // Junaid Commnented
+    //func carePlanActivity() -> OCKCarePlanActivity
 }
 
 /**

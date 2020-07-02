@@ -17,6 +17,8 @@ struct LayFlat: Activity {
     
     let activityType: ActivityType = .layFlat
     
+    /* Junaid Commnented
+    
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
         let calendar = Calendar.autoupdatingCurrent
@@ -66,6 +68,8 @@ struct LayFlat: Activity {
         )
         return activity
     }
+ 
+ */
 }
 
 

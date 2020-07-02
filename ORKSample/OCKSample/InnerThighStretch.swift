@@ -17,6 +17,8 @@ struct InnerThighStretch: Activity {
     
     let activityType: ActivityType = .innerThighStretch //Change this
     
+    /* Junaid Commnented
+    
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
         let calendar = Calendar.autoupdatingCurrent
@@ -69,4 +71,6 @@ struct InnerThighStretch: Activity {
         
         return activity
     }
+    
+    */
 }

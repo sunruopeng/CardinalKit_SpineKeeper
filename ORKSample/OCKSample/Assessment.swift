@@ -45,6 +45,9 @@ protocol Assessment: Activity {
  `OCKCarePlanEventResult` for a `OCKCarePlanEvent` and `ORKTaskResult`. The
  `OCKCarePlanEventResult` can then be written to a `OCKCarePlanStore`.
  */
+
+/* Junaid Commnented
+
 extension Assessment {
     func buildResultForCarePlanEvent(_ event: OCKCarePlanEvent, taskResult: ORKTaskResult) -> OCKCarePlanEventResult {
         let formatter = DateFormatter()
@@ -179,3 +182,6 @@ extension Assessment {
         fatalError("Unexpected task result type")
     }
 }
+
+ 
+ */

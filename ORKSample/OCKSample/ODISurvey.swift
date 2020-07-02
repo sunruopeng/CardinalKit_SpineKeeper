@@ -11,6 +11,7 @@ struct ODISurvey: Assessment {
     
     let activityType: ActivityType = .odiSurvey
     
+    /* Junaid Commnented
     func carePlanActivity() -> OCKCarePlanActivity {
         let calendar = Calendar.autoupdatingCurrent
         let startDate = (UserDefaults.standard.object(forKey: "startDate") as! Date)
@@ -45,6 +46,8 @@ struct ODISurvey: Assessment {
         
         return activity
     }
+ 
+ */
     
     // MARK: Assessment
     

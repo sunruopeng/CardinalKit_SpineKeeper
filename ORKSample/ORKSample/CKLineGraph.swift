@@ -9,6 +9,8 @@
 import CareKit
 import ResearchKit
 
+/*  Junaid Commnented
+
 class CKLineGraph : OCKChart {
     
     var lineGraph : ORKLineGraphChartView!
@@ -61,3 +63,5 @@ class CKLineGraph : OCKChart {
 
 
 }
+
+*/

@@ -17,6 +17,7 @@ struct AbdominalCrunch: Activity {
     
     let activityType: ActivityType = .abdominalCrunch //Change this
     
+    /* Junaid Commnented
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
         let calendar = Calendar.autoupdatingCurrent
@@ -68,6 +69,8 @@ struct AbdominalCrunch: Activity {
         
         return activity
     }
+ 
+ */
 }
 
 

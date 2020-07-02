@@ -17,6 +17,8 @@ struct SagittalCore: Activity {
     
     let activityType: ActivityType = .sagittalCore //Change this
     
+    
+    /* Junaid Commnented
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
         let calendar = Calendar.autoupdatingCurrent
@@ -68,5 +70,7 @@ struct SagittalCore: Activity {
         
         return activity
     }
+    
+    */
 }
 

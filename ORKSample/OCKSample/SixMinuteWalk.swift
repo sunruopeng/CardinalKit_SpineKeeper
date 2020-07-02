@@ -40,6 +40,8 @@ struct SixMinuteWalk: Assessment {
     
     let activityType: ActivityType = .sixMinuteWalk
     
+    /* Junaid Commnented
+    
     func carePlanActivity() -> OCKCarePlanActivity {
         let calendar = Calendar.autoupdatingCurrent
         let startDate = (UserDefaults.standard.object(forKey: "startDate") as! Date)
@@ -73,6 +75,7 @@ struct SixMinuteWalk: Assessment {
         return activity
     }
     
+    */
     // MARK: Assessment
     
     func task() -> ORKTask {

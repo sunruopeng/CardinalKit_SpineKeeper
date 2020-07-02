@@ -40,28 +40,29 @@ struct ExcerciseMinutes: Assessment {
     
     let activityType: ActivityType = .excerciseMinutes
     
-    func carePlanActivity() -> OCKCarePlanActivity {
-        // Create a weekly schedule.
-        let startDate = DateComponents(year: 2016, month: 01, day: 01)
-        let schedule = OCKCareSchedule.weeklySchedule(withStartDate: startDate as DateComponents, occurrencesOnEachDay: [1, 1, 1, 1, 1, 1, 1])
-        
-        // Get the localized strings to use for the assessment.
-        let title = NSLocalizedString("Excercise", comment: "")
-        let summary = NSLocalizedString("Minutes of activity", comment: "")
-        let activity = OCKCarePlanActivity.assessment(
-            withIdentifier: activityType.rawValue,
-            groupIdentifier: nil,
-            title: title,
-            text: summary,
-            tintColor: Colors.purple.color,
-            resultResettable: false,
-            schedule: schedule,
-            userInfo: nil,
-            optional: false
-        )
-        
-        return activity
-    }
+    //Junaid Commneted
+//    func carePlanActivity() -> OCKCarePlanActivity {
+//        // Create a weekly schedule.
+//        let startDate = DateComponents(year: 2016, month: 01, day: 01)
+//        let schedule = OCKCareSchedule.weeklySchedule(withStartDate: startDate as DateComponents, occurrencesOnEachDay: [1, 1, 1, 1, 1, 1, 1])
+//
+//        // Get the localized strings to use for the assessment.
+//        let title = NSLocalizedString("Excercise", comment: "")
+//        let summary = NSLocalizedString("Minutes of activity", comment: "")
+//        let activity = OCKCarePlanActivity.assessment(
+//            withIdentifier: activityType.rawValue,
+//            groupIdentifier: nil,
+//            title: title,
+//            text: summary,
+//            tintColor: Colors.purple.color,
+//            resultResettable: false,
+//            schedule: schedule,
+//            userInfo: nil,
+//            optional: false
+//        )
+//
+//        return activity
+//    }
     
     // MARK: Assessment
     

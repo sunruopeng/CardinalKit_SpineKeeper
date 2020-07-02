@@ -17,6 +17,8 @@ struct PhysicalActivity: Activity {
     
     let activityType: ActivityType = .physicalActivity
     
+    /* Junaid Commnented
+    
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
         let calendar = Calendar.autoupdatingCurrent
@@ -65,6 +67,8 @@ struct PhysicalActivity: Activity {
         )
         return activity
     }
+ 
+ */
 }
 
 

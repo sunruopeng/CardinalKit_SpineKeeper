@@ -17,6 +17,8 @@ struct StandingThreadTheNeedle: Activity {
     
     let activityType: ActivityType = .standingThreadTheNeedle //Change this
     
+    /* Junaid Commnented
+    
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
         let calendar = Calendar.autoupdatingCurrent
@@ -68,4 +70,6 @@ struct StandingThreadTheNeedle: Activity {
         
         return activity
     }
+ 
+ */
 }

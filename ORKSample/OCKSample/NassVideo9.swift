@@ -17,6 +17,7 @@ struct NassVideo9: Activity {
     
     let activityType: ActivityType = .nassVideo9
     
+    /* Junaid Commnented
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
         let calendar = Calendar.autoupdatingCurrent
@@ -67,6 +68,8 @@ struct NassVideo9: Activity {
         
         return activity
     }
+ 
+ */
 }
 
 

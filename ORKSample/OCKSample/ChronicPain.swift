@@ -16,6 +16,7 @@ struct ChronicPain: Activity {
     // MARK: Activity
     
     let activityType: ActivityType = .chronicPain
+    /* Junaid Commnented
     
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
@@ -67,6 +68,8 @@ struct ChronicPain: Activity {
         
         return activity
     }
+    
+    */
 }
 
 

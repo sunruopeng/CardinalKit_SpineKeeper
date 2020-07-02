@@ -17,6 +17,8 @@ struct Myth10: Activity {
     
     let activityType: ActivityType = .myth10
     
+    /* Junaid Commnented
+    
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
         let calendar = Calendar.autoupdatingCurrent
@@ -66,6 +68,8 @@ struct Myth10: Activity {
         
         return activity
     }
+    
+    */
 }
 
 

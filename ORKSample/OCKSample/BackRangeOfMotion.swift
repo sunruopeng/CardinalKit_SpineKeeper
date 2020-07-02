@@ -39,7 +39,7 @@ struct BackRangeOfMotion: Assessment {
     // MARK: Activity
     
     let activityType: ActivityType = .backRangeOfMotion
-    
+    /* Junaid Commnented
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
         let startDate = DateComponents(year: 2016, month: 01, day: 01)
@@ -62,6 +62,8 @@ struct BackRangeOfMotion: Assessment {
         )
         return activity
     }
+ 
+ */
     // MARK: Assessment 
     func task() -> ORKTask {
         let intendedUseDescription = "Back range of motion can be important in back pain"

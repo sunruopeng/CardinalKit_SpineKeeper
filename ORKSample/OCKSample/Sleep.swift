@@ -39,7 +39,7 @@ struct Sleep: Assessment {
     // MARK: Activity
     
     let activityType: ActivityType = .sleep
-    
+    /* Junaid Commnented
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
         let startDate = DateComponents(year: 2016, month: 01, day: 01)
@@ -62,6 +62,7 @@ struct Sleep: Assessment {
         
         return activity
     }
+     */
    
     func task() -> ORKTask {
         // Get the localized strings to use for the task.
@@ -122,4 +123,6 @@ struct Sleep: Assessment {
             
         })
     }
+ 
+ 
 }

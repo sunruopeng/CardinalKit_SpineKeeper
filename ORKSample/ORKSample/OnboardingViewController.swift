@@ -417,9 +417,9 @@ extension OnboardingViewController : ORKTaskViewControllerDelegate {
                 }
                 
                 
-                
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.containerViewController?.sampleData = SampleData(carePlanStore: (appDelegate.containerViewController?.careStoreManager.store)!)
+                //  Junaid Commnented
+//                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//                appDelegate.containerViewController?.sampleData = SampleData(carePlanStore: (appDelegate.containerViewController?.careStoreManager.store)!)
                 performSegue(withIdentifier: "unwindToStudy", sender: nil)
             
             case .discarded, .failed, .saved:

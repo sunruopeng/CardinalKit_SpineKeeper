@@ -17,6 +17,8 @@ struct IceHeat: Activity {
     
     let activityType: ActivityType = .iceHeat
     
+    /* Junaid Commnented
+    
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
         let calendar = Calendar.autoupdatingCurrent
@@ -66,6 +68,8 @@ struct IceHeat: Activity {
         )
         return activity
     }
+ 
+ */
 }
 
 

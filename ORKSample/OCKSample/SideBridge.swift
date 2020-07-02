@@ -18,6 +18,7 @@ struct SideBridge: Activity {
     
     let activityType: ActivityType = .sideBridge //Change this
     
+    /* Junaid Commnented
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
         let calendar = Calendar.autoupdatingCurrent
@@ -69,6 +70,8 @@ struct SideBridge: Activity {
         
         return activity
     }
+ 
+ */
 }
 
 

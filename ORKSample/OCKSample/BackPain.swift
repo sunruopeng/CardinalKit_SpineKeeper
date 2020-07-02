@@ -40,6 +40,8 @@ struct BackPain: Assessment {
     
     let activityType: ActivityType = .backPain
     
+    /* Junaid Commnented
+    
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
         let calendar = Calendar.autoupdatingCurrent
@@ -65,6 +67,8 @@ struct BackPain: Assessment {
         
         return activity
     }
+ 
+ */
     
     // MARK: Assessment
     

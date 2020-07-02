@@ -30,6 +30,7 @@
 
 import CareKit
 
+/* Junaid Commnented
 class QueryActivityEventsOperation: Operation {
     // MARK: Properties
     
@@ -147,3 +148,5 @@ struct DailyEvents {
         mappedEvents = [:]
     }
 }
+
+ */

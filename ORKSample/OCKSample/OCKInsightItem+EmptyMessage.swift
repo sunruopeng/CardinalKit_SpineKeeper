@@ -30,9 +30,12 @@
 
 import CareKit
 
+/* Junaid Commnented
 extension OCKInsightItem {
     /// Returns an `OCKInsightItem` to show when no insights have been calculated.
     static func emptyInsightsMessage() -> OCKInsightItem {
         return OCKMessageItem(title: "No Insights", text: "There are no insights to show.", tintColor: Colors.green.color, messageType: .tip)
     }
 }
+
+ */

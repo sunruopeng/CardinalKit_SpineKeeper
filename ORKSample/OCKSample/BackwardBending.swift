@@ -17,6 +17,8 @@ struct BackwardBending: Activity {
     
     let activityType: ActivityType = .backwardBending //Change this
     
+    /* Junaid Commnented
+    
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
         let calendar = Calendar.autoupdatingCurrent
@@ -69,4 +71,7 @@ struct BackwardBending: Activity {
         
         return activity
     }
+ 
+ */
+ 
 }

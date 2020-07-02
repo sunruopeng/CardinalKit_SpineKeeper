@@ -37,17 +37,22 @@ import AVFoundation
 import MediaPlayer
 import AVKit
 
-//import MessageUI
+import MessageUI
 
 class ResearchContainerViewController: UIViewController, HealthClientType, MFMailComposeViewControllerDelegate { //MFMessageComposeViewControllerDelegate
     // MARK: HealthClientType
     
     var healthStore: HKHealthStore?
-    let careStoreManager = CarePlanStoreManager.sharedCarePlanStoreManager
+    // Junaid Commnented
+    //let careStoreManager = CarePlanStoreManager.sharedCarePlanStoreManager
     var sampleData: SampleData?
+    
+    /* Junaid Commnented
     var careCardVC : OCKCareCardViewController?
     var symptomCardVC : OCKSymptomTrackerViewController?
     var insightsVC : OCKInsightsViewController?
+ 
+ */
     var dashboardVC : DashboardTableViewController?
 
     // MARK: Propertues
@@ -73,15 +78,21 @@ class ResearchContainerViewController: UIViewController, HealthClientType, MFMai
     
     required init?(coder aDecoder: NSCoder) {
         //UserDefaults.standard.set(Calendar.autoupdatingCurrent.startOfDay(for: Date()), forKey: "startDate")
-        if UserDefaults.standard.object(forKey: "startDate") != nil {
-            sampleData = SampleData(carePlanStore: careStoreManager.store)
-        }
-        super.init(coder: aDecoder)
-        careCardVC = createCareCardViewController()
-        symptomCardVC = createSymptomTrackerViewController()
-        insightsVC = createInsightsViewController()
         
-        careStoreManager.delegate = self
+         //  Junaid Commnented
+//        if UserDefaults.standard.object(forKey: "startDate") != nil {
+//            sampleData = SampleData(carePlanStore: careStoreManager.store)
+//        }
+        super.init(coder: aDecoder)
+        
+        /* Junaid Commnented
+         careCardVC = createCareCardViewController()
+         symptomCardVC = createSymptomTrackerViewController()
+         insightsVC = createInsightsViewController()
+         
+         */
+         // Junaid Commnented
+        //careStoreManager.delegate = self
     }
     
     // MARK: UIViewController
@@ -145,6 +156,7 @@ class ResearchContainerViewController: UIViewController, HealthClientType, MFMai
         toWithdrawl()
     }
     
+    /* Junaid Commnented
     
     fileprivate func createCareCardViewController() -> OCKCareCardViewController {
         let viewController = OCKCareCardViewController(carePlanStore: CarePlanStoreManager.sharedCarePlanStoreManager.store)
@@ -186,7 +198,8 @@ class ResearchContainerViewController: UIViewController, HealthClientType, MFMai
         viewController.tabBarItem = UITabBarItem(title: viewController.title, image: UIImage(named:"tab_dashboard"), selectedImage: UIImage(named: "tab_dashboard_selected"))
         return viewController
     }
-    
+ */
+ 
     
     
     // MARK: Transitions
@@ -213,11 +226,13 @@ class ResearchContainerViewController: UIViewController, HealthClientType, MFMai
             present(viewController, animated: true, completion: nil)
         }
         
-        if UserDefaults.standard.integer(forKey: "withdrawn") == 1 {
-            sampleData?.resetStore(store: CarePlanStoreManager.sharedCarePlanStoreManager.store)
-            ORKPasscodeViewController.removePasscodeFromKeychain()
-            toOnboarding()
-        }
+        /* Junaid Commnented
+         if UserDefaults.standard.integer(forKey: "withdrawn") == 1 {
+         sampleData?.resetStore(store: CarePlanStoreManager.sharedCarePlanStoreManager.store)
+         ORKPasscodeViewController.removePasscodeFromKeychain()
+         toOnboarding()
+         }
+         */
     }
 }
 
@@ -249,6 +264,8 @@ extension ResearchContainerViewController: ORKTaskViewControllerDelegate {
         guard reason == .completed else { return }
         
         // Determine the event that was completed and the `SampleAssessment` it represents.
+        
+        /* Junaid Commnented
         guard let event = symptomCardVC!.lastSelectedAssessmentEvent,
             let activityType = ActivityType(rawValue: event.activity.identifier),
             let sampleAssessment = sampleData?.activityWithType(activityType) as? Assessment else { return }
@@ -308,9 +325,12 @@ extension ResearchContainerViewController: ORKTaskViewControllerDelegate {
             // Update the event with the result.
             completeEvent(event, inStore: careStoreManager.store, withResult: carePlanResult)
         }
+ 
+ */
 
     }
     // MARK: Convenience
+    /* Junaid Commnented
     fileprivate func completeEvent(_ event: OCKCarePlanEvent, inStore store: OCKCarePlanStore, withResult result: OCKCarePlanEventResult) {
         store.update(event, with: result, state: .completed) { success, _, error in
             if !success {
@@ -318,6 +338,7 @@ extension ResearchContainerViewController: ORKTaskViewControllerDelegate {
             }
         }
     }
+ */
 
 }
 
@@ -339,15 +360,21 @@ extension ResearchContainerViewController: ORKPasscodeDelegate {
 
 // MARK: CarePlanStoreManagerDelegate
 
+/* Junaid Commnented
 extension ResearchContainerViewController: CarePlanStoreManagerDelegate {
     
     /// Called when the `CarePlanStoreManager`'s insights are updated.
-    func carePlanStoreManager(_ manager: CarePlanStoreManager, didUpdateInsights insights: [OCKInsightItem]) {
-        // Update the insights view controller with the new insights.
-        insightsVC?.items = insights
-    }
+    /* Junaid Commnedted
+     
+     func carePlanStoreManager(_ manager: CarePlanStoreManager, didUpdateInsights insights: [OCKInsightItem]) {
+     // Update the insights view controller with the new insights.
+     insightsVC?.items = insights
+     }
+     
+     */
 }
 
+ */
 
 
 
@@ -358,6 +385,7 @@ extension ResearchContainerViewController: CarePlanStoreManagerDelegate {
 // add symptom delegate and orktask delegate
 // FIX!!!
 
+/*  Junaid Commnented
 extension ResearchContainerViewController: OCKCareCardViewControllerDelegate {
 
     
@@ -463,7 +491,9 @@ extension ResearchContainerViewController: OCKCareCardViewControllerDelegate {
     }
 }
 
+ */
 
+/* Junaid Commnented
 extension ResearchContainerViewController: OCKSymptomTrackerViewControllerDelegate {
     
     /// Called when the user taps an assessment on the `OCKSymptomTrackerViewController`.
@@ -488,3 +518,5 @@ extension ResearchContainerViewController: OCKSymptomTrackerViewControllerDelega
         present(taskViewController, animated: true, completion: nil)
     }
 }
+
+ */

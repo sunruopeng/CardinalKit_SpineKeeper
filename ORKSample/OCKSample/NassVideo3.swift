@@ -14,8 +14,8 @@ import CareKit
  */
 struct NassVideo3: Activity {
     // MARK: Activity
-    
     let activityType: ActivityType = .nassVideo3
+    /* Junaid Commnented
     
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
@@ -67,6 +67,8 @@ struct NassVideo3: Activity {
         
         return activity
     }
+ 
+ */
 }
 
 

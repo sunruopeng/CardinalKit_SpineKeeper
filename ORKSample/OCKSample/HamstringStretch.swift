@@ -17,6 +17,8 @@ struct HamstringStretch: Activity {
     
     let activityType: ActivityType = .hamstringStretch //Change this
     
+    /* Junaid Commnented
+    
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
         let calendar = Calendar.autoupdatingCurrent
@@ -69,4 +71,6 @@ struct HamstringStretch: Activity {
         
         return activity
     }
+ 
+ */
 }

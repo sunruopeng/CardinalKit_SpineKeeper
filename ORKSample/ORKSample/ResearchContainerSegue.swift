@@ -56,9 +56,11 @@ class ResearchContainerSegue: UIStoryboardSegue {
             yo.viewControllers?.remove(at: 0)
             let temp =  yo.viewControllers?.remove(at: 0) as! UINavigationController
             sour.dashboardVC = temp.viewControllers.first as? DashboardTableViewController
-            yo.viewControllers?.insert(UINavigationController(rootViewController: sour.insightsVC!), at: 0)
-            yo.viewControllers?.insert(UINavigationController(rootViewController: sour.symptomCardVC!), at: 0)
-            yo.viewControllers?.insert(UINavigationController(rootViewController: sour.careCardVC!), at: 0)
+            
+            //  Junaid Commnented
+//            yo.viewControllers?.insert(UINavigationController(rootViewController: sour.insightsVC!), at: 0)
+//            yo.viewControllers?.insert(UINavigationController(rootViewController: sour.symptomCardVC!), at: 0)
+//            yo.viewControllers?.insert(UINavigationController(rootViewController: sour.careCardVC!), at: 0)
             
             yo.selectedIndex = 0
             

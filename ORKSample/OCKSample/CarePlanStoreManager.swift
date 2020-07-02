@@ -30,6 +30,8 @@
 
 import CareKit
 
+/* Junaid Commnented
+
 class CarePlanStoreManager: NSObject {
     // MARK: Static Properties
     
@@ -94,3 +96,6 @@ protocol CarePlanStoreManagerDelegate: class {
     func carePlanStoreManager(_ manager: CarePlanStoreManager, didUpdateInsights insights: [OCKInsightItem])
     
 }
+
+ 
+ */

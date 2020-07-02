@@ -16,7 +16,7 @@ struct Breathe: Activity {
     // MARK: Activity
     
     let activityType: ActivityType = .breathe
-    
+    /* Junaid Commnented
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
         let calendar = Calendar.autoupdatingCurrent
@@ -62,5 +62,7 @@ struct Breathe: Activity {
         
         return activity
     }
+ 
+ */
 }
 
