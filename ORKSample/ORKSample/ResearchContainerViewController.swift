@@ -47,6 +47,9 @@ class ResearchContainerViewController: UIViewController, HealthClientType, MFMai
     //let careStoreManager = CarePlanStoreManager.sharedCarePlanStoreManager
     var sampleData: SampleData?
     
+    
+    var careCardVC : DailyActivitesViewController?
+    
     /* Junaid Commnented
     var careCardVC : OCKCareCardViewController?
     var symptomCardVC : OCKSymptomTrackerViewController?
@@ -84,6 +87,9 @@ class ResearchContainerViewController: UIViewController, HealthClientType, MFMai
 //            sampleData = SampleData(carePlanStore: careStoreManager.store)
 //        }
         super.init(coder: aDecoder)
+        
+        
+        careCardVC = createCareCardViewController()
         
         /* Junaid Commnented
          careCardVC = createCareCardViewController()
@@ -154,6 +160,16 @@ class ResearchContainerViewController: UIViewController, HealthClientType, MFMai
     
     @IBAction func unwindToWithdrawl(_ segue: UIStoryboardSegue) {
         toWithdrawl()
+    }
+    
+    
+    fileprivate func createCareCardViewController() -> DailyActivitesViewController {
+        let viewController = DailyActivitesViewController(storeManager: CareStoreReferenceManager.shared.synchronizedStoreManager)
+        
+        viewController.title = "Daily Activities"
+         viewController.tabBarItem = UITabBarItem(title: viewController.title, image: UIImage(named:"carecard"), selectedImage: UIImage(named: "carecard-filled"))
+        
+        return viewController
     }
     
     /* Junaid Commnented

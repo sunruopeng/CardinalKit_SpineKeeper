@@ -241,47 +241,42 @@
 		B5D35FC71BEA363F004CBB06 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D35FC61BEA363F004CBB06 /* ProfileHeaderView.swift */; };
 		B5D35FC91BEA48D3004CBB06 /* HKHealthStore+Queries.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D35FC81BEA48D3004CBB06 /* HKHealthStore+Queries.swift */; };
 		B5FA92E91BF13D98001E46C0 /* HealthDataStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA92E81BF13D98001E46C0 /* HealthDataStep.swift */; };
-		FA7C5EE524A625DE00C6C976 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7C5EE224A625D600C6C976 /* ResearchKit.framework */; };
-		FA7C5EE624A625DE00C6C976 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA7C5EE224A625D600C6C976 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FAB5682824A46C740065BB45 /* CareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB5681724A46AF90065BB45 /* CareKit.framework */; };
-		FAB5682924A46C740065BB45 /* CareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAB5681724A46AF90065BB45 /* CareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FA2AA2CA24ADCD9C00597A15 /* CareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2AA2C424ADCD8600597A15 /* CareKit.framework */; };
+		FA2AA2CB24ADCD9C00597A15 /* CareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA2AA2C424ADCD8600597A15 /* CareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FA2AA2CC24ADCDA500597A15 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2AA2A724ADCCD800597A15 /* ResearchKit.framework */; };
+		FA2AA2CD24ADCDA500597A15 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA2AA2A724ADCCD800597A15 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FA50C0E324AE064D00D99A84 /* DailyActivitesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50C0E224AE064D00D99A84 /* DailyActivitesViewController.swift */; };
+		FA50C0E924AE0CAB00D99A84 /* CareStoreReferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50C0E824AE0CAB00D99A84 /* CareStoreReferenceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FA7C5EE124A625D600C6C976 /* PBXContainerItemProxy */ = {
+		FA2AA2A624ADCCD800597A15 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FA7C5EDB24A625D500C6C976 /* ResearchKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = B183A5951A8535D100C76870;
 			remoteInfo = ResearchKit;
 		};
-		FA7C5EE324A625D600C6C976 /* PBXContainerItemProxy */ = {
+		FA2AA2A824ADCCD800597A15 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FA7C5EDB24A625D500C6C976 /* ResearchKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
 			remoteInfo = ResearchKitTests;
 		};
-		FAB5681624A46AF90065BB45 /* PBXContainerItemProxy */ = {
+		FA2AA2C324ADCD8600597A15 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FAB5681024A46AF80065BB45 /* CareKit.xcodeproj */;
+			containerPortal = FA2AA2BC24ADCD8600597A15 /* CareKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8605A5BA1C4F04EC00DD65FF;
 			remoteInfo = CareKit;
 		};
-		FAB5681824A46AF90065BB45 /* PBXContainerItemProxy */ = {
+		FA2AA2C524ADCD8600597A15 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FAB5681024A46AF80065BB45 /* CareKit.xcodeproj */;
+			containerPortal = FA2AA2BC24ADCD8600597A15 /* CareKit.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 8605A5C41C4F04EC00DD65FF;
+			remoteGlobalIDString = 5196C7F9226F8F8F00F1C2A2;
 			remoteInfo = CareKitTests;
-		};
-		FAB5682A24A46C740065BB45 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FAB5681024A46AF80065BB45 /* CareKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8605A5B91C4F04EC00DD65FF;
-			remoteInfo = CareKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -292,8 +287,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FA7C5EE624A625DE00C6C976 /* ResearchKit.framework in Embed Frameworks */,
-				FAB5682924A46C740065BB45 /* CareKit.framework in Embed Frameworks */,
+				FA2AA2CD24ADCDA500597A15 /* ResearchKit.framework in Embed Frameworks */,
+				FA2AA2CB24ADCD9C00597A15 /* CareKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,8 +535,10 @@
 		B5D35FC61BEA363F004CBB06 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileHeaderView.swift; path = ORKSample/ProfileHeaderView.swift; sourceTree = "<group>"; };
 		B5D35FC81BEA48D3004CBB06 /* HKHealthStore+Queries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "HKHealthStore+Queries.swift"; path = "ORKSample/HKHealthStore+Queries.swift"; sourceTree = "<group>"; };
 		B5FA92E81BF13D98001E46C0 /* HealthDataStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthDataStep.swift; path = ORKSample/HealthDataStep.swift; sourceTree = "<group>"; };
-		FA7C5EDB24A625D500C6C976 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../../apple-repos/ResearchKit/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
-		FAB5681024A46AF80065BB45 /* CareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKit.xcodeproj; path = ../../CareKit/CareKit.xcodeproj; sourceTree = "<group>"; };
+		FA2AA2BC24ADCD8600597A15 /* CareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKit.xcodeproj; path = "../../Carekit (Stable)/CareKit/CareKit/CareKit.xcodeproj"; sourceTree = "<group>"; };
+		FA50C0E224AE064D00D99A84 /* DailyActivitesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyActivitesViewController.swift; sourceTree = "<group>"; };
+		FA50C0E824AE0CAB00D99A84 /* CareStoreReferenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareStoreReferenceManager.swift; sourceTree = "<group>"; };
+		FA7C5EDB24A625D500C6C976 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../../ResearchKit (Stable)/ResearchKit/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -549,9 +546,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAB5682824A46C740065BB45 /* CareKit.framework in Frameworks */,
+				FA2AA2CA24ADCD9C00597A15 /* CareKit.framework in Frameworks */,
 				07A3B51C22B97ABE00AD872B /* HealthKit.framework in Frameworks */,
-				FA7C5EE524A625DE00C6C976 /* ResearchKit.framework in Frameworks */,
+				FA2AA2CC24ADCDA500597A15 /* ResearchKit.framework in Frameworks */,
 				0755B4B01FD511430078A8F7 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -822,6 +819,7 @@
 		161479C21BD6CE8F0099A068 /* ORKSample */ = {
 			isa = PBXGroup;
 			children = (
+				FA50C0DA24AE05D400D99A84 /* CareCard */,
 				07E9EA821E76966F0030F5E5 /* ORKSample-Bridging-Header.h */,
 				161479C31BD6CE8F0099A068 /* AppDelegate.swift */,
 				86CCDFF51C1B50970042AA39 /* ResearchContainerViewController.swift */,
@@ -990,30 +988,39 @@
 		BC2A3CA81C58E92600DA64B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA2AA2BC24ADCD8600597A15 /* CareKit.xcodeproj */,
 				FA7C5EDB24A625D500C6C976 /* ResearchKit.xcodeproj */,
-				FAB5681024A46AF80065BB45 /* CareKit.xcodeproj */,
 				07A3B51B22B97ABE00AD872B /* HealthKit.framework */,
 				0755B4AF1FD511430078A8F7 /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FA7C5EDC24A625D500C6C976 /* Products */ = {
+		FA2AA2A124ADCCD800597A15 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA7C5EE224A625D600C6C976 /* ResearchKit.framework */,
-				FA7C5EE424A625D600C6C976 /* ResearchKitTests.xctest */,
+				FA2AA2A724ADCCD800597A15 /* ResearchKit.framework */,
+				FA2AA2A924ADCCD800597A15 /* ResearchKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FAB5681124A46AF80065BB45 /* Products */ = {
+		FA2AA2BD24ADCD8600597A15 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FAB5681724A46AF90065BB45 /* CareKit.framework */,
-				FAB5681924A46AF90065BB45 /* CareKitTests.xctest */,
+				FA2AA2C424ADCD8600597A15 /* CareKit.framework */,
+				FA2AA2C624ADCD8600597A15 /* CareKitTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		FA50C0DA24AE05D400D99A84 /* CareCard */ = {
+			isa = PBXGroup;
+			children = (
+				FA50C0E824AE0CAB00D99A84 /* CareStoreReferenceManager.swift */,
+				FA50C0E224AE064D00D99A84 /* DailyActivitesViewController.swift */,
+			);
+			name = CareCard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1031,7 +1038,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				FAB5682B24A46C740065BB45 /* PBXTargetDependency */,
 			);
 			name = ORKSample;
 			productName = ResearchHealth;
@@ -1083,11 +1089,11 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = FAB5681124A46AF80065BB45 /* Products */;
-					ProjectRef = FAB5681024A46AF80065BB45 /* CareKit.xcodeproj */;
+					ProductGroup = FA2AA2BD24ADCD8600597A15 /* Products */;
+					ProjectRef = FA2AA2BC24ADCD8600597A15 /* CareKit.xcodeproj */;
 				},
 				{
-					ProductGroup = FA7C5EDC24A625D500C6C976 /* Products */;
+					ProductGroup = FA2AA2A124ADCCD800597A15 /* Products */;
 					ProjectRef = FA7C5EDB24A625D500C6C976 /* ResearchKit.xcodeproj */;
 				},
 			);
@@ -1099,32 +1105,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		FA7C5EE224A625D600C6C976 /* ResearchKit.framework */ = {
+		FA2AA2A724ADCCD800597A15 /* ResearchKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ResearchKit.framework;
-			remoteRef = FA7C5EE124A625D600C6C976 /* PBXContainerItemProxy */;
+			remoteRef = FA2AA2A624ADCCD800597A15 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FA7C5EE424A625D600C6C976 /* ResearchKitTests.xctest */ = {
+		FA2AA2A924ADCCD800597A15 /* ResearchKitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ResearchKitTests.xctest;
-			remoteRef = FA7C5EE324A625D600C6C976 /* PBXContainerItemProxy */;
+			remoteRef = FA2AA2A824ADCCD800597A15 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FAB5681724A46AF90065BB45 /* CareKit.framework */ = {
+		FA2AA2C424ADCD8600597A15 /* CareKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = CareKit.framework;
-			remoteRef = FAB5681624A46AF90065BB45 /* PBXContainerItemProxy */;
+			remoteRef = FA2AA2C324ADCD8600597A15 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FAB5681924A46AF90065BB45 /* CareKitTests.xctest */ = {
+		FA2AA2C624ADCD8600597A15 /* CareKitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = CareKitTests.xctest;
-			remoteRef = FAB5681824A46AF90065BB45 /* PBXContainerItemProxy */;
+			remoteRef = FA2AA2C524ADCD8600597A15 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1298,6 +1304,7 @@
 				070BA6141FD2102A00B38879 /* NassVideo5.swift in Sources */,
 				07E773A32058F25800C5D237 /* AbdominalExercise.swift in Sources */,
 				165A7E661BD99DBA00B6D223 /* StudyTasks.swift in Sources */,
+				FA50C0E324AE064D00D99A84 /* DailyActivitesViewController.swift in Sources */,
 				07DBAA931E9CA49F00FC3F36 /* CarePlanStoreManager.swift in Sources */,
 				B5FA92E91BF13D98001E46C0 /* HealthDataStep.swift in Sources */,
 				B5D1175E1BE8D17E00D7F153 /* LineGraphDataSource.swift in Sources */,
@@ -1331,6 +1338,7 @@
 				B5C2073F1BEC16F00051D9D8 /* ResearchContainerSegue.swift in Sources */,
 				0733F1882348058600209212 /* RNCryptor.swift in Sources */,
 				B5BC85FA1BF1405900B0CFA5 /* OnboardingViewController.swift in Sources */,
+				FA50C0E924AE0CAB00D99A84 /* CareStoreReferenceManager.swift in Sources */,
 				07E773622058DA1900C5D237 /* Myth6.swift in Sources */,
 				07E05A6D1FCF5BF6002A54C3 /* BackwardBending.swift in Sources */,
 				070BA6111FD2102A00B38879 /* NassVideo7.swift in Sources */,
@@ -1380,14 +1388,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		FAB5682B24A46C740065BB45 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CareKit;
-			targetProxy = FAB5682A24A46C740065BB45 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		161479C71BD6CE8F0099A068 /* Main.storyboard */ = {
@@ -1542,7 +1542,7 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = "";
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "$(SRCROOT)";
 				INFOPLIST_FILE = ORKSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stanfordBack.Test2;
@@ -1578,7 +1578,7 @@
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "$(SRCROOT)";
 				INFOPLIST_FILE = ORKSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stanfordBack.Test2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
