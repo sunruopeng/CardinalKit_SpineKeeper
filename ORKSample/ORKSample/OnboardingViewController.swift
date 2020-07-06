@@ -30,6 +30,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 import UIKit
 import ResearchKit
+import CareKit
 
 class OnboardingViewController: UIViewController {
     // MARK: IB actions
@@ -37,6 +38,7 @@ class OnboardingViewController: UIViewController {
     @IBAction func joinButtonTapped(_ sender: UIButton) {
         
         let eligProcessStep = makeEligibilityStep()
+        
         
         let consentDocument = ConsentDocument()
         let htmlFile = Bundle.main.path(forResource: "consent", ofType: "html")
@@ -416,6 +418,13 @@ extension OnboardingViewController : ORKTaskViewControllerDelegate {
                     UserDefaults.standard.set(old + out, forKey: "odiSurvey")
                 }
                 
+                
+
+                if UserDefaults.standard.object(forKey: "startDate") != nil {
+                    
+                    let carestore = CareStoreReferenceManager.shared.synchronizedStoreManager.store as! OCKStore
+                    _ = TasksData(carePlanStore: carestore)
+                }
                 
                 //  Junaid Commnented
 //                let appDelegate = UIApplication.shared.delegate as! AppDelegate

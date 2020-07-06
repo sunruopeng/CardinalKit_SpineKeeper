@@ -37,8 +37,7 @@ class SampleData: NSObject {
 
     /// An array of `Activity`s used in the app.
     let activities: [Activity] = [
-        PressUp(),
-        Breathe(),
+        //PressUp(),
         BackwardBending(),
         FrontalCoreStretch(),
         HamstringStretch(),

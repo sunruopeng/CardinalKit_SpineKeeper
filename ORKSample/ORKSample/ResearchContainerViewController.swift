@@ -46,7 +46,8 @@ class ResearchContainerViewController: UIViewController, HealthClientType, MFMai
     // Junaid Commnented
     //let careStoreManager = CarePlanStoreManager.sharedCarePlanStoreManager
     var sampleData: SampleData?
-    
+    var taskData: TasksData?
+    let careStoreManager = CareStoreReferenceManager.shared
     
     var careCardVC : DailyActivitesViewController?
     
@@ -82,10 +83,10 @@ class ResearchContainerViewController: UIViewController, HealthClientType, MFMai
     required init?(coder aDecoder: NSCoder) {
         //UserDefaults.standard.set(Calendar.autoupdatingCurrent.startOfDay(for: Date()), forKey: "startDate")
         
-         //  Junaid Commnented
-//        if UserDefaults.standard.object(forKey: "startDate") != nil {
-//            sampleData = SampleData(carePlanStore: careStoreManager.store)
-//        }
+
+        if UserDefaults.standard.object(forKey: "startDate") != nil {
+            taskData = TasksData(carePlanStore: careStoreManager.synchronizedStoreManager.store as! OCKStore)
+        }
         super.init(coder: aDecoder)
         
         

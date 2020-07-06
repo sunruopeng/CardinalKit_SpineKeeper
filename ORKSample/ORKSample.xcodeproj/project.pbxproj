@@ -63,7 +63,6 @@
 		070E22531EA40DAC0087759C /* CKLineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070E22521EA40DAC0087759C /* CKLineGraph.swift */; };
 		070F16FB1FE2678F00C9A09B /* BackFacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070F16FA1FE2678F00C9A09B /* BackFacts.swift */; };
 		070F17011FE276F400C9A09B /* CausesOfBackPain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070F17001FE276F400C9A09B /* CausesOfBackPain.swift */; };
-		071F10501FBCFFC700EFFA89 /* PressUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071F104F1FBCFFC700EFFA89 /* PressUp.swift */; };
 		0725EACE21E57FFE00861C3B /* Legal.html in Resources */ = {isa = PBXBuildFile; fileRef = 0725EAC921E57FFD00861C3B /* Legal.html */; };
 		0733F1882348058600209212 /* RNCryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0733F1872348058600209212 /* RNCryptor.swift */; };
 		07466C051FE1B75000CB9871 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07466C041FE1B75000CB9871 /* ImageScrollView.swift */; };
@@ -151,7 +150,6 @@
 		07DBAAB01E9CA89700FC3F36 /* Assessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBAAAF1E9CA89700FC3F36 /* Assessment.swift */; };
 		07DBAAB41E9CCE9400FC3F36 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBAAB31E9CCE9400FC3F36 /* SampleData.swift */; };
 		07DC54D32094FFF1002B1219 /* StanfordSpineKeeperIntro.mov in Resources */ = {isa = PBXBuildFile; fileRef = 07DC54D22094FFEE002B1219 /* StanfordSpineKeeperIntro.mov */; };
-		07E05A5F1FBD2C16002A54C3 /* Breathe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E05A5E1FBD2C16002A54C3 /* Breathe.swift */; };
 		07E05A671FCDE8D5002A54C3 /* Brace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E05A661FCDE8D5002A54C3 /* Brace.swift */; };
 		07E05A691FCDEB2E002A54C3 /* WallWash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E05A681FCDEB2E002A54C3 /* WallWash.swift */; };
 		07E05A6B1FCDEDDA002A54C3 /* DoorwayChestStretch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E05A6A1FCDEDDA002A54C3 /* DoorwayChestStretch.swift */; };
@@ -241,6 +239,10 @@
 		B5D35FC71BEA363F004CBB06 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D35FC61BEA363F004CBB06 /* ProfileHeaderView.swift */; };
 		B5D35FC91BEA48D3004CBB06 /* HKHealthStore+Queries.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D35FC81BEA48D3004CBB06 /* HKHealthStore+Queries.swift */; };
 		B5FA92E91BF13D98001E46C0 /* HealthDataStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA92E81BF13D98001E46C0 /* HealthDataStep.swift */; };
+		FA0C120A24B2CE3C0033669E /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C120924B2CE3C0033669E /* Task.swift */; };
+		FA0C120E24B2D0610033669E /* PressUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C120D24B2D0610033669E /* PressUp.swift */; };
+		FA0C121024B2DB870033669E /* TasksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C120F24B2DB870033669E /* TasksData.swift */; };
+		FA0C121224B2F2800033669E /* Breathe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C121124B2F2800033669E /* Breathe.swift */; };
 		FA2AA2CA24ADCD9C00597A15 /* CareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2AA2C424ADCD8600597A15 /* CareKit.framework */; };
 		FA2AA2CB24ADCD9C00597A15 /* CareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA2AA2C424ADCD8600597A15 /* CareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FA2AA2CC24ADCDA500597A15 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2AA2A724ADCCD800597A15 /* ResearchKit.framework */; };
@@ -352,7 +354,6 @@
 		070E22521EA40DAC0087759C /* CKLineGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CKLineGraph.swift; path = ORKSample/CKLineGraph.swift; sourceTree = "<group>"; };
 		070F16FA1FE2678F00C9A09B /* BackFacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BackFacts.swift; path = OCKSample/BackFacts.swift; sourceTree = "<group>"; };
 		070F17001FE276F400C9A09B /* CausesOfBackPain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CausesOfBackPain.swift; path = OCKSample/CausesOfBackPain.swift; sourceTree = "<group>"; };
-		071F104F1FBCFFC700EFFA89 /* PressUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PressUp.swift; path = OCKSample/PressUp.swift; sourceTree = "<group>"; };
 		0725EAC921E57FFD00861C3B /* Legal.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Legal.html; sourceTree = "<group>"; };
 		0733F1872348058600209212 /* RNCryptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNCryptor.swift; sourceTree = "<group>"; };
 		07466C041FE1B75000CB9871 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageScrollView.swift; path = ORKSample/ImageScrollView.swift; sourceTree = "<group>"; };
@@ -440,7 +441,6 @@
 		07DBAAAF1E9CA89700FC3F36 /* Assessment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Assessment.swift; path = OCKSample/Assessment.swift; sourceTree = "<group>"; };
 		07DBAAB31E9CCE9400FC3F36 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SampleData.swift; path = OCKSample/SampleData.swift; sourceTree = "<group>"; };
 		07DC54D22094FFEE002B1219 /* StanfordSpineKeeperIntro.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = StanfordSpineKeeperIntro.mov; sourceTree = "<group>"; };
-		07E05A5E1FBD2C16002A54C3 /* Breathe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Breathe.swift; path = OCKSample/Breathe.swift; sourceTree = "<group>"; };
 		07E05A661FCDE8D5002A54C3 /* Brace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Brace.swift; path = OCKSample/Brace.swift; sourceTree = "<group>"; };
 		07E05A681FCDEB2E002A54C3 /* WallWash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WallWash.swift; path = OCKSample/WallWash.swift; sourceTree = "<group>"; };
 		07E05A6A1FCDEDDA002A54C3 /* DoorwayChestStretch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DoorwayChestStretch.swift; path = OCKSample/DoorwayChestStretch.swift; sourceTree = "<group>"; };
@@ -535,6 +535,10 @@
 		B5D35FC61BEA363F004CBB06 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileHeaderView.swift; path = ORKSample/ProfileHeaderView.swift; sourceTree = "<group>"; };
 		B5D35FC81BEA48D3004CBB06 /* HKHealthStore+Queries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "HKHealthStore+Queries.swift"; path = "ORKSample/HKHealthStore+Queries.swift"; sourceTree = "<group>"; };
 		B5FA92E81BF13D98001E46C0 /* HealthDataStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthDataStep.swift; path = ORKSample/HealthDataStep.swift; sourceTree = "<group>"; };
+		FA0C120924B2CE3C0033669E /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		FA0C120D24B2D0610033669E /* PressUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressUp.swift; sourceTree = "<group>"; };
+		FA0C120F24B2DB870033669E /* TasksData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksData.swift; sourceTree = "<group>"; };
+		FA0C121124B2F2800033669E /* Breathe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breathe.swift; sourceTree = "<group>"; };
 		FA2AA2BC24ADCD8600597A15 /* CareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKit.xcodeproj; path = "../../Carekit (Stable)/CareKit/CareKit/CareKit.xcodeproj"; sourceTree = "<group>"; };
 		FA50C0E224AE064D00D99A84 /* DailyActivitesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyActivitesViewController.swift; sourceTree = "<group>"; };
 		FA50C0E824AE0CAB00D99A84 /* CareStoreReferenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareStoreReferenceManager.swift; sourceTree = "<group>"; };
@@ -819,6 +823,7 @@
 		161479C21BD6CE8F0099A068 /* ORKSample */ = {
 			isa = PBXGroup;
 			children = (
+				FA0C120324B2CDF00033669E /* Tasks */,
 				FA50C0DA24AE05D400D99A84 /* CareCard */,
 				07E9EA821E76966F0030F5E5 /* ORKSample-Bridging-Header.h */,
 				161479C31BD6CE8F0099A068 /* AppDelegate.swift */,
@@ -907,8 +912,6 @@
 			children = (
 				16147A0E1BD83F700099A068 /* ActivityViewController.swift */,
 				165A7E651BD99DBA00B6D223 /* StudyTasks.swift */,
-				071F104F1FBCFFC700EFFA89 /* PressUp.swift */,
-				07E05A5E1FBD2C16002A54C3 /* Breathe.swift */,
 				07E05A6C1FCF5BF5002A54C3 /* BackwardBending.swift */,
 				07E05A6F1FCF5C62002A54C3 /* FrontalCoreStretch.swift */,
 				07E05A701FCF5C62002A54C3 /* InnerThighStretch.swift */,
@@ -994,6 +997,17 @@
 				0755B4AF1FD511430078A8F7 /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA0C120324B2CDF00033669E /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				FA0C120924B2CE3C0033669E /* Task.swift */,
+				FA0C120D24B2D0610033669E /* PressUp.swift */,
+				FA0C120F24B2DB870033669E /* TasksData.swift */,
+				FA0C121124B2F2800033669E /* Breathe.swift */,
+			);
+			name = Tasks;
 			sourceTree = "<group>";
 		};
 		FA2AA2A124ADCCD800597A15 /* Products */ = {
@@ -1276,7 +1290,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				07709A49209502AC0018FCCF /* ODISurvey.swift in Sources */,
+				FA0C120E24B2D0610033669E /* PressUp.swift in Sources */,
 				07DBAAB41E9CCE9400FC3F36 /* SampleData.swift in Sources */,
+				FA0C121224B2F2800033669E /* Breathe.swift in Sources */,
 				070BA6121FD2102A00B38879 /* NassVideo3.swift in Sources */,
 				070F16FB1FE2678F00C9A09B /* BackFacts.swift in Sources */,
 				B5D35FC91BEA48D3004CBB06 /* HKHealthStore+Queries.swift in Sources */,
@@ -1313,10 +1329,10 @@
 				07E773732058E05B00C5D237 /* Diary.swift in Sources */,
 				07E773A5205909EB00C5D237 /* NeckPress.swift in Sources */,
 				07DBAAB01E9CA89700FC3F36 /* Assessment.swift in Sources */,
+				FA0C121024B2DB870033669E /* TasksData.swift in Sources */,
 				07E7736B2058DA1A00C5D237 /* Myth5.swift in Sources */,
 				07DBAA961E9CA49F00FC3F36 /* OCKInsightItem+EmptyMessage.swift in Sources */,
 				16BF5B691BE2974A007C79C6 /* ProfileViewController.swift in Sources */,
-				071F10501FBCFFC700EFFA89 /* PressUp.swift in Sources */,
 				070BA5F41FD153CD00B38879 /* NassVideo1.swift in Sources */,
 				07E05A751FCF5C63002A54C3 /* HamstringStretch.swift in Sources */,
 				07E773692058DA1A00C5D237 /* Myth2.swift in Sources */,
@@ -1324,7 +1340,6 @@
 				B5C207421BECBA8B0051D9D8 /* WithdrawViewController.swift in Sources */,
 				07E773AF2059130100C5D237 /* Guidelines.swift in Sources */,
 				04FC64701EA2C777007DC617 /* BackRangeOfMotion.swift in Sources */,
-				07E05A5F1FBD2C16002A54C3 /* Breathe.swift in Sources */,
 				07DBAA941E9CA49F00FC3F36 /* Colors.swift in Sources */,
 				07CE9F1F1E7F24D40070659E /* LearnStaticTableViewCell.swift in Sources */,
 				04FC643F1EA29A2F007DC617 /* Sleep.swift in Sources */,
@@ -1367,6 +1382,7 @@
 				07E7734D20589C3200C5D237 /* Dealing3.swift in Sources */,
 				07CE9F1D1E7F23B10070659E /* LearnViewController.swift in Sources */,
 				07E773572058A80600C5D237 /* Sleep2.swift in Sources */,
+				FA0C120A24B2CE3C0033669E /* Task.swift in Sources */,
 				07E05A741FCF5C63002A54C3 /* InnerThighStretch.swift in Sources */,
 				07E05A6B1FCDEDDA002A54C3 /* DoorwayChestStretch.swift in Sources */,
 				07E7733F20589A9B00C5D237 /* Dealing1.swift in Sources */,
