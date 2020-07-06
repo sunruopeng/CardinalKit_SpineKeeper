@@ -7,6 +7,7 @@
 //
 
 import CareKit
+import UIKit
 
 /**
  Struct that conforms to the `Activity` protocol to define a press up
@@ -17,14 +18,10 @@ struct WallWash: Activity {
     
     let activityType: ActivityType = .wallWash
     
-    /* Junaid Commnented
     
-    func carePlanActivity() -> OCKCarePlanActivity {
+    func carePlanActivity() -> OCKTask? {
         // Create a weekly schedule.
-        let calendar = Calendar.autoupdatingCurrent
         let startDate = (UserDefaults.standard.object(forKey: "startDate") as! Date)
-        let startDateComps = calendar.dateComponents([.year, .month, .day], from: startDate)
-        let endDate = calendar.dateComponents([.year, .month, .day], from: calendar.date(byAdding: .day, value: 28, to: startDate)!)
         
         var days: [Int] = []
         switch(UserDefaults.standard.integer(forKey: "activityScheduleIndex")) {
@@ -41,35 +38,45 @@ struct WallWash: Activity {
             days = []
         }
         
+        if days.count == 0 {
+            return nil
+        }
+        
         var occurrences = [Int](repeating: 0, count: 28)
         for day in days {
             occurrences[day-1]+=1
         }
         
-        let schedule = OCKCareSchedule.monthlySchedule(withStartDate: startDateComps, occurrencesOnEachDay: occurrences as [NSNumber], endDate: endDate)
+        var scheduleElements : [OCKScheduleElement] = []
         
-        // Get the localized strings to use for the activity.
-        let title = "Wall Wash"
-        let summary = "Repeat 10-15 times"
-        let instructions = "Stand facing a wall with a cloth in hand. Squat down to 4:00 o’clock and back up to 10:00 o’clock (or as much as your range of motion allows). Hold each position for 1-2 seconds."
+        for index in 0..<occurrences.count {
+            
+            if occurrences[index] == 1 {
+                let caldendar = Calendar.current
+                let startOfDay = Calendar.current.startOfDay(for: startDate)
+                let scheduleStartDate = caldendar.date(byAdding: .day, value: index, to: startOfDay)!
+                
+                let scheduleElement =  OCKScheduleElement(start: scheduleStartDate, end: nil,
+                                                          interval: DateComponents(day: 28),
+                                                          text: "Repeat 10-15 times",
+                                                          targetValues: [],
+                                                          duration: .allDay)
+                scheduleElements.append(scheduleElement)
+            }
+        }
         
-        // Create the intervention activity.
-        let activity = OCKCarePlanActivity.intervention(
-            withIdentifier: activityType.rawValue,//+startDate.description+endDate.description,
-            groupIdentifier: "Todo's",
-            title: title,
-            text: summary,
-            tintColor: Colors.stanfordOrange.color,
-            instructions: instructions,
-            imageURL: Bundle.main.url(forResource: "wallwash_combined", withExtension: "jpg"),
-            schedule: schedule,
-            userInfo: nil,
-            optional: false
-        )
+        let schedule = OCKSchedule(composing: scheduleElements)
         
+        var activity = OCKTask(id: activityType.rawValue,
+                               title: "Wall Wash",
+                               carePlanID: nil, schedule: schedule)
+        
+        activity.instructions = "Stand facing a wall with a cloth in hand. Squat down to 4:00 o’clock and back up to 10:00 o’clock (or as much as your range of motion allows). Hold each position for 1-2 seconds."
+        
+        activity.groupIdentifier = "Todo's"
+        activity.asset = "\(String(describing: Bundle.main.url(forResource: "wallwash_combined", withExtension: "jpg")))"
         return activity
     }
- 
- */
+    
 }
 

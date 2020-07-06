@@ -7,6 +7,7 @@
 //
 
 import CareKit
+import UIKit
 
 /**
  Struct that conforms to the `Activity` protocol to define a press up
@@ -17,15 +18,10 @@ struct BackwardBending: Activity {
     
     let activityType: ActivityType = .backwardBending //Change this
     
-    /* Junaid Commnented
     
-    func carePlanActivity() -> OCKCarePlanActivity {
+    func carePlanActivity() -> OCKTask? {
         // Create a weekly schedule.
-        let calendar = Calendar.autoupdatingCurrent
         let startDate = (UserDefaults.standard.object(forKey: "startDate") as! Date)
-        let startDateComps = calendar.dateComponents([.year, .month, .day], from: startDate)
-        let endDate = calendar.dateComponents([.year, .month, .day], from: calendar.date(byAdding: .day, value: 28, to: startDate)!)
-        
         
         var days: [Int] = []
         switch(UserDefaults.standard.integer(forKey: "activityScheduleIndex")) {
@@ -42,36 +38,48 @@ struct BackwardBending: Activity {
             days = []
         }
         
+        if days.count == 0 {
+            return nil
+        }
+        
         var occurrences = [Int](repeating: 0, count: 28)
         for day in days {
             occurrences[day-1]+=1
         }
         
-        let schedule = OCKCareSchedule.monthlySchedule(withStartDate: startDateComps, occurrencesOnEachDay: occurrences as [NSNumber], endDate: endDate)
+        var scheduleElements : [OCKScheduleElement] = []
         
-        // Get the localized strings to use for the activity. ### Change the instructions
-        let title = NSLocalizedString("Backward Bend", comment: "")  // Title Change
-        let summary = NSLocalizedString("Repeat 10 times", comment: "")
-        let instructions = "This is especially good if you’ve been sitting at a desk. Stand up, placing hands on the top of buttocks, just below the waist. Keep your feet shoulder width apart with your toes turned slightly out. Bend your head, then shoulders, then back backward, letting hips go slightly forward for balance. Slowly return to standing. Repeat 10 times"
-
+        for index in 0..<occurrences.count {
+            
+            if occurrences[index] == 1 {
+                let caldendar = Calendar.current
+                let startOfDay = Calendar.current.startOfDay(for: startDate)
+                let scheduleStartDate = caldendar.date(byAdding: .day, value: index, to: startOfDay)!
+                
+                let scheduleElement =  OCKScheduleElement(start: scheduleStartDate, end: nil,
+                                                          interval: DateComponents(day: 28),
+                                                          text: "Repeat 10 times",
+                                                          targetValues: [],
+                                                          duration: .allDay)
+                scheduleElements.append(scheduleElement)
+            }
+        }
         
-        // Create the intervention activity.
-        let activity = OCKCarePlanActivity.intervention(
-            withIdentifier: activityType.rawValue,//+startDate.description+endDate.description,
-            groupIdentifier: "Todo's",
-            title: title,
-            text: summary,
-            tintColor: Colors.red.color,  //Change the color here
-            instructions: instructions,
-            imageURL: Bundle.main.url(forResource: "backbend", withExtension: "png"),
-            schedule: schedule,
-            userInfo: nil,
-            optional: false
-        )
+        let schedule = OCKSchedule(composing: scheduleElements)
+        
+        
+        var activity = OCKTask(id: activityType.rawValue,
+                               title: "Backward Bend",
+                               carePlanID: nil, schedule: schedule)
+        
+        activity.instructions = "This is especially good if you’ve been sitting at a desk. Stand up, placing hands on the top of buttocks, just below the waist. Keep your feet shoulder width apart with your toes turned slightly out. Bend your head, then shoulders, then back backward, letting hips go slightly forward for balance. Slowly return to standing. Repeat 10 times"
+        
+        activity.groupIdentifier = "Todo's"
+        
         
         return activity
     }
- 
- */
- 
+    
+    
+    
 }

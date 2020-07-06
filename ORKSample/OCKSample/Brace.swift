@@ -7,6 +7,7 @@
 //
 
 import CareKit
+import UIKit
 
 /**
  Struct that conforms to the `Activity` protocol to define a press up
@@ -17,14 +18,9 @@ struct Brace: Activity {
     
     let activityType: ActivityType = .brace
     
-    /* Junaid Commnented
-    func carePlanActivity() -> OCKCarePlanActivity {
+    func carePlanActivity() -> OCKTask? {
         // Create a weekly schedule.
-        let calendar = Calendar.autoupdatingCurrent
         let startDate = (UserDefaults.standard.object(forKey: "startDate") as! Date)
-        let startDateComps = calendar.dateComponents([.year, .month, .day], from: startDate)
-        let endDate = calendar.dateComponents([.year, .month, .day], from: calendar.date(byAdding: .day, value: 28, to: startDate)!)
-        
         
         var days: [Int] = []
         switch(UserDefaults.standard.integer(forKey: "activityScheduleIndex")) {
@@ -41,35 +37,44 @@ struct Brace: Activity {
             days = []
         }
         
+        if days.count == 0 {
+            return nil
+        }
+        
         var occurrences = [Int](repeating: 0, count: 28)
         for day in days {
             occurrences[day-1]+=1
         }
         
-        let schedule = OCKCareSchedule.monthlySchedule(withStartDate: startDateComps, occurrencesOnEachDay: occurrences as [NSNumber], endDate: endDate)
+        var scheduleElements : [OCKScheduleElement] = []
         
-        // Get the localized strings to use for the activity.
-        let title = "Brace"
-        let summary = "Wear for as long as desired"
-        let instructions = "You may consider purchasing a soft lumbar or lumbosacral brace made of cloth. You may obtain one at any medical supply store near you. Use the brace whenever you need an extra reminder to stabilize your back."
+        for index in 0..<occurrences.count {
+            
+            if occurrences[index] == 1 {
+                let caldendar = Calendar.current
+                let startOfDay = Calendar.current.startOfDay(for: startDate)
+                let scheduleStartDate = caldendar.date(byAdding: .day, value: index, to: startOfDay)!
+                
+                let scheduleElement =  OCKScheduleElement(start: scheduleStartDate, end: nil,
+                                                          interval: DateComponents(day: 28),
+                                                          text: "Wear for as long as desired",
+                                                          targetValues: [],
+                                                          duration: .allDay)
+                scheduleElements.append(scheduleElement)
+            }
+        }
         
-        // Create the intervention activity.
-        let activity = OCKCarePlanActivity.intervention(
-            withIdentifier: activityType.rawValue,//+startDate.description+endDate.description,
-            groupIdentifier: "Todo's",
-            title: title,
-            text: summary,
-            tintColor: Colors.stanfordLightTan.color,
-            instructions: instructions,
-            imageURL: Bundle.main.url(forResource: "brace", withExtension: "png"),
-            schedule: schedule,
-            userInfo: nil,
-            optional: false
-        )
+        let schedule = OCKSchedule(composing: scheduleElements)
+        var activity = OCKTask(id: activityType.rawValue,
+                               title: "Brace",
+                               carePlanID: nil, schedule: schedule)
         
+        activity.instructions = "You may consider purchasing a soft lumbar or lumbosacral brace made of cloth. You may obtain one at any medical supply store near you. Use the brace whenever you need an extra reminder to stabilize your back."
+        activity.asset = "\(String(describing: Bundle.main.url(forResource: "brace", withExtension: "png")))"
+        activity.groupIdentifier = "Todo's"
         return activity
     }
- 
- */
+    
+    
 }
 

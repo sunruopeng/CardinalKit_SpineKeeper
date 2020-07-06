@@ -8,6 +8,7 @@
 //
 
 import CareKit
+import UIKit
 
 /**
  Struct that conforms to the `Activity` protocol to define a press up
@@ -18,15 +19,10 @@ struct Plank: Activity {
     
     let activityType: ActivityType = .plank //Change this
     
-    /* Junaid Commnented
     
-    func carePlanActivity() -> OCKCarePlanActivity {
+    func carePlanActivity() -> OCKTask? {
         // Create a weekly schedule.
-        let calendar = Calendar.autoupdatingCurrent
         let startDate = (UserDefaults.standard.object(forKey: "startDate") as! Date)
-        let startDateComps = calendar.dateComponents([.year, .month, .day], from: startDate)
-        let endDate = calendar.dateComponents([.year, .month, .day], from: calendar.date(byAdding: .day, value: 28, to: startDate)!)
-        
         
         var days: [Int] = []
         switch(UserDefaults.standard.integer(forKey: "activityScheduleIndex")) {
@@ -43,36 +39,46 @@ struct Plank: Activity {
             days = []
         }
         
+        if days.count == 0 {
+            return nil
+        }
+        
         var occurrences = [Int](repeating: 0, count: 28)
         for day in days {
             occurrences[day-1]+=1
         }
         
-        let schedule = OCKCareSchedule.monthlySchedule(withStartDate: startDateComps, occurrencesOnEachDay: occurrences as [NSNumber], endDate: endDate)
+        var scheduleElements : [OCKScheduleElement] = []
         
-        // Get the localized strings to use for the activity. ### Change the instructions
-        let title = NSLocalizedString("Plank", comment: "")  // Title Change ###
-        let summary = NSLocalizedString("Repeat 5 times", comment: "") // CHANGE COMMENT AND INSTRUCTIONS BELOW
-        let instructions = "Prop up onto elbows and knees. Keep shoulders, hips and knees in a straight line. Hold 10 seconds, working towards 30 seconds. Repeat 5 times."
+        for index in 0..<occurrences.count {
+            
+            if occurrences[index] == 1 {
+                let caldendar = Calendar.current
+                let startOfDay = Calendar.current.startOfDay(for: startDate)
+                let scheduleStartDate = caldendar.date(byAdding: .day, value: index, to: startOfDay)!
+                
+                let scheduleElement =  OCKScheduleElement(start: scheduleStartDate, end: nil,
+                                                          interval: DateComponents(day: 28),
+                                                          text: "Repeat 5 times",
+                                                          targetValues: [],
+                                                          duration: .allDay)
+                scheduleElements.append(scheduleElement)
+            }
+        }
         
-        // Create the intervention activity.
-        let activity = OCKCarePlanActivity.intervention(
-            withIdentifier: activityType.rawValue,//+startDate.description+endDate.description,
-            groupIdentifier: "Todo's",
-            title: title,
-            text: summary,
-            tintColor: Colors.blue.color,  //Change the color here ###
-            instructions: instructions,
-            imageURL: Bundle.main.url(forResource: "plank", withExtension: "jpg"),
-            schedule: schedule,
-            userInfo: nil,
-            optional: false
-        )
+        let schedule = OCKSchedule(composing: scheduleElements)
         
+        var activity = OCKTask(id: activityType.rawValue,
+                               title: "Plank",
+                               carePlanID: nil, schedule: schedule)
+        
+        activity.instructions = "Prop up onto elbows and knees. Keep shoulders, hips and knees in a straight line. Hold 10 seconds, working towards 30 seconds. Repeat 5 times."
+        
+        activity.groupIdentifier = "Todo's"
+        activity.asset = "\(String(describing: Bundle.main.url(forResource: "plank", withExtension: "jpg")))"
         return activity
     }
- 
- */
+    
 }
 
 

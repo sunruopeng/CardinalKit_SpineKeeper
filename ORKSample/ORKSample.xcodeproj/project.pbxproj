@@ -239,10 +239,8 @@
 		B5D35FC71BEA363F004CBB06 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D35FC61BEA363F004CBB06 /* ProfileHeaderView.swift */; };
 		B5D35FC91BEA48D3004CBB06 /* HKHealthStore+Queries.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D35FC81BEA48D3004CBB06 /* HKHealthStore+Queries.swift */; };
 		B5FA92E91BF13D98001E46C0 /* HealthDataStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA92E81BF13D98001E46C0 /* HealthDataStep.swift */; };
-		FA0C120A24B2CE3C0033669E /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C120924B2CE3C0033669E /* Task.swift */; };
-		FA0C120E24B2D0610033669E /* PressUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C120D24B2D0610033669E /* PressUp.swift */; };
-		FA0C121024B2DB870033669E /* TasksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C120F24B2DB870033669E /* TasksData.swift */; };
-		FA0C121224B2F2800033669E /* Breathe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C121124B2F2800033669E /* Breathe.swift */; };
+		FA0C122624B31D970033669E /* PressUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C121F24B31D970033669E /* PressUp.swift */; };
+		FA0C122724B31D970033669E /* Breathe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C122524B31D970033669E /* Breathe.swift */; };
 		FA2AA2CA24ADCD9C00597A15 /* CareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2AA2C424ADCD8600597A15 /* CareKit.framework */; };
 		FA2AA2CB24ADCD9C00597A15 /* CareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA2AA2C424ADCD8600597A15 /* CareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FA2AA2CC24ADCDA500597A15 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2AA2A724ADCCD800597A15 /* ResearchKit.framework */; };
@@ -535,10 +533,8 @@
 		B5D35FC61BEA363F004CBB06 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileHeaderView.swift; path = ORKSample/ProfileHeaderView.swift; sourceTree = "<group>"; };
 		B5D35FC81BEA48D3004CBB06 /* HKHealthStore+Queries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "HKHealthStore+Queries.swift"; path = "ORKSample/HKHealthStore+Queries.swift"; sourceTree = "<group>"; };
 		B5FA92E81BF13D98001E46C0 /* HealthDataStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthDataStep.swift; path = ORKSample/HealthDataStep.swift; sourceTree = "<group>"; };
-		FA0C120924B2CE3C0033669E /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		FA0C120D24B2D0610033669E /* PressUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressUp.swift; sourceTree = "<group>"; };
-		FA0C120F24B2DB870033669E /* TasksData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksData.swift; sourceTree = "<group>"; };
-		FA0C121124B2F2800033669E /* Breathe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breathe.swift; sourceTree = "<group>"; };
+		FA0C121F24B31D970033669E /* PressUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PressUp.swift; path = "../../../../Old files/PressUp.swift"; sourceTree = "<group>"; };
+		FA0C122524B31D970033669E /* Breathe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Breathe.swift; path = "../../../../Old files/Breathe.swift"; sourceTree = "<group>"; };
 		FA2AA2BC24ADCD8600597A15 /* CareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKit.xcodeproj; path = "../../Carekit (Stable)/CareKit/CareKit/CareKit.xcodeproj"; sourceTree = "<group>"; };
 		FA50C0E224AE064D00D99A84 /* DailyActivitesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyActivitesViewController.swift; sourceTree = "<group>"; };
 		FA50C0E824AE0CAB00D99A84 /* CareStoreReferenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareStoreReferenceManager.swift; sourceTree = "<group>"; };
@@ -823,7 +819,6 @@
 		161479C21BD6CE8F0099A068 /* ORKSample */ = {
 			isa = PBXGroup;
 			children = (
-				FA0C120324B2CDF00033669E /* Tasks */,
 				FA50C0DA24AE05D400D99A84 /* CareCard */,
 				07E9EA821E76966F0030F5E5 /* ORKSample-Bridging-Header.h */,
 				161479C31BD6CE8F0099A068 /* AppDelegate.swift */,
@@ -910,6 +905,8 @@
 		16BF5B671BE29676007C79C6 /* Activities */ = {
 			isa = PBXGroup;
 			children = (
+				FA0C121F24B31D970033669E /* PressUp.swift */,
+				FA0C122524B31D970033669E /* Breathe.swift */,
 				16147A0E1BD83F700099A068 /* ActivityViewController.swift */,
 				165A7E651BD99DBA00B6D223 /* StudyTasks.swift */,
 				07E05A6C1FCF5BF5002A54C3 /* BackwardBending.swift */,
@@ -997,17 +994,6 @@
 				0755B4AF1FD511430078A8F7 /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FA0C120324B2CDF00033669E /* Tasks */ = {
-			isa = PBXGroup;
-			children = (
-				FA0C120924B2CE3C0033669E /* Task.swift */,
-				FA0C120D24B2D0610033669E /* PressUp.swift */,
-				FA0C120F24B2DB870033669E /* TasksData.swift */,
-				FA0C121124B2F2800033669E /* Breathe.swift */,
-			);
-			name = Tasks;
 			sourceTree = "<group>";
 		};
 		FA2AA2A124ADCCD800597A15 /* Products */ = {
@@ -1290,9 +1276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07709A49209502AC0018FCCF /* ODISurvey.swift in Sources */,
-				FA0C120E24B2D0610033669E /* PressUp.swift in Sources */,
 				07DBAAB41E9CCE9400FC3F36 /* SampleData.swift in Sources */,
-				FA0C121224B2F2800033669E /* Breathe.swift in Sources */,
 				070BA6121FD2102A00B38879 /* NassVideo3.swift in Sources */,
 				070F16FB1FE2678F00C9A09B /* BackFacts.swift in Sources */,
 				B5D35FC91BEA48D3004CBB06 /* HKHealthStore+Queries.swift in Sources */,
@@ -1329,7 +1313,6 @@
 				07E773732058E05B00C5D237 /* Diary.swift in Sources */,
 				07E773A5205909EB00C5D237 /* NeckPress.swift in Sources */,
 				07DBAAB01E9CA89700FC3F36 /* Assessment.swift in Sources */,
-				FA0C121024B2DB870033669E /* TasksData.swift in Sources */,
 				07E7736B2058DA1A00C5D237 /* Myth5.swift in Sources */,
 				07DBAA961E9CA49F00FC3F36 /* OCKInsightItem+EmptyMessage.swift in Sources */,
 				16BF5B691BE2974A007C79C6 /* ProfileViewController.swift in Sources */,
@@ -1347,6 +1330,7 @@
 				07E773A920590E7B00C5D237 /* SideBridge.swift in Sources */,
 				04FC64431EA2C0A0007DC617 /* VoiceAnalysis.swift in Sources */,
 				04FC64741EA321BC007DC617 /* StartBackSurvey.swift in Sources */,
+				FA0C122724B31D970033669E /* Breathe.swift in Sources */,
 				070BA6131FD2102A00B38879 /* NassVideo4.swift in Sources */,
 				07466C131FE1DF0A00CB9871 /* LayFlat.swift in Sources */,
 				07DBAA951E9CA49F00FC3F36 /* NSCalendar+Dates.swift in Sources */,
@@ -1363,6 +1347,7 @@
 				16BF5B711BE2C989007C79C6 /* ProfileStaticTableViewCell.swift in Sources */,
 				07DBAA9B1E9CA51300FC3F36 /* InsightsBuilder.swift in Sources */,
 				07DBAA921E9CA49F00FC3F36 /* BuildInsightsOperation.swift in Sources */,
+				FA0C122624B31D970033669E /* PressUp.swift in Sources */,
 				B5D1175C1BE8D15400D7F153 /* DiscreteGraphDataSource.swift in Sources */,
 				07DBAA9E1E9CA57600FC3F36 /* Activity.swift in Sources */,
 				86CCDFF61C1B50970042AA39 /* ResearchContainerViewController.swift in Sources */,
@@ -1382,7 +1367,6 @@
 				07E7734D20589C3200C5D237 /* Dealing3.swift in Sources */,
 				07CE9F1D1E7F23B10070659E /* LearnViewController.swift in Sources */,
 				07E773572058A80600C5D237 /* Sleep2.swift in Sources */,
-				FA0C120A24B2CE3C0033669E /* Task.swift in Sources */,
 				07E05A741FCF5C63002A54C3 /* InnerThighStretch.swift in Sources */,
 				07E05A6B1FCDEDDA002A54C3 /* DoorwayChestStretch.swift in Sources */,
 				07E7733F20589A9B00C5D237 /* Dealing1.swift in Sources */,

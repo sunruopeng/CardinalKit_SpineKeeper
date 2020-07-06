@@ -34,10 +34,11 @@ import CareKit
 class SampleData: NSObject {
     
     // MARK: Properties
-
+    
     /// An array of `Activity`s used in the app.
     let activities: [Activity] = [
-        //PressUp(),
+        PressUp(),
+        Breathe(),
         BackwardBending(),
         FrontalCoreStretch(),
         HamstringStretch(),
@@ -50,12 +51,12 @@ class SampleData: NSObject {
         TransverseCore(),
         SagittalCore(),
         AbdominalCrunch(),
-        //NeckPress(), Junaid Commnented
+        NeckPress(),
         SideBridge(),
         Plank(),
         PhysicalActivity(),
         Guidelines(),
-        
+        //
         NassVideo1(),
         NassVideo2(),
         NassVideo3(),
@@ -65,7 +66,6 @@ class SampleData: NSObject {
         NassVideo7(),
         NassVideo8(),
         NassVideo9(),
-        
         IceHeat(),
         LayFlat(),
         ExerciseType(),
@@ -93,12 +93,11 @@ class SampleData: NSObject {
         CopingRefresher1(),
         CopingRefresher2(),
         SummaryFacts(),
-        
-        StartBackSurvey(),
-        ODISurvey(),
-        BackPain(),
-        Weight(),
-        SixMinuteWalk(),
+        //StartBackSurvey(),
+        //ODISurvey(),
+        //BackPain(),
+        //Weight(),
+        //SixMinuteWalk(),
         
         //Mood(),
         //ExcerciseMinutes(),
@@ -109,99 +108,65 @@ class SampleData: NSObject {
         //Journaling()
     ]
     
-    /**
-        An array of `OCKContact`s to display on the Connect view.
-    */
-    /* Junaid Commnented
-    
-    let contacts: [OCKContact] = [
-        OCKContact(contactType: .careTeam,
-            name: "Dr. Maria Ruiz",
-            relation: "Physician",
-			contactInfoItems:[.phone("888-555-5512"), .sms("888-555-5512"), .email("mruiz2@mac.com")],
-            tintColor: Colors.blue.color,
-            monogram: "MR",
-            image: nil),
-        
-        OCKContact(contactType: .careTeam,
-            name: "Bill James",
-            relation: "Nurse",
-			contactInfoItems:[.phone("888-555-5512"), .sms("888-555-5512"), .email("billjames2@mac.com")],
-            tintColor: Colors.green.color,
-            monogram: nil,
-            image: nil),
-        
-        OCKContact(contactType: .personal,
-            name: "Tom Clark",
-            relation: "Father",
-			contactInfoItems:[.phone("888-555-5512"), .sms("888-555-5512"), .facetimeVideo("8885555512", display: "888-555-5512")],
-            tintColor: Colors.yellow.color,
-            monogram: nil,
-            image: nil)
-    ]
- 
- */
-    
     // MARK: Initialization
-
-    /* Junaid Commnented
-    required init(carePlanStore: OCKCarePlanStore) {
+    
+    required init(carePlanStore: OCKStore) {
         super.init()
         
         //self._clearStore(store: carePlanStore)
         // Populate the store with the sample activities.
         for sampleActivity in self.activities {
-            let carePlanActivity = sampleActivity.carePlanActivity()
-            
-            carePlanStore.add(carePlanActivity) { success, error in
-                if !success {
-                    print(error?.localizedDescription as Any)
-                }
-            }
-        }
-    }
- 
- */
- 
-    /* Junaid Commnented
-    func resetStore(store: OCKCarePlanStore) {
-        self._clearStore(store: store)
-    }
-    
-    private func _clearStore(store: OCKCarePlanStore) {
-        print("*** CLEANING STORE DEBUG ONLY ****")
-        
-        let deleteGroup = DispatchGroup()
-
-        deleteGroup.enter()
-        store.activities { (success, activities, errorOrNil) in
-            
-            guard success else {
-                // Perform proper error handling here...
-                fatalError(errorOrNil!.localizedDescription)
-            }
-            
-            for activity in activities {
+            if let carePlanActivity = sampleActivity.carePlanActivity() {
                 
-                deleteGroup.enter()
-                store.remove(activity) { (success, error) -> Void in
-                    
-                    print("Removing \(activity)")
-                    guard success else {
-                        fatalError("*** An error occurred: \(error!.localizedDescription)")
+                carePlanStore.addTask(carePlanActivity) { result in
+                    switch result {
+                    case .failure(let error): print("Error: \(error.localizedDescription)")
+                    case .success: print("Successfully saved a new task!")
                     }
-                    print("Removed: \(activity)")
-                    deleteGroup.leave()
                 }
             }
-            deleteGroup.leave()
         }
-        
-        // Wait until all the asynchronous calls are done.
-        DispatchGroup().wait(timeout: DispatchTime.distantFuture)
     }
     
-    */
+    /* Junaid Commnented
+     func resetStore(store: OCKCarePlanStore) {
+     self._clearStore(store: store)
+     }
+     
+     private func _clearStore(store: OCKCarePlanStore) {
+     print("*** CLEANING STORE DEBUG ONLY ****")
+     
+     let deleteGroup = DispatchGroup()
+     
+     deleteGroup.enter()
+     store.activities { (success, activities, errorOrNil) in
+     
+     guard success else {
+     // Perform proper error handling here...
+     fatalError(errorOrNil!.localizedDescription)
+     }
+     
+     for activity in activities {
+     
+     deleteGroup.enter()
+     store.remove(activity) { (success, error) -> Void in
+     
+     print("Removing \(activity)")
+     guard success else {
+     fatalError("*** An error occurred: \(error!.localizedDescription)")
+     }
+     print("Removed: \(activity)")
+     deleteGroup.leave()
+     }
+     }
+     deleteGroup.leave()
+     }
+     
+     // Wait until all the asynchronous calls are done.
+     DispatchGroup().wait(timeout: DispatchTime.distantFuture)
+     }
+     
+     */
     
     // MARK: Convenience
     
@@ -215,17 +180,17 @@ class SampleData: NSObject {
     }
     
     /* Junaid Commnented
-    
-    func generateSampleDocument() -> OCKDocument {
-        let subtitle = OCKDocumentElementSubtitle(subtitle: "First subtitle")
-        
-        let paragraph = OCKDocumentElementParagraph(content: "Lorem ipsum dolor sit amet, vim primis noster sententiae ne, et albucius apeirian accusata mea, vim at dicunt laoreet. Eu probo omnes inimicus ius, duo at veritus alienum. Nostrud facilisi id pro. Putant oporteat id eos. Admodum antiopam mel in, at per everti quaeque. Lorem ipsum dolor sit amet, vim primis noster sententiae ne, et albucius apeirian accusata mea, vim at dicunt laoreet. Eu probo omnes inimicus ius, duo at veritus alienum. Nostrud facilisi id pro. Putant oporteat id eos. Admodum antiopam mel in, at per everti quaeque. Lorem ipsum dolor sit amet, vim primis noster sententiae ne, et albucius apeirian accusata mea, vim at dicunt laoreet. Eu probo omnes inimicus ius, duo at veritus alienum. Nostrud facilisi id pro. Putant oporteat id eos. Admodum antiopam mel in, at per everti quaeque.")
-            
-        let document = OCKDocument(title: "Sample Document Title", elements: [subtitle, paragraph])
-        document.pageHeader = "App Name: OCKSample, User Name: John Appleseed"
-        
-        return document
-    }
-    
-    */
+     
+     func generateSampleDocument() -> OCKDocument {
+     let subtitle = OCKDocumentElementSubtitle(subtitle: "First subtitle")
+     
+     let paragraph = OCKDocumentElementParagraph(content: "Lorem ipsum dolor sit amet, vim primis noster sententiae ne, et albucius apeirian accusata mea, vim at dicunt laoreet. Eu probo omnes inimicus ius, duo at veritus alienum. Nostrud facilisi id pro. Putant oporteat id eos. Admodum antiopam mel in, at per everti quaeque. Lorem ipsum dolor sit amet, vim primis noster sententiae ne, et albucius apeirian accusata mea, vim at dicunt laoreet. Eu probo omnes inimicus ius, duo at veritus alienum. Nostrud facilisi id pro. Putant oporteat id eos. Admodum antiopam mel in, at per everti quaeque. Lorem ipsum dolor sit amet, vim primis noster sententiae ne, et albucius apeirian accusata mea, vim at dicunt laoreet. Eu probo omnes inimicus ius, duo at veritus alienum. Nostrud facilisi id pro. Putant oporteat id eos. Admodum antiopam mel in, at per everti quaeque.")
+     
+     let document = OCKDocument(title: "Sample Document Title", elements: [subtitle, paragraph])
+     document.pageHeader = "App Name: OCKSample, User Name: John Appleseed"
+     
+     return document
+     }
+     
+     */
 }

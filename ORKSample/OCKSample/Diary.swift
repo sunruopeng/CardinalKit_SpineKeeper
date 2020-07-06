@@ -7,6 +7,7 @@
 //
 
 import CareKit
+import UIKit
 
 /**
  Struct that conforms to the `Activity` protocol to define a press up
@@ -17,14 +18,10 @@ struct Diary: Activity {
     
     let activityType: ActivityType = .diary
     
-    /* Junaid Commnented
     
-    func carePlanActivity() -> OCKCarePlanActivity {
+    func carePlanActivity() -> OCKTask? {
         // Create a weekly schedule.
-        let calendar = Calendar.autoupdatingCurrent
         let startDate = (UserDefaults.standard.object(forKey: "startDate") as! Date)
-        let startDateComps = calendar.dateComponents([.year, .month, .day], from: startDate)
-        let endDate = calendar.dateComponents([.year, .month, .day], from: calendar.date(byAdding: .day, value: 28, to: startDate)!)
         
         var days: [Int] = []
         switch(UserDefaults.standard.integer(forKey: "activityScheduleIndex")) {
@@ -41,35 +38,43 @@ struct Diary: Activity {
             days = []
         }
         
+        if days.count == 0 {
+            return nil
+        }
+        
         var occurrences = [Int](repeating: 0, count: 28)
         for day in days {
             occurrences[day-1]+=1
         }
         
-        let schedule = OCKCareSchedule.monthlySchedule(withStartDate: startDateComps, occurrencesOnEachDay: occurrences as [NSNumber], endDate: endDate)
+        var scheduleElements : [OCKScheduleElement] = []
         
-        // Get the localized strings to use for the activity.
-        let title = "Sleep Diary"
-        let summary = "Log an entry"
-        let instructions = "One of the best ways you can tell whether you are getting enough good-quality sleep, and whether you have signs of a sleep disorder, is by keeping a sleep diary.  Use this diary to record the quality and quantity of your sleep; your use of medications, alcohol, and caffeinated beverages; your exercise patterns; and how sleepy you feel during the day. After a week or so, look over this information to see how many hours of sleep or nighttime awakenings one night are linked to your being tired the next day. This information will give you a sense of how much uninterrupted sleep you need to avoid daytime sleepiness. You also can use the diary to see some of the patterns or practices that may keep you from getting a good night’s sleep.\n\n\u{2022}You can keep your own diary or use the Journal feature in the SYmptom Tracker tab."
+        for index in 0..<occurrences.count {
+            
+            if occurrences[index] == 1 {
+                let caldendar = Calendar.current
+                let startOfDay = Calendar.current.startOfDay(for: startDate)
+                let scheduleStartDate = caldendar.date(byAdding: .day, value: index, to: startOfDay)!
+                
+                let scheduleElement =  OCKScheduleElement(start: scheduleStartDate, end: nil,
+                                                          interval: DateComponents(day: 28),
+                                                          text: "Log an entry",
+                                                          targetValues: [],
+                                                          duration: .allDay)
+                scheduleElements.append(scheduleElement)
+            }
+        }
         
-        // Create the intervention activity.
-        let activity = OCKCarePlanActivity.intervention(
-            withIdentifier: activityType.rawValue,//+startDate.description+endDate.description,
-            groupIdentifier: "Todo's",
-            title: title,
-            text: summary,
-            tintColor: Colors.stanfordLightTan.color,
-            instructions: instructions,
-            imageURL: nil, //Bundle.main.url(forResource: "brace", withExtension: "png"),
-            schedule: schedule,
-            userInfo: nil,
-            optional: false
-        )
+        let schedule = OCKSchedule(composing: scheduleElements)
+        var activity = OCKTask(id: activityType.rawValue,
+                               title: "Sleep Diary",
+                               carePlanID: nil, schedule: schedule)
         
+        activity.instructions = "One of the best ways you can tell whether you are getting enough good-quality sleep, and whether you have signs of a sleep disorder, is by keeping a sleep diary.  Use this diary to record the quality and quantity of your sleep; your use of medications, alcohol, and caffeinated beverages; your exercise patterns; and how sleepy you feel during the day. After a week or so, look over this information to see how many hours of sleep or nighttime awakenings one night are linked to your being tired the next day. This information will give you a sense of how much uninterrupted sleep you need to avoid daytime sleepiness. You also can use the diary to see some of the patterns or practices that may keep you from getting a good night’s sleep.\n\n\u{2022}You can keep your own diary or use the Journal feature in the SYmptom Tracker tab."
+        
+        activity.groupIdentifier = "Todo's"
         return activity
     }
     
-    */
 }
 

@@ -418,17 +418,9 @@ extension OnboardingViewController : ORKTaskViewControllerDelegate {
                     UserDefaults.standard.set(old + out, forKey: "odiSurvey")
                 }
                 
-                
-
-                if UserDefaults.standard.object(forKey: "startDate") != nil {
-                    
-                    let carestore = CareStoreReferenceManager.shared.synchronizedStoreManager.store as! OCKStore
-                    _ = TasksData(carePlanStore: carestore)
-                }
-                
-                //  Junaid Commnented
-//                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//                appDelegate.containerViewController?.sampleData = SampleData(carePlanStore: (appDelegate.containerViewController?.careStoreManager.store)!)
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                let store = CareStoreReferenceManager.shared.synchronizedStoreManager.store as! OCKStore
+                appDelegate.containerViewController?.sampleData = SampleData(carePlanStore: store)
                 performSegue(withIdentifier: "unwindToStudy", sender: nil)
             
             case .discarded, .failed, .saved:

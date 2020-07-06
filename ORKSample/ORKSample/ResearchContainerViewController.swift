@@ -43,12 +43,8 @@ class ResearchContainerViewController: UIViewController, HealthClientType, MFMai
     // MARK: HealthClientType
     
     var healthStore: HKHealthStore?
-    // Junaid Commnented
-    //let careStoreManager = CarePlanStoreManager.sharedCarePlanStoreManager
     var sampleData: SampleData?
-    var taskData: TasksData?
     let careStoreManager = CareStoreReferenceManager.shared
-    
     var careCardVC : DailyActivitesViewController?
     
     /* Junaid Commnented
@@ -85,7 +81,7 @@ class ResearchContainerViewController: UIViewController, HealthClientType, MFMai
         
 
         if UserDefaults.standard.object(forKey: "startDate") != nil {
-            taskData = TasksData(carePlanStore: careStoreManager.synchronizedStoreManager.store as! OCKStore)
+            sampleData = SampleData(carePlanStore: careStoreManager.synchronizedStoreManager.store as! OCKStore)
         }
         super.init(coder: aDecoder)
         
@@ -167,7 +163,7 @@ class ResearchContainerViewController: UIViewController, HealthClientType, MFMai
     fileprivate func createCareCardViewController() -> DailyActivitesViewController {
         let viewController = DailyActivitesViewController(storeManager: CareStoreReferenceManager.shared.synchronizedStoreManager)
         
-        viewController.title = "Daily Activities"
+        viewController.title = "Activities"
          viewController.tabBarItem = UITabBarItem(title: viewController.title, image: UIImage(named:"carecard"), selectedImage: UIImage(named: "carecard-filled"))
         
         return viewController

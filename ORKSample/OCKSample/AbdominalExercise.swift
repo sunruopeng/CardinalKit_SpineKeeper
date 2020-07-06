@@ -7,6 +7,7 @@
 //
 
 import CareKit
+import UIKit
 
 /**
  Struct that conforms to the `Activity` protocol to define a press up
@@ -17,15 +18,9 @@ struct AbdominalExercise: Activity {
     
     let activityType: ActivityType = .abdominalExercise //Change this
     
-    /* Junaid Commnented
-    
-    func carePlanActivity() -> OCKCarePlanActivity {
+    func carePlanActivity() -> OCKTask? {
         // Create a weekly schedule.
-        let calendar = Calendar.autoupdatingCurrent
         let startDate = (UserDefaults.standard.object(forKey: "startDate") as! Date)
-        let startDateComps = calendar.dateComponents([.year, .month, .day], from: startDate)
-        let endDate = calendar.dateComponents([.year, .month, .day], from: calendar.date(byAdding: .day, value: 28, to: startDate)!)
-        
         
         var days: [Int] = []
         switch(UserDefaults.standard.integer(forKey: "activityScheduleIndex")) {
@@ -41,38 +36,48 @@ struct AbdominalExercise: Activity {
         default:
             days = []
         }
-
+        
+        if days.count == 0 {
+            return nil
+        }
+        
         var occurrences = [Int](repeating: 0, count: 28)
         for day in days {
             occurrences[day-1]+=1
         }
         
-        let schedule = OCKCareSchedule.monthlySchedule(withStartDate: startDateComps, occurrencesOnEachDay: occurrences as [NSNumber], endDate: endDate)
         
-        // Get the localized strings to use for the activity. ### Change the instructions
-        let title = NSLocalizedString("Abdominal Crunch", comment: "")  // Title Change ###
-        let summary = NSLocalizedString("Repeat 10-15 times", comment: "") // CHANGE COMMENT AND INSTRUCTIONS BELOW
-        let instructions = "Lay on your back with both knees bent. Draw abdominal wall in. Maintaining abdominal wall drawn in, extend one leg (if your abdominal wall lifts up or your back arches, your leg is too close to the floor). Return leg and extend other leg. Repeat to fatigue or about 10-15 repetitions at a slow and controlled pace."
+        var scheduleElements : [OCKScheduleElement] = []
         
-        // Create the intervention activity.
-        let activity = OCKCarePlanActivity.intervention(
-            withIdentifier: activityType.rawValue,//+startDate.description+endDate.description,
-            groupIdentifier: "Todo's",
-            title: title,
-            text: summary,
-            tintColor: Colors.blue.color,  //Change the color here ###
-            instructions: instructions,
-            imageURL: Bundle.main.url(forResource: "abdominalexercise", withExtension: "jpg"),
-            schedule: schedule,
-            userInfo: nil,
-            optional: false
-        )
+        for index in 0..<occurrences.count {
+            
+            if occurrences[index] == 1 {
+                let caldendar = Calendar.current
+                let startOfDay = Calendar.current.startOfDay(for: startDate)
+                let scheduleStartDate = caldendar.date(byAdding: .day, value: index, to: startOfDay)!
+                
+                let scheduleElement =  OCKScheduleElement(start: scheduleStartDate, end: nil,
+                                                          interval: DateComponents(day: 28),
+                                                          text: "Repeat 10-15 times",
+                                                          targetValues: [],
+                                                          duration: .allDay)
+                scheduleElements.append(scheduleElement)
+            }
+        }
         
+        
+        let taskSchedule = OCKSchedule(composing: scheduleElements)
+        
+        
+        var activity = OCKTask(id: activityType.rawValue,
+                           title: "Abdominal Crunch",
+                           carePlanID: nil, schedule: taskSchedule)
+        
+        activity.instructions = "You can stretch and strengthen the low back muscles that help you stand and lift. Stand with your feet shoulder width apart, about 18” in front of a wall (with your back to the wall).  Hold a household object of desired weight (book, can of soup, exercise weight) directly in front of you. Tighten your abdominal muscles, then reach through your legs to touch the wall, keeping hips and knees bent. Use your hips to push your body back to a standing position, then extend your arms and reach over your head and slightly backward. Repeat 10 times."
+        
+        activity.groupIdentifier = "Todo's"
+        activity.asset = "\(String(describing: Bundle.main.url(forResource: "abdominalexercise", withExtension: "jpg")))"
         return activity
     }
     
-    */
 }
-
-
-
