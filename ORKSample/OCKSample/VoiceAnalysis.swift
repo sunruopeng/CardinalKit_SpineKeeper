@@ -40,6 +40,10 @@ struct VoiceAnalysis: Assessment {
     
     let activityType: ActivityType = .voiceAnalysis
     
+    func carePlanActivity() -> OCKTask? {
+        return nil
+    }
+    
     /* Junaid Commnented
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.

@@ -45,6 +45,10 @@ struct Weight: Assessment, HealthSampleBuilder {
     
     let unit = HKUnit.pound()
     
+    func carePlanActivity() -> OCKTask? {
+        return nil
+    }
+    
     // MARK: Activity
     
     

@@ -40,6 +40,10 @@ struct SixMinuteWalk: Assessment {
     
     let activityType: ActivityType = .sixMinuteWalk
     
+    func carePlanActivity() -> OCKTask? {
+        return nil
+    }
+    
     /* Junaid Commnented
     
     func carePlanActivity() -> OCKCarePlanActivity {

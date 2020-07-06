@@ -39,6 +39,10 @@ struct BackRangeOfMotion: Assessment {
     // MARK: Activity
     
     let activityType: ActivityType = .backRangeOfMotion
+    
+    func carePlanActivity() -> OCKTask? {
+        return nil
+    }
     /* Junaid Commnented
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.

@@ -6,10 +6,14 @@ import CareKit
  Struct that conforms to the `Assessment` protocol to define a mood
  assessment.
  */
-struct ODISurvey: Assessment {
+struct ODISurvey: Assessment {  
     // MARK: Activity
     
     let activityType: ActivityType = .odiSurvey
+    
+    func carePlanActivity() -> OCKTask? {
+        return nil
+    }
     
     /* Junaid Commnented
     func carePlanActivity() -> OCKCarePlanActivity {

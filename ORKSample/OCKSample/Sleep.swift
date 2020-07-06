@@ -39,6 +39,10 @@ struct Sleep: Assessment {
     // MARK: Activity
     
     let activityType: ActivityType = .sleep
+    
+    func carePlanActivity() -> OCKTask? {
+        return nil
+    }
     /* Junaid Commnented
     func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.

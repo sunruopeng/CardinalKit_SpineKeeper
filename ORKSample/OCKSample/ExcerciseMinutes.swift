@@ -40,6 +40,10 @@ struct ExcerciseMinutes: Assessment {
     
     let activityType: ActivityType = .excerciseMinutes
     
+    func carePlanActivity() -> OCKTask? {
+        return nil
+    }
+    
     //Junaid Commneted
 //    func carePlanActivity() -> OCKCarePlanActivity {
 //        // Create a weekly schedule.

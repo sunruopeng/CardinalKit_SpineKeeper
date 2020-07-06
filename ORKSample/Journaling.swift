@@ -40,6 +40,10 @@ struct Journaling: Assessment {
     
     let activityType: ActivityType = .journaling
     
+    func carePlanActivity() -> OCKTask? {
+        return nil
+    }
+    
     /* Junaid Commnented
     
     func carePlanActivity() -> OCKCarePlanActivity {

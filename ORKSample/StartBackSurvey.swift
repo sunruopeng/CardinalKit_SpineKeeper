@@ -38,7 +38,12 @@ import CareKit
 struct StartBackSurvey: Assessment {
     // MARK: Activity
     
+    
     let activityType: ActivityType = .startBackSurvey
+    
+    func carePlanActivity() -> OCKTask? {
+        return nil
+    }
     
     /* Junaid Commnented
     func carePlanActivity() -> OCKCarePlanActivity {

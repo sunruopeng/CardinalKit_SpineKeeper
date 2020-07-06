@@ -40,6 +40,10 @@ struct BackPain: Assessment {
     
     let activityType: ActivityType = .backPain
     
+    func carePlanActivity() -> OCKTask? {
+        return nil
+    }
+    
     /* Junaid Commnented
     
     func carePlanActivity() -> OCKCarePlanActivity {

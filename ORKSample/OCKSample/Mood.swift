@@ -40,6 +40,10 @@ struct Mood: Assessment {
     
     let activityType: ActivityType = .mood
     
+    func carePlanActivity() -> OCKTask? {
+        return nil
+    }
+    
     /* Junaid Commnented
     
     func carePlanActivity() -> OCKCarePlanActivity {
