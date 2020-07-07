@@ -73,7 +73,7 @@ struct HamstringStretch: Activity {
         activity.instructions = "Stretching the hamstring can be done sitting or standing. Keep your leg straight as you lean forward with your chest. Hold for 60 seconds."
         
         activity.groupIdentifier = "Todo's"
-        activity.asset = "\(String(describing: Bundle.main.url(forResource: "hamstringstretch", withExtension: "jpg")))"
+        activity.asset = "hamstringstretch.jpg"
         return activity
     }
     

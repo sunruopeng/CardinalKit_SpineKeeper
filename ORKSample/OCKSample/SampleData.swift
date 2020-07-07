@@ -128,45 +128,18 @@ class SampleData: NSObject {
         }
     }
     
-    /* Junaid Commnented
-     func resetStore(store: OCKCarePlanStore) {
-     self._clearStore(store: store)
-     }
-     
-     private func _clearStore(store: OCKCarePlanStore) {
-     print("*** CLEANING STORE DEBUG ONLY ****")
-     
-     let deleteGroup = DispatchGroup()
-     
-     deleteGroup.enter()
-     store.activities { (success, activities, errorOrNil) in
-     
-     guard success else {
-     // Perform proper error handling here...
-     fatalError(errorOrNil!.localizedDescription)
-     }
-     
-     for activity in activities {
-     
-     deleteGroup.enter()
-     store.remove(activity) { (success, error) -> Void in
-     
-     print("Removing \(activity)")
-     guard success else {
-     fatalError("*** An error occurred: \(error!.localizedDescription)")
-     }
-     print("Removed: \(activity)")
-     deleteGroup.leave()
-     }
-     }
-     deleteGroup.leave()
-     }
-     
-     // Wait until all the asynchronous calls are done.
-     DispatchGroup().wait(timeout: DispatchTime.distantFuture)
-     }
-     
-     */
+    func resetStore(store: OCKStore) {
+        self._clearStore(store: store)
+    }
+    
+    private func _clearStore(store: OCKStore) {
+        print("*** CLEANING STORE DEBUG ONLY ****")
+        do {
+            try store.delete()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
     
     // MARK: Convenience
     
@@ -178,19 +151,4 @@ class SampleData: NSObject {
         
         return nil
     }
-    
-    /* Junaid Commnented
-     
-     func generateSampleDocument() -> OCKDocument {
-     let subtitle = OCKDocumentElementSubtitle(subtitle: "First subtitle")
-     
-     let paragraph = OCKDocumentElementParagraph(content: "Lorem ipsum dolor sit amet, vim primis noster sententiae ne, et albucius apeirian accusata mea, vim at dicunt laoreet. Eu probo omnes inimicus ius, duo at veritus alienum. Nostrud facilisi id pro. Putant oporteat id eos. Admodum antiopam mel in, at per everti quaeque. Lorem ipsum dolor sit amet, vim primis noster sententiae ne, et albucius apeirian accusata mea, vim at dicunt laoreet. Eu probo omnes inimicus ius, duo at veritus alienum. Nostrud facilisi id pro. Putant oporteat id eos. Admodum antiopam mel in, at per everti quaeque. Lorem ipsum dolor sit amet, vim primis noster sententiae ne, et albucius apeirian accusata mea, vim at dicunt laoreet. Eu probo omnes inimicus ius, duo at veritus alienum. Nostrud facilisi id pro. Putant oporteat id eos. Admodum antiopam mel in, at per everti quaeque.")
-     
-     let document = OCKDocument(title: "Sample Document Title", elements: [subtitle, paragraph])
-     document.pageHeader = "App Name: OCKSample, User Name: John Appleseed"
-     
-     return document
-     }
-     
-     */
 }

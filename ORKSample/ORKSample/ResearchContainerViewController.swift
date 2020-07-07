@@ -239,13 +239,14 @@ class ResearchContainerViewController: UIViewController, HealthClientType, MFMai
             present(viewController, animated: true, completion: nil)
         }
         
-        /* Junaid Commnented
-         if UserDefaults.standard.integer(forKey: "withdrawn") == 1 {
-         sampleData?.resetStore(store: CarePlanStoreManager.sharedCarePlanStoreManager.store)
-         ORKPasscodeViewController.removePasscodeFromKeychain()
-         toOnboarding()
-         }
-         */
+        if UserDefaults.standard.integer(forKey: "withdrawn") == 1 {
+            if self.sampleData != nil {
+                let store = CareStoreReferenceManager.shared.synchronizedStoreManager.store as! OCKStore
+                sampleData!.resetStore(store: store)
+            }
+            ORKPasscodeViewController.removePasscodeFromKeychain()
+            toOnboarding()
+        }
     }
 }
 

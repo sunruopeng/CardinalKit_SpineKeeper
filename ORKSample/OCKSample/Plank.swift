@@ -75,7 +75,7 @@ struct Plank: Activity {
         activity.instructions = "Prop up onto elbows and knees. Keep shoulders, hips and knees in a straight line. Hold 10 seconds, working towards 30 seconds. Repeat 5 times."
         
         activity.groupIdentifier = "Todo's"
-        activity.asset = "\(String(describing: Bundle.main.url(forResource: "plank", withExtension: "jpg")))"
+        activity.asset = "plank.jpg"
         return activity
     }
     

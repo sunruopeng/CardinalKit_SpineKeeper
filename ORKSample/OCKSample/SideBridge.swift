@@ -75,7 +75,7 @@ struct SideBridge: Activity {
         activity.instructions = "On your side with knees bent at 90 degrees, prop up on your elbow, elongate neck away from shoulder, and draw your abdominal wall in. Continue to breathe. Lift hips away from table keeping your head, shoulders and hips in a straight line. Hold for 10 seconds working towards 30 seconds. Repeat 1-5 times or to fatigue."
         
         activity.groupIdentifier = "Todo's"
-        activity.asset = "\(String(describing: Bundle.main.url(forResource: "sidebridge", withExtension: "jpg")))"
+        activity.asset = "sidebridge.jpg"
         return activity
     }
     

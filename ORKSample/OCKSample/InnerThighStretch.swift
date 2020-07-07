@@ -75,7 +75,7 @@ struct InnerThighStretch: Activity {
         activity.instructions = "Turn your body facing forward. Place your leg onto a chair and try to keep your leg straight. Adjust the height of the chair as necessary to allow you to maintain a straight leg. Lean into the leg on the chair to feel a stretch in the inner thigh area. Hold for 60 seconds"
         
         activity.groupIdentifier = "Todo's"
-        activity.asset = "\(String(describing: Bundle.main.url(forResource: "innerthighstretch", withExtension: "jpg")))"
+        activity.asset = "innerthighstretch.jpg"
         
         return activity
     }

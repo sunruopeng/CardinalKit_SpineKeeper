@@ -75,7 +75,7 @@ struct NeckPress: Activity {
         activity.instructions = "This is an isometric exercise to strengthen your neck. Press your palm against your forehead, then use your neck muscles to push against your palm. Hold for ten seconds and repeat six times. Then press your palm against your temple and use your neck muscles to push against your palm, holding for ten seconds and repeating six times on each side. Then cup both hands behind your head and use your neck muscles to press back into your hands. Hold for ten seconds, and repeat six times."
         
         activity.groupIdentifier = "Todo's"
-        activity.asset = "\(String(describing: Bundle.main.url(forResource: "neck_combined", withExtension: "jpg")))"
+        activity.asset = "neck_combined.jpg"
         return activity
     }
 }

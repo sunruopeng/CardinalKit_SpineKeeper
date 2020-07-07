@@ -27,7 +27,7 @@ class DailyActivitesViewController: OCKDailyPageViewController {
             tasks.forEach { task in
                 let activity = task as! OCKTask
                 if activity.userInfo == nil {
-                    let taskCard = OCKChecklistTaskViewController(task: task,
+                    let taskCard = SimpleActivityViewController(task: task,
                                                                   eventQuery: .init(for: date),
                                                                   storeManager: self.storeManager)
                     listViewController.appendViewController(taskCard, animated: false)

@@ -74,7 +74,7 @@ struct AbdominalCrunch: Activity {
         activity.instructions = "Draw abdominal wall inward, exhale as you lift your chest area. This can be done with quick short movements or slow full movements. Repeat 10-15 times or to fatigue."
         
         activity.groupIdentifier = "Todo's"
-        activity.asset = "\(String(describing: Bundle.main.url(forResource: "abdominalcrunch", withExtension: "jpg")))"
+        activity.asset = "abdominalcrunch.jpg"
         return activity
     }
 }

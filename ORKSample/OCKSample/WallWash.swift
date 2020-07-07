@@ -74,7 +74,7 @@ struct WallWash: Activity {
         activity.instructions = "Stand facing a wall with a cloth in hand. Squat down to 4:00 o’clock and back up to 10:00 o’clock (or as much as your range of motion allows). Hold each position for 1-2 seconds."
         
         activity.groupIdentifier = "Todo's"
-        activity.asset = "\(String(describing: Bundle.main.url(forResource: "wallwash_combined", withExtension: "jpg")))"
+        activity.asset = "wallwash_combined.jpg"
         return activity
     }
     

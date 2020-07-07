@@ -76,7 +76,7 @@ struct AbdominalExercise: Activity {
         activity.instructions = "You can stretch and strengthen the low back muscles that help you stand and lift. Stand with your feet shoulder width apart, about 18” in front of a wall (with your back to the wall).  Hold a household object of desired weight (book, can of soup, exercise weight) directly in front of you. Tighten your abdominal muscles, then reach through your legs to touch the wall, keeping hips and knees bent. Use your hips to push your body back to a standing position, then extend your arms and reach over your head and slightly backward. Repeat 10 times."
         
         activity.groupIdentifier = "Todo's"
-        activity.asset = "\(String(describing: Bundle.main.url(forResource: "abdominalexercise", withExtension: "jpg")))"
+        activity.asset = "abdominalexercise.jpg"
         return activity
     }
     

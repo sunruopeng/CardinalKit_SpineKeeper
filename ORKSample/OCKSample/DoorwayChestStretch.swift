@@ -72,7 +72,7 @@ struct DoorwayChestStretch: Activity {
         activity.instructions = "Stand in a doorway placing your arms as shown and with your back straight. Step through the door to feel a stretch in your chest area. Moving your hands higher or lower will allow you to stretch more areas of the chest. Do this for 10-15 seconds."
         
         activity.groupIdentifier = "Todo's"
-        activity.asset = "\(String(describing: Bundle.main.url(forResource: "doorwaycheststretch", withExtension: "jpg")))"
+        activity.asset = "doorwaycheststretch.jpg"
         return activity
     }
 }

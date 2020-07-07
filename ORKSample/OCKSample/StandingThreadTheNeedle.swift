@@ -73,7 +73,7 @@ struct StandingThreadTheNeedle: Activity {
         activity.instructions = "Stand with one hand on the wall and the opposite  leg on the ground, abdominals tight, back straight. Most of your weight should be through the arm on the wall. Reach under your arm pit area (3:00 o’clock) and reach out and up (10:00 o’clock). Keep your weight-bearing shoulder blade down. Repeat 10-15 times, holding 5 seconds. Switch sides and repeat."
         
         activity.groupIdentifier = "Todo's"
-        activity.asset = "\(String(describing: Bundle.main.url(forResource: "standingthreadtheneedle_combined", withExtension: "jpg")))"
+        activity.asset = "standingthreadtheneedle_combined.jpg"
         return activity
     }
 }

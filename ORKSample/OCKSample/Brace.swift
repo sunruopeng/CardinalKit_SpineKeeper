@@ -70,7 +70,7 @@ struct Brace: Activity {
                                carePlanID: nil, schedule: schedule)
         
         activity.instructions = "You may consider purchasing a soft lumbar or lumbosacral brace made of cloth. You may obtain one at any medical supply store near you. Use the brace whenever you need an extra reminder to stabilize your back."
-        activity.asset = "\(String(describing: Bundle.main.url(forResource: "brace", withExtension: "png")))"
+        activity.asset = "brace.png"
         activity.groupIdentifier = "Todo's"
         return activity
     }

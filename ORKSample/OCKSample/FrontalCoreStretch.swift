@@ -76,7 +76,7 @@ struct FrontalCoreStretch: Activity {
         activity.instructions = "This will stretch out your sides. Stand with feet hip width apart and tighten your abdominal muscles. Shift your hips to the right while reaching overhead with your right arm. Repeat, shifting your hips to the left while reaching with your left arm. Repeat 10 times, alternating sides."
         
         activity.groupIdentifier = "Todo's"
-        activity.asset = "\(String(describing: Bundle.main.url(forResource: "frontalcorestretch", withExtension: "jpg")))"
+        activity.asset = "frontalcorestretch.jpg"
         
         return activity
     }

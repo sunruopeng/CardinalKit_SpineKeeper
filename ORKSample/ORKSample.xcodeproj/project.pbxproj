@@ -248,6 +248,7 @@
 		FA0C122724B31D970033669E /* Breathe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C122524B31D970033669E /* Breathe.swift */; };
 		FA50C0E324AE064D00D99A84 /* DailyActivitesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50C0E224AE064D00D99A84 /* DailyActivitesViewController.swift */; };
 		FA50C0E924AE0CAB00D99A84 /* CareStoreReferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50C0E824AE0CAB00D99A84 /* CareStoreReferenceManager.swift */; };
+		FAD5E0EB24B4B8740076B762 /* SimpleActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5E0EA24B4B8740076B762 /* SimpleActivityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -541,6 +542,7 @@
 		FA0C122524B31D970033669E /* Breathe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Breathe.swift; path = OCKSample/Breathe.swift; sourceTree = "<group>"; };
 		FA50C0E224AE064D00D99A84 /* DailyActivitesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyActivitesViewController.swift; sourceTree = "<group>"; };
 		FA50C0E824AE0CAB00D99A84 /* CareStoreReferenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareStoreReferenceManager.swift; sourceTree = "<group>"; };
+		FAD5E0EA24B4B8740076B762 /* SimpleActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleActivityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -908,6 +910,7 @@
 			isa = PBXGroup;
 			children = (
 				FA07880424B49F1D00BB9CFD /* MultimediaActivityViewController.swift */,
+				FAD5E0EA24B4B8740076B762 /* SimpleActivityViewController.swift */,
 				FA0C121F24B31D970033669E /* PressUp.swift */,
 				FA0C122524B31D970033669E /* Breathe.swift */,
 				16147A0E1BD83F700099A068 /* ActivityViewController.swift */,
@@ -1338,6 +1341,7 @@
 				07466C131FE1DF0A00CB9871 /* LayFlat.swift in Sources */,
 				07DBAA951E9CA49F00FC3F36 /* NSCalendar+Dates.swift in Sources */,
 				B5C2073F1BEC16F00051D9D8 /* ResearchContainerSegue.swift in Sources */,
+				FAD5E0EB24B4B8740076B762 /* SimpleActivityViewController.swift in Sources */,
 				0733F1882348058600209212 /* RNCryptor.swift in Sources */,
 				B5BC85FA1BF1405900B0CFA5 /* OnboardingViewController.swift in Sources */,
 				FA50C0E924AE0CAB00D99A84 /* CareStoreReferenceManager.swift in Sources */,
