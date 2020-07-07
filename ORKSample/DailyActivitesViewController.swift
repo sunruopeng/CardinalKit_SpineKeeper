@@ -17,7 +17,6 @@ class DailyActivitesViewController: OCKDailyPageViewController {
     
     override func dailyPageViewController(_ dailyPageViewController: OCKDailyPageViewController, prepare listViewController: OCKListViewController, for date: Date) {
         
-        
         var query = OCKTaskQuery(for: date)
         query.excludesTasksWithNoEvents = true
         
@@ -26,12 +25,18 @@ class DailyActivitesViewController: OCKDailyPageViewController {
             guard let tasks = try? result.get() else { return }
             
             tasks.forEach { task in
-                
-                let taskCard = OCKChecklistTaskViewController(task: task,
-                                                                   eventQuery: .init(for: date),
-                                                                   storeManager: self.storeManager)
-                
-                listViewController.appendViewController(taskCard, animated: false)
+                let activity = task as! OCKTask
+                if activity.userInfo == nil {
+                    let taskCard = OCKChecklistTaskViewController(task: task,
+                                                                  eventQuery: .init(for: date),
+                                                                  storeManager: self.storeManager)
+                    listViewController.appendViewController(taskCard, animated: false)
+                } else {
+                    let taskCard = MultimediaActivityViewController(task: task,
+                                                                  eventQuery: .init(for: date),
+                                                                  storeManager: self.storeManager)
+                    listViewController.appendViewController(taskCard, animated: false)
+                }
             }
         }
     }
