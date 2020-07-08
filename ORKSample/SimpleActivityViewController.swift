@@ -9,7 +9,7 @@
 import UIKit
 import CareKit
 
-class SimpleActivityViewController: OCKChecklistTaskViewController {
+class SimpleActivityViewController: OCKInstructionsTaskViewController {
     
     override func didSelectTaskView(_ taskView: UIView & OCKTaskDisplayable, eventIndexPath: IndexPath) {
         guard let event = controller.eventFor(indexPath: eventIndexPath) else { return }

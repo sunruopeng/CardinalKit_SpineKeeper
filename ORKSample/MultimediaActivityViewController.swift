@@ -11,7 +11,7 @@ import CareKit
 import AVKit
 import WebKit
 
-class MultimediaActivityViewController: OCKChecklistTaskViewController {
+class MultimediaActivityViewController: OCKInstructionsTaskViewController {
     
     //This method is called when the user taps the card for detail view
     override func didSelectTaskView(_ taskView: UIView & OCKTaskDisplayable, eventIndexPath: IndexPath) {
