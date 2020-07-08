@@ -27,11 +27,27 @@ class DailyActivitesViewController: OCKDailyPageViewController {
             tasks.forEach { task in
                 let activity = task as! OCKTask
                 if activity.userInfo == nil {
-                    let view = SimpleInstructionsTaskViewSynchronizer()
-                    let taskController = OCKInstructionsTaskController(storeManager: self.storeManager)
-                    let taskCard = SimpleActivityViewController(controller: taskController, viewSynchronizer: view)
-                    taskCard.controller.fetchAndObserveEvents(forTask: task, eventQuery: OCKEventQuery(for: date))
-                    listViewController.appendViewController(taskCard, animated: false)
+                    
+                    if activity.id.oneOf(other: ActivityType.backPain.rawValue, ActivityType.odiSurvey.rawValue,ActivityType.sixMinuteWalk.rawValue,ActivityType.startBackSurvey.rawValue,ActivityType.weight.rawValue) {
+                        
+                        let careCard = AssessmentViewController(task: task,
+                                                                    eventQuery: .init(for: date),
+                                                                    storeManager: self.storeManager)
+                        listViewController.appendViewController(careCard, animated: false)
+                        
+                    }else {
+                        
+                        let view = SimpleInstructionsTaskViewSynchronizer()
+                        let taskController = OCKInstructionsTaskController(storeManager: self.storeManager)
+                        let taskCard = SimpleActivityViewController(controller: taskController, viewSynchronizer: view)
+                        taskCard.controller.fetchAndObserveEvents(forTask: task, eventQuery: OCKEventQuery(for: date))
+                        listViewController.appendViewController(taskCard, animated: false)
+                        
+                    }
+                    
+                    
+                    
+                    
                 } else {
                     let view = SimpleInstructionsTaskViewSynchronizer()
                     let taskController = OCKInstructionsTaskController(storeManager: self.storeManager)
@@ -39,6 +55,7 @@ class DailyActivitesViewController: OCKDailyPageViewController {
                     taskCard.controller.fetchAndObserveEvents(forTask: task, eventQuery: OCKEventQuery(for: date))
                     listViewController.appendViewController(taskCard, animated: false)
                 }
+                
             }
         }
     }
@@ -61,5 +78,12 @@ class SimpleInstructionsTaskViewSynchronizer: OCKInstructionsTaskViewSynchronize
             view.headerView.detailLabel.text = element.text
             view.instructionsLabel.text = ""
         }
+    }
+}
+
+
+extension Equatable {
+    func oneOf(other: Self...) -> Bool {
+        return other.contains(self)
     }
 }

@@ -12,46 +12,40 @@ struct ODISurvey: Assessment {
     let activityType: ActivityType = .odiSurvey
     
     func carePlanActivity() -> OCKTask? {
-        return nil
-    }
-    
-    /* Junaid Commnented
-    func carePlanActivity() -> OCKCarePlanActivity {
-        let calendar = Calendar.autoupdatingCurrent
         let startDate = (UserDefaults.standard.object(forKey: "startDate") as! Date)
-        let startDateComps = calendar.dateComponents([.year, .month, .day], from: startDate)
-        //let endDate = calendar.dateComponents([.year, .month, .day], from: calendar.date(byAdding: .day, value: 28, to: startDate)!)
-        //let schedule = OCKCareSchedule.weeklySchedule(withStartDate: startDateComps as DateComponents, occurrencesOnEachDay: [1, 1, 1, 1, 1, 1, 1])
-        let endDate = calendar.dateComponents([.year, .month, .day], from: calendar.date(byAdding: .day, value: 365, to: startDate)!)
         
         let days = [8,15,22,28]
         var occurrences = [Int](repeating: 0, count: 28)
         for day in days {
             occurrences[day-1]+=1
         }
-        let schedule = OCKCareSchedule.monthlySchedule(withStartDate: startDateComps, occurrencesOnEachDay: occurrences as [NSNumber], endDate: endDate)
         
+        var scheduleElements : [OCKScheduleElement] = []
         
-        // Get the localized strings to use for the assessment.
-        let title = NSLocalizedString("ODI Survey", comment: "")
+        for index in 0..<occurrences.count {
+            
+            if occurrences[index] == 1 {
+                let caldendar = Calendar.current
+                let startOfDay = Calendar.current.startOfDay(for: startDate)
+                let scheduleStartDate = caldendar.date(byAdding: .day, value: index, to: startOfDay)!
+                
+                let scheduleElement =  OCKScheduleElement(start: scheduleStartDate, end: nil,
+                                                          interval: DateComponents(day: 28),
+                                                          text: "",
+                                                          targetValues: [],
+                                                          duration: .allDay)
+                scheduleElements.append(scheduleElement)
+            }
+        }
         
-        let activity = OCKCarePlanActivity.assessment(
-            withIdentifier: activityType.rawValue,//+startDate.description+endDate.description,
-            groupIdentifier: "Diagnostics",
-            title: title,
-            text: "",
-            tintColor: Colors.stanfordAqua.color,
-            resultResettable: true,
-            // imageURL: Bundle.main.url(forResource: "plank", withExtension: "jpg"),
-            schedule: schedule,
-            userInfo: nil,// ["hasTask" : "yes"]
-            optional: false
-        )
+        let schedule = OCKSchedule(composing: scheduleElements)
+        var activity = OCKTask(id: activityType.rawValue,
+                               title: "ODI Survey",
+                               carePlanID: nil, schedule: schedule)
         
+        activity.groupIdentifier = "Diagnostics"
         return activity
     }
- 
- */
     
     // MARK: Assessment
     
@@ -62,7 +56,7 @@ struct ODISurvey: Assessment {
         let instructionStep = ORKInstructionStep(identifier: "ODIIntroStep")
         instructionStep.title = "Oswestry Disability Index"
         instructionStep.text = "Could you please complete this questionnaire. It is designed to give us information as to how your back (or leg) trouble has affected your ability to manage in everyday life."
-  
+        
         
         steps += [instructionStep]
         
@@ -102,7 +96,7 @@ struct ODISurvey: Assessment {
                                             answer: questAnswerFormat)
         questQuestionStep.text = questQuestionStepTitle
         steps += [questQuestionStep]
-
+        
         // Quest question using text choice
         questQuestionStepTitle = "Lifting"
         textChoices = [
@@ -156,7 +150,7 @@ struct ODISurvey: Assessment {
                                             answer: questAnswerFormat)
         questQuestionStep.text = questQuestionStepTitle
         steps += [questQuestionStep]
-
+        
         
         // Quest question using text choice
         questQuestionStepTitle = "Standing"
@@ -286,7 +280,7 @@ struct ODISurvey: Assessment {
          
          */
         // Summary step
- 
+        
         
         let summaryStep = ORKCompletionStep(identifier: "ODISummaryStep")
         summaryStep.title = "Thank you."

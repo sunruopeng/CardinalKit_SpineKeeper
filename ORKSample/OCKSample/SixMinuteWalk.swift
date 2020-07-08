@@ -41,45 +41,42 @@ struct SixMinuteWalk: Assessment {
     let activityType: ActivityType = .sixMinuteWalk
     
     func carePlanActivity() -> OCKTask? {
-        return nil
-    }
-    
-    /* Junaid Commnented
-    
-    func carePlanActivity() -> OCKCarePlanActivity {
-        let calendar = Calendar.autoupdatingCurrent
+
         let startDate = (UserDefaults.standard.object(forKey: "startDate") as! Date)
-        let startDateComps = calendar.dateComponents([.year, .month, .day], from: startDate)
-        //let endDate = calendar.dateComponents([.year, .month, .day], from: calendar.date(byAdding: .day, value: 28, to: startDate)!)
-        //let schedule = OCKCareSchedule.weeklySchedule(withStartDate: startDateComps as DateComponents, occurrencesOnEachDay: [1, 1, 1, 1, 1, 1, 1])
-        let endDate = calendar.dateComponents([.year, .month, .day], from: calendar.date(byAdding: .day, value: 365, to: startDate)!)
         
         let days = [1,10,19]
         var occurrences = [Int](repeating: 0, count: 28)
         for day in days {
             occurrences[day-1]+=1
         }
-        let schedule = OCKCareSchedule.monthlySchedule(withStartDate: startDateComps, occurrencesOnEachDay: occurrences as [NSNumber], endDate: endDate)
         
-        // Get the localized strings to use for the assessment.
-        let title = NSLocalizedString("6-Minute Walk Test", comment: "")
-        let summary = NSLocalizedString("Perform a 6-minute walk", comment: "")
+        var scheduleElements : [OCKScheduleElement] = []
         
-        let activity = OCKCarePlanActivity.assessment(
-            withIdentifier: activityType.rawValue,//+startDate.description+endDate.description,
-            groupIdentifier: "Todo's",
-            title: title,
-            text: summary,
-            tintColor: Colors.stanfordGreen.color,
-            resultResettable: true,
-            schedule: schedule,
-            userInfo: nil,
-            optional: false
-        )
+        for index in 0..<occurrences.count {
+            
+            if occurrences[index] == 1 {
+                let caldendar = Calendar.current
+                let startOfDay = Calendar.current.startOfDay(for: startDate)
+                let scheduleStartDate = caldendar.date(byAdding: .day, value: index, to: startOfDay)!
+                
+                let scheduleElement =  OCKScheduleElement(start: scheduleStartDate, end: nil,
+                                                          interval: DateComponents(day: 28),
+                                                          text: "Perform a 6-minute walk",
+                                                          targetValues: [],
+                                                          duration: .allDay)
+                scheduleElements.append(scheduleElement)
+            }
+        }
+        
+        let schedule = OCKSchedule(composing: scheduleElements)
+        var activity = OCKTask(id: activityType.rawValue,
+                               title: "6-Minute Walk Test",
+                               carePlanID: nil, schedule: schedule)
+        
+        activity.groupIdentifier = "Todo's"
         return activity
     }
     
-    */
     // MARK: Assessment
     
     func task() -> ORKTask {

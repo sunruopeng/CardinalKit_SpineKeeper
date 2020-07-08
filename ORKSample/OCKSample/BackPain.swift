@@ -41,38 +41,36 @@ struct BackPain: Assessment {
     let activityType: ActivityType = .backPain
     
     func carePlanActivity() -> OCKTask? {
-        return nil
-    }
-    
-    /* Junaid Commnented
-    
-    func carePlanActivity() -> OCKCarePlanActivity {
         // Create a weekly schedule.
-        let calendar = Calendar.autoupdatingCurrent
         let startDate = (UserDefaults.standard.object(forKey: "startDate") as! Date)
-        let startDateComps = calendar.dateComponents([.year, .month, .day], from: startDate)
-        let schedule = OCKCareSchedule.weeklySchedule(withStartDate: startDateComps as DateComponents, occurrencesOnEachDay: [1, 1, 1, 1, 1, 1, 1])
         
-        // Get the localized strings to use for the assessment.
-        let title = NSLocalizedString("Pain", comment: "")
-        let summary = NSLocalizedString("Lower Back", comment: "")
+        let occurrences = [1, 1, 1, 1, 1, 1, 1]
+        var scheduleElements : [OCKScheduleElement] = []
         
-        let activity = OCKCarePlanActivity.assessment(
-            withIdentifier: activityType.rawValue,
-            groupIdentifier: "Diagnostics",
-            title: title,
-            text: summary,
-            tintColor: Colors.blue.color,
-            resultResettable: true,
-            schedule: schedule,
-            userInfo: nil,
-            optional: false
-        )
+        for index in 0..<occurrences.count {
+            
+            if occurrences[index] == 1 {
+                let caldendar = Calendar.current
+                let startOfDay = Calendar.current.startOfDay(for: startDate)
+                let scheduleStartDate = caldendar.date(byAdding: .day, value: index, to: startOfDay)!
+                
+                let scheduleElement =  OCKScheduleElement(start: scheduleStartDate, end: nil,
+                                                          interval: DateComponents(day: 28),
+                                                          text: "Lower Back",
+                                                          targetValues: [],
+                                                          duration: .allDay)
+                scheduleElements.append(scheduleElement)
+            }
+        }
         
+        let schedule = OCKSchedule(composing: scheduleElements)
+        var activity = OCKTask(id: activityType.rawValue,
+                               title: "Pain",
+                               carePlanID: nil, schedule: schedule)
+        
+        activity.groupIdentifier = "Diagnostics"
         return activity
     }
- 
- */
     
     // MARK: Assessment
     

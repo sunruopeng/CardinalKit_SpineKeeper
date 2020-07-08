@@ -45,49 +45,43 @@ struct Weight: Assessment, HealthSampleBuilder {
     
     let unit = HKUnit.pound()
     
-    func carePlanActivity() -> OCKTask? {
-        return nil
-    }
-    
     // MARK: Activity
     
-    
-    /* Junaid Commnented
-    func carePlanActivity() -> OCKCarePlanActivity {
-        let calendar = Calendar.autoupdatingCurrent
+    func carePlanActivity() -> OCKTask? {
         let startDate = (UserDefaults.standard.object(forKey: "startDate") as! Date)
-        let startDateComps = calendar.dateComponents([.year, .month, .day], from: startDate)
-        //let endDate = calendar.dateComponents([.year, .month, .day], from: calendar.date(byAdding: .day, value: 28, to: startDate)!)
-        //let schedule = OCKCareSchedule.weeklySchedule(withStartDate: startDateComps as DateComponents, occurrencesOnEachDay: [1, 1, 1, 1, 1, 1, 1])
-        let endDate = calendar.dateComponents([.year, .month, .day], from: calendar.date(byAdding: .day, value: 365, to: startDate)!)
         
         let days = [8,15,22]
         var occurrences = [Int](repeating: 0, count: 28)
         for day in days {
             occurrences[day-1]+=1
         }
-        let schedule = OCKCareSchedule.monthlySchedule(withStartDate: startDateComps, occurrencesOnEachDay: occurrences as [NSNumber], endDate: endDate)
         
-        // Get the localized strings to use for the assessment.
-        let title = NSLocalizedString("Weight", comment: "")
-        let summary = NSLocalizedString("Early morning", comment: "")
+        var scheduleElements : [OCKScheduleElement] = []
         
-        let activity = OCKCarePlanActivity.assessment(
-            withIdentifier: activityType.rawValue,
-            groupIdentifier: "Diagnostics",
-            title: title,
-            text: summary,
-            tintColor: Colors.yellow.color,
-            resultResettable: true,
-            schedule: schedule,
-            userInfo: nil,
-            optional: false
-        )
+        for index in 0..<occurrences.count {
+            
+            if occurrences[index] == 1 {
+                let caldendar = Calendar.current
+                let startOfDay = Calendar.current.startOfDay(for: startDate)
+                let scheduleStartDate = caldendar.date(byAdding: .day, value: index, to: startOfDay)!
+                
+                let scheduleElement =  OCKScheduleElement(start: scheduleStartDate, end: nil,
+                                                          interval: DateComponents(day: 28),
+                                                          text: "Early morning",
+                                                          targetValues: [],
+                                                          duration: .allDay)
+                scheduleElements.append(scheduleElement)
+            }
+        }
         
+        let schedule = OCKSchedule(composing: scheduleElements)
+        var activity = OCKTask(id: activityType.rawValue,
+                               title: "Weight",
+                               carePlanID: nil, schedule: schedule)
+        
+        activity.groupIdentifier = "Diagnostics"
         return activity
     }
-    
-    */
     
     // MARK: Assessment
     
