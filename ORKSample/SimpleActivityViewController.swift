@@ -11,6 +11,7 @@ import CareKit
 
 class SimpleActivityViewController: OCKInstructionsTaskViewController {
     
+    //This method is called when the user taps the card for detail view
     override func didSelectTaskView(_ taskView: UIView & OCKTaskDisplayable, eventIndexPath: IndexPath) {
         guard let event = controller.eventFor(indexPath: eventIndexPath) else { return }
         guard let task = event.task as? OCKTask else { return }
