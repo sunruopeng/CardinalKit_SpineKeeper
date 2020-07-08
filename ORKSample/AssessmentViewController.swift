@@ -530,7 +530,7 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
             let intendedUseDescription = "Fitness is important. Please hold your phone in your non-dominant hand or place it in your pocket while you complete this task."
             UIApplication.shared.isIdleTimerDisabled = true
             // let speechInstruction = "walk for a bit then stop"
-            let task = ORKOrderedTask.fitnessCheck(withIdentifier: "walkingTask", intendedUseDescription: intendedUseDescription, walkDuration: 5, restDuration: 0, options: [])
+            let task = ORKOrderedTask.fitnessCheck(withIdentifier: "walkingTask", intendedUseDescription: intendedUseDescription, walkDuration: 360, restDuration: 0, options: [])
             
             let surveyViewController = ORKTaskViewController(task: task, taskRun: nil)
             surveyViewController.delegate = self
