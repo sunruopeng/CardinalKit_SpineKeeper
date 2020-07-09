@@ -46,13 +46,8 @@ class ResearchContainerViewController: UIViewController, HealthClientType, MFMai
     var sampleData: SampleData?
     let careStoreManager = CareStoreReferenceManager.shared
     var careCardVC : DailyActivitesViewController?
+    var insightsVC : InsightsViewController?
     
-    /* Junaid Commnented
-    var careCardVC : OCKCareCardViewController?
-    var symptomCardVC : OCKSymptomTrackerViewController?
-    var insightsVC : OCKInsightsViewController?
- 
- */
     var dashboardVC : DashboardTableViewController?
 
     // MARK: Propertues
@@ -87,13 +82,8 @@ class ResearchContainerViewController: UIViewController, HealthClientType, MFMai
         
         
         careCardVC = createCareCardViewController()
+        insightsVC = createInsightsViewController()
         
-        /* Junaid Commnented
-         careCardVC = createCareCardViewController()
-         symptomCardVC = createSymptomTrackerViewController()
-         insightsVC = createInsightsViewController()
-         
-         */
          // Junaid Commnented
         //careStoreManager.delegate = self
     }
@@ -169,23 +159,20 @@ class ResearchContainerViewController: UIViewController, HealthClientType, MFMai
         return viewController
     }
     
-    /* Junaid Commnented
-    
-    fileprivate func createCareCardViewController() -> OCKCareCardViewController {
-        let viewController = OCKCareCardViewController(carePlanStore: CarePlanStoreManager.sharedCarePlanStoreManager.store)
-        viewController.glyphType = .heart
-        viewController.glyphTintColor = Colors.cardinalRed.color
-        //viewController.maskImage = UIImage(named: "heart-gray")
-        //viewController.smallMaskImage = UIImage(named: "heart-gray-small")
-        //viewController.maskImageTintColor = Colors.cardinalRed.color
-        viewController.delegate = self
-        
+    fileprivate func createInsightsViewController() -> InsightsViewController {
+        // Create an `OCKInsightsViewController` with sample data.
+        let headerTitle = NSLocalizedString("", comment: "")
+        let viewController = InsightsViewController(storeManager: CareStoreReferenceManager.shared.synchronizedStoreManager)
+        //let viewController = OCKInsightsViewController(insightItems: careStoreManager.insights, headerTitle: headerTitle, headerSubtitle: "")
+        //viewController.showEdgeIndicators = true
         // Setup the controller's title and tab bar item
-        viewController.title = NSLocalizedString("Daily Activities", comment: "")
-        viewController.headerTitle = NSLocalizedString("Activity Completion", comment: "")
-        viewController.tabBarItem = UITabBarItem(title: viewController.title, image: UIImage(named:"carecard"), selectedImage: UIImage(named: "carecard-filled"))
+        viewController.title = NSLocalizedString("Insights", comment: "")
+        viewController.tabBarItem = UITabBarItem(title: viewController.title, image: UIImage(named:"tab_dashboard"), selectedImage: UIImage(named: "tab_dashboard_selected"))
         return viewController
     }
+    
+    
+    /* Junaid Commnented
     fileprivate func createSymptomTrackerViewController() -> OCKSymptomTrackerViewController {
         let viewController = OCKSymptomTrackerViewController(carePlanStore: careStoreManager.store)
         viewController.glyphType = .stethoscope
