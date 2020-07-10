@@ -51,23 +51,17 @@ struct PressUp: Activity {
         var scheduleElements : [OCKScheduleElement] = []
         
         for index in 0..<occurrences.count {
-            
             if occurrences[index] == 1 {
-                
                 let scheduleStartDate = Calendar.current.date(byAdding: .day, value: index, to: startDate)!
-                let scheduleEndDate = Calendar.current.date(byAdding: .day, value: 1, to: scheduleStartDate)!
-                
-                
-                let scheduleElement =  OCKScheduleElement(start: scheduleStartDate, end: scheduleEndDate, interval: DateComponents(day: 1), text: "Repeat 10 times", targetValues: [], duration: .allDay)
-                
+                let scheduleElement =  OCKScheduleElement(start: scheduleStartDate, end: nil,
+                                                          interval: DateComponents(day: 28),
+                                                          text: "Repeat 10 times",
+                                                          targetValues: [], duration: .allDay)
                 scheduleElements.append(scheduleElement)
             }
         }
         
-        
         let taskSchedule = OCKSchedule(composing: scheduleElements)
-        
-        
         var task = OCKTask(id: activityType.rawValue,
                            title: "Press Up",
                            carePlanID: nil, schedule: taskSchedule)
