@@ -193,8 +193,15 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
     override func taskView(_ taskView: UIView & OCKTaskDisplayable, didCompleteEvent isComplete: Bool,
                            at indexPath: IndexPath, sender: Any?) {
         
+        //if user un-mark the assessment then delete its results from the datastore as well
         if !isComplete {
             super.taskView(taskView, didCompleteEvent: isComplete, at: indexPath, sender: sender)
+            //get the event
+            guard let event = controller.eventFor(indexPath: indexPath) else { return }
+            //if outcome is saved then delete it
+            if let outcome = event.outcome {
+                controller.store.deleteAnyOutcome(outcome, callbackQueue: .main, completion: nil)
+            }
             return
         }
         
