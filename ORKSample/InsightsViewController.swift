@@ -44,16 +44,16 @@ class InsightsViewController: OCKDailyPageViewController {
                 let averagePainDataSeries = OCKDataSeriesConfiguration(
                     taskID: task.id,
                     legendTitle: "Average Pain",
-                    gradientStartColor: Colors.blue.color,
-                    gradientEndColor: Colors.blue.color,
+                    gradientStartColor: Colors.lightBlue.color,
+                    gradientEndColor: Colors.lightBlue.color,
                     markerSize: 8,
                     eventAggregator: myCustomAggregator)
                 
                 let maxPainDataSeries = OCKDataSeriesConfiguration(
                     taskID: task.id,
                     legendTitle: "Maximum Pain",
-                    gradientStartColor: Colors.lightBlue.color,
-                    gradientEndColor: Colors.lightBlue.color,
+                    gradientStartColor: Colors.blue.color,
+                    gradientEndColor: Colors.blue.color,
                     markerSize: 8,
                     eventAggregator: myCustomAggregator)
                 
@@ -61,16 +61,16 @@ class InsightsViewController: OCKDailyPageViewController {
                 let averagePainLineDataSeries = OCKDataSeriesConfiguration(
                     taskID: task.id,
                     legendTitle: "",
-                    gradientStartColor: Colors.blue.color,
-                    gradientEndColor: Colors.blue.color,
+                    gradientStartColor: Colors.stanfordAqua.color,
+                    gradientEndColor: Colors.stanfordAqua.color,
                     markerSize: 4,
                     eventAggregator: myCustomAggregator)
                 
                 let maxPainLineDataSeries = OCKDataSeriesConfiguration(
                     taskID: task.id,
                     legendTitle: "",
-                    gradientStartColor: Colors.stanfordAqua.color,
-                    gradientEndColor: Colors.stanfordAqua.color,
+                    gradientStartColor: Colors.blue.color,
+                    gradientEndColor: Colors.blue.color,
                     markerSize: 4,
                     eventAggregator: myCustomAggregator)
                 
