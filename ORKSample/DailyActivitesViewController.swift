@@ -128,8 +128,24 @@ class AssessmentInstructionsTaskViewSynchronizer: OCKInstructionsTaskViewSynchro
             //Show the values for Back Pain Assessment
             if event.task.id == ActivityType.backPain.rawValue && values.count == 2 {
                 view.completionButton.isSelected = true
-                let text = "Average: \(values[0])\nMax: \(values[1])"
-                view.instructionsLabel.text = text
+
+                var averagePain: Int = 0
+                var maxPain: Int = 0
+                var outcomeValue = values[0].stringValue ?? ""
+                if outcomeValue.contains("average:") {
+                    averagePain = Int(outcomeValue.components(separatedBy: ":").last!)!
+                } else if outcomeValue.contains("max:") {
+                    maxPain = Int(outcomeValue.components(separatedBy: ":").last!)!
+                }
+                
+                outcomeValue = values[1].stringValue ?? ""
+                if outcomeValue.contains("average:") {
+                    averagePain = Int(outcomeValue.components(separatedBy: ":").last!)!
+                } else if outcomeValue.contains("max:") {
+                    maxPain = Int(outcomeValue.components(separatedBy: ":").last!)!
+                }
+                
+                view.instructionsLabel.text = "Average: \(averagePain)\nMax: \(maxPain)"
             }
         }  else {
             view.completionButton.isSelected = false

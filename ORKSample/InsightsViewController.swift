@@ -29,16 +29,49 @@ class InsightsViewController: OCKDailyPageViewController {
             guard let tasks = try? result.get() else { return }
             
             tasks.forEach { task in
+                
                 let averagePainAggregator = OCKEventAggregator.custom { dailyEvents -> Double in
-                    let values = dailyEvents.map { $0.outcome?.values[0].integerValue ?? 0 }
-                    let sumTotal = values.reduce(0, +)
-                    return Double(sumTotal)
+                    var result: Double = 0
+                    for event in dailyEvents {
+                        guard let outcome = event.outcome else { continue }
+                        let values = outcome.values
+                        if values.count == 2 {
+                            var outcomeValue = values[0].stringValue ?? ""
+                            if outcomeValue.contains("average:") {
+                                let actualValue = Double(outcomeValue.components(separatedBy: ":").last!)!
+                                result += actualValue
+                            }
+                            
+                            outcomeValue = values[1].stringValue ?? ""
+                            if outcomeValue.contains("average:") {
+                                let actualValue = Double(outcomeValue.components(separatedBy: ":").last!)!
+                                result += actualValue
+                            }
+                        }
+                    }
+                    return result
                 }
                 
                 let maxPainPainAggregator = OCKEventAggregator.custom { dailyEvents -> Double in
-                    let values = dailyEvents.map { $0.outcome?.values[1].integerValue ?? 0 }
-                    let sumTotal = values.reduce(0, +)
-                    return Double(sumTotal)
+                    var result: Double = 0
+                    for event in dailyEvents {
+                        guard let outcome = event.outcome else { continue }
+                        let values = outcome.values
+                        if values.count == 2 {
+                            var outcomeValue = values[0].stringValue ?? ""
+                            if outcomeValue.contains("max:") {
+                                let actualValue = Double(outcomeValue.components(separatedBy: ":").last!)!
+                                result += actualValue
+                            }
+                            
+                            outcomeValue = values[1].stringValue ?? ""
+                            if outcomeValue.contains("max:") {
+                                let actualValue = Double(outcomeValue.components(separatedBy: ":").last!)!
+                                result += actualValue
+                            }
+                        }
+                    }
+                    return result
                 }
                 
                 // Create a plot comparing nausea to medication adherence.

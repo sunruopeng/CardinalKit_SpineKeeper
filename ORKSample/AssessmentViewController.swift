@@ -157,11 +157,11 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
         if taskIdentifier == ActivityType.backPain.rawValue {
             let pain = taskViewController.result.results!.first(where: { $0.identifier == "backPainStep1" }) as! ORKStepResult
             let painResult = pain.results!.first as! ORKScaleQuestionResult
-            let painAnswer = Int(truncating: painResult.scaleAnswer!)
+            let painAnswer = "average:\(Int(truncating: painResult.scaleAnswer!))"
             
             let pain1 = taskViewController.result.results!.first(where: { $0.identifier == "backPainStep2" }) as! ORKStepResult
             let painResult1 = pain1.results!.first as! ORKScaleQuestionResult
-            let painAnswer1 = Int(truncating: painResult1.scaleAnswer!)
+            let painAnswer1 = "max:\(Int(truncating: painResult1.scaleAnswer!))"
             
             //save results
             self.saveAssessmentResult(values: [painAnswer, painAnswer1])
