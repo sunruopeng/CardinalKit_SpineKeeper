@@ -62,13 +62,8 @@ class InsightsViewController: OCKDailyPageViewController {
                 let averagePainLineDataSeries = OCKDataSeriesConfiguration(
                     taskID: task.id,
                     legendTitle: "",
-<<<<<<< HEAD
-                    gradientStartColor: Colors.stanfordAqua.color,
-                    gradientEndColor: Colors.stanfordAqua.color,
-=======
                     gradientStartColor: Colors.lightBlue.color,
                     gradientEndColor: Colors.lightBlue.color,
->>>>>>> 1eec93b346a382c5ab8ee4d3ed2d4a9b7edd8cc5
                     markerSize: 4,
                     eventAggregator: averagePainAggregator)
                 
