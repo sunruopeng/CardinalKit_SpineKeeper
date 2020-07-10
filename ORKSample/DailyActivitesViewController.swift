@@ -38,6 +38,12 @@ class DailyActivitesViewController: OCKDailyPageViewController {
                         let taskCard = AssessmentViewController(controller: taskController, viewSynchronizer: view)
                         taskCard.controller.fetchAndObserveEvents(forTask: task, eventQuery: OCKEventQuery(for: date))
                         listViewController.appendViewController(taskCard, animated: false)
+                    } else if activity.id == ActivityType.doorwayChestStretch.rawValue {
+                        let view = GridTaskViewSynchronizer()
+                        let taskController = OCKGridTaskController(storeManager: self.storeManager)
+                        let taskCard = GridActivityViewController(controller: taskController, viewSynchronizer: view)
+                        taskCard.controller.fetchAndObserveEvents(forTask: task, eventQuery: OCKEventQuery(for: date))
+                        listViewController.appendViewController(taskCard, animated: false)
                     } else {
                         let view = SimpleInstructionsTaskViewSynchronizer()
                         let taskController = OCKInstructionsTaskController(storeManager: self.storeManager)
@@ -52,7 +58,6 @@ class DailyActivitesViewController: OCKDailyPageViewController {
                     taskCard.controller.fetchAndObserveEvents(forTask: task, eventQuery: OCKEventQuery(for: date))
                     listViewController.appendViewController(taskCard, animated: false)
                 }
-                
             }
         }
     }
@@ -67,6 +72,26 @@ class SimpleInstructionsTaskViewSynchronizer: OCKInstructionsTaskViewSynchronize
     }
     
     override func updateView(_ view: OCKInstructionsTaskView, context: OCKSynchronizationContext<OCKTaskEvents?>) {
+        super.updateView(view, context: context)
+        // Update the view when the data changes in the store here...
+        if let event = context.viewModel?.firstEvent {
+            let element = event.scheduleEvent.element
+            view.headerView.titleLabel.text = event.task.title
+            view.headerView.detailLabel.text = element.text
+            view.instructionsLabel.text = ""
+        }
+    }
+}
+
+// Define a custom view synchronizer for simple grid activities
+class GridTaskViewSynchronizer: OCKGridTaskViewSynchronizer {
+        
+    override func makeView() -> OCKGridTaskView {
+        let view = super.makeView()
+        return view
+    }
+
+    override func updateView(_ view: OCKGridTaskView, context: OCKSynchronizationContext<OCKTaskEvents?>) {
         super.updateView(view, context: context)
         // Update the view when the data changes in the store here...
         if let event = context.viewModel?.firstEvent {

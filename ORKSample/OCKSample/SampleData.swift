@@ -44,7 +44,7 @@ class SampleData: NSObject {
         HamstringStretch(),
         InnerThighStretch(),
         StandingThreadTheNeedle(),
-        //DoorwayChestStretch(),
+        DoorwayChestStretch(),
         WallWash(),
         Brace(),
         Diary(),

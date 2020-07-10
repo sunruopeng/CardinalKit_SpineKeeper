@@ -46,25 +46,38 @@ struct DoorwayChestStretch: Activity {
             occurrences[day-1]+=2
         }
         
-        var scheduleElements : [OCKScheduleElement] = []
+        var schedules : [OCKSchedule] = []
         
         for index in 0..<occurrences.count {
             
-            if occurrences[index] == 1 {
+            if occurrences[index] == 2 {
                 let caldendar = Calendar.current
                 let startOfDay = Calendar.current.startOfDay(for: startDate)
-                let scheduleStartDate = caldendar.date(byAdding: .day, value: index, to: startOfDay)!
-                
-                let scheduleElement =  OCKScheduleElement(start: scheduleStartDate, end: nil,
+                var scheduleStartDate = caldendar.date(byAdding: .day, value: index, to: startOfDay)!
+                scheduleStartDate = caldendar.date(byAdding: .hour, value: 6, to: scheduleStartDate)!
+                                
+                let scheduleElement1 =  OCKScheduleElement(start: scheduleStartDate, end: nil,
                                                           interval: DateComponents(day: 28),
                                                           text: "Repeat 2-3 times daily",
                                                           targetValues: [],
-                                                          duration: .allDay)
-                scheduleElements.append(scheduleElement)
+                                                          duration: .hours(1))
+                
+                let subSchedule1 = OCKSchedule(composing: [scheduleElement1])
+                
+                scheduleStartDate = caldendar.date(byAdding: .hour, value: 11, to: scheduleStartDate)!
+                let scheduleElement2 =  OCKScheduleElement(start: scheduleStartDate, end: nil,
+                                                          interval: DateComponents(day: 28),
+                                                          text: "Repeat 2-3 times daily",
+                                                          targetValues: [],
+                                                          duration: .hours(1))
+                let subSchedule2 = OCKSchedule(composing: [scheduleElement2])
+                
+                schedules.append(subSchedule1)
+                schedules.append(subSchedule2)
             }
         }
         
-        let schedule = OCKSchedule(composing: scheduleElements)
+        let schedule = OCKSchedule(composing: schedules)
         var activity = OCKTask(id: activityType.rawValue,
                                title: "Doorway Chest Stretch",
                                carePlanID: nil, schedule: schedule)
