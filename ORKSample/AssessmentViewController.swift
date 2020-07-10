@@ -43,8 +43,8 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
             let weightAnswer = step1Result.numericAnswer
             let answerStep1 = Int(truncating: weightAnswer ?? 0.0)
             
-            //save result
-            controller.appendOutcomeValue(withType: answerStep1, at: IndexPath(item: 0, section: 0), completion: nil)
+            //save results
+            self.saveAssessmentResult(values: [answerStep1])
         }
         
         //handle result of back survey assessment
@@ -86,15 +86,7 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
             let answer9 = Int(truncating: step9Result.choiceAnswers?[0] as! NSNumber)
             
             //save results
-            controller.appendOutcomeValue(withType: answer1, at: IndexPath(item: 0, section: 0), completion: nil)
-            controller.appendOutcomeValue(withType: answer2, at: IndexPath(item: 0, section: 0), completion: nil)
-            controller.appendOutcomeValue(withType: answer3, at: IndexPath(item: 0, section: 0), completion: nil)
-            controller.appendOutcomeValue(withType: answer4, at: IndexPath(item: 0, section: 0), completion: nil)
-            controller.appendOutcomeValue(withType: answer5, at: IndexPath(item: 0, section: 0), completion: nil)
-            controller.appendOutcomeValue(withType: answer6, at: IndexPath(item: 0, section: 0), completion: nil)
-            controller.appendOutcomeValue(withType: answer7, at: IndexPath(item: 0, section: 0), completion: nil)
-            controller.appendOutcomeValue(withType: answer8, at: IndexPath(item: 0, section: 0), completion: nil)
-            controller.appendOutcomeValue(withType: answer9, at: IndexPath(item: 0, section: 0), completion: nil)
+            self.saveAssessmentResult(values: [answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9])
         }
         
         //handle result of ODI assessment
@@ -136,15 +128,7 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
             let answer9 = Int(truncating: step9Result.choiceAnswers?[0] as! NSNumber)
             
             //save results
-            controller.appendOutcomeValue(withType: answer1, at: IndexPath(item: 0, section: 0), completion: nil)
-            controller.appendOutcomeValue(withType: answer2, at: IndexPath(item: 0, section: 0), completion: nil)
-            controller.appendOutcomeValue(withType: answer3, at: IndexPath(item: 0, section: 0), completion: nil)
-            controller.appendOutcomeValue(withType: answer4, at: IndexPath(item: 0, section: 0), completion: nil)
-            controller.appendOutcomeValue(withType: answer5, at: IndexPath(item: 0, section: 0), completion: nil)
-            controller.appendOutcomeValue(withType: answer6, at: IndexPath(item: 0, section: 0), completion: nil)
-            controller.appendOutcomeValue(withType: answer7, at: IndexPath(item: 0, section: 0), completion: nil)
-            controller.appendOutcomeValue(withType: answer8, at: IndexPath(item: 0, section: 0), completion: nil)
-            controller.appendOutcomeValue(withType: answer9, at: IndexPath(item: 0, section: 0), completion: nil)
+            self.saveAssessmentResult(values: [answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9])
         }
         
         //handle result of 6-minutes walk assessment
@@ -180,8 +164,29 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
             let painAnswer1 = Int(truncating: painResult1.scaleAnswer!)
             
             //save results
-            controller.appendOutcomeValue(withType: painAnswer, at: IndexPath(item: 0, section: 0), completion: nil)
-            controller.appendOutcomeValue(withType: painAnswer1, at: IndexPath(item: 0, section: 0), completion: nil)
+            self.saveAssessmentResult(values: [painAnswer, painAnswer1])
+        }
+    }
+    
+    func saveAssessmentResult(values: [OCKOutcomeValueUnderlyingType]) {
+        if values.count == 0 { return }
+        guard
+            let event = controller.eventFor(indexPath: IndexPath(item: 0, section: 0)),
+            let taskID = (event.task as! OCKTask).localDatabaseID
+            else { return }
+
+        var outcomeValues = [OCKOutcomeValue]()
+        for value in values {
+            outcomeValues.append(OCKOutcomeValue(value))
+        }
+        
+        let outcome = OCKOutcome(taskID: taskID, taskOccurrenceIndex: event.scheduleEvent.occurrence, values: outcomeValues)
+        let store = CareStoreReferenceManager.shared.synchronizedStoreManager.store
+        store.addAnyOutcome(outcome, callbackQueue: .main) { (result) in
+            switch result {
+            case .success(_): print("Outcome created")
+            case .failure(let error): print(error.localizedDescription)
+            }
         }
     }
     

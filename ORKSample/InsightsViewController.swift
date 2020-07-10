@@ -29,50 +29,51 @@ class InsightsViewController: OCKDailyPageViewController {
             guard let tasks = try? result.get() else { return }
             
             tasks.forEach { task in
-                
-                let myCustomAggregator = OCKEventAggregator.custom { dailyEvents -> Double in
-                    print(dailyEvents.first?.outcome?.values)
-                    let values = dailyEvents.map { $0.outcome?.values.first?.integerValue ?? 0 }
-                    print(values)
+                let averagePainAggregator = OCKEventAggregator.custom { dailyEvents -> Double in
+                    let values = dailyEvents.map { $0.outcome?.values[0].integerValue ?? 0 }
                     let sumTotal = values.reduce(0, +)
-                    
+                    return Double(sumTotal)
+                }
+                
+                let maxPainPainAggregator = OCKEventAggregator.custom { dailyEvents -> Double in
+                    let values = dailyEvents.map { $0.outcome?.values[1].integerValue ?? 0 }
+                    let sumTotal = values.reduce(0, +)
                     return Double(sumTotal)
                 }
                 
                 // Create a plot comparing nausea to medication adherence.
-                print(task)
                 let averagePainDataSeries = OCKDataSeriesConfiguration(
                     taskID: task.id,
                     legendTitle: "Average Pain",
-                    gradientStartColor: Colors.blue.color,
-                    gradientEndColor: Colors.blue.color,
+                    gradientStartColor: Colors.lightBlue.color,
+                    gradientEndColor: Colors.lightBlue.color,
                     markerSize: 8,
-                    eventAggregator: myCustomAggregator)
+                    eventAggregator: averagePainAggregator)
                 
                 let maxPainDataSeries = OCKDataSeriesConfiguration(
                     taskID: task.id,
                     legendTitle: "Maximum Pain",
-                    gradientStartColor: Colors.lightBlue.color,
-                    gradientEndColor: Colors.lightBlue.color,
+                    gradientStartColor: Colors.blue.color,
+                    gradientEndColor: Colors.blue.color,
                     markerSize: 8,
-                    eventAggregator: myCustomAggregator)
+                    eventAggregator: maxPainPainAggregator)
                 
                 
                 let averagePainLineDataSeries = OCKDataSeriesConfiguration(
                     taskID: task.id,
                     legendTitle: "",
-                    gradientStartColor: Colors.blue.color,
-                    gradientEndColor: Colors.blue.color,
+                    gradientStartColor: Colors.lightBlue.color,
+                    gradientEndColor: Colors.lightBlue.color,
                     markerSize: 4,
-                    eventAggregator: myCustomAggregator)
+                    eventAggregator: averagePainAggregator)
                 
                 let maxPainLineDataSeries = OCKDataSeriesConfiguration(
                     taskID: task.id,
                     legendTitle: "",
-                    gradientStartColor: Colors.stanfordAqua.color,
-                    gradientEndColor: Colors.stanfordAqua.color,
+                    gradientStartColor: Colors.blue.color,
+                    gradientEndColor: Colors.blue.color,
                     markerSize: 4,
-                    eventAggregator: myCustomAggregator)
+                    eventAggregator: maxPainPainAggregator)
                 
                 let insightsBarCard = OCKCartesianChartViewController(plotType: .bar, selectedDate: date,
                                                                       configurations: [averagePainDataSeries, maxPainDataSeries],

@@ -92,17 +92,21 @@ class AssessmentInstructionsTaskViewSynchronizer: OCKInstructionsTaskViewSynchro
         super.updateView(view, context: context)
         
         // Update the view when the data changes in the store here...
-        if let event = context.viewModel?.firstEvent {
-            let element = event.scheduleEvent.element
-            view.headerView.titleLabel.text = event.task.title
-            view.headerView.detailLabel.text = element.text
-            view.instructionsLabel.text = ""
-        }
+        guard let event = context.viewModel?.firstEvent else { return }
+        let element = event.scheduleEvent.element
+        view.headerView.titleLabel.text = event.task.title
+        view.headerView.detailLabel.text = element.text
+        view.instructionsLabel.text = ""
         
         // Check if an answer exists or not and set the button accordingly
-        if let _ = context.viewModel?.firstEvent?.outcome?.values.first {
-            view.completionButton.isSelected = true
-        } else {
+        if let values = context.viewModel?.firstEvent?.outcome?.values {
+            //Show the values for Back Pain Assessment
+            if event.task.id == ActivityType.backPain.rawValue && values.count == 2 {
+                view.completionButton.isSelected = true
+                let text = "Average: \(values[0])\nMax: \(values[1])"
+                view.instructionsLabel.text = text
+            }
+        }  else {
             view.completionButton.isSelected = false
             view.completionButton.label.text = "Start Assessment"
         }
