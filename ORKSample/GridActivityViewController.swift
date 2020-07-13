@@ -15,6 +15,14 @@ class GridActivityViewController: OCKGridTaskViewController {
         super.viewDidLoad()
     }
     
+    //override method to show custom text on the labels
+    override func collectionView(_ collectionView: UICollectionView,
+                                 cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = super.collectionView(collectionView, cellForItemAt: indexPath) as! OCKGridTaskView.DefaultCellType
+        cell.completionButton.label.text = indexPath.row == 0 ? "Morning" : "Evening"
+        return cell
+    }
+    
     //This method is called when the user taps the card for detail view
     override func didSelectTaskView(_ taskView: UIView & OCKTaskDisplayable, eventIndexPath: IndexPath) {
         guard let event = controller.eventFor(indexPath: eventIndexPath) else { return }
