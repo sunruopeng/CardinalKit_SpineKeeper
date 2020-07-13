@@ -19,18 +19,25 @@ class DailyActivitesViewController: OCKDailyPageViewController {
                                           prepare listViewController: OCKListViewController,
                                           for date: Date) {
         
-        let startDate = (UserDefaults.standard.object(forKey: "startDate") as! Date)
-        let endDate = startDate + 27
+        //Check whether 28 days have been passed or not
+        let startDate = UserDefaults.standard.object(forKey: "startDate") as! Date
+        let endDate = Calendar.current.date(byAdding: .day, value: 27, to: startDate)!
+        if date > endDate {
+            //Show dummy event with completion message
+            let view = EmptyInstructionsTaskViewSynchronizer()
+            let taskController = OCKInstructionsTaskController(storeManager: self.storeManager)
+            let taskCard = EmptyActivityViewController(controller: taskController, viewSynchronizer: view)
+            taskCard.controller.fetchAndObserveEvents(forTaskID: ActivityType.stepsCount.rawValue,
+                                                      eventQuery: OCKEventQuery(for: date))
+            listViewController.appendViewController(taskCard, animated: false)
+            return
+        }
         
-            if endDate > date {
-                return
-            }
-
+        //fetch the task for the specified date
         var query = OCKTaskQuery(for: date)
         query.excludesTasksWithNoEvents = true
         
         storeManager.store.fetchAnyTasks(query: query, callbackQueue: .main) { result in
-            
             guard let tasks = try? result.get() else { return }
             tasks.forEach { task in
                 let activity = task as! OCKTask
@@ -83,7 +90,7 @@ class DailyActivitesViewController: OCKDailyPageViewController {
     
     func saveStepsRestult(date: Date, activity: OCKTask) {
         
-        let startDate = (UserDefaults.standard.object(forKey: "startDate") as! Date)
+        let startDate = UserDefaults.standard.object(forKey: "startDate") as! Date
         let daysDifference = startDate.interval(ofComponent: .day, fromDate: date)
         
         self.fetchSteps(date: date) { (steps) in
@@ -120,6 +127,32 @@ class DailyActivitesViewController: OCKDailyPageViewController {
                 }
             }
         }
+    }
+}
+
+// Define a custom view synchronizer for empty instruction activity
+class EmptyInstructionsTaskViewSynchronizer: OCKInstructionsTaskViewSynchronizer {
+    
+    override func makeView() -> OCKInstructionsTaskView {
+        let view = super.makeView()
+        return view
+    }
+    
+    override func updateView(_ view: OCKInstructionsTaskView, context: OCKSynchronizationContext<OCKTaskEvents?>) {
+        super.updateView(view, context: context)
+        // Update the view when the data changes in the store here...
+        view.headerView.titleLabel.text = "Well Done!"
+        view.headerView.detailLabel.text = "28 Days of survey has been completed."
+        view.headerView.detailDisclosureImage?.image = nil
+        view.instructionsLabel.text = "Thank you for participating in Standford SpineKeeper study. We appreciate your time & efforts."
+        view.completionButton.isHidden = true
+    }
+}
+
+class EmptyActivityViewController: OCKInstructionsTaskViewController {
+    //This method is called when the user taps the card for detail view
+    override func didSelectTaskView(_ taskView: UIView & OCKTaskDisplayable, eventIndexPath: IndexPath) {
+        return
     }
 }
 
@@ -223,12 +256,9 @@ extension Equatable {
 extension Date {
     
     func interval(ofComponent comp: Calendar.Component, fromDate date: Date) -> Int {
-        
         let currentCalendar = Calendar.current
-        
         guard let start = currentCalendar.ordinality(of: comp, in: .era, for: date) else { return 0 }
         guard let end = currentCalendar.ordinality(of: comp, in: .era, for: self) else { return 0 }
-        
         return end - start
     }
 }
