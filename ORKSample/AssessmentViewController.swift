@@ -15,6 +15,9 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
     private let quantityType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMass)!
     private let unit = HKUnit.pound()
     private var taskIdentifier = ""
+    let formatter = DateFormatter()
+    let calendar = Calendar.current
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +27,16 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
     func taskViewController(_ taskViewController: ORKTaskViewController,
                             didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
         
-        UIApplication.shared.isIdleTimerDisabled = false
+        
+        print(reason.rawValue)
+        print(error?.localizedDescription)
+        
+        if taskIdentifier == ActivityType.sixMinuteWalk.rawValue {
+            
+            if reason == .completed {
+                UIApplication.shared.isIdleTimerDisabled = false
+            }
+        }
         
         defer {
             dismiss(animated: true, completion: nil)
@@ -133,22 +145,31 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
         
         //handle result of 6-minutes walk assessment
         if taskIdentifier == ActivityType.sixMinuteWalk.rawValue {
-            let step1 = taskViewController.result.results!.first(where: { $0.identifier == "fitness.walk" }) as! ORKStepResult
-            if let results = step1.results {
-                var res = results[0] as! ORKFileResult
-                for r1 in results {
-                    if r1.identifier == "pedometer" {
-                        res = r1 as! ORKFileResult
-                        do {
-                            let string = try NSString.init(contentsOf: res.fileURL!,
-                                                           encoding: String.Encoding.utf8.rawValue)
-                            print(string)
-                        } catch {
-                            print(error.localizedDescription)
-                        }
-                    }
+            formatter.dateFormat = "yyyy-MM-dd"
+            let startDate = (UserDefaults.standard.object(forKey: "startDate") as! Date)
+            let components = calendar.dateComponents([.day, .month, .year], from: startDate as Date)
+            var out = formatter.string(from: calendar.date(from: components)!) + " "
+            let result = taskViewController.result.stepResult(forStepIdentifier: "fitness.walk")
+            let results = result?.results
+            if results?.count == 0 {
+                return
+            }
+            var res = results?[0] as! ORKFileResult
+            for r1 in results! {
+                if (r1.identifier == "pedometer") {
+                    res = r1 as! ORKFileResult
+                    do {
+                        let string = try NSString.init(contentsOf: res.fileURL!, encoding: String.Encoding.utf8.rawValue)
+                        out += string as String
+                    } catch {}
                 }
             }
+            
+            
+            out += "\n"
+            let old = UserDefaults.standard.object(forKey: "sixMinuteWalk") as! String
+            UserDefaults.standard.set(old + out, forKey: "sixMinuteWalk")
+            
             
             //controller.appendOutcomeValue(withType: 0, at: IndexPath(item: 0, section: 0), completion: nil)
         }

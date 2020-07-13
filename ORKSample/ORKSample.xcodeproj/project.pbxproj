@@ -239,6 +239,10 @@
 		B5D35FC71BEA363F004CBB06 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D35FC61BEA363F004CBB06 /* ProfileHeaderView.swift */; };
 		B5D35FC91BEA48D3004CBB06 /* HKHealthStore+Queries.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D35FC81BEA48D3004CBB06 /* HKHealthStore+Queries.swift */; };
 		B5FA92E91BF13D98001E46C0 /* HealthDataStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA92E81BF13D98001E46C0 /* HealthDataStep.swift */; };
+		FA027DED24B88AC50015278C /* CareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA027DE124B88AB30015278C /* CareKit.framework */; };
+		FA027DEE24B88AC50015278C /* CareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA027DE124B88AB30015278C /* CareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FA027DEF24B88ACA0015278C /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA027DEA24B88ABE0015278C /* ResearchKit.framework */; };
+		FA027DF024B88ACA0015278C /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA027DEA24B88ABE0015278C /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FA07880524B49F1D00BB9CFD /* MultimediaActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07880424B49F1D00BB9CFD /* MultimediaActivityViewController.swift */; };
 		FA08C12124B887AE007567B9 /* GridActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA08C12024B887AE007567B9 /* GridActivityViewController.swift */; };
 		FA0C122624B31D970033669E /* PressUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C121F24B31D970033669E /* PressUp.swift */; };
@@ -251,33 +255,33 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FAD462DF24B7680D001F5D25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FAD462D924B7680D001F5D25 /* ResearchKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B183A5951A8535D100C76870;
-			remoteInfo = ResearchKit;
-		};
-		FAD462E124B7680D001F5D25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FAD462D924B7680D001F5D25 /* ResearchKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
-			remoteInfo = ResearchKitTests;
-		};
-		FAD462EA24B76814001F5D25 /* PBXContainerItemProxy */ = {
+		FA027DE024B88AB30015278C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FAD462E324B76814001F5D25 /* CareKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8605A5BA1C4F04EC00DD65FF;
 			remoteInfo = CareKit;
 		};
-		FAD462EC24B76814001F5D25 /* PBXContainerItemProxy */ = {
+		FA027DE224B88AB30015278C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FAD462E324B76814001F5D25 /* CareKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 5196C7F9226F8F8F00F1C2A2;
 			remoteInfo = CareKitTests;
+		};
+		FA027DE924B88ABE0015278C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAD462D924B7680D001F5D25 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B183A5951A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		FA027DEB24B88ABE0015278C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAD462D924B7680D001F5D25 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
+			remoteInfo = ResearchKitTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -288,6 +292,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				FA027DF024B88ACA0015278C /* ResearchKit.framework in Embed Frameworks */,
+				FA027DEE24B88AC50015278C /* CareKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,8 +546,8 @@
 		FA50C0E224AE064D00D99A84 /* DailyActivitesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyActivitesViewController.swift; sourceTree = "<group>"; };
 		FA50C0E824AE0CAB00D99A84 /* CareStoreReferenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareStoreReferenceManager.swift; sourceTree = "<group>"; };
 		FAC0588124B5AD7600F4C0D4 /* AssessmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentViewController.swift; sourceTree = "<group>"; };
-		FAD462D924B7680D001F5D25 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../../apple-repos/ResearchKit/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
-		FAD462E324B76814001F5D25 /* CareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKit.xcodeproj; path = "../../apple-repos/CareKit/CareKit/CareKit.xcodeproj"; sourceTree = "<group>"; };
+		FAD462D924B7680D001F5D25 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../../ResearchKit (Stable)/ResearchKit/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
+		FAD462E324B76814001F5D25 /* CareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKit.xcodeproj; path = "../../Carekit (Stable)/CareKit/CareKit/CareKit.xcodeproj"; sourceTree = "<group>"; };
 		FAD5E0EA24B4B8740076B762 /* SimpleActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleActivityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -550,7 +556,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA027DED24B88AC50015278C /* CareKit.framework in Frameworks */,
 				07A3B51C22B97ABE00AD872B /* HealthKit.framework in Frameworks */,
+				FA027DEF24B88ACA0015278C /* ResearchKit.framework in Frameworks */,
 				0755B4B01FD511430078A8F7 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1003,6 +1011,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FA027DDC24B88AB30015278C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA027DE124B88AB30015278C /* CareKit.framework */,
+				FA027DE324B88AB30015278C /* CareKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA027DE424B88ABE0015278C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA027DEA24B88ABE0015278C /* ResearchKit.framework */,
+				FA027DEC24B88ABE0015278C /* ResearchKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		FA49708124B6E86800CA3A9B /* Insights */ = {
 			isa = PBXGroup;
 			children = (
@@ -1018,24 +1044,6 @@
 				FA50C0E224AE064D00D99A84 /* DailyActivitesViewController.swift */,
 			);
 			name = CareCard;
-			sourceTree = "<group>";
-		};
-		FAD462DA24B7680D001F5D25 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FAD462E024B7680D001F5D25 /* ResearchKit.framework */,
-				FAD462E224B7680D001F5D25 /* ResearchKitTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		FAD462E424B76814001F5D25 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FAD462EB24B76814001F5D25 /* CareKit.framework */,
-				FAD462ED24B76814001F5D25 /* CareKitTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1071,7 +1079,6 @@
 				TargetAttributes = {
 					161479BF1BD6CE8F0099A068 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = M24M42Z23H;
 						LastSwiftMigration = 1140;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -1104,11 +1111,11 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = FAD462E424B76814001F5D25 /* Products */;
+					ProductGroup = FA027DDC24B88AB30015278C /* Products */;
 					ProjectRef = FAD462E324B76814001F5D25 /* CareKit.xcodeproj */;
 				},
 				{
-					ProductGroup = FAD462DA24B7680D001F5D25 /* Products */;
+					ProductGroup = FA027DE424B88ABE0015278C /* Products */;
 					ProjectRef = FAD462D924B7680D001F5D25 /* ResearchKit.xcodeproj */;
 				},
 			);
@@ -1120,32 +1127,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		FAD462E024B7680D001F5D25 /* ResearchKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ResearchKit.framework;
-			remoteRef = FAD462DF24B7680D001F5D25 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FAD462E224B7680D001F5D25 /* ResearchKitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ResearchKitTests.xctest;
-			remoteRef = FAD462E124B7680D001F5D25 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FAD462EB24B76814001F5D25 /* CareKit.framework */ = {
+		FA027DE124B88AB30015278C /* CareKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = CareKit.framework;
-			remoteRef = FAD462EA24B76814001F5D25 /* PBXContainerItemProxy */;
+			remoteRef = FA027DE024B88AB30015278C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FAD462ED24B76814001F5D25 /* CareKitTests.xctest */ = {
+		FA027DE324B88AB30015278C /* CareKitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = CareKitTests.xctest;
-			remoteRef = FAD462EC24B76814001F5D25 /* PBXContainerItemProxy */;
+			remoteRef = FA027DE224B88AB30015278C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FA027DEA24B88ABE0015278C /* ResearchKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ResearchKit.framework;
+			remoteRef = FA027DE924B88ABE0015278C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FA027DEC24B88ABE0015278C /* ResearchKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ResearchKitTests.xctest;
+			remoteRef = FA027DEB24B88ABE0015278C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1556,7 +1563,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M24M42Z23H;
+				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 				"HEADER_SEARCH_PATHS[arch=*]" = "";
@@ -1593,7 +1600,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M24M42Z23H;
+				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "$(SRCROOT)";

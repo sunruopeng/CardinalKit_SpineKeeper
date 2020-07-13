@@ -172,36 +172,6 @@ class ResearchContainerViewController: UIViewController, HealthClientType, MFMai
     }
     
     
-    /* Junaid Commnented
-    fileprivate func createSymptomTrackerViewController() -> OCKSymptomTrackerViewController {
-        let viewController = OCKSymptomTrackerViewController(carePlanStore: careStoreManager.store)
-        viewController.glyphType = .stethoscope
-        viewController.glyphTintColor = Colors.stanfordAqua.color
-        //viewController.progressRingTintColor = Colors.stanfordAqua.color
-        viewController.delegate = self
-        
-        // Setup the controller's title and tab bar item
-        viewController.title = NSLocalizedString("Symptom Tracker", comment: "")
-        viewController.headerTitle = NSLocalizedString("Log Completion", comment: "")
-        //viewController.showEdgeIndicators = true
-        viewController.tabBarItem = UITabBarItem(title: viewController.title, image: UIImage(named:"CK-symptoms"), selectedImage: UIImage(named: "CK-symptoms-filled"))
-        return viewController
-    }
-    fileprivate func createInsightsViewController() -> OCKInsightsViewController {
-        // Create an `OCKInsightsViewController` with sample data.
-        let headerTitle = NSLocalizedString("", comment: "")
-        let viewController = OCKInsightsViewController(insightItems: careStoreManager.insights, patientWidgets: nil, thresholds: nil, store: careStoreManager.store)
-        //let viewController = OCKInsightsViewController(insightItems: careStoreManager.insights, headerTitle: headerTitle, headerSubtitle: "")
-        //viewController.showEdgeIndicators = true
-        // Setup the controller's title and tab bar item
-        viewController.title = NSLocalizedString("Insights", comment: "")
-        viewController.tabBarItem = UITabBarItem(title: viewController.title, image: UIImage(named:"tab_dashboard"), selectedImage: UIImage(named: "tab_dashboard_selected"))
-        return viewController
-    }
- */
- 
-    
-    
     // MARK: Transitions
     
     @objc func showPasscode() {

@@ -228,24 +228,14 @@ class ProfileViewController: UITableViewController, HealthClientType, MFMailComp
             self.performSegue(withIdentifier: "unwindToWithdrawlSegue", sender: self)
         }
         if indexPath.section == 1 && indexPath.row == 1 {
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            //print(appDelegate.getData())
             
-            let composeVC = MFMailComposeViewController()
-            composeVC.mailComposeDelegate = self
             
-            // Configure the fields of the interface.
-            composeVC.setToRecipients(["stanfordspinekeeper@stanford.edu"])
-            composeVC.setSubject("Spinekeeper Data")
-            let text = appDelegate.getData()
-            //print(text)
-            let cipherdata = RNCryptor.encrypt(data: text.data(using: .utf8)!, withPassword: "whohasyourbacksmuck")
-            let ciphertext = cipherdata.base64EncodedString()
-            //print(ciphertext)
-            composeVC.setMessageBody(ciphertext, isHTML: false)
-            composeVC.modalPresentationStyle = .fullScreen
-            // Present the view controller modally.
-            self.present(composeVC, animated: true, completion: nil)
+            let mailComposeViewController = self.configuredMailComposeViewController()
+            if MFMailComposeViewController.canSendMail() {
+                self.present(mailComposeViewController, animated: true, completion: nil)
+            }else {
+                self.showSendMailErrorAlert()
+            }
         }
         
         if indexPath.section == 2 && indexPath.row == 0 {
@@ -276,6 +266,35 @@ class ProfileViewController: UITableViewController, HealthClientType, MFMailComp
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    func configuredMailComposeViewController() -> MFMailComposeViewController
+    {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let mailComposerVC = MFMailComposeViewController()
+        mailComposerVC.mailComposeDelegate = self
+        let text = appDelegate.getData()
+        //print(text)
+        let cipherdata = RNCryptor.encrypt(data: text.data(using: .utf8)!, withPassword: "whohasyourbacksmuck")
+        let ciphertext = cipherdata.base64EncodedString()
+        
+        mailComposerVC.setToRecipients(["stanfordspinekeeper@stanford.edu"])
+        
+        mailComposerVC.setSubject("Spinekeeper Data")
+        mailComposerVC.setMessageBody(ciphertext, isHTML: false)
+        
+        return mailComposerVC
+    }
+    
+    func showSendMailErrorAlert() {
+        let alert = UIAlertController(title: "Spinekeeper", message: "Your device could not send an e-mail. Please check e-mail configuration settings and try again.",         preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { _ in
+            //Cancel Action
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         switch result{
