@@ -250,6 +250,7 @@
 		FA49708324B6E8B100CA3A9B /* InsightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49708224B6E8B100CA3A9B /* InsightsViewController.swift */; };
 		FA50C0E324AE064D00D99A84 /* DailyActivitesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50C0E224AE064D00D99A84 /* DailyActivitesViewController.swift */; };
 		FA50C0E924AE0CAB00D99A84 /* CareStoreReferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50C0E824AE0CAB00D99A84 /* CareStoreReferenceManager.swift */; };
+		FA90A72C24BC491E00423FCD /* StepsCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90A72B24BC491E00423FCD /* StepsCount.swift */; };
 		FAC0588224B5AD7600F4C0D4 /* AssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0588124B5AD7600F4C0D4 /* AssessmentViewController.swift */; };
 		FAD5E0EB24B4B8740076B762 /* SimpleActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5E0EA24B4B8740076B762 /* SimpleActivityViewController.swift */; };
 /* End PBXBuildFile section */
@@ -545,6 +546,7 @@
 		FA49708224B6E8B100CA3A9B /* InsightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsViewController.swift; sourceTree = "<group>"; };
 		FA50C0E224AE064D00D99A84 /* DailyActivitesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyActivitesViewController.swift; sourceTree = "<group>"; };
 		FA50C0E824AE0CAB00D99A84 /* CareStoreReferenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareStoreReferenceManager.swift; sourceTree = "<group>"; };
+		FA90A72B24BC491E00423FCD /* StepsCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsCount.swift; sourceTree = "<group>"; };
 		FAC0588124B5AD7600F4C0D4 /* AssessmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentViewController.swift; sourceTree = "<group>"; };
 		FAD462D924B7680D001F5D25 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../../ResearchKit (Stable)/ResearchKit/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
 		FAD462E324B76814001F5D25 /* CareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKit.xcodeproj; path = "../../Carekit (Stable)/CareKit/CareKit/CareKit.xcodeproj"; sourceTree = "<group>"; };
@@ -973,6 +975,7 @@
 				07E773602058DA1800C5D237 /* Myth10.swift */,
 				070F17001FE276F400C9A09B /* CausesOfBackPain.swift */,
 				07E7736C2058DD1900C5D237 /* Coping.swift */,
+				FA90A72B24BC491E00423FCD /* StepsCount.swift */,
 				07E7736E2058DFA900C5D237 /* CopingRefresher1.swift */,
 				07E773702058E00A00C5D237 /* CopingRefresher2.swift */,
 				07E773742058E30500C5D237 /* SummaryFacts.swift */,
@@ -1359,6 +1362,7 @@
 				070BA6131FD2102A00B38879 /* NassVideo4.swift in Sources */,
 				07466C131FE1DF0A00CB9871 /* LayFlat.swift in Sources */,
 				07DBAA951E9CA49F00FC3F36 /* NSCalendar+Dates.swift in Sources */,
+				FA90A72C24BC491E00423FCD /* StepsCount.swift in Sources */,
 				B5C2073F1BEC16F00051D9D8 /* ResearchContainerSegue.swift in Sources */,
 				FAD5E0EB24B4B8740076B762 /* SimpleActivityViewController.swift in Sources */,
 				0733F1882348058600209212 /* RNCryptor.swift in Sources */,

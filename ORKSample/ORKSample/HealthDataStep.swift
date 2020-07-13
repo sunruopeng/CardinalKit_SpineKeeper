@@ -43,6 +43,7 @@ class HealthDataStep: ORKInstructionStep {
     
     let healthDataItemsToWrite: Set<HKSampleType> = [
         HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMass)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!,
         HKObjectType.workoutType()
     ]
     

@@ -104,6 +104,7 @@ enum ActivityType: String {
     case copingRefresher1
     case copingRefresher2
     case summaryFacts
+    case stepsCount
     
     // things to measure - assessment
     case startBackSurvey

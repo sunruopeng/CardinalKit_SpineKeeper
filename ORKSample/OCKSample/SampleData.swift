@@ -99,6 +99,7 @@ class SampleData: NSObject {
         BackPain(),
         Weight(),
         SixMinuteWalk(),
+        StepsCount(),
         
         //Mood(),
         //ExcerciseMinutes(),
