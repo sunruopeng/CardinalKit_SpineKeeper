@@ -18,6 +18,13 @@ class DailyActivitesViewController: OCKDailyPageViewController {
     override func dailyPageViewController(_ dailyPageViewController: OCKDailyPageViewController,
                                           prepare listViewController: OCKListViewController,
                                           for date: Date) {
+        
+        let startDate = (UserDefaults.standard.object(forKey: "startDate") as! Date)
+        let endDate = startDate + 27
+        
+            if endDate > date {
+                return
+            }
 
         var query = OCKTaskQuery(for: date)
         query.excludesTasksWithNoEvents = true
