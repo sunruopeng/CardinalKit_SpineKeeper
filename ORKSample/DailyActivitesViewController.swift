@@ -91,7 +91,7 @@ class DailyActivitesViewController: OCKDailyPageViewController {
     func saveStepsRestult(date: Date, activity: OCKTask) {
         
         let startDate = UserDefaults.standard.object(forKey: "startDate") as! Date
-        let daysDifference = startDate.interval(ofComponent: .day, fromDate: date)
+        let daysDifference = date.interval(ofComponent: .day, fromDate: startDate)
         
         self.fetchSteps(date: date) { (steps) in
             
@@ -107,8 +107,9 @@ class DailyActivitesViewController: OCKDailyPageViewController {
                 
                 switch eventResult {
                     
-                case .success(_):
-                    self.storeManager.store.deleteAnyOutcome(outcome, callbackQueue: .main) { (result) in
+                case .success(let event):
+                    
+                    if event.outcome == nil {
                         
                         self.storeManager.store.addAnyOutcome(outcome, callbackQueue: .main) { (outcomeResult) in
                             switch outcomeResult {
@@ -120,7 +121,33 @@ class DailyActivitesViewController: OCKDailyPageViewController {
                                 print(error.localizedDescription)
                             }
                         }
+                        
+                    } else {
+                        
+                        self.storeManager.store.deleteAnyOutcome(event.outcome!, callbackQueue: .main) { (result) in
+                            
+                            switch result {
+                            case .success(_):
+                                print("Successfully deleted")
+                                
+                            case .failure(let error):
+                                print(error.localizedDescription)
+                            }
+                            
+                            
+                            self.storeManager.store.addAnyOutcome(outcome, callbackQueue: .main) { (outcomeResult) in
+                                switch outcomeResult {
+                                    
+                                case .success(_):
+                                    print("Outcome Successfully added")
+                                    
+                                case .failure(let error):
+                                    print(error.localizedDescription)
+                                }
+                            }
+                        }
                     }
+                    
                 case .failure(let error):
                     
                     print(error.localizedDescription)

@@ -106,8 +106,7 @@ class InsightsViewController: OCKDailyPageViewController {
                         var result: Double = 0.0
                         for event in dailyEvents {
                             guard let outcome = event.outcome else { continue }
-                            let value = outcome.values.first?.doubleValue
-                            result = value ?? 0.0
+                            result = Double(outcome.values.first?.integerValue ?? 0)
                         }
                         return result
                     }
