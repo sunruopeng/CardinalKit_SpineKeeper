@@ -17,6 +17,7 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
     private var taskIdentifier = ""
     let formatter = DateFormatter()
     let calendar = Calendar.current
+    var isSixMinuteActivity = false
     
     
     override func viewDidLoad() {
@@ -32,14 +33,23 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
         print(error?.localizedDescription)
         
         if taskIdentifier == ActivityType.sixMinuteWalk.rawValue {
-            
+            isSixMinuteActivity = true
             if reason == .completed {
                 UIApplication.shared.isIdleTimerDisabled = false
             }
         }
         
-        defer {
-            dismiss(animated: true, completion: nil)
+        if isSixMinuteActivity {
+            
+            if error == nil {
+                isSixMinuteActivity = false
+                dismiss(animated: true, completion: nil)
+            }
+            
+        }else {
+            do {
+                dismiss(animated: true, completion: nil)
+            }
         }
         
         guard reason == .completed else {
@@ -170,8 +180,7 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
             let old = UserDefaults.standard.object(forKey: "sixMinuteWalk") as! String
             UserDefaults.standard.set(old + out, forKey: "sixMinuteWalk")
             
-            
-            //controller.appendOutcomeValue(withType: 0, at: IndexPath(item: 0, section: 0), completion: nil)
+            self.saveAssessmentResult(values: [old + out])
         }
         
         //handle result of back pain assessment
