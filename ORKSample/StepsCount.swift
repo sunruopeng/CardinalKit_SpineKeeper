@@ -44,6 +44,8 @@ struct StepsCount: Activity {
         
         task.instructions = "Steps Count"
         task.groupIdentifier = "Todo's"
+        task.impactsAdherence = false
+        
         return task
     }
     
