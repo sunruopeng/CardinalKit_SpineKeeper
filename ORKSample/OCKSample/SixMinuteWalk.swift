@@ -50,25 +50,25 @@ struct SixMinuteWalk: Assessment {
             occurrences[day-1]+=1
         }
         
-        var scheduleElements : [OCKScheduleElement] = []
-        
-        for index in 0..<occurrences.count {
-            
-            if occurrences[index] == 1 {
-                let caldendar = Calendar.current
-                let startOfDay = Calendar.current.startOfDay(for: startDate)
-                let scheduleStartDate = caldendar.date(byAdding: .day, value: index, to: startOfDay)!
+        var schedules : [OCKSchedule] = []
+        let caldendar = Calendar.current
+        let startOfDay = Calendar.current.startOfDay(for: startDate)
                 
+        for index in 0..<occurrences.count {
+            if occurrences[index] == 1 {
+                let scheduleStartDate = caldendar.date(byAdding: .day, value: index, to: startOfDay)!
                 let scheduleElement =  OCKScheduleElement(start: scheduleStartDate, end: nil,
                                                           interval: DateComponents(day: 28),
                                                           text: "Perform a 6-minute walk",
                                                           targetValues: [],
                                                           duration: .allDay)
-                scheduleElements.append(scheduleElement)
+                
+                let subSchedule = OCKSchedule(composing: [scheduleElement])
+                schedules.append(subSchedule)
             }
         }
         
-        let schedule = OCKSchedule(composing: scheduleElements)
+        let schedule = OCKSchedule(composing: schedules)
         var activity = OCKTask(id: activityType.rawValue,
                                title: "6-Minute Walk Test",
                                carePlanID: nil, schedule: schedule)
@@ -77,13 +77,50 @@ struct SixMinuteWalk: Assessment {
         return activity
     }
     
+    func optionalDailySixMinActivity() -> [OCKTask] {
+        let startDate = (UserDefaults.standard.object(forKey: "startDate") as! Date)
+        
+        let days = [1,10,19]
+        var occurrences = [Int](repeating: 0, count: 28)
+        for day in days {
+            occurrences[day-1]+=1
+        }
+        
+        let caldendar = Calendar.current
+        let startOfDay = Calendar.current.startOfDay(for: startDate)
+        var tasks: [OCKTask] = []
+        
+        for index in 0..<occurrences.count {
+            if occurrences[index] == 0 {
+                let scheduleStartDate = caldendar.date(byAdding: .day, value: index, to: startOfDay)!
+                let scheduleElement =  OCKScheduleElement(start: scheduleStartDate, end: nil,
+                                                          interval: DateComponents(day: 28),
+                                                          text: "Perform a 6-minute walk",
+                                                          targetValues: [],
+                                                          duration: .allDay)
+                
+                let schedule = OCKSchedule(composing: [scheduleElement])
+                var activity = OCKTask(id: "\(activityType.rawValue)-\(index)",
+                                       title: "6-Minute Walk Test",
+                                       carePlanID: nil, schedule: schedule)
+                activity.impactsAdherence = false
+                activity.groupIdentifier = "Todo's"
+                tasks.append(activity)
+            }
+        }
+        
+        return tasks
+    }
+    
     // MARK: Assessment
     
     func task() -> ORKTask {
         let intendedUseDescription = "Fitness is important. Please hold your phone in your non-dominant hand or place it in your pocket while you complete this task."
         UIApplication.shared.isIdleTimerDisabled = true
         // let speechInstruction = "walk for a bit then stop"
-        return ORKOrderedTask.fitnessCheck(withIdentifier: "walkingTask", intendedUseDescription: intendedUseDescription, walkDuration: 360, restDuration: 0, options: [])
+        return ORKOrderedTask.fitnessCheck(withIdentifier: "walkingTask",
+                                           intendedUseDescription: intendedUseDescription,
+                                           walkDuration: 360, restDuration: 0, options: [])
         //DEBUG
         //return ORKOrderedTask.fitnessCheck(withIdentifier: "walkingTask", intendedUseDescription: intendedUseDescription, walkDuration: 5, restDuration: 0, options: [])
         

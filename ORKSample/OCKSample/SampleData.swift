@@ -119,11 +119,22 @@ class SampleData: NSObject {
         // Populate the store with the sample activities.
         for sampleActivity in self.activities {
             if let carePlanActivity = sampleActivity.carePlanActivity() {
-                
                 carePlanStore.addTask(carePlanActivity) { result in
                     switch result {
                     case .failure(let error): print("Error: \(error.localizedDescription)")
                     case .success: print("Successfully saved a new task!")
+                    }
+                }
+            }
+            
+            //Add extra daily 6-min activities
+            if sampleActivity.activityType.rawValue == ActivityType.sixMinuteWalk.rawValue {
+                let sixMinuteWalk = sampleActivity as! SixMinuteWalk
+                let activities = sixMinuteWalk.optionalDailySixMinActivity()
+                carePlanStore.addAnyTasks(activities, callbackQueue: .main) { (result) in
+                    switch result {
+                    case .success(_): print("Successfully saved: Optional Daily Six Min Activity")
+                    case .failure(let error): print("Error: \(error.localizedDescription)")
                     }
                 }
             }

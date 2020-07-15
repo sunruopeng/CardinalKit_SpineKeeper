@@ -22,6 +22,7 @@ class DailyActivitesViewController: OCKDailyPageViewController {
         //Check whether 28 days have been passed or not
         let startDate = UserDefaults.standard.object(forKey: "startDate") as! Date
         let endDate = Calendar.current.date(byAdding: .day, value: 27, to: startDate)!
+        
         if date > endDate {
             //Show dummy event with completion message
             let view = EmptyInstructionsTaskViewSynchronizer()
@@ -45,28 +46,30 @@ class DailyActivitesViewController: OCKDailyPageViewController {
                     let assessments = [ActivityType.backPain.rawValue, ActivityType.odiSurvey.rawValue,
                                        ActivityType.sixMinuteWalk.rawValue, ActivityType.startBackSurvey.rawValue,
                                        ActivityType.weight.rawValue]
-                    if activity.id.oneOf(other: assessments) {
+                    
+                    if activity.id.oneOf(other: assessments) ||
+                        activity.id.contains("\(ActivityType.sixMinuteWalk.rawValue)-") { //Assessment
                         let view = AssessmentInstructionsTaskViewSynchronizer()
                         let taskController = OCKInstructionsTaskController(storeManager: self.storeManager)
                         let taskCard = AssessmentViewController(controller: taskController, viewSynchronizer: view)
                         taskCard.controller.fetchAndObserveEvents(forTask: task, eventQuery: OCKEventQuery(for: date))
                         listViewController.appendViewController(taskCard, animated: false)
-                    } else if activity.id == ActivityType.doorwayChestStretch.rawValue {
+                    } else if activity.id == ActivityType.doorwayChestStretch.rawValue { // Doorway Activity
                         let view = GridTaskViewSynchronizer()
                         let taskController = OCKGridTaskController(storeManager: self.storeManager)
                         let taskCard = GridActivityViewController(controller: taskController, viewSynchronizer: view)
                         taskCard.controller.fetchAndObserveEvents(forTask: task, eventQuery: OCKEventQuery(for: date))
                         listViewController.appendViewController(taskCard, animated: false)
-                    } else if activity.id == ActivityType.stepsCount.rawValue {
+                    } else if activity.id == ActivityType.stepsCount.rawValue {  //Dummy Activity to Store Step Count
                         self.saveStepsRestult(date: date, activity: activity)
-                    } else {
+                    } else { //Simple activity
                         let view = SimpleInstructionsTaskViewSynchronizer()
                         let taskController = OCKInstructionsTaskController(storeManager: self.storeManager)
                         let taskCard = SimpleActivityViewController(controller: taskController, viewSynchronizer: view)
                         taskCard.controller.fetchAndObserveEvents(forTask: task, eventQuery: OCKEventQuery(for: date))
                         listViewController.appendViewController(taskCard, animated: false)
                     }
-                } else {
+                } else { //Multimedia Activity
                     let view = SimpleInstructionsTaskViewSynchronizer()
                     let taskController = OCKInstructionsTaskController(storeManager: self.storeManager)
                     let taskCard = MultimediaActivityViewController(controller: taskController, viewSynchronizer: view)
@@ -89,9 +92,8 @@ class DailyActivitesViewController: OCKDailyPageViewController {
     }
     
     func saveStepsRestult(date: Date, activity: OCKTask) {
-        
         let startDate = UserDefaults.standard.object(forKey: "startDate") as! Date
-        let daysDifference = date.interval(ofComponent: .day, fromDate: startDate)
+        let daysDifference = startDate.daysTo(date)
         
         self.fetchSteps(date: date) { (steps) in
             
@@ -104,16 +106,11 @@ class DailyActivitesViewController: OCKDailyPageViewController {
             let outcome = OCKOutcome(taskID: taskID, taskOccurrenceIndex: daysDifference, values: [value])
             
             self.storeManager.store.fetchAnyEvent(forTask: activity, occurrence: daysDifference, callbackQueue: .main) { (eventResult) in
-                
                 switch eventResult {
-                    
                 case .success(let event):
-                    
                     if event.outcome == nil {
-                        
                         self.storeManager.store.addAnyOutcome(outcome, callbackQueue: .main) { (outcomeResult) in
                             switch outcomeResult {
-                                
                             case .success(_):
                                 print("Outcome Successfully added")
                                 
@@ -123,21 +120,17 @@ class DailyActivitesViewController: OCKDailyPageViewController {
                         }
                         
                     } else {
-                        
                         self.storeManager.store.deleteAnyOutcome(event.outcome!, callbackQueue: .main) { (result) in
-                            
                             switch result {
                             case .success(_):
                                 print("Successfully deleted")
-                                
+                            
                             case .failure(let error):
                                 print(error.localizedDescription)
                             }
-                            
-                            
+                                                        
                             self.storeManager.store.addAnyOutcome(outcome, callbackQueue: .main) { (outcomeResult) in
                                 switch outcomeResult {
-                                    
                                 case .success(_):
                                     print("Outcome Successfully added")
                                     
@@ -147,9 +140,7 @@ class DailyActivitesViewController: OCKDailyPageViewController {
                             }
                         }
                     }
-                    
                 case .failure(let error):
-                    
                     print(error.localizedDescription)
                 }
             }
@@ -243,6 +234,12 @@ class AssessmentInstructionsTaskViewSynchronizer: OCKInstructionsTaskViewSynchro
         view.headerView.detailLabel.text = element.text
         view.instructionsLabel.text = ""
         
+        //Check for 6-min daily optional activity
+        if event.task.impactsAdherence == false {
+            view.instructionsLabel.text = "This assessment is optional for today."
+            view.completionButton.tintColor = Colors.blue.color
+        }
+        
         // Check if an answer exists or not and set the button accordingly
         if let values = context.viewModel?.firstEvent?.outcome?.values {
             //Show the values for Back Pain Assessment
@@ -267,7 +264,7 @@ class AssessmentInstructionsTaskViewSynchronizer: OCKInstructionsTaskViewSynchro
                 
                 view.instructionsLabel.text = "Average: \(averagePain)\nMax: \(maxPain)"
             }
-        }  else {
+        } else {
             view.completionButton.isSelected = false
             view.completionButton.label.text = "Start Assessment"
         }
@@ -281,11 +278,13 @@ extension Equatable {
 }
 
 extension Date {
-    
-    func interval(ofComponent comp: Calendar.Component, fromDate date: Date) -> Int {
-        let currentCalendar = Calendar.current
-        guard let start = currentCalendar.ordinality(of: comp, in: .era, for: date) else { return 0 }
-        guard let end = currentCalendar.ordinality(of: comp, in: .era, for: self) else { return 0 }
-        return end - start
+    func daysTo(_ date: Date) -> Int {
+        let calendar = Calendar.current
+        let date1 = calendar.startOfDay(for: self)
+        let date2 = calendar.startOfDay(for: date)
+        
+        let components = calendar.dateComponents([.day], from: date1, to: date2)
+        guard let days = components.day else { return 0 }
+        return days
     }
 }
