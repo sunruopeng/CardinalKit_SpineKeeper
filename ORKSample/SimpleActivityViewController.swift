@@ -23,6 +23,9 @@ class SimpleActivityViewController: OCKInstructionsTaskViewController {
             if let outcome = event.outcome {
                 controller.store.deleteAnyOutcome(outcome, callbackQueue: .main, completion: nil)
             }
+            
+            //Update the daily progress
+            CareStoreReferenceManager.shared.updateProgress(by: -1, for: event.scheduleEvent.start)
             return
         }
         
@@ -36,8 +39,12 @@ class SimpleActivityViewController: OCKInstructionsTaskViewController {
                                  values: [OCKOutcomeValue(1)])
         controller.store.addAnyOutcome(outcome, callbackQueue: .main) { (result) in
             switch result {
-            case .success(_): print("Outcome created")
             case .failure(let error): print(error.localizedDescription)
+            case .success(_):
+                print("Outcome created")
+                
+                //Update the daily progress
+                CareStoreReferenceManager.shared.updateProgress(by: 1, for: event.scheduleEvent.start)
             }
         }
     }

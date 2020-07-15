@@ -239,10 +239,6 @@
 		B5D35FC71BEA363F004CBB06 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D35FC61BEA363F004CBB06 /* ProfileHeaderView.swift */; };
 		B5D35FC91BEA48D3004CBB06 /* HKHealthStore+Queries.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D35FC81BEA48D3004CBB06 /* HKHealthStore+Queries.swift */; };
 		B5FA92E91BF13D98001E46C0 /* HealthDataStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA92E81BF13D98001E46C0 /* HealthDataStep.swift */; };
-		FA027DED24B88AC50015278C /* CareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA027DE124B88AB30015278C /* CareKit.framework */; };
-		FA027DEE24B88AC50015278C /* CareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA027DE124B88AB30015278C /* CareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FA027DEF24B88ACA0015278C /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA027DEA24B88ABE0015278C /* ResearchKit.framework */; };
-		FA027DF024B88ACA0015278C /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA027DEA24B88ABE0015278C /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FA07880524B49F1D00BB9CFD /* MultimediaActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07880424B49F1D00BB9CFD /* MultimediaActivityViewController.swift */; };
 		FA08C12124B887AE007567B9 /* GridActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA08C12024B887AE007567B9 /* GridActivityViewController.swift */; };
 		FA0C122624B31D970033669E /* PressUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C121F24B31D970033669E /* PressUp.swift */; };
@@ -251,35 +247,40 @@
 		FA50C0E324AE064D00D99A84 /* DailyActivitesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50C0E224AE064D00D99A84 /* DailyActivitesViewController.swift */; };
 		FA50C0E924AE0CAB00D99A84 /* CareStoreReferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50C0E824AE0CAB00D99A84 /* CareStoreReferenceManager.swift */; };
 		FA90A72C24BC491E00423FCD /* StepsCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90A72B24BC491E00423FCD /* StepsCount.swift */; };
+		FA9622B224BCB8420057B7DB /* CareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9622A524BCB8100057B7DB /* CareKit.framework */; };
+		FA9622B324BCB8430057B7DB /* CareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA9622A524BCB8100057B7DB /* CareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FA9622B424BCB8490057B7DB /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9622AF24BCB8180057B7DB /* ResearchKit.framework */; };
+		FA9622B524BCB8490057B7DB /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA9622AF24BCB8180057B7DB /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FAC0588224B5AD7600F4C0D4 /* AssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0588124B5AD7600F4C0D4 /* AssessmentViewController.swift */; };
+		FAC92D7724BF479D0028494A /* ProgressTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC92D7624BF479D0028494A /* ProgressTrack.swift */; };
 		FAD5E0EB24B4B8740076B762 /* SimpleActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5E0EA24B4B8740076B762 /* SimpleActivityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FA027DE024B88AB30015278C /* PBXContainerItemProxy */ = {
+		FA9622A424BCB8100057B7DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FAD462E324B76814001F5D25 /* CareKit.xcodeproj */;
+			containerPortal = FA96229D24BCB80F0057B7DB /* CareKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8605A5BA1C4F04EC00DD65FF;
 			remoteInfo = CareKit;
 		};
-		FA027DE224B88AB30015278C /* PBXContainerItemProxy */ = {
+		FA9622A624BCB8100057B7DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FAD462E324B76814001F5D25 /* CareKit.xcodeproj */;
+			containerPortal = FA96229D24BCB80F0057B7DB /* CareKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 5196C7F9226F8F8F00F1C2A2;
 			remoteInfo = CareKitTests;
 		};
-		FA027DE924B88ABE0015278C /* PBXContainerItemProxy */ = {
+		FA9622AE24BCB8180057B7DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FAD462D924B7680D001F5D25 /* ResearchKit.xcodeproj */;
+			containerPortal = FA9622A824BCB8170057B7DB /* ResearchKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = B183A5951A8535D100C76870;
 			remoteInfo = ResearchKit;
 		};
-		FA027DEB24B88ABE0015278C /* PBXContainerItemProxy */ = {
+		FA9622B024BCB8180057B7DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FAD462D924B7680D001F5D25 /* ResearchKit.xcodeproj */;
+			containerPortal = FA9622A824BCB8170057B7DB /* ResearchKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
 			remoteInfo = ResearchKitTests;
@@ -293,8 +294,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FA027DF024B88ACA0015278C /* ResearchKit.framework in Embed Frameworks */,
-				FA027DEE24B88AC50015278C /* CareKit.framework in Embed Frameworks */,
+				FA9622B524BCB8490057B7DB /* ResearchKit.framework in Embed Frameworks */,
+				FA9622B324BCB8430057B7DB /* CareKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -547,9 +548,10 @@
 		FA50C0E224AE064D00D99A84 /* DailyActivitesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyActivitesViewController.swift; sourceTree = "<group>"; };
 		FA50C0E824AE0CAB00D99A84 /* CareStoreReferenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareStoreReferenceManager.swift; sourceTree = "<group>"; };
 		FA90A72B24BC491E00423FCD /* StepsCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsCount.swift; sourceTree = "<group>"; };
+		FA96229D24BCB80F0057B7DB /* CareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKit.xcodeproj; path = "../../apple-repos/CareKit/CareKit/CareKit.xcodeproj"; sourceTree = "<group>"; };
+		FA9622A824BCB8170057B7DB /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../../apple-repos/ResearchKit/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
 		FAC0588124B5AD7600F4C0D4 /* AssessmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentViewController.swift; sourceTree = "<group>"; };
-		FAD462D924B7680D001F5D25 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../../ResearchKit (Stable)/ResearchKit/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
-		FAD462E324B76814001F5D25 /* CareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKit.xcodeproj; path = "../../Carekit (Stable)/CareKit/CareKit/CareKit.xcodeproj"; sourceTree = "<group>"; };
+		FAC92D7624BF479D0028494A /* ProgressTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProgressTrack.swift; path = OCKSample/ProgressTrack.swift; sourceTree = "<group>"; };
 		FAD5E0EA24B4B8740076B762 /* SimpleActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleActivityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -558,9 +560,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA027DED24B88AC50015278C /* CareKit.framework in Frameworks */,
+				FA9622B224BCB8420057B7DB /* CareKit.framework in Frameworks */,
 				07A3B51C22B97ABE00AD872B /* HealthKit.framework in Frameworks */,
-				FA027DEF24B88ACA0015278C /* ResearchKit.framework in Frameworks */,
+				FA9622B424BCB8490057B7DB /* ResearchKit.framework in Frameworks */,
 				0755B4B01FD511430078A8F7 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -981,6 +983,7 @@
 				07E773742058E30500C5D237 /* SummaryFacts.swift */,
 				07E773AC2059126C00C5D237 /* PhysicalActivity.swift */,
 				07E773AE2059130100C5D237 /* Guidelines.swift */,
+				FAC92D7624BF479D0028494A /* ProgressTrack.swift */,
 				07DBAA9C1E9CA57600FC3F36 /* Activity.swift */,
 			);
 			name = Activities;
@@ -1006,30 +1009,12 @@
 		BC2A3CA81C58E92600DA64B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FAD462E324B76814001F5D25 /* CareKit.xcodeproj */,
-				FAD462D924B7680D001F5D25 /* ResearchKit.xcodeproj */,
+				FA9622A824BCB8170057B7DB /* ResearchKit.xcodeproj */,
+				FA96229D24BCB80F0057B7DB /* CareKit.xcodeproj */,
 				07A3B51B22B97ABE00AD872B /* HealthKit.framework */,
 				0755B4AF1FD511430078A8F7 /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FA027DDC24B88AB30015278C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FA027DE124B88AB30015278C /* CareKit.framework */,
-				FA027DE324B88AB30015278C /* CareKitTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		FA027DE424B88ABE0015278C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FA027DEA24B88ABE0015278C /* ResearchKit.framework */,
-				FA027DEC24B88ABE0015278C /* ResearchKitTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		FA49708124B6E86800CA3A9B /* Insights */ = {
@@ -1047,6 +1032,24 @@
 				FA50C0E224AE064D00D99A84 /* DailyActivitesViewController.swift */,
 			);
 			name = CareCard;
+			sourceTree = "<group>";
+		};
+		FA96229E24BCB80F0057B7DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA9622A524BCB8100057B7DB /* CareKit.framework */,
+				FA9622A724BCB8100057B7DB /* CareKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA9622A924BCB8170057B7DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA9622AF24BCB8180057B7DB /* ResearchKit.framework */,
+				FA9622B124BCB8180057B7DB /* ResearchKitTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1114,12 +1117,12 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = FA027DDC24B88AB30015278C /* Products */;
-					ProjectRef = FAD462E324B76814001F5D25 /* CareKit.xcodeproj */;
+					ProductGroup = FA96229E24BCB80F0057B7DB /* Products */;
+					ProjectRef = FA96229D24BCB80F0057B7DB /* CareKit.xcodeproj */;
 				},
 				{
-					ProductGroup = FA027DE424B88ABE0015278C /* Products */;
-					ProjectRef = FAD462D924B7680D001F5D25 /* ResearchKit.xcodeproj */;
+					ProductGroup = FA9622A924BCB8170057B7DB /* Products */;
+					ProjectRef = FA9622A824BCB8170057B7DB /* ResearchKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1130,32 +1133,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		FA027DE124B88AB30015278C /* CareKit.framework */ = {
+		FA9622A524BCB8100057B7DB /* CareKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = CareKit.framework;
-			remoteRef = FA027DE024B88AB30015278C /* PBXContainerItemProxy */;
+			remoteRef = FA9622A424BCB8100057B7DB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FA027DE324B88AB30015278C /* CareKitTests.xctest */ = {
+		FA9622A724BCB8100057B7DB /* CareKitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = CareKitTests.xctest;
-			remoteRef = FA027DE224B88AB30015278C /* PBXContainerItemProxy */;
+			remoteRef = FA9622A624BCB8100057B7DB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FA027DEA24B88ABE0015278C /* ResearchKit.framework */ = {
+		FA9622AF24BCB8180057B7DB /* ResearchKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ResearchKit.framework;
-			remoteRef = FA027DE924B88ABE0015278C /* PBXContainerItemProxy */;
+			remoteRef = FA9622AE24BCB8180057B7DB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FA027DEC24B88ABE0015278C /* ResearchKitTests.xctest */ = {
+		FA9622B124BCB8180057B7DB /* ResearchKitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ResearchKitTests.xctest;
-			remoteRef = FA027DEB24B88ABE0015278C /* PBXContainerItemProxy */;
+			remoteRef = FA9622B024BCB8180057B7DB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1340,6 +1343,7 @@
 				07E773732058E05B00C5D237 /* Diary.swift in Sources */,
 				07E773A5205909EB00C5D237 /* NeckPress.swift in Sources */,
 				FA49708324B6E8B100CA3A9B /* InsightsViewController.swift in Sources */,
+				FAC92D7724BF479D0028494A /* ProgressTrack.swift in Sources */,
 				07DBAAB01E9CA89700FC3F36 /* Assessment.swift in Sources */,
 				07E7736B2058DA1A00C5D237 /* Myth5.swift in Sources */,
 				07DBAA961E9CA49F00FC3F36 /* OCKInsightItem+EmptyMessage.swift in Sources */,

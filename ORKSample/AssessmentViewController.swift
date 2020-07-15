@@ -40,13 +40,11 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
         }
         
         if isSixMinuteActivity {
-            
             if error == nil {
                 isSixMinuteActivity = false
                 dismiss(animated: true, completion: nil)
             }
-            
-        }else {
+        } else {
             do {
                 dismiss(animated: true, completion: nil)
             }
@@ -214,8 +212,12 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
         let store = CareStoreReferenceManager.shared.synchronizedStoreManager.store
         store.addAnyOutcome(outcome, callbackQueue: .main) { (result) in
             switch result {
-            case .success(_): print("Outcome created")
             case .failure(let error): print(error.localizedDescription)
+            case .success(_):
+                print("Outcome created")
+                
+                //Update the daily progress
+                CareStoreReferenceManager.shared.updateProgress(by: 1, for: event.scheduleEvent.start)
             }
         }
     }
@@ -237,6 +239,9 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
             if let outcome = event.outcome {
                 controller.store.deleteAnyOutcome(outcome, callbackQueue: .main, completion: nil)
             }
+            
+            //Update the daily progress
+            CareStoreReferenceManager.shared.updateProgress(by: -1, for: event.scheduleEvent.start)
             return
         }
         

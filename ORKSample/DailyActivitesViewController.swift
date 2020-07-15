@@ -40,6 +40,10 @@ class DailyActivitesViewController: OCKDailyPageViewController {
         
         storeManager.store.fetchAnyTasks(query: query, callbackQueue: .main) { result in
             guard let tasks = try? result.get() else { return }
+            
+            var todayActivityCount: Int = 0
+            var progressTrackActivity: OCKTask? = nil
+            
             tasks.forEach { task in
                 let activity = task as! OCKTask
                 if activity.userInfo == nil {
@@ -49,20 +53,26 @@ class DailyActivitesViewController: OCKDailyPageViewController {
                     
                     if activity.id.oneOf(other: assessments) ||
                         activity.id.contains("\(ActivityType.sixMinuteWalk.rawValue)-") { //Assessment
+                        if activity.impactsAdherence { todayActivityCount += 1 }
                         let view = AssessmentInstructionsTaskViewSynchronizer()
                         let taskController = OCKInstructionsTaskController(storeManager: self.storeManager)
                         let taskCard = AssessmentViewController(controller: taskController, viewSynchronizer: view)
                         taskCard.controller.fetchAndObserveEvents(forTask: task, eventQuery: OCKEventQuery(for: date))
                         listViewController.appendViewController(taskCard, animated: false)
                     } else if activity.id == ActivityType.doorwayChestStretch.rawValue { // Doorway Activity
+                        if activity.impactsAdherence { todayActivityCount += 2 }
                         let view = GridTaskViewSynchronizer()
                         let taskController = OCKGridTaskController(storeManager: self.storeManager)
                         let taskCard = GridActivityViewController(controller: taskController, viewSynchronizer: view)
                         taskCard.controller.fetchAndObserveEvents(forTask: task, eventQuery: OCKEventQuery(for: date))
                         listViewController.appendViewController(taskCard, animated: false)
-                    } else if activity.id == ActivityType.stepsCount.rawValue {  //Dummy Activity to Store Step Count
+                    } else if activity.id == ActivityType.stepsCount.rawValue { //Dummy Activity to Store Steps Count
                         self.saveStepsRestult(date: date, activity: activity)
+                    } else if activity.id == ActivityType.progressTrack.rawValue {
+                        //Dummy Activity to Store Daily Progress
+                        progressTrackActivity = activity
                     } else { //Simple activity
+                        if activity.impactsAdherence { todayActivityCount += 1 }
                         let view = SimpleInstructionsTaskViewSynchronizer()
                         let taskController = OCKInstructionsTaskController(storeManager: self.storeManager)
                         let taskCard = SimpleActivityViewController(controller: taskController, viewSynchronizer: view)
@@ -70,11 +80,34 @@ class DailyActivitesViewController: OCKDailyPageViewController {
                         listViewController.appendViewController(taskCard, animated: false)
                     }
                 } else { //Multimedia Activity
+                    if activity.impactsAdherence { todayActivityCount += 1 }
                     let view = SimpleInstructionsTaskViewSynchronizer()
                     let taskController = OCKInstructionsTaskController(storeManager: self.storeManager)
                     let taskCard = MultimediaActivityViewController(controller: taskController, viewSynchronizer: view)
                     taskCard.controller.fetchAndObserveEvents(forTask: task, eventQuery: OCKEventQuery(for: date))
                     listViewController.appendViewController(taskCard, animated: false)
+                }
+            }
+            
+            //Create the progress outcome in the CareKit datastore
+            if let activity = progressTrackActivity {
+                let occurrence = startDate.daysTo(date)
+                self.storeManager.store.fetchAnyEvent(forTask: activity, occurrence: occurrence, callbackQueue: .main) { (result) in
+                    switch result {
+                    case .failure(let error): print(error.localizedDescription)
+                    case .success(let event):
+                        if event.outcome == nil {
+                            let values = [OCKOutcomeValue("total:\(todayActivityCount)"), OCKOutcomeValue(Int(0))]
+                            let outcome = OCKOutcome(taskID: activity.localDatabaseID!,
+                                                     taskOccurrenceIndex: occurrence, values: values)
+                            self.storeManager.store.addAnyOutcome(outcome, callbackQueue: .main) { (finalResult) in
+                                switch finalResult {
+                                case .failure(let error): print(error.localizedDescription)
+                                case .success(_): print("Progress Outcome Created Successfully.")
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

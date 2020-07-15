@@ -23,4 +23,28 @@ class CareStoreReferenceManager : NSObject {
     }()
     
     private override init() {}
+
+    func updateProgress(by value: Int, for date: Date) {
+        let store = self.synchronizedStoreManager.store
+        store.fetchAnyEvents(taskID: ActivityType.progressTrack.rawValue,
+            query: OCKEventQuery(for: date), callbackQueue: .main) { (result) in
+                guard let events = try? result.get() else { return }
+                if events.count > 0 {
+                    let event = events.first!
+                    if var outcome = event.outcome {
+                        if let oldValue = outcome.values.first!.integerValue {
+                            outcome.values[0] = OCKOutcomeValue(Int(oldValue + value))
+                        } else if let oldValue = outcome.values.last!.integerValue {
+                            outcome.values[1] = OCKOutcomeValue(Int(oldValue + value))
+                        }
+                        store.updateAnyOutcome(outcome, callbackQueue: .main) { (finalResult) in
+                            switch finalResult {
+                            case .failure(let error): print(error.localizedDescription)
+                            case .success(_): print("Progress Outcome updated successfully.")
+                            }
+                        }
+                    }
+                }
+        }
+    }
 }

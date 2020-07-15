@@ -100,6 +100,7 @@ class SampleData: NSObject {
         Weight(),
         SixMinuteWalk(),
         StepsCount(),
+        ProgressTrack()
         
         //Mood(),
         //ExcerciseMinutes(),
@@ -115,7 +116,6 @@ class SampleData: NSObject {
     required init(carePlanStore: OCKStore) {
         super.init()
         
-        //self._clearStore(store: carePlanStore)
         // Populate the store with the sample activities.
         for sampleActivity in self.activities {
             if let carePlanActivity = sampleActivity.carePlanActivity() {
