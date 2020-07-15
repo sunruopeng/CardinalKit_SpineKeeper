@@ -11,6 +11,37 @@ import CareKit
 
 class SimpleActivityViewController: OCKInstructionsTaskViewController {
     
+    //This method will call when you will tap on the "Mark as Completed" button
+    override func taskView(_ taskView: UIView & OCKTaskDisplayable,
+                           didCompleteEvent isComplete: Bool, at indexPath: IndexPath, sender: Any?) {
+        //if user un-mark the activity then delete its results from the datastore as well
+        if !isComplete {
+            super.taskView(taskView, didCompleteEvent: isComplete, at: indexPath, sender: sender)
+            //get the event
+            guard let event = controller.eventFor(indexPath: indexPath) else { return }
+            //if outcome is saved then delete it
+            if let outcome = event.outcome {
+                controller.store.deleteAnyOutcome(outcome, callbackQueue: .main, completion: nil)
+            }
+            return
+        }
+        
+        //Save results
+        guard
+            let event = controller.eventFor(indexPath: indexPath),
+            let taskID = (event.task as! OCKTask).localDatabaseID
+            else { return }
+        
+        let outcome = OCKOutcome(taskID: taskID, taskOccurrenceIndex: event.scheduleEvent.occurrence,
+                                 values: [OCKOutcomeValue(1)])
+        controller.store.addAnyOutcome(outcome, callbackQueue: .main) { (result) in
+            switch result {
+            case .success(_): print("Outcome created")
+            case .failure(let error): print(error.localizedDescription)
+            }
+        }
+    }
+    
     //This method is called when the user taps the card for detail view
     override func didSelectTaskView(_ taskView: UIView & OCKTaskDisplayable, eventIndexPath: IndexPath) {
         guard let event = controller.eventFor(indexPath: eventIndexPath) else { return }
