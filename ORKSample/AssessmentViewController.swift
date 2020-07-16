@@ -25,6 +25,8 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
                             didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
         
         defer {
+            //enable screen locking
+            UIApplication.shared.isIdleTimerDisabled = false
             taskViewController.dismiss(animated: true, completion: nil)
         }
         
@@ -131,23 +133,29 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
         
         //handle result of 6-minutes walk assessment
         if taskIdentifier == ActivityType.sixMinuteWalk.rawValue {
-            let result = taskViewController.result.stepResult(forStepIdentifier: "fitness.walk")
-            let results = result?.results
-            if results?.count == 0 {
-                return
-            }
+            guard
+                let stepResult = taskViewController.result.stepResult(forStepIdentifier: "fitness.walk"),
+                let results = stepResult.results
+                else { return }
             
-            var res = results?[0] as! ORKFileResult
-            for r1 in results! {
-                if (r1.identifier == "pedometer") {
-                    res = r1 as! ORKFileResult
-                    do {
-                        let string = try NSString.init(contentsOf: res.fileURL!, encoding: String.Encoding.utf8.rawValue)
-                    } catch {}
+            var pedometerResults: ORKFileResult? = nil
+            for result in results {
+                if result.identifier == "pedometer" {
+                    pedometerResults = result as? ORKFileResult
+                    break
                 }
             }
             
-            //self.saveAssessmentResult(values: [old + out])
+            //Save results
+            if pedometerResults == nil {
+                self.saveAssessmentResult(values: ["steps:0", "distance:0"])
+            } else {
+                let jsonString = try? NSString(contentsOf: pedometerResults!.fileURL!,
+                                             encoding: String.Encoding.utf8.rawValue)
+                let jsonData = jsonString!.data(using: String.Encoding.utf8.rawValue)!
+                let jsonObj = try? JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers)
+                print(jsonObj)
+            }
         }
         
         //handle result of back pain assessment
@@ -242,6 +250,7 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
         } else if task.id == ActivityType.sixMinuteWalk.rawValue { //start six minutes walk assessment
             let intendedUseDescription = "Fitness is important. Please hold your phone in your non-dominant hand or place it in your pocket while you complete this task."
             
+            //Disbale screen locking
             UIApplication.shared.isIdleTimerDisabled = true
             
             // let speechInstruction = "walk for a bit then stop"
