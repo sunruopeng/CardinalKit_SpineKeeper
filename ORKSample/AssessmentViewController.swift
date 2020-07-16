@@ -15,10 +15,6 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
     private let quantityType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMass)!
     private let unit = HKUnit.pound()
     private var taskIdentifier = ""
-    let formatter = DateFormatter()
-    let calendar = Calendar.current
-    var isSixMinuteActivity = false
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,26 +24,8 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
     func taskViewController(_ taskViewController: ORKTaskViewController,
                             didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
         
-        
-        print(reason.rawValue)
-        print(error?.localizedDescription)
-        
-        if taskIdentifier == ActivityType.sixMinuteWalk.rawValue {
-            isSixMinuteActivity = true
-            if reason == .completed {
-                UIApplication.shared.isIdleTimerDisabled = false
-            }
-        }
-        
-        if isSixMinuteActivity {
-            if error == nil {
-                isSixMinuteActivity = false
-                dismiss(animated: true, completion: nil)
-            }
-        } else {
-            do {
-                dismiss(animated: true, completion: nil)
-            }
+        defer {
+            taskViewController.dismiss(animated: true, completion: nil)
         }
         
         guard reason == .completed else {
@@ -153,32 +131,23 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
         
         //handle result of 6-minutes walk assessment
         if taskIdentifier == ActivityType.sixMinuteWalk.rawValue {
-            formatter.dateFormat = "yyyy-MM-dd"
-            let startDate = (UserDefaults.standard.object(forKey: "startDate") as! Date)
-            let components = calendar.dateComponents([.day, .month, .year], from: startDate as Date)
-            var out = formatter.string(from: calendar.date(from: components)!) + " "
             let result = taskViewController.result.stepResult(forStepIdentifier: "fitness.walk")
             let results = result?.results
             if results?.count == 0 {
                 return
             }
+            
             var res = results?[0] as! ORKFileResult
             for r1 in results! {
                 if (r1.identifier == "pedometer") {
                     res = r1 as! ORKFileResult
                     do {
                         let string = try NSString.init(contentsOf: res.fileURL!, encoding: String.Encoding.utf8.rawValue)
-                        out += string as String
                     } catch {}
                 }
             }
             
-            
-            out += "\n"
-            let old = UserDefaults.standard.object(forKey: "sixMinuteWalk") as! String
-            UserDefaults.standard.set(old + out, forKey: "sixMinuteWalk")
-            
-            self.saveAssessmentResult(values: [old + out])
+            //self.saveAssessmentResult(values: [old + out])
         }
         
         //handle result of back pain assessment
@@ -278,11 +247,11 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
             // let speechInstruction = "walk for a bit then stop"
             let task = ORKOrderedTask.fitnessCheck(withIdentifier: "walkingTask",
                                                    intendedUseDescription: intendedUseDescription,
-                                                   walkDuration: 360, restDuration: 0, options: [])
+                                                   walkDuration: 20, restDuration: 0, options: [])
             
             let surveyViewController = ORKTaskViewController(task: task, taskRun: nil)
             surveyViewController.delegate = self
-            
+            surveyViewController.outputDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
             //present the survey to the user
             self.present(surveyViewController, animated: true, completion: nil)
         } else if task.id == ActivityType.weight.rawValue { //start weight assessment
