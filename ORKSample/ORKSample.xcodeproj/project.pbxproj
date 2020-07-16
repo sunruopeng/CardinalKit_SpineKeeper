@@ -225,6 +225,7 @@
 		16BF5B691BE2974A007C79C6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF5B681BE2974A007C79C6 /* ProfileViewController.swift */; };
 		16BF5B6F1BE2BE77007C79C6 /* HealthClientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF5B6E1BE2BE77007C79C6 /* HealthClientType.swift */; };
 		16BF5B711BE2C989007C79C6 /* ProfileStaticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF5B701BE2C989007C79C6 /* ProfileStaticTableViewCell.swift */; };
+		785FE090635CCB518B68A397 /* Pods_ORKSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C14C41F74E047E79BB004D5 /* Pods_ORKSample.framework */; };
 		86CCDFF61C1B50970042AA39 /* ResearchContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CCDFF51C1B50970042AA39 /* ResearchContainerViewController.swift */; };
 		B5BC85FA1BF1405900B0CFA5 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161479C51BD6CE8F0099A068 /* OnboardingViewController.swift */; };
 		B5BC85FD1BF1408500B0CFA5 /* HealthDataStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168F25711BE052AD001D2D65 /* HealthDataStepViewController.swift */; };
@@ -528,7 +529,10 @@
 		16BF5B681BE2974A007C79C6 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ORKSample/ProfileViewController.swift; sourceTree = "<group>"; };
 		16BF5B6E1BE2BE77007C79C6 /* HealthClientType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthClientType.swift; path = ORKSample/HealthClientType.swift; sourceTree = "<group>"; };
 		16BF5B701BE2C989007C79C6 /* ProfileStaticTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileStaticTableViewCell.swift; path = ORKSample/ProfileStaticTableViewCell.swift; sourceTree = "<group>"; };
+		2C14C41F74E047E79BB004D5 /* Pods_ORKSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ORKSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E29868A1083CE33037AB56A /* Pods-ORKSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ORKSample.debug.xcconfig"; path = "Target Support Files/Pods-ORKSample/Pods-ORKSample.debug.xcconfig"; sourceTree = "<group>"; };
 		86CCDFF51C1B50970042AA39 /* ResearchContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResearchContainerViewController.swift; path = ORKSample/ResearchContainerViewController.swift; sourceTree = SOURCE_ROOT; };
+		B28A1F0CF7C7D4DE2A721803 /* Pods-ORKSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ORKSample.release.xcconfig"; path = "Target Support Files/Pods-ORKSample/Pods-ORKSample.release.xcconfig"; sourceTree = "<group>"; };
 		B5C2073E1BEC16F00051D9D8 /* ResearchContainerSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResearchContainerSegue.swift; path = ORKSample/ResearchContainerSegue.swift; sourceTree = "<group>"; };
 		B5C207411BECBA8B0051D9D8 /* WithdrawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WithdrawViewController.swift; path = ORKSample/WithdrawViewController.swift; sourceTree = "<group>"; };
 		B5C2074F1BECCB1A0051D9D8 /* AnimatableChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimatableChart.swift; path = ORKSample/AnimatableChart.swift; sourceTree = "<group>"; };
@@ -564,6 +568,7 @@
 				07A3B51C22B97ABE00AD872B /* HealthKit.framework in Frameworks */,
 				FA9622B424BCB8490057B7DB /* ResearchKit.framework in Frameworks */,
 				0755B4B01FD511430078A8F7 /* AudioToolbox.framework in Frameworks */,
+				785FE090635CCB518B68A397 /* Pods_ORKSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -820,6 +825,7 @@
 				0733F1822348056000209212 /* RNCryptor */,
 				161479C21BD6CE8F0099A068 /* ORKSample */,
 				161479C11BD6CE8F0099A068 /* Products */,
+				415652397363193B7F8F9896 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -998,6 +1004,16 @@
 			name = Protocols;
 			sourceTree = "<group>";
 		};
+		415652397363193B7F8F9896 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5E29868A1083CE33037AB56A /* Pods-ORKSample.debug.xcconfig */,
+				B28A1F0CF7C7D4DE2A721803 /* Pods-ORKSample.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B5C207401BECBA710051D9D8 /* Withdrawal */ = {
 			isa = PBXGroup;
 			children = (
@@ -1013,6 +1029,7 @@
 				FA96229D24BCB80F0057B7DB /* CareKit.xcodeproj */,
 				07A3B51B22B97ABE00AD872B /* HealthKit.framework */,
 				0755B4AF1FD511430078A8F7 /* AudioToolbox.framework */,
+				2C14C41F74E047E79BB004D5 /* Pods_ORKSample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1059,10 +1076,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 161479D21BD6CE8F0099A068 /* Build configuration list for PBXNativeTarget "ORKSample" */;
 			buildPhases = (
+				7364B9659923B4998762625A /* [CP] Check Pods Manifest.lock */,
 				161479BC1BD6CE8F0099A068 /* Sources */,
 				161479BD1BD6CE8F0099A068 /* Frameworks */,
 				161479BE1BD6CE8F0099A068 /* Resources */,
 				BC2A3CDF1C58F1DB00DA64B7 /* Embed Frameworks */,
+				3C82A6F8B3559607C5134383 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1297,6 +1316,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C82A6F8B3559607C5134383 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ORKSample/Pods-ORKSample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Zip/Zip.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Zip.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ORKSample/Pods-ORKSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7364B9659923B4998762625A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ORKSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		161479BC1BD6CE8F0099A068 /* Sources */ = {
@@ -1559,6 +1621,7 @@
 		};
 		161479D31BD6CE8F0099A068 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E29868A1083CE33037AB56A /* Pods-ORKSample.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1596,6 +1659,7 @@
 		};
 		161479D41BD6CE8F0099A068 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B28A1F0CF7C7D4DE2A721803 /* Pods-ORKSample.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;

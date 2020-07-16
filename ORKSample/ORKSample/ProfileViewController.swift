@@ -33,8 +33,9 @@ import UIKit
 import ResearchKit
 import HealthKit
 import AVKit
-
+import Zip
 import MessageUI
+import WebKit
 
 class ProfileViewController: UITableViewController, HealthClientType, MFMailComposeViewControllerDelegate {
     // MARK: Properties
@@ -193,7 +194,7 @@ class ProfileViewController: UITableViewController, HealthClientType, MFMailComp
             let section = indexPath.section
             let index = indexPath.row
             let detailVC = segue.destination
-            let baseURL = Bundle.main.resourceURL
+            let baseURL = Bundle.main.resourceURL?.appendingPathComponent("HTMLContent")
             var htmlname = ""
             if section == 3 && index == 1 {
                 htmlname = "Legal"
@@ -207,7 +208,7 @@ class ProfileViewController: UITableViewController, HealthClientType, MFMailComp
             else {return }
             let htmlFile = Bundle.main.path(forResource: htmlname, ofType: "html")
             let html = try? String(contentsOfFile: htmlFile!, encoding: String.Encoding.utf8)
-            let webView = UIWebView.init(frame: self.view.frame)
+            let webView = WKWebView(frame: self.view.frame)
             webView.loadHTMLString(html!, baseURL: baseURL)
             webView.autoresizingMask = [.flexibleWidth, .flexibleHeight, .flexibleLeftMargin, .flexibleRightMargin];
             detailVC.view.addSubview(webView)
@@ -269,6 +270,7 @@ class ProfileViewController: UITableViewController, HealthClientType, MFMailComp
     
     func configuredMailComposeViewController() -> MFMailComposeViewController
     {
+        let fileManager = FileManager.default
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let mailComposerVC = MFMailComposeViewController()
         mailComposerVC.mailComposeDelegate = self
@@ -278,9 +280,54 @@ class ProfileViewController: UITableViewController, HealthClientType, MFMailComp
         let ciphertext = cipherdata.base64EncodedString()
         
         mailComposerVC.setToRecipients(["stanfordspinekeeper@stanford.edu"])
-        
         mailComposerVC.setSubject("Spinekeeper Data")
         mailComposerVC.setMessageBody(ciphertext, isHTML: false)
+        
+        let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let fileUrl = documentsURL.appendingPathComponent("Spinekeeper Data.zip")
+        
+        let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as NSURL
+        let documentsPath = documentsUrl.path
+        
+        // delete old zip file if exist
+        do {
+            if let documentPath = documentsPath
+            {
+                let fileNames = try fileManager.contentsOfDirectory(atPath: "\(documentPath)")
+                for fileName in fileNames {
+                    
+                    if (fileName.hasSuffix(".zip"))
+                    {
+                        let filePathName = "\(documentPath)/\(fileName)"
+                        try fileManager.removeItem(atPath: filePathName)
+                    }
+                }
+            }
+            
+        } catch {
+            print("Could not clear temp folder: \(error)")
+        }
+        
+        do {
+            let fileURLs = try fileManager.contentsOfDirectory(at: documentsURL, includingPropertiesForKeys: nil)
+            
+            do {
+                let _ = try Zip.quickZipFiles(fileURLs, fileName: "Spinekeeper Data", progress: { (progress) in
+                    
+                    print(progress)
+                })
+            }
+            catch {
+                print(error.localizedDescription)
+            }
+        } catch {
+            print("Error while enumerating files \(documentsURL.path): \(error.localizedDescription)")
+        }
+        
+        if let fileData = NSData(contentsOf: fileUrl) {
+            print("File data loaded.")
+            mailComposerVC.addAttachmentData(fileData as Data, mimeType: "application/zip", fileName: "Spinekeeper Data")
+        }
         
         return mailComposerVC
     }

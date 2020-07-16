@@ -31,6 +31,7 @@
 import UIKit
 import ResearchKit
 import HealthKit
+import WebKit
 
 class LearnViewController: UITableViewController {
     // MARK: Properties
@@ -147,7 +148,7 @@ class LearnViewController: UITableViewController {
             let indexPath = self.tableView.indexPath(for: cell)!
             let index = indexPath.row
             let detailVC = segue.destination
-            let baseURL = Bundle.main.resourceURL
+            let baseURL = Bundle.main.resourceURL?.appendingPathComponent("HTMLContent")
             let htmlname = contents[index]["htmlContent"]
             
             if htmlname == "none" {
@@ -176,7 +177,7 @@ class LearnViewController: UITableViewController {
             }
             let htmlFile = Bundle.main.path(forResource: htmlname, ofType: "html")
             let html = try? String(contentsOfFile: htmlFile!, encoding: String.Encoding.utf8)
-            let webView = UIWebView.init(frame: self.view.frame)
+            let webView = WKWebView(frame: self.view.frame)
             webView.loadHTMLString(html!, baseURL: baseURL)
             webView.autoresizingMask = [.flexibleWidth, .flexibleHeight, .flexibleLeftMargin, .flexibleRightMargin];
             detailVC.view.addSubview(webView)
