@@ -154,7 +154,17 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
                                              encoding: String.Encoding.utf8.rawValue)
                 let jsonData = jsonString!.data(using: String.Encoding.utf8.rawValue)!
                 let jsonObj = try? JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers)
-                print(jsonObj)
+                let fitnessDict = jsonObj as! [String: Any]
+                let fitnessItems = fitnessDict["items"] as! [[String: Any]]
+                var numberofSteps : Int = 0
+                var totalDistance : Double = 0
+                
+                for stepsDistanceItems in fitnessItems {
+                    numberofSteps += stepsDistanceItems["numberOfSteps"] as! Int
+                    totalDistance += stepsDistanceItems["distance"] as! Double
+                }
+                
+                self.saveAssessmentResult(values: ["steps:\(numberofSteps)", "distance:\(totalDistance)"])
             }
         }
         

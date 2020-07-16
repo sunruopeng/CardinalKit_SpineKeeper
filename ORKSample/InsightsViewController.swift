@@ -132,7 +132,7 @@ class InsightsViewController: OCKDailyPageViewController {
             markerSize: 4,
             eventAggregator: stepsAggregator)
         
-        let lineChartVC = OCKCartesianChartViewController(plotType: .line, selectedDate: date,
+        let lineChartVC = OCKCartesianChartViewController(plotType: .bar, selectedDate: date,
                                                           configurations: [stepsLineDataSeries],
                                                           storeManager: self.storeManager)
         lineChartVC.chartView.headerView.titleLabel.text = "Daily Steps"

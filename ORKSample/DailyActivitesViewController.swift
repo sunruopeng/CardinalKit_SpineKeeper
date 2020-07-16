@@ -296,6 +296,26 @@ class AssessmentInstructionsTaskViewSynchronizer: OCKInstructionsTaskViewSynchro
                 }
                 
                 view.instructionsLabel.text = "Average: \(averagePain)\nMax: \(maxPain)"
+            } else if event.task.id == ActivityType.sixMinuteWalk.rawValue && values.count == 2 {
+                view.completionButton.isSelected = true
+                
+                var steps: Int = 0
+                var distance: Double = 0
+                var outcomeValue = values[0].stringValue ?? ""
+                if outcomeValue.contains("steps:") {
+                    steps = Int(outcomeValue.components(separatedBy: ":").last!)!
+                } else if outcomeValue.contains("distance:") {
+                    distance = Double(outcomeValue.components(separatedBy: ":").last!)!
+                }
+                
+                outcomeValue = values[1].stringValue ?? ""
+                if outcomeValue.contains("distance:") {
+                    distance = Double(outcomeValue.components(separatedBy: ":").last!)!
+                } else if outcomeValue.contains("steps:") {
+                    steps = Int(outcomeValue.components(separatedBy: ":").last!)!
+                }
+                
+                view.instructionsLabel.text = "Steps: \(steps)\nDistance: \(String( format: "%.2f", distance))m"
             }
         } else {
             view.completionButton.isSelected = false
