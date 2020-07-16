@@ -132,7 +132,8 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
         }
         
         //handle result of 6-minutes walk assessment
-        if taskIdentifier == ActivityType.sixMinuteWalk.rawValue {
+        if taskIdentifier == ActivityType.sixMinuteWalk.rawValue ||
+            taskIdentifier.contains("\(ActivityType.sixMinuteWalk.rawValue)-") {
             guard
                 let stepResult = taskViewController.result.stepResult(forStepIdentifier: "fitness.walk"),
                 let results = stepResult.results
@@ -244,6 +245,7 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
             
             let surveyTask = ORKOrderedTask(identifier: task.id, steps: steps)
             let surveyViewController = ORKTaskViewController(task: surveyTask, taskRun: nil)
+            surveyViewController.modalPresentationStyle = .fullScreen
             surveyViewController.delegate = self
             
             //present the survey to the user
@@ -253,11 +255,13 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
             
             let surveyTask = ORKOrderedTask(identifier: task.id, steps: steps)
             let surveyViewController = ORKTaskViewController(task: surveyTask, taskRun: nil)
+            surveyViewController.modalPresentationStyle = .fullScreen
             surveyViewController.delegate = self
 
             //present the survey to the user
             self.present(surveyViewController, animated: true, completion: nil)
-        } else if task.id == ActivityType.sixMinuteWalk.rawValue { //start six minutes walk assessment
+        } else if task.id == ActivityType.sixMinuteWalk.rawValue ||
+            task.id.contains("\(ActivityType.sixMinuteWalk.rawValue)-") { //start six minutes walk assessment
             let intendedUseDescription = "Fitness is important. Please hold your phone in your non-dominant hand or place it in your pocket while you complete this task."
             
             //Disbale screen locking
@@ -270,7 +274,9 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
             
             let surveyViewController = ORKTaskViewController(task: task, taskRun: nil)
             surveyViewController.delegate = self
-            surveyViewController.outputDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+            surveyViewController.modalPresentationStyle = .fullScreen
+            surveyViewController.outputDirectory = FileManager.default.urls(for: .documentDirectory,
+                                                                            in: .userDomainMask).first
             //present the survey to the user
             self.present(surveyViewController, animated: true, completion: nil)
         } else if task.id == ActivityType.weight.rawValue { //start weight assessment
@@ -289,6 +295,7 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
             let task = ORKOrderedTask(identifier: task.id, steps: [questionStep])
             
             let surveyViewController = ORKTaskViewController(task: task, taskRun: nil)
+            surveyViewController.modalPresentationStyle = .fullScreen
             surveyViewController.delegate = self
             
             //present the survey to the user
@@ -298,6 +305,7 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
             
             let task = ORKOrderedTask(identifier: task.id, steps: steps)
             let surveyViewController = ORKTaskViewController(task: task, taskRun: nil)
+            surveyViewController.modalPresentationStyle = .fullScreen
             surveyViewController.delegate = self
             
             //present the survey to the user
