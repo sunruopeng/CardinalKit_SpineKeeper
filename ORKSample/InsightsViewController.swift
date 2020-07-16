@@ -21,7 +21,7 @@ class InsightsViewController: OCKDailyPageViewController {
         var query = OCKTaskQuery(for: date)
         query.excludesTasksWithNoEvents = true
         query.ids = [ActivityType.backPain.rawValue, ActivityType.stepsCount.rawValue,
-                     ActivityType.progressTrack.rawValue]
+                     ActivityType.progressTrack.rawValue,ActivityType.sixMinuteWalk.rawValue]
         
         storeManager.store.fetchAnyTasks(query: query, callbackQueue: .main) { result in
             guard let tasks = try? result.get() else { return }
@@ -37,6 +37,10 @@ class InsightsViewController: OCKDailyPageViewController {
                     let dailyProgressInsightsLineChartVC = self.dailyProgressChartViewController(date: date,
                                                                                                  taskID: task.id)
                     listViewController.appendViewController(dailyProgressInsightsLineChartVC, animated: false)
+                } else if task.id == ActivityType.sixMinuteWalk.rawValue {
+                    let dailyDistanceInsightsBarChartVC = self.dailyDistanceChartViewController(date: date,
+                                                                                                 taskID: task.id)
+                    listViewController.appendViewController(dailyDistanceInsightsBarChartVC, animated: false)
                 }
             }
         }
@@ -136,6 +140,46 @@ class InsightsViewController: OCKDailyPageViewController {
                                                           configurations: [stepsLineDataSeries],
                                                           storeManager: self.storeManager)
         lineChartVC.chartView.headerView.titleLabel.text = "Daily Steps"
+        lineChartVC.chartView.headerView.detailLabel.text = ""
+        lineChartVC.chartView.headerView.accessibilityLabel = "Steps, This Week"
+        return lineChartVC
+    }
+    
+    func dailyDistanceChartViewController(date: Date, taskID: String) -> OCKCartesianChartViewController {
+        let distanceAggregator = OCKEventAggregator.custom { dailyEvents -> Double in
+            var result: Double = 0.0
+            for event in dailyEvents {
+                guard let outcome = event.outcome else { continue }
+                let values = outcome.values
+                if values.count == 2 {
+                    var outcomeValue = values[0].stringValue ?? ""
+                    if outcomeValue.contains("distance:") {
+                        let actualValue = Double(outcomeValue.components(separatedBy: ":").last!)!
+                        result += actualValue
+                    }
+                    
+                    outcomeValue = values[1].stringValue ?? ""
+                    if outcomeValue.contains("distance:") {
+                        let actualValue = Double(outcomeValue.components(separatedBy: ":").last!)!
+                        result += actualValue
+                    }
+                }
+            }
+            return result
+        }
+        
+        let distanceLineDataSeries = OCKDataSeriesConfiguration(
+            taskID: taskID,
+            legendTitle: "",
+            gradientStartColor: Colors.blue.color,
+            gradientEndColor: Colors.blue.color,
+            markerSize: 4,
+            eventAggregator: distanceAggregator)
+        
+        let lineChartVC = OCKCartesianChartViewController(plotType: .bar, selectedDate: date,
+                                                          configurations: [distanceLineDataSeries],
+                                                          storeManager: self.storeManager)
+        lineChartVC.chartView.headerView.titleLabel.text = "Six Minutes Walk"
         lineChartVC.chartView.headerView.detailLabel.text = ""
         lineChartVC.chartView.headerView.accessibilityLabel = "Steps, This Week"
         return lineChartVC
