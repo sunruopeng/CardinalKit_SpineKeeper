@@ -10,7 +10,7 @@ import UIKit
 import ResearchKit
 import CareKit
 
-class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewControllerDelegate {
+class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewControllerDelegate, FileManagerDelegate {
     
     private let quantityType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMass)!
     private let unit = HKUnit.pound()
@@ -139,6 +139,8 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
                 let results = stepResult.results
                 else { return }
             
+            
+            
             var pedometerResults: ORKFileResult? = nil
             for result in results {
                 if result.identifier == "pedometer" {
@@ -161,6 +163,7 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
                 let numberofSteps = stepsDistanceItems["numberOfSteps"] as! Int
                 let totalDistance = stepsDistanceItems["distance"] as! Double
                 self.saveAssessmentResult(values: ["steps:\(numberofSteps)", "distance:\(totalDistance)"])
+                self.copyFilesofSixMinutes(results: results)
             }
         }
         
@@ -177,6 +180,54 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
             //save results
             self.saveAssessmentResult(values: [painAnswer, painAnswer1])
         }
+    }
+    
+    func copyFilesofSixMinutes(results: [ORKResult]) {
+        
+        var pedometerFileUrl : URL? = nil
+        var accelerometerFileUrl : URL? = nil
+        var deviceMotionFileUrl : URL? = nil
+        
+        for result in results {
+            if result.identifier == "pedometer" {
+                pedometerFileUrl = (result as! ORKFileResult).fileURL!
+                continue
+            }
+            
+            if result.identifier == "accelerometer" {
+                accelerometerFileUrl = (result as! ORKFileResult).fileURL!
+                continue
+            }
+            
+            if result.identifier == "deviceMotion" {
+                deviceMotionFileUrl = (result as! ORKFileResult).fileURL!
+                continue
+            }
+        }
+        
+        let fileManager = FileManager.default
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HHmm-MMddyy"
+        let now = Date()
+        let dateString = formatter.string(from:now)
+        
+        do {
+            let documentDirectoryURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
+            let rootDirectoryUrl = documentDirectoryURL.appendingPathComponent("spinekeeper-data/\(dateString)")
+            try fileManager.createDirectory(at: rootDirectoryUrl, withIntermediateDirectories: true, attributes: nil)
+            let newPedometerFileUrl = rootDirectoryUrl.appendingPathComponent("pedometer").appendingPathExtension("json")
+            let newAccelerometerFileUrl = rootDirectoryUrl.appendingPathComponent("accelerometer").appendingPathExtension("json")
+            let newDeviceMotionFileUrl = rootDirectoryUrl.appendingPathComponent("deviceMotion").appendingPathExtension("json")
+            try fileManager.copyItem(at: pedometerFileUrl!, to: newPedometerFileUrl)
+            try fileManager.copyItem(at: accelerometerFileUrl!, to: newAccelerometerFileUrl)
+            try fileManager.copyItem(at: deviceMotionFileUrl!, to: newDeviceMotionFileUrl)
+            
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+        
+        
     }
     
     func saveAssessmentResult(values: [OCKOutcomeValueUnderlyingType]) {

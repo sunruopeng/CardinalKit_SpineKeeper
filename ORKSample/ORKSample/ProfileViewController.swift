@@ -282,51 +282,40 @@ class ProfileViewController: UITableViewController, HealthClientType, MFMailComp
         mailComposerVC.setToRecipients(["stanfordspinekeeper@stanford.edu"])
         mailComposerVC.setSubject("Spinekeeper Data")
         mailComposerVC.setMessageBody(ciphertext, isHTML: false)
-        
-        let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        let fileUrl = documentsURL.appendingPathComponent("Spinekeeper Data.zip")
-        
-        let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as NSURL
+    
+        let documentsUrl =  fileManager.urls(for: .documentDirectory, in: .userDomainMask).first! as NSURL
+        let fileUrl = documentsUrl.appendingPathComponent("spinekeeper-data.zip")
         let documentsPath = documentsUrl.path
         
-        // delete old zip file if exist
         do {
             if let documentPath = documentsPath
             {
                 let fileNames = try fileManager.contentsOfDirectory(atPath: "\(documentPath)")
                 for fileName in fileNames {
                     
+                    // delete old zip file if exist
                     if (fileName.hasSuffix(".zip"))
                     {
                         let filePathName = "\(documentPath)/\(fileName)"
                         try fileManager.removeItem(atPath: filePathName)
                     }
+                    
+                    if (fileName.hasPrefix("spinekeeper-data"))
+                    {
+                        let newUrl = documentsUrl.appendingPathComponent("spinekeeper-data")
+                        let _ = try Zip.quickZipFiles([newUrl!], fileName: "spinekeeper-data", progress: { (progress) in
+                            
+                            print(progress)
+                        })
+                    }
                 }
             }
-            
         } catch {
-            print("Could not clear temp folder: \(error)")
+            print("\(error.localizedDescription)")
         }
         
-        do {
-            let fileURLs = try fileManager.contentsOfDirectory(at: documentsURL, includingPropertiesForKeys: nil)
-            
-            do {
-                let _ = try Zip.quickZipFiles(fileURLs, fileName: "Spinekeeper Data", progress: { (progress) in
-                    
-                    print(progress)
-                })
-            }
-            catch {
-                print(error.localizedDescription)
-            }
-        } catch {
-            print("Error while enumerating files \(documentsURL.path): \(error.localizedDescription)")
-        }
-        
-        if let fileData = NSData(contentsOf: fileUrl) {
-            print("File data loaded.")
-            mailComposerVC.addAttachmentData(fileData as Data, mimeType: "application/zip", fileName: "Spinekeeper Data")
+        if let fileData = NSData(contentsOf: fileUrl!) {
+            mailComposerVC.addAttachmentData(fileData as Data, mimeType: "application/zip", fileName: "spinekeeper-data")
         }
         
         return mailComposerVC
