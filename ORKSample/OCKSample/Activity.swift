@@ -115,6 +115,7 @@ enum ActivityType: String {
     case excerciseMinutes
     case weight // done
     case sixMinuteWalk
+    case sixMinuteWalkOptional
     case sleep
     case voiceAnalysis
     case backRangeOfMotion

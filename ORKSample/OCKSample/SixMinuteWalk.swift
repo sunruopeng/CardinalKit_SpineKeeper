@@ -77,41 +77,6 @@ struct SixMinuteWalk: Assessment {
         return activity
     }
     
-    func optionalDailySixMinActivity() -> [OCKTask] {
-        let startDate = (UserDefaults.standard.object(forKey: "startDate") as! Date)
-        
-        let days = [1,10,19]
-        var occurrences = [Int](repeating: 0, count: 28)
-        for day in days {
-            occurrences[day-1]+=1
-        }
-        
-        let caldendar = Calendar.current
-        let startOfDay = Calendar.current.startOfDay(for: startDate)
-        var tasks: [OCKTask] = []
-        
-        for index in 0..<occurrences.count {
-            if occurrences[index] == 0 {
-                let scheduleStartDate = caldendar.date(byAdding: .day, value: index, to: startOfDay)!
-                let scheduleElement =  OCKScheduleElement(start: scheduleStartDate, end: nil,
-                                                          interval: DateComponents(day: 28),
-                                                          text: "Perform a 6-minute walk",
-                                                          targetValues: [],
-                                                          duration: .allDay)
-                
-                let schedule = OCKSchedule(composing: [scheduleElement])
-                var activity = OCKTask(id: "\(activityType.rawValue)-\(index)",
-                                       title: "6-Minute Walk Test",
-                                       carePlanID: nil, schedule: schedule)
-                activity.impactsAdherence = false
-                activity.groupIdentifier = "Todo's"
-                tasks.append(activity)
-            }
-        }
-        
-        return tasks
-    }
-    
     // MARK: Assessment
     
     func task() -> ORKTask {

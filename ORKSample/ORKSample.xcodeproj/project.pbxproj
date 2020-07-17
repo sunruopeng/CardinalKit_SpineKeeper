@@ -253,6 +253,7 @@
 		FA9622B424BCB8490057B7DB /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9622AF24BCB8180057B7DB /* ResearchKit.framework */; };
 		FA9622B524BCB8490057B7DB /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA9622AF24BCB8180057B7DB /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FAC0588224B5AD7600F4C0D4 /* AssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0588124B5AD7600F4C0D4 /* AssessmentViewController.swift */; };
+		FAC8E86624C0DD91000CD90F /* SixMinuteWalkOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8E86524C0DD91000CD90F /* SixMinuteWalkOptional.swift */; };
 		FAC92D7724BF479D0028494A /* ProgressTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC92D7624BF479D0028494A /* ProgressTrack.swift */; };
 		FAD5E0EB24B4B8740076B762 /* SimpleActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5E0EA24B4B8740076B762 /* SimpleActivityViewController.swift */; };
 /* End PBXBuildFile section */
@@ -555,6 +556,7 @@
 		FA96229D24BCB80F0057B7DB /* CareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKit.xcodeproj; path = "../../apple-repos/CareKit/CareKit/CareKit.xcodeproj"; sourceTree = "<group>"; };
 		FA9622A824BCB8170057B7DB /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../../apple-repos/ResearchKit/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
 		FAC0588124B5AD7600F4C0D4 /* AssessmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentViewController.swift; sourceTree = "<group>"; };
+		FAC8E86524C0DD91000CD90F /* SixMinuteWalkOptional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SixMinuteWalkOptional.swift; path = OCKSample/SixMinuteWalkOptional.swift; sourceTree = "<group>"; };
 		FAC92D7624BF479D0028494A /* ProgressTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProgressTrack.swift; path = OCKSample/ProgressTrack.swift; sourceTree = "<group>"; };
 		FAD5E0EA24B4B8740076B762 /* SimpleActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleActivityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -805,6 +807,7 @@
 				07DBAA9D1E9CA57600FC3F36 /* BackPain.swift */,
 				07DBAAAA1E9CA88200FC3F36 /* Weight.swift */,
 				042E2C0C1EA0867800961299 /* SixMinuteWalk.swift */,
+				FAC8E86524C0DD91000CD90F /* SixMinuteWalkOptional.swift */,
 				07709A44209502AB0018FCCF /* ODISurvey.swift */,
 				07DBAAA71E9CA88200FC3F36 /* ExcerciseMinutes.swift */,
 				04FC64421EA2C0A0007DC617 /* VoiceAnalysis.swift */,
@@ -1010,7 +1013,6 @@
 				5E29868A1083CE33037AB56A /* Pods-ORKSample.debug.xcconfig */,
 				B28A1F0CF7C7D4DE2A721803 /* Pods-ORKSample.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -1446,6 +1448,7 @@
 				FA0C122624B31D970033669E /* PressUp.swift in Sources */,
 				B5D1175C1BE8D15400D7F153 /* DiscreteGraphDataSource.swift in Sources */,
 				07DBAA9E1E9CA57600FC3F36 /* Activity.swift in Sources */,
+				FAC8E86624C0DD91000CD90F /* SixMinuteWalkOptional.swift in Sources */,
 				86CCDFF61C1B50970042AA39 /* ResearchContainerViewController.swift in Sources */,
 				07E7735320589F8E00C5D237 /* StayingActive2.swift in Sources */,
 				07E7736F2058DFA900C5D237 /* CopingRefresher1.swift in Sources */,

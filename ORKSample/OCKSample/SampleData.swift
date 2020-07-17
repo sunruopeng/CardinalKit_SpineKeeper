@@ -99,6 +99,7 @@ class SampleData: NSObject {
         BackPain(),
         Weight(),
         SixMinuteWalk(),
+        SixMinuteWalkOptional(),
         StepsCount(),
         ProgressTrack()
         
@@ -123,18 +124,6 @@ class SampleData: NSObject {
                     switch result {
                     case .failure(let error): print("Error: \(error.localizedDescription)")
                     case .success: print("Successfully saved a new task!")
-                    }
-                }
-            }
-            
-            //Add extra daily 6-min activities
-            if sampleActivity.activityType.rawValue == ActivityType.sixMinuteWalk.rawValue {
-                let sixMinuteWalk = sampleActivity as! SixMinuteWalk
-                let activities = sixMinuteWalk.optionalDailySixMinActivity()
-                carePlanStore.addAnyTasks(activities, callbackQueue: .main) { (result) in
-                    switch result {
-                    case .success(_): print("Successfully saved: Optional Daily Six Min Activity")
-                    case .failure(let error): print("Error: \(error.localizedDescription)")
                     }
                 }
             }

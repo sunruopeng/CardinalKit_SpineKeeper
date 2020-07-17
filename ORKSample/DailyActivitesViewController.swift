@@ -48,11 +48,10 @@ class DailyActivitesViewController: OCKDailyPageViewController {
                 let activity = task as! OCKTask
                 if activity.userInfo == nil {
                     let assessments = [ActivityType.backPain.rawValue, ActivityType.odiSurvey.rawValue,
-                                       ActivityType.sixMinuteWalk.rawValue, ActivityType.startBackSurvey.rawValue,
-                                       ActivityType.weight.rawValue]
+                                       ActivityType.sixMinuteWalk.rawValue, ActivityType.sixMinuteWalkOptional.rawValue,
+                                       ActivityType.startBackSurvey.rawValue, ActivityType.weight.rawValue]
                     
-                    if activity.id.oneOf(other: assessments) ||
-                        activity.id.contains("\(ActivityType.sixMinuteWalk.rawValue)-") { //Assessment
+                    if activity.id.oneOf(other: assessments) { //Assessment
                         if activity.impactsAdherence { todayActivityCount += 1 }
                         let view = AssessmentInstructionsTaskViewSynchronizer()
                         let taskController = OCKInstructionsTaskController(storeManager: self.storeManager)
@@ -297,7 +296,7 @@ class AssessmentInstructionsTaskViewSynchronizer: OCKInstructionsTaskViewSynchro
                 
                 view.instructionsLabel.text = "Average: \(averagePain)\nMax: \(maxPain)"
             } else if event.task.id == ActivityType.sixMinuteWalk.rawValue ||
-                event.task.id.contains("\(ActivityType.sixMinuteWalk.rawValue)-") {
+                event.task.id == ActivityType.sixMinuteWalkOptional.rawValue {
                 if values.count == 2 {
                     view.completionButton.isSelected = true
                     

@@ -133,7 +133,7 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
         
         //handle result of 6-minutes walk assessment
         if taskIdentifier == ActivityType.sixMinuteWalk.rawValue ||
-            taskIdentifier.contains("\(ActivityType.sixMinuteWalk.rawValue)-") {
+            taskIdentifier == ActivityType.sixMinuteWalkOptional.rawValue {
             guard
                 let stepResult = taskViewController.result.stepResult(forStepIdentifier: "fitness.walk"),
                 let results = stepResult.results
@@ -157,14 +157,9 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
                 let jsonObj = try? JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers)
                 let fitnessDict = jsonObj as! [String: Any]
                 let fitnessItems = fitnessDict["items"] as! [[String: Any]]
-                var numberofSteps : Int = 0
-                var totalDistance : Double = 0
-                
-                for stepsDistanceItems in fitnessItems {
-                    numberofSteps += stepsDistanceItems["numberOfSteps"] as! Int
-                    totalDistance += stepsDistanceItems["distance"] as! Double
-                }
-                
+                let stepsDistanceItems = fitnessItems.last!
+                let numberofSteps = stepsDistanceItems["numberOfSteps"] as! Int
+                let totalDistance = stepsDistanceItems["distance"] as! Double
                 self.saveAssessmentResult(values: ["steps:\(numberofSteps)", "distance:\(totalDistance)"])
             }
         }
@@ -261,7 +256,7 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
             //present the survey to the user
             self.present(surveyViewController, animated: true, completion: nil)
         } else if task.id == ActivityType.sixMinuteWalk.rawValue ||
-            task.id.contains("\(ActivityType.sixMinuteWalk.rawValue)-") { //start six minutes walk assessment
+            task.id == ActivityType.sixMinuteWalkOptional.rawValue { //start six minutes walk assessment
             let intendedUseDescription = "Fitness is important. Please hold your phone in your non-dominant hand or place it in your pocket while you complete this task."
             
             //Disbale screen locking
