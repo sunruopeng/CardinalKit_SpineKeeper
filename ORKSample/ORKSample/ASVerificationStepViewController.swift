@@ -31,7 +31,8 @@ class ASVerificationStepViewController : ORKVerificationStepViewController {
         controller.present(alert2Controller, animated: true, completion: nil)
     }
     
-    override func continueTapped() {
+    //override func continueTapped() {
+    func continueTapped() {
         // check if the email has been verfiied
         // if so then self.goForward()
         // else tell them to do it again with an error
