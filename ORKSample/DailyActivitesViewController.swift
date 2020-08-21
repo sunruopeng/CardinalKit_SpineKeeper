@@ -191,8 +191,8 @@ class EmptyInstructionsTaskViewSynchronizer: OCKInstructionsTaskViewSynchronizer
     override func updateView(_ view: OCKInstructionsTaskView, context: OCKSynchronizationContext<OCKTaskEvents?>) {
         super.updateView(view, context: context)
         // Update the view when the data changes in the store here...
-        view.headerView.titleLabel.text = "Well Done!"
-        view.headerView.detailLabel.text = "28 Days of survey has been completed."
+        view.headerView.titleLabel.text = "Well Done!\nYou have completed the entire study.\n\nPlease go to the Profile tab and click Email Data to send us your data."
+        //view.headerView.detailLabel.text = "You have completed the entire study.\nPlease go to the Profile tab and click Email Data to send us your data."
         view.headerView.detailDisclosureImage?.image = nil
         view.instructionsLabel.text = "Thank you for participating in Standford SpineKeeper study. We appreciate your time & efforts."
         view.completionButton.isHidden = true

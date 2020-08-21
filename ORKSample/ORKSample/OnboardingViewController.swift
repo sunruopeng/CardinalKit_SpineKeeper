@@ -145,15 +145,15 @@ class OnboardingViewController: UIViewController {
         
         let tempStep = ORKInstructionStep.init(identifier: "tutorialStep1")
         tempStep.title = "All Set!"
-        tempStep.detailText = "We'll recommend a daily list of things to do in your Daily Activities Tab.\n\nFor each activity, you can tap the arrow on the right to see more detail. Tap the colored bubbles below each activity as you complete them."
-        //tempStep.image = ResearchContainerViewController.imageResize(with: UIImage(named: "CareCard-Intro")!, andResizeTo: CGSize.init(width: 100.0, height: 100.0))
-        tempStep.image = UIImage(named: "tutorial_activity")
+        tempStep.detailText = "We'll recommend a daily list of things to do in your Activities Tab.\n\nFor each activity, you can tap the arrow on the right to see more detail. Tap the colored bubbles below each activity as you complete them."
+        tempStep.image = ResearchContainerViewController.imageResize(with: UIImage(named: "tutorial_activity")!, andResizeTo: CGSize.init(width: 100.0, height: 135.0))
+        //tempStep.image = UIImage(named: "tutorial_activity")
         
         let tempStep2 = ORKInstructionStep.init(identifier: "tutorialStep2")
         tempStep2.title = " "
-        tempStep2.detailText = "We'll also ask you to log your daily symptoms in the Symptom Tracker tab.\n\nFor each task, you should tap the arrow on the right to log your symptoms."
-        //tempStep2.image = ResearchContainerViewController.imageResize(with: UIImage(named: "Symptom-Intro")!, andResizeTo: CGSize.init(width: 100.0, height: 100.0))
-        tempStep2.image = UIImage(named: "tutorial_symptoms")
+        tempStep2.detailText = "Use the Insights tab to view your weekly progress.\n\nUse the Learn tab to know more about back pain."
+        tempStep2.image = ResearchContainerViewController.imageResize(with: UIImage(named: "tutorial_symptoms")!, andResizeTo: CGSize.init(width: 100.0, height: 142.0))
+        //tempStep2.image = UIImage(named: "tutorial_symptoms")
         
         let completionTask = ORKNavigableOrderedTask(identifier: "tutorialTask", steps: [tempStep, tempStep2])
         let completeStep = ORKNavigablePageStep(identifier: "TutorialStep", pageTask: completionTask)
