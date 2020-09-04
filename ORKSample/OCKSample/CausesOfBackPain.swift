@@ -69,7 +69,7 @@ struct CausesOfBackPain: Activity {
                                title: "Causes of Back Pain",
                                carePlanID: nil, schedule: schedule)
         
-        activity.instructions = "\u{2022} Take a slow breath in through your nose, breathing into your lower belly (for about 4 seconds).\n\n\u{2022} Hold for 1 to 2 seconds.\n\n\u{2022} Exhale slowly through your mouth (for about 4 seconds).\n\n\u{2022} Wait a few seconds before taking another breath."
+        activity.instructions = "Back pain often develops without a cause that your doctor can identify with a test or an imaging study. Conditions commonly linked to back pain include: \u{2022} Muscle or ligament strain. Repeated heavy lifting or a sudden awkward movement can strain back muscles and spinal ligaments. If you're in poor physical condition, constant strain on your back can cause painful muscle spasms.\n\n\u{2022} Bulging or ruptured disks. Disks act as cushions between the bones (vertebrae) in your spine. The soft material inside a disk can bulge or rupture and press on a nerve. However, you can have a bulging or ruptured disk without back pain. Disk disease is often found incidentally when you have spine X-rays for some other reason.\n\n\u{2022} Arthritis. Osteoarthritis can affect the lower back. In some cases, arthritis in the spine can lead to a narrowing of the space around the spinal cord, a condition called spinal stenosis.\n\n\u{2022} Osteoporosis. Your spine's vertebrae can develop painful fractures if your bones become porous and brittle."
         
         activity.groupIdentifier = "Learn"
         return activity

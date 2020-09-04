@@ -316,7 +316,7 @@ class AssessmentViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
             // let speechInstruction = "walk for a bit then stop"
             let task = ORKOrderedTask.fitnessCheck(withIdentifier: "walkingTask",
                                                    intendedUseDescription: intendedUseDescription,
-                                                   walkDuration: 360, restDuration: 5, options: [])
+                                                   walkDuration: 360, restDuration: 0, options: [])
             
             let surveyViewController = ORKTaskViewController(task: task, taskRun: nil)
             surveyViewController.delegate = self
