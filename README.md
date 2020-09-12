@@ -1,10 +1,9 @@
 # SpineKeeper Setup
 
-Open Xcode project file with ORKSample/OrkSample.xcworkspace
+Open Xcode 11.5 project file with ORKSample/OrkSample.xcworkspace
 
-Sync ResearchKit/Master, Carekit/Stable from Apple 
+Drag into the Frameworks folder, the .xcodeproj from
 
-Add CareKit.framework, CarkitStore.framework, CareKitUI.framework, ResearchKit.framework through ORKSample Frameworks
-
-
-
+https://github.com/ResearchKit/ResearchKit/master
+https://github.com/carekit-apple/CareKit/stable
+and SpineKeeper/ORKSample/ORKSample/Pods/Pods.xcodeproj)
