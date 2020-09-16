@@ -225,9 +225,18 @@
 		16BF5B691BE2974A007C79C6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF5B681BE2974A007C79C6 /* ProfileViewController.swift */; };
 		16BF5B6F1BE2BE77007C79C6 /* HealthClientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF5B6E1BE2BE77007C79C6 /* HealthClientType.swift */; };
 		16BF5B711BE2C989007C79C6 /* ProfileStaticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BF5B701BE2C989007C79C6 /* ProfileStaticTableViewCell.swift */; };
-		785FE090635CCB518B68A397 /* Pods_ORKSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C14C41F74E047E79BB004D5 /* Pods_ORKSample.framework */; };
-		7F2618CD24CC3813005F8E34 /* CareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F2618CC24CC3813005F8E34 /* CareKit.framework */; };
-		7F2618CE24CC3813005F8E34 /* CareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7F2618CC24CC3813005F8E34 /* CareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		56E0FD202511CE0300034BDC /* CareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E0FD102511CD3400034BDC /* CareKit.framework */; };
+		56E0FD212511CE0300034BDC /* CareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 56E0FD102511CD3400034BDC /* CareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		56E0FD262511CE1100034BDC /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E0FCFA2511CD1900034BDC /* ResearchKit.framework */; };
+		56E0FD272511CE1100034BDC /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 56E0FCFA2511CD1900034BDC /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		56E0FD312511CED300034BDC /* CareKitStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E0FD302511CED300034BDC /* CareKitStore.framework */; };
+		56E0FD322511CED300034BDC /* CareKitStore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 56E0FD302511CED300034BDC /* CareKitStore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		56E0FD342511CED800034BDC /* CareKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E0FD332511CED800034BDC /* CareKitUI.framework */; };
+		56E0FD352511CED800034BDC /* CareKitUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 56E0FD332511CED800034BDC /* CareKitUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		56E0FD372511CEDE00034BDC /* Pods_ORKSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E0FD362511CEDE00034BDC /* Pods_ORKSample.framework */; };
+		56E0FD382511CEDE00034BDC /* Pods_ORKSample.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 56E0FD362511CEDE00034BDC /* Pods_ORKSample.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		56E0FD3A2511DB6300034BDC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56E0FD392511DB6300034BDC /* GoogleService-Info.plist */; };
+		56E0FD3C2511DBC800034BDC /* User (1).swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E0FD3B2511DBC800034BDC /* User (1).swift */; };
 		86CCDFF61C1B50970042AA39 /* ResearchContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CCDFF51C1B50970042AA39 /* ResearchContainerViewController.swift */; };
 		B5BC85FA1BF1405900B0CFA5 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161479C51BD6CE8F0099A068 /* OnboardingViewController.swift */; };
 		B5BC85FD1BF1408500B0CFA5 /* HealthDataStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168F25711BE052AD001D2D65 /* HealthDataStepViewController.swift */; };
@@ -242,14 +251,6 @@
 		B5D35FC71BEA363F004CBB06 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D35FC61BEA363F004CBB06 /* ProfileHeaderView.swift */; };
 		B5D35FC91BEA48D3004CBB06 /* HKHealthStore+Queries.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D35FC81BEA48D3004CBB06 /* HKHealthStore+Queries.swift */; };
 		B5FA92E91BF13D98001E46C0 /* HealthDataStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA92E81BF13D98001E46C0 /* HealthDataStep.swift */; };
-		EA8C8A5324EEFF450066CECA /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C8A5024EEFF3C0066CECA /* ResearchKit.framework */; };
-		EA8C8A5424EEFF450066CECA /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C8A5024EEFF3C0066CECA /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EA8C8A6024EEFF620066CECA /* CareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C8A5D24EEFF5B0066CECA /* CareKit.framework */; };
-		EA8C8A6124EEFF620066CECA /* CareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C8A5D24EEFF5B0066CECA /* CareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EA8C8A6324EEFF6C0066CECA /* CareKitStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C8A6224EEFF6C0066CECA /* CareKitStore.framework */; };
-		EA8C8A6424EEFF6C0066CECA /* CareKitStore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C8A6224EEFF6C0066CECA /* CareKitStore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EA8C8A6624EEFF710066CECA /* CareKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C8A6524EEFF710066CECA /* CareKitUI.framework */; };
-		EA8C8A6724EEFF710066CECA /* CareKitUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EA8C8A6524EEFF710066CECA /* CareKitUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FA07880524B49F1D00BB9CFD /* MultimediaActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07880424B49F1D00BB9CFD /* MultimediaActivityViewController.swift */; };
 		FA08C12124B887AE007567B9 /* GridActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA08C12024B887AE007567B9 /* GridActivityViewController.swift */; };
 		FA0C122624B31D970033669E /* PressUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C121F24B31D970033669E /* PressUp.swift */; };
@@ -265,30 +266,30 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		EA8C8A4F24EEFF3C0066CECA /* PBXContainerItemProxy */ = {
+		56E0FCF92511CD1900034BDC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EA8C8A4924EEFF3C0066CECA /* ResearchKit.xcodeproj */;
+			containerPortal = 56E0FCF22511CD1900034BDC /* ResearchKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = B183A5951A8535D100C76870;
 			remoteInfo = ResearchKit;
 		};
-		EA8C8A5124EEFF3C0066CECA /* PBXContainerItemProxy */ = {
+		56E0FCFB2511CD1900034BDC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EA8C8A4924EEFF3C0066CECA /* ResearchKit.xcodeproj */;
+			containerPortal = 56E0FCF22511CD1900034BDC /* ResearchKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
 			remoteInfo = ResearchKitTests;
 		};
-		EA8C8A5C24EEFF5B0066CECA /* PBXContainerItemProxy */ = {
+		56E0FD0F2511CD3400034BDC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EA8C8A5524EEFF5A0066CECA /* CareKit.xcodeproj */;
+			containerPortal = 56E0FD0A2511CD3400034BDC /* CareKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8605A5BA1C4F04EC00DD65FF;
 			remoteInfo = CareKit;
 		};
-		EA8C8A5E24EEFF5B0066CECA /* PBXContainerItemProxy */ = {
+		56E0FD112511CD3400034BDC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EA8C8A5524EEFF5A0066CECA /* CareKit.xcodeproj */;
+			containerPortal = 56E0FD0A2511CD3400034BDC /* CareKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 5196C7F9226F8F8F00F1C2A2;
 			remoteInfo = CareKitTests;
@@ -296,17 +297,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		BC2A3CDF1C58F1DB00DA64B7 /* Embed Frameworks */ = {
+		56E0FD222511CE0300034BDC /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EA8C8A6124EEFF620066CECA /* CareKit.framework in Embed Frameworks */,
-				EA8C8A5424EEFF450066CECA /* ResearchKit.framework in Embed Frameworks */,
-				EA8C8A6424EEFF6C0066CECA /* CareKitStore.framework in Embed Frameworks */,
-				7F2618CE24CC3813005F8E34 /* CareKit.framework in Embed Frameworks */,
-				EA8C8A6724EEFF710066CECA /* CareKitUI.framework in Embed Frameworks */,
+				56E0FD352511CED800034BDC /* CareKitUI.framework in Embed Frameworks */,
+				56E0FD382511CEDE00034BDC /* Pods_ORKSample.framework in Embed Frameworks */,
+				56E0FD322511CED300034BDC /* CareKitStore.framework in Embed Frameworks */,
+				56E0FD212511CE0300034BDC /* CareKit.framework in Embed Frameworks */,
+				56E0FD272511CE1100034BDC /* ResearchKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,9 +540,14 @@
 		16BF5B681BE2974A007C79C6 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ORKSample/ProfileViewController.swift; sourceTree = "<group>"; };
 		16BF5B6E1BE2BE77007C79C6 /* HealthClientType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthClientType.swift; path = ORKSample/HealthClientType.swift; sourceTree = "<group>"; };
 		16BF5B701BE2C989007C79C6 /* ProfileStaticTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileStaticTableViewCell.swift; path = ORKSample/ProfileStaticTableViewCell.swift; sourceTree = "<group>"; };
-		2C14C41F74E047E79BB004D5 /* Pods_ORKSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ORKSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56E0FCF22511CD1900034BDC /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../../../Desktop/ResearchKit-master/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
+		56E0FD0A2511CD3400034BDC /* CareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKit.xcodeproj; path = "../../../Desktop/CareKit-stable/CareKit/CareKit.xcodeproj"; sourceTree = "<group>"; };
+		56E0FD302511CED300034BDC /* CareKitStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CareKitStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56E0FD332511CED800034BDC /* CareKitUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CareKitUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56E0FD362511CEDE00034BDC /* Pods_ORKSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_ORKSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56E0FD392511DB6300034BDC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		56E0FD3B2511DBC800034BDC /* User (1).swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "User (1).swift"; path = "../../../Downloads/User (1).swift"; sourceTree = "<group>"; };
 		5E29868A1083CE33037AB56A /* Pods-ORKSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ORKSample.debug.xcconfig"; path = "Target Support Files/Pods-ORKSample/Pods-ORKSample.debug.xcconfig"; sourceTree = "<group>"; };
-		7F2618CC24CC3813005F8E34 /* CareKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CareKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86CCDFF51C1B50970042AA39 /* ResearchContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResearchContainerViewController.swift; path = ORKSample/ResearchContainerViewController.swift; sourceTree = SOURCE_ROOT; };
 		B28A1F0CF7C7D4DE2A721803 /* Pods-ORKSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ORKSample.release.xcconfig"; path = "Target Support Files/Pods-ORKSample/Pods-ORKSample.release.xcconfig"; sourceTree = "<group>"; };
 		B5C2073E1BEC16F00051D9D8 /* ResearchContainerSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResearchContainerSegue.swift; path = ORKSample/ResearchContainerSegue.swift; sourceTree = "<group>"; };
@@ -555,10 +561,6 @@
 		B5D35FC61BEA363F004CBB06 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileHeaderView.swift; path = ORKSample/ProfileHeaderView.swift; sourceTree = "<group>"; };
 		B5D35FC81BEA48D3004CBB06 /* HKHealthStore+Queries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "HKHealthStore+Queries.swift"; path = "ORKSample/HKHealthStore+Queries.swift"; sourceTree = "<group>"; };
 		B5FA92E81BF13D98001E46C0 /* HealthDataStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthDataStep.swift; path = ORKSample/HealthDataStep.swift; sourceTree = "<group>"; };
-		EA8C8A4924EEFF3C0066CECA /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ../../ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
-		EA8C8A5524EEFF5A0066CECA /* CareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKit.xcodeproj; path = ../../CareKit/CareKit/CareKit.xcodeproj; sourceTree = "<group>"; };
-		EA8C8A6224EEFF6C0066CECA /* CareKitStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CareKitStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA8C8A6524EEFF710066CECA /* CareKitUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CareKitUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA07880424B49F1D00BB9CFD /* MultimediaActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultimediaActivityViewController.swift; sourceTree = "<group>"; };
 		FA08C12024B887AE007567B9 /* GridActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridActivityViewController.swift; sourceTree = "<group>"; };
 		FA0C121F24B31D970033669E /* PressUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PressUp.swift; path = OCKSample/PressUp.swift; sourceTree = "<group>"; };
@@ -578,14 +580,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA8C8A6624EEFF710066CECA /* CareKitUI.framework in Frameworks */,
-				EA8C8A6024EEFF620066CECA /* CareKit.framework in Frameworks */,
+				56E0FD202511CE0300034BDC /* CareKit.framework in Frameworks */,
+				56E0FD372511CEDE00034BDC /* Pods_ORKSample.framework in Frameworks */,
 				07A3B51C22B97ABE00AD872B /* HealthKit.framework in Frameworks */,
+				56E0FD342511CED800034BDC /* CareKitUI.framework in Frameworks */,
+				56E0FD262511CE1100034BDC /* ResearchKit.framework in Frameworks */,
+				56E0FD312511CED300034BDC /* CareKitStore.framework in Frameworks */,
 				0755B4B01FD511430078A8F7 /* AudioToolbox.framework in Frameworks */,
-				EA8C8A6324EEFF6C0066CECA /* CareKitStore.framework in Frameworks */,
-				785FE090635CCB518B68A397 /* Pods_ORKSample.framework in Frameworks */,
-				7F2618CD24CC3813005F8E34 /* CareKit.framework in Frameworks */,
-				EA8C8A5324EEFF450066CECA /* ResearchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -839,6 +840,7 @@
 			isa = PBXGroup;
 			children = (
 				07E4224D2096F2EA00D444D7 /* temp.gpx */,
+				56E0FD392511DB6300034BDC /* GoogleService-Info.plist */,
 				BC2A3CA81C58E92600DA64B7 /* Frameworks */,
 				0733F1822348056000209212 /* RNCryptor */,
 				161479C21BD6CE8F0099A068 /* ORKSample */,
@@ -923,6 +925,7 @@
 		16BF5B641BE2964F007C79C6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				56E0FD3B2511DBC800034BDC /* User (1).swift */,
 				16BF5B681BE2974A007C79C6 /* ProfileViewController.swift */,
 				16BF5B701BE2C989007C79C6 /* ProfileStaticTableViewCell.swift */,
 				B5D35FC61BEA363F004CBB06 /* ProfileHeaderView.swift */,
@@ -1031,6 +1034,24 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		56E0FCF32511CD1900034BDC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56E0FCFA2511CD1900034BDC /* ResearchKit.framework */,
+				56E0FCFC2511CD1900034BDC /* ResearchKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		56E0FD0B2511CD3400034BDC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56E0FD102511CD3400034BDC /* CareKit.framework */,
+				56E0FD122511CD3400034BDC /* CareKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		B5C207401BECBA710051D9D8 /* Withdrawal */ = {
 			isa = PBXGroup;
 			children = (
@@ -1042,34 +1063,15 @@
 		BC2A3CA81C58E92600DA64B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EA8C8A6524EEFF710066CECA /* CareKitUI.framework */,
-				EA8C8A6224EEFF6C0066CECA /* CareKitStore.framework */,
-				EA8C8A5524EEFF5A0066CECA /* CareKit.xcodeproj */,
-				EA8C8A4924EEFF3C0066CECA /* ResearchKit.xcodeproj */,
-				7F2618CC24CC3813005F8E34 /* CareKit.framework */,
+				56E0FD362511CEDE00034BDC /* Pods_ORKSample.framework */,
+				56E0FD332511CED800034BDC /* CareKitUI.framework */,
+				56E0FD302511CED300034BDC /* CareKitStore.framework */,
+				56E0FD0A2511CD3400034BDC /* CareKit.xcodeproj */,
+				56E0FCF22511CD1900034BDC /* ResearchKit.xcodeproj */,
 				07A3B51B22B97ABE00AD872B /* HealthKit.framework */,
 				0755B4AF1FD511430078A8F7 /* AudioToolbox.framework */,
-				2C14C41F74E047E79BB004D5 /* Pods_ORKSample.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EA8C8A4A24EEFF3C0066CECA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EA8C8A5024EEFF3C0066CECA /* ResearchKit.framework */,
-				EA8C8A5224EEFF3C0066CECA /* ResearchKitTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		EA8C8A5624EEFF5A0066CECA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EA8C8A5D24EEFF5B0066CECA /* CareKit.framework */,
-				EA8C8A5F24EEFF5B0066CECA /* CareKitTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		FA49708124B6E86800CA3A9B /* Insights */ = {
@@ -1100,8 +1102,8 @@
 				161479BC1BD6CE8F0099A068 /* Sources */,
 				161479BD1BD6CE8F0099A068 /* Frameworks */,
 				161479BE1BD6CE8F0099A068 /* Resources */,
-				BC2A3CDF1C58F1DB00DA64B7 /* Embed Frameworks */,
 				3C82A6F8B3559607C5134383 /* [CP] Embed Pods Frameworks */,
+				56E0FD222511CE0300034BDC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1157,12 +1159,12 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = EA8C8A5624EEFF5A0066CECA /* Products */;
-					ProjectRef = EA8C8A5524EEFF5A0066CECA /* CareKit.xcodeproj */;
+					ProductGroup = 56E0FD0B2511CD3400034BDC /* Products */;
+					ProjectRef = 56E0FD0A2511CD3400034BDC /* CareKit.xcodeproj */;
 				},
 				{
-					ProductGroup = EA8C8A4A24EEFF3C0066CECA /* Products */;
-					ProjectRef = EA8C8A4924EEFF3C0066CECA /* ResearchKit.xcodeproj */;
+					ProductGroup = 56E0FCF32511CD1900034BDC /* Products */;
+					ProjectRef = 56E0FCF22511CD1900034BDC /* ResearchKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1173,32 +1175,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		EA8C8A5024EEFF3C0066CECA /* ResearchKit.framework */ = {
+		56E0FCFA2511CD1900034BDC /* ResearchKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ResearchKit.framework;
-			remoteRef = EA8C8A4F24EEFF3C0066CECA /* PBXContainerItemProxy */;
+			remoteRef = 56E0FCF92511CD1900034BDC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		EA8C8A5224EEFF3C0066CECA /* ResearchKitTests.xctest */ = {
+		56E0FCFC2511CD1900034BDC /* ResearchKitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ResearchKitTests.xctest;
-			remoteRef = EA8C8A5124EEFF3C0066CECA /* PBXContainerItemProxy */;
+			remoteRef = 56E0FCFB2511CD1900034BDC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		EA8C8A5D24EEFF5B0066CECA /* CareKit.framework */ = {
+		56E0FD102511CD3400034BDC /* CareKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = CareKit.framework;
-			remoteRef = EA8C8A5C24EEFF5B0066CECA /* PBXContainerItemProxy */;
+			remoteRef = 56E0FD0F2511CD3400034BDC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		EA8C8A5F24EEFF5B0066CECA /* CareKitTests.xctest */ = {
+		56E0FD122511CD3400034BDC /* CareKitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = CareKitTests.xctest;
-			remoteRef = EA8C8A5E24EEFF5B0066CECA /* PBXContainerItemProxy */;
+			remoteRef = 56E0FD112511CD3400034BDC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1291,6 +1293,7 @@
 				070BA6021FD154CF00B38879 /* nass2.mp4 in Resources */,
 				07951D571E9AC9D5005CE00E /* 12_IssuesToConside2@3x.m4v in Resources */,
 				07E7738E2058E93100C5D237 /* myth6.html in Resources */,
+				56E0FD3A2511DB6300034BDC /* GoogleService-Info.plist in Resources */,
 				07951D9C1E9ACA37005CE00E /* institution.png in Resources */,
 				07951D851E9ACA37005CE00E /* 15privacy_risk.html in Resources */,
 				07951D891E9ACA37005CE00E /* 2quiz_headsup.html in Resources */,
@@ -1408,6 +1411,7 @@
 				07466C0D1FE1D37300CB9871 /* IceHeat.swift in Sources */,
 				07E7734B20589BE600C5D237 /* Dealing2.swift in Sources */,
 				070BA6161FD2102A00B38879 /* NassVideo8.swift in Sources */,
+				56E0FD3C2511DBC800034BDC /* User (1).swift in Sources */,
 				07E773712058E00A00C5D237 /* CopingRefresher2.swift in Sources */,
 				07E7735120589F1B00C5D237 /* StayingActive1.swift in Sources */,
 				07DBAA971E9CA49F00FC3F36 /* QueryActivityEventsOperation.swift in Sources */,
@@ -1645,7 +1649,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5E29868A1083CE33037AB56A /* Pods-ORKSample.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1685,7 +1688,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B28A1F0CF7C7D4DE2A721803 /* Pods-ORKSample.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
