@@ -47,6 +47,7 @@
 
 import UIKit
 import ResearchKit
+import FirebaseCore
 
 import MessageUI
 
@@ -83,6 +84,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         UIView.appearance().tintColor = Colors.cardinalRed.color
+        FirebaseApp.configure()
         lockApp()
         return true
     }
